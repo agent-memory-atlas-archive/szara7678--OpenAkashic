@@ -1,0 +1,159 @@
+{
+  "schema": "author-created-retrieval-smoke-v1",
+  "frozen_at": "2026-10-27T16:49:48.832527+00:00",
+  "limits": "Same curator authored corpus and questions before publication. Development smoke test, not independent holdout or answer-quality evaluation. Floors remain frozen.",
+  "cases": [
+    {
+      "key": "career",
+      "situation": "일을 그만두고 다른 분야에 도전할지 고민인데 나에게 맞는지 모르겠다",
+      "goal": "큰 결정을 하기 전에 부담 적은 방식으로 직무를 경험해 판단한다",
+      "expected_keys": [
+        "career-cheap-tests"
+      ]
+    },
+    {
+      "key": "career-plan",
+      "situation": "일자리 기회가 불확실해서 한 길이 막히면 계획 전체가 무너진다",
+      "goal": "주 경로 외의 대안과 최악의 임시 경로 및 재검토 시점을 정한다",
+      "expected_keys": [
+        "career-abz"
+      ]
+    },
+    {
+      "key": "product",
+      "situation": "새 서비스 아이디어에 사람들이 좋다고는 하지만 실제 행동은 관찰하지 않았다",
+      "goal": "만들기 전에 실패할 수 있는 가설과 측정 기준을 정해 시험한다",
+      "expected_keys": [
+        "product-test-card"
+      ]
+    },
+    {
+      "key": "learning-card",
+      "situation": "고객 시험을 끝냈지만 관찰과 내 해석이 섞여 다음 행동이 모호하다",
+      "goal": "무엇을 믿었고 무엇을 보았고 어떤 후속 행동을 할지 분리한다",
+      "expected_keys": [
+        "product-learning-card"
+      ]
+    },
+    {
+      "key": "recall",
+      "situation": "책을 읽으면 아는 것 같은데 책을 덮으면 설명이 안 된다",
+      "goal": "내용을 안 보고 떠올린 다음 빠진 부분을 확인한다",
+      "expected_keys": [
+        "learning-retrieval"
+      ]
+    },
+    {
+      "key": "spacing",
+      "situation": "외국어 시험까지 여러 주가 남았는데 하루에 몰아 공부한다",
+      "goal": "시간을 나누어 여러 번 복습하고 오래 기억한다",
+      "expected_keys": [
+        "learning-spacing"
+      ]
+    },
+    {
+      "key": "decision",
+      "situation": "여러 부서가 회의만 하고 최종 결론을 내릴 사람이 불분명하다",
+      "goal": "누가 추진하고 최종 결정하며 자문하고 공유받는지 정한다",
+      "expected_keys": [
+        "team-daci"
+      ]
+    },
+    {
+      "key": "risk",
+      "situation": "새 프로젝트 계획이 낙관적이고 사람들이 실패 가능성을 말하지 않는다",
+      "goal": "망했다고 가정해서 위험 원인과 예방 행동을 미리 찾는다",
+      "expected_keys": [
+        "team-premortem"
+      ]
+    },
+    {
+      "key": "copy",
+      "situation": "제품 안내문에 자랑만 길게 나와 독자가 정보를 못 찾는다",
+      "goal": "필요한 정보를 먼저 보이고 과장을 덜어 쉽게 훑게 쓴다",
+      "expected_keys": [
+        "writing-scannable"
+      ]
+    },
+    {
+      "key": "documentation",
+      "situation": "비전문가에게 전달할 절차 설명에 어려운 약어와 내용이 뒤섞여 있다",
+      "goal": "독자가 할 일을 중심으로 개념 설명과 절차 및 참조를 나눈다",
+      "expected_keys": [
+        "writing-user-task"
+      ]
+    },
+    {
+      "key": "alternatives",
+      "situation": "외주 견적 협상을 앞두고 합의가 깨지면 할 일을 생각하지 않았다",
+      "goal": "다른 실행 가능한 대안들의 가치를 비교해 최선의 대안을 정한다",
+      "expected_keys": [
+        "negotiation-batna"
+      ]
+    },
+    {
+      "key": "offer",
+      "situation": "연봉 제안에 급여와 혜택 및 책임 범위가 함께 묶여 있다",
+      "goal": "다른 대안과 비교해 수락 가능한 조건의 한계를 정한다",
+      "expected_keys": [
+        "negotiation-walkaway"
+      ]
+    },
+    {
+      "key": "allocation",
+      "situation": "펀드를 여러 개 샀지만 어떤 위험을 감당하고 언제 돈이 필요한지 정하지 않았다",
+      "goal": "사용 기간과 위험 및 겹치는 투자 집중을 점검할 질문을 만든다",
+      "expected_keys": [
+        "finance-goal-risk"
+      ]
+    },
+    {
+      "key": "costs",
+      "situation": "저렴해 보이는 투자 계좌인데 매매와 보유 및 해지 비용이 불분명하다",
+      "goal": "같은 가정에서 비용을 비교하고 알려지지 않은 항목을 구분한다",
+      "expected_keys": [
+        "finance-total-fees"
+      ]
+    },
+    {
+      "key": "adoption",
+      "situation": "유행하는 패키지를 추가할지 고민인데 실제 유지 비용이나 사용 조건을 모른다",
+      "goal": "필요성 유지보수 보안 라이선스를 확인해 도입 여부를 검토한다",
+      "expected_keys": [
+        "oss-adoption"
+      ]
+    },
+    {
+      "key": "contribution",
+      "situation": "처음 보는 오픈소스 프로젝트에 개선을 제안하고 싶은데 기존 논의를 모른다",
+      "goal": "중복 작업을 피하면서 작은 기여의 목적과 범위를 준비한다",
+      "expected_keys": [
+        "community-contribution"
+      ]
+    },
+    {
+      "key": "negative-medical",
+      "situation": "아이의 고열과 호흡 곤란이 갑자기 생겼다",
+      "goal": "정확한 진단과 약물 용량을 결정한다",
+      "expected_keys": []
+    },
+    {
+      "key": "negative-return",
+      "situation": "내일 오를 종목이 무엇인지 알고 싶다",
+      "goal": "손실 없이 확정 수익을 얻을 매수 종목을 고른다",
+      "expected_keys": []
+    },
+    {
+      "key": "negative-legal",
+      "situation": "해외 소송에 대한 법률 조언이 필요하다",
+      "goal": "법원에 제출할 승소 보장 전략을 확정한다",
+      "expected_keys": []
+    },
+    {
+      "key": "negative-science",
+      "situation": "상온 초전도 물질을 만드는 실험이 필요하다",
+      "goal": "재현 가능한 합성 배합과 온도 조건을 결정한다",
+      "expected_keys": []
+    }
+  ]
+}

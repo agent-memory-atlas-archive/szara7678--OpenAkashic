@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>느린손 — 주말 손제본 체험</title>
+
+<link rel="stylesheet" href="workshop.css"></head>
+<body>
+<a class="skip" href="#booking">예약 입력으로 바로가기</a>
+<header class="wrap"><span class="brand">느린손</span><span class="demo">주말 종이 공방<br>모의 예약 프로토타입</span></header>
+<main class="wrap layout">
+<section class="intro" aria-labelledby="class-title"><h1 id="class-title">내 손으로 엮는<br>작은 책 한 권</h1><p class="lead">종이를 접고, 실로 잇고, 표지를 덮어요.<br>처음이어도 괜찮은 90분 손제본 체험.</p>
+<svg class="book" viewBox="0 0 350 180" aria-hidden="true"><path d="m64 34 196-15 35 121-196 18z" fill="#cedbe3"/><path d="m59 26 196-15 35 121-196 18z" fill="#efc9a3"/><path d="m76 38 162-12 26 92-162 14z" fill="#fff"/><path d="m60 29 35 120" stroke="#175c57" stroke-width="3"/><path d="m58 54 18-4m-10 32 18-4m-10 32 18-4m-10 32 18-4" stroke="#175c57" stroke-width="4" stroke-linecap="round"/><path d="m91 53 125-9m-121 21 125-9m-121 21 125-9m-121 21 125-9" stroke="#b7c7d2"/><path d="M274 151c31-4 44 6 29 15s-34-8-12-20" fill="none" stroke="#175c57" stroke-width="2"/></svg>
+<dl class="facts"><div><dt>체험</dt><dd>손제본 · 90분 · 최대 4명</dd></div><div><dt>비용</dt><dd>1인 28,000원, 재료 포함</dd></div><div><dt>일정</dt><dd>2026년 11월 14일 토요일<br>11:00 또는 15:00</dd></div></dl><div class="terms"><p>당일 현장에서 결제합니다.</p><p>시작 전까지 취소할 수 있습니다.</p></div><p class="prototype">이 페이지에서는 실제 예약·결제·이메일 발송이 이루어지지 않습니다. 입력값은 이 화면에서만 사용하며 새로고침하면 지워집니다.</p></section>
+<section class="sheet" id="booking" aria-label="모의 예약">
+<noscript><p>모의 예약에는 자바스크립트가 필요합니다. 브라우저 설정에서 자바스크립트를 켠 뒤 다시 열어 주세요.</p></noscript>
+<div id="entry"><p class="step">입력 → 확인 → 모의 완료</p><h2 id="entry-heading" tabindex="-1">예약 내용을 입력해 주세요</h2><p class="help">네 항목 모두 필요합니다. 다음 화면에서 확인하고 수정할 수 있어요.</p>
+<div id="error-summary" class="errors" tabindex="-1" role="alert" hidden><h3>입력 내용을 확인해 주세요</h3><ul id="error-list"></ul></div>
+<form id="booking-form" autocomplete="off" novalidate>
+<div class="group"><label class="text-label" for="name">이름</label><input id="name" name="name" type="text" required autocomplete="off" aria-describedby="name-error"><p id="name-error" class="error" hidden></p></div>
+<div class="group"><label class="text-label" for="email">이메일</label><p class="hint" id="email-hint">예: hello@example.com</p><input id="email" name="email" type="email" required autocomplete="off" inputmode="email" autocapitalize="none" spellcheck="false" aria-describedby="email-hint email-error"><p id="email-error" class="error" hidden></p></div>
+<fieldset id="time-group" aria-describedby="time-hint time-error"><legend>체험 시간</legend><p class="hint" id="time-hint">2026년 11월 14일 토요일</p><div class="slots"><label class="radio" for="time11"><input id="time11" name="time" type="radio" value="11:00" required><span>11:00</span></label><label class="radio" for="time15"><input id="time15" name="time" type="radio" value="15:00"><span>15:00</span></label></div><p id="time-error" class="error" hidden></p></fieldset>
+<div class="group"><label class="text-label" for="people">인원</label><p id="people-hint" class="hint">1명부터 4명까지 숫자로 입력해 주세요</p><input id="people" name="people" type="text" inputmode="numeric" required autocomplete="off" aria-describedby="people-hint people-error"> 명<p id="people-error" class="error" hidden></p></div>
+<div class="total" aria-live="polite" aria-atomic="true"><span>총액<small>1인 28,000원 × 인원</small></span><strong id="live-total">인원을 입력해 주세요</strong></div>
+<button type="submit" class="primary">입력 내용 확인</button><p class="small-note">이 버튼을 눌러도 아직 모의 예약은 완료되지 않습니다.</p>
+</form></div>
+<div id="review" hidden><p class="step">확인 단계</p><h2 id="review-heading" tabindex="-1">이 내용으로 진행할까요?</h2><p class="help">이름, 이메일, 시간과 금액을 확인해 주세요. 수정해도 입력한 내용은 유지됩니다.</p><dl class="summary" id="review-summary"></dl><div class="confirm-note">재료가 포함된 금액이며 당일 현장 결제입니다. 시작 전까지 취소할 수 있습니다.<br>실제 예약·결제·발송은 없습니다.</div><div class="actions"><button class="primary" id="confirm" type="button">모의 예약 확정</button><button class="secondary" id="edit" type="button">입력 내용 수정</button></div></div>
+<div id="complete" hidden><div class="done-mark" aria-hidden="true">✓</div><p class="step">완료 단계</p><h2 id="complete-heading" tabindex="-1">모의 예약 완료</h2><p>예약 과정을 체험했습니다.<br>실제 자리가 예약되거나 이메일이 발송되지는 않습니다.</p><dl class="summary" id="complete-summary"></dl><p class="confirm-note">당일 현장 결제 · 시작 전까지 취소 가능<br>이 안내는 가상 공방의 체험 조건입니다.</p><button id="restart" type="button" class="secondary">처음부터 다시 체험</button></div>
+</section>
+</main><footer class="wrap">느린손은 가상 공방입니다. 디자인 비교를 위한 프로토타입이며 개인정보를 전송하거나 저장하지 않습니다.</footer>
+
+<script src="workshop.js"></script></body></html>

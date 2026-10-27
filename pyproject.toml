@@ -7,7 +7,7 @@ name = "openakashic-mcp"
 version = "1.0.0"
 description = "Visibility-aware knowledge vault for AI agents — private/public markdown notes, ~20 MCP tools, semantic search, and a built-in publication workflow. Self-hostable."
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = "Apache-2.0"}
 authors = [{name = "szara7678", email = "gci.insu@gmail.com"}]
 keywords = ["mcp", "knowledge", "vault", "ai-agents", "claude", "fastapi", "rag"]
 classifiers = [
@@ -15,7 +15,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
 ]
 requires-python = ">=3.11"
 dependencies = [
@@ -38,3 +38,4 @@ openakashic = "app.main:app"
 
 [tool.hatch.metadata]
 mcpName = "io.github.szara7678/openakashic"
+

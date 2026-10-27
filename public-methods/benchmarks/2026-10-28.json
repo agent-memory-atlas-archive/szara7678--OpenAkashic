@@ -1,0 +1,2770 @@
+{
+  "schema": "method-kpi-v1",
+  "measured_at": "2026-10-27T17:32:44.409400+00:00",
+  "evaluation_kind": "author_created_development_regression_not_independent_holdout",
+  "summary": {
+    "lexical": {
+      "positive_n": 16,
+      "top1": 1,
+      "top5": 1,
+      "negative_n": 4,
+      "valid_abstentions": 4,
+      "service_errors": 0,
+      "median_seconds": 0.01,
+      "p95_seconds": 0.0124,
+      "failed_cases": [
+        "career",
+        "career-plan",
+        "product",
+        "learning-card",
+        "recall",
+        "spacing",
+        "decision",
+        "risk",
+        "copy",
+        "documentation",
+        "alternatives",
+        "offer",
+        "allocation",
+        "adoption",
+        "contribution"
+      ]
+    },
+    "hybrid": {
+      "positive_n": 16,
+      "top1": 16,
+      "top5": 16,
+      "negative_n": 4,
+      "valid_abstentions": 4,
+      "service_errors": 0,
+      "median_seconds": 0.8512500000000001,
+      "p95_seconds": 1.0014,
+      "failed_cases": []
+    },
+    "context": {
+      "cases": 16,
+      "budget_checks": 48,
+      "all_within_cap": true,
+      "reference_retained_checks": 48,
+      "full_top5_tokens": 29910,
+      "compact_reference_tokens": 14924,
+      "compact_plus_fetch_tokens": 25217,
+      "same_answer_quality": "unmeasured",
+      "actual_billed_usage": null
+    },
+    "graph": {
+      "methods": 55,
+      "stable_graph": 55,
+      "no_dangling_edges": 55,
+      "source_links_match_record": 52,
+      "exact_feedback_versions": 9,
+      "source_methods": 52,
+      "feedback_methods": 9
+    }
+  },
+  "records": [
+    {
+      "case": "career",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_769519565d9e4eb68ce27c60bc879490"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0397,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "career",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_769519565d9e4eb68ce27c60bc879490"
+      ],
+      "ids": [
+        "method_769519565d9e4eb68ce27c60bc879490",
+        "method_4409287a86e44a46ab31171d93a7b7f7",
+        "method_62fd49754e2542da802845cb2fa8608c",
+        "method_710ecbba8f2742ba93b4a68ff2143aae",
+        "method_f6a1798ca0f4474589bdbd5bf74eae8a"
+      ],
+      "available": true,
+      "elapsed_seconds": 1.1419,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 194,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 941,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1957,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2301,
+        "compact_1024_tokens": 941,
+        "compact_plus_exact_fetch_tokens": 2103,
+        "selected_fetch_id": "method_769519565d9e4eb68ce27c60bc879490",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "career-plan",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_4409287a86e44a46ab31171d93a7b7f7"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0124,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "career-plan",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_4409287a86e44a46ab31171d93a7b7f7"
+      ],
+      "ids": [
+        "method_4409287a86e44a46ab31171d93a7b7f7",
+        "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+        "method_769519565d9e4eb68ce27c60bc879490",
+        "method_f70995d13acc49adb28497af7bcb14a1",
+        "method_13dad5a5dcb942c382816e96049edcf6"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8497,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 211,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 1007,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1829,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2201,
+        "compact_1024_tokens": 1007,
+        "compact_plus_exact_fetch_tokens": 1495,
+        "selected_fetch_id": "method_4409287a86e44a46ab31171d93a7b7f7",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "product",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_710ecbba8f2742ba93b4a68ff2143aae"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0093,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "product",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_710ecbba8f2742ba93b4a68ff2143aae"
+      ],
+      "ids": [
+        "method_710ecbba8f2742ba93b4a68ff2143aae",
+        "method_21c0995c2768476da59e7115c73205e5",
+        "method_f70995d13acc49adb28497af7bcb14a1",
+        "method_62fd49754e2542da802845cb2fa8608c",
+        "method_69b5c6d56d384423a315b3c4905d81c8"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.9318,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 202,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 966,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 2002,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2212,
+        "compact_1024_tokens": 966,
+        "compact_plus_exact_fetch_tokens": 2069,
+        "selected_fetch_id": "method_710ecbba8f2742ba93b4a68ff2143aae",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "learning-card",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_21c0995c2768476da59e7115c73205e5"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.011,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "learning-card",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_21c0995c2768476da59e7115c73205e5"
+      ],
+      "ids": [
+        "method_21c0995c2768476da59e7115c73205e5",
+        "method_72c20c6ba92448e892491d9840fd691c",
+        "method_103585915b604ffba57d547fd36da259",
+        "method_5d0c199705e14772a33a65b55c701c5e",
+        "method_fa79358fbb3143459eaeab135bcdb023"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8913,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 198,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 957,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 2007,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2181,
+        "compact_1024_tokens": 957,
+        "compact_plus_exact_fetch_tokens": 1409,
+        "selected_fetch_id": "method_21c0995c2768476da59e7115c73205e5",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "recall",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_72c20c6ba92448e892491d9840fd691c"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.011,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "recall",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_72c20c6ba92448e892491d9840fd691c"
+      ],
+      "ids": [
+        "method_72c20c6ba92448e892491d9840fd691c",
+        "method_103585915b604ffba57d547fd36da259",
+        "method_33a595e82ddc478698be3669934e6760",
+        "method_fa79358fbb3143459eaeab135bcdb023",
+        "method_435e3ceb63134fd887c4d9a2c722f9e5"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.7669,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 191,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 958,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 2001,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2182,
+        "compact_1024_tokens": 958,
+        "compact_plus_exact_fetch_tokens": 2032,
+        "selected_fetch_id": "method_72c20c6ba92448e892491d9840fd691c",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "spacing",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_435e3ceb63134fd887c4d9a2c722f9e5"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.01,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "spacing",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_435e3ceb63134fd887c4d9a2c722f9e5"
+      ],
+      "ids": [
+        "method_435e3ceb63134fd887c4d9a2c722f9e5",
+        "method_72c20c6ba92448e892491d9840fd691c"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8024,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 201,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 968,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 968,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 854,
+        "compact_1024_tokens": 968,
+        "compact_plus_exact_fetch_tokens": 1438,
+        "selected_fetch_id": "method_435e3ceb63134fd887c4d9a2c722f9e5",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "decision",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_aa62abb9e67e47488f69c1251cd43304"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0093,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "decision",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_aa62abb9e67e47488f69c1251cd43304"
+      ],
+      "ids": [
+        "method_aa62abb9e67e47488f69c1251cd43304",
+        "method_70ceb860f1514053bb8314db63a326ef",
+        "method_9210344a5c964d4a94657848b2ce3f8f",
+        "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+        "method_d1d75cc1bc94400c9560324063ec5287"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.7483,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 207,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 910,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1742,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2224,
+        "compact_1024_tokens": 910,
+        "compact_plus_exact_fetch_tokens": 1403,
+        "selected_fetch_id": "method_aa62abb9e67e47488f69c1251cd43304",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "risk",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_f70995d13acc49adb28497af7bcb14a1"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0115,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "risk",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_f70995d13acc49adb28497af7bcb14a1"
+      ],
+      "ids": [
+        "method_f70995d13acc49adb28497af7bcb14a1",
+        "method_710ecbba8f2742ba93b4a68ff2143aae",
+        "method_62fd49754e2542da802845cb2fa8608c",
+        "method_f6a1798ca0f4474589bdbd5bf74eae8a"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.7709,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 194,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 974,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1710,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 1794,
+        "compact_1024_tokens": 974,
+        "compact_plus_exact_fetch_tokens": 1449,
+        "selected_fetch_id": "method_f70995d13acc49adb28497af7bcb14a1",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "copy",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_33a595e82ddc478698be3669934e6760"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0117,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "copy",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_33a595e82ddc478698be3669934e6760"
+      ],
+      "ids": [
+        "method_33a595e82ddc478698be3669934e6760",
+        "method_fa79358fbb3143459eaeab135bcdb023",
+        "method_103585915b604ffba57d547fd36da259",
+        "method_5d0c199705e14772a33a65b55c701c5e",
+        "method_0b8450340161413d96cd38d879e84ae3"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.9044,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 199,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 894,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1575,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2287,
+        "compact_1024_tokens": 894,
+        "compact_plus_exact_fetch_tokens": 1364,
+        "selected_fetch_id": "method_33a595e82ddc478698be3669934e6760",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "documentation",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_103585915b604ffba57d547fd36da259"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0092,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "documentation",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_103585915b604ffba57d547fd36da259"
+      ],
+      "ids": [
+        "method_103585915b604ffba57d547fd36da259",
+        "method_33a595e82ddc478698be3669934e6760",
+        "method_fa79358fbb3143459eaeab135bcdb023",
+        "method_72c20c6ba92448e892491d9840fd691c"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8727,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 197,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 983,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1654,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 1757,
+        "compact_1024_tokens": 983,
+        "compact_plus_exact_fetch_tokens": 1461,
+        "selected_fetch_id": "method_103585915b604ffba57d547fd36da259",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "alternatives",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_c3aa4545035847fbb1d95ebdce5ed1ce"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0096,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "alternatives",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_c3aa4545035847fbb1d95ebdce5ed1ce"
+      ],
+      "ids": [
+        "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+        "method_769519565d9e4eb68ce27c60bc879490",
+        "method_21c0995c2768476da59e7115c73205e5",
+        "method_f6a1798ca0f4474589bdbd5bf74eae8a",
+        "method_ca9a0e9cfe634cba9c28b0b086b12670"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8528,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 200,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 997,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1828,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2217,
+        "compact_1024_tokens": 997,
+        "compact_plus_exact_fetch_tokens": 1447,
+        "selected_fetch_id": "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "offer",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_db0a40d480064c61bd720e62b232ca5d"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0094,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "offer",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_db0a40d480064c61bd720e62b232ca5d"
+      ],
+      "ids": [
+        "method_db0a40d480064c61bd720e62b232ca5d",
+        "method_c3aa4545035847fbb1d95ebdce5ed1ce"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8271,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 202,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 737,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 737,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 828,
+        "compact_1024_tokens": 737,
+        "compact_plus_exact_fetch_tokens": 1203,
+        "selected_fetch_id": "method_db0a40d480064c61bd720e62b232ca5d",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "allocation",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_ca9a0e9cfe634cba9c28b0b086b12670"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0108,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "allocation",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_ca9a0e9cfe634cba9c28b0b086b12670"
+      ],
+      "ids": [
+        "method_ca9a0e9cfe634cba9c28b0b086b12670",
+        "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+        "method_f040265d2ae640c49d8614c218e06d61"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.9954,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 201,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 954,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1446,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 1433,
+        "compact_1024_tokens": 954,
+        "compact_plus_exact_fetch_tokens": 1463,
+        "selected_fetch_id": "method_ca9a0e9cfe634cba9c28b0b086b12670",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "costs",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_7c5dc3d99bfc4e03ba08ebe209259bae"
+      ],
+      "ids": [
+        "method_7c5dc3d99bfc4e03ba08ebe209259bae"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.0096,
+      "top1": true,
+      "top5": true,
+      "abstained": false
+    },
+    {
+      "case": "costs",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_7c5dc3d99bfc4e03ba08ebe209259bae"
+      ],
+      "ids": [
+        "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+        "method_ca9a0e9cfe634cba9c28b0b086b12670"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8981,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 202,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 828,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1059,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 934,
+        "compact_1024_tokens": 828,
+        "compact_plus_exact_fetch_tokens": 2017,
+        "selected_fetch_id": "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "adoption",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_62fd49754e2542da802845cb2fa8608c"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0121,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "adoption",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_62fd49754e2542da802845cb2fa8608c"
+      ],
+      "ids": [
+        "method_62fd49754e2542da802845cb2fa8608c",
+        "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+        "method_d340976ef2f543a2a168b66f51c10beb",
+        "method_78c6bc2939a645c1a02c4cae35c0c79a",
+        "method_13dad5a5dcb942c382816e96049edcf6"
+      ],
+      "available": true,
+      "elapsed_seconds": 0.8974,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 197,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 954,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1911,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2347,
+        "compact_1024_tokens": 954,
+        "compact_plus_exact_fetch_tokens": 1478,
+        "selected_fetch_id": "method_62fd49754e2542da802845cb2fa8608c",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "contribution",
+      "mode": "lexical",
+      "expected_ids": [
+        "method_f6a1798ca0f4474589bdbd5bf74eae8a"
+      ],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0119,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "contribution",
+      "mode": "hybrid",
+      "expected_ids": [
+        "method_f6a1798ca0f4474589bdbd5bf74eae8a"
+      ],
+      "ids": [
+        "method_f6a1798ca0f4474589bdbd5bf74eae8a",
+        "method_f70995d13acc49adb28497af7bcb14a1",
+        "method_681dc89fa9bc4ccb9ead50121fe5b0aa",
+        "method_4ae1a991a2954dc2b7c8e30465a08215",
+        "method_9210344a5c964d4a94657848b2ce3f8f"
+      ],
+      "available": true,
+      "elapsed_seconds": 1.0014,
+      "top1": true,
+      "top5": true,
+      "abstained": false,
+      "context": {
+        "budgets": [
+          {
+            "cap": 256,
+            "actual_tokens": 201,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 1024,
+            "actual_tokens": 896,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          },
+          {
+            "cap": 2048,
+            "actual_tokens": 1690,
+            "counter_matches": true,
+            "within_cap": true,
+            "expected_reference_retained": true
+          }
+        ],
+        "full_top5_method_tokens": 2158,
+        "compact_1024_tokens": 896,
+        "compact_plus_exact_fetch_tokens": 1386,
+        "selected_fetch_id": "method_f6a1798ca0f4474589bdbd5bf74eae8a",
+        "limits": "o200k JSON material counts, not billed usage. Reference pack requires exact fetch; preserving an expected ID is not answer sufficiency."
+      }
+    },
+    {
+      "case": "negative-medical",
+      "mode": "lexical",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0092,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "negative-medical",
+      "mode": "hybrid",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.7631,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "negative-return",
+      "mode": "lexical",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.01,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "negative-return",
+      "mode": "hybrid",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.801,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "negative-legal",
+      "mode": "lexical",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.0095,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "negative-legal",
+      "mode": "hybrid",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.7557,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "negative-science",
+      "mode": "lexical",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.008,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    },
+    {
+      "case": "negative-science",
+      "mode": "hybrid",
+      "expected_ids": [],
+      "ids": [],
+      "available": true,
+      "elapsed_seconds": 0.7094,
+      "top1": false,
+      "top5": false,
+      "abstained": true
+    }
+  ],
+  "graph_audits": [
+    {
+      "id": "method_f6a1798ca0f4474589bdbd5bf74eae8a",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0025,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_62fd49754e2542da802845cb2fa8608c",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_ca9a0e9cfe634cba9c28b0b086b12670",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0034,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_db0a40d480064c61bd720e62b232ca5d",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0028,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_103585915b604ffba57d547fd36da259",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0024,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_33a595e82ddc478698be3669934e6760",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_f70995d13acc49adb28497af7bcb14a1",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_aa62abb9e67e47488f69c1251cd43304",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_435e3ceb63134fd887c4d9a2c722f9e5",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0017,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_72c20c6ba92448e892491d9840fd691c",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_21c0995c2768476da59e7115c73205e5",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_710ecbba8f2742ba93b4a68ff2143aae",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_4409287a86e44a46ab31171d93a7b7f7",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0035,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_769519565d9e4eb68ce27c60bc879490",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0019,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_5b230aa120c54d198e86887fcf8a4ab3",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_13dad5a5dcb942c382816e96049edcf6",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0026,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_d210e9033f2042a9b17537de7d701bd0",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0021,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_5d0c199705e14772a33a65b55c701c5e",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0021,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_fa79358fbb3143459eaeab135bcdb023",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_0b8450340161413d96cd38d879e84ae3",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_5af91cc7219a4130a3a2cf2d7630b031",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0026,
+      "node_count": 8,
+      "edge_count": 8,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 3,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_9317be20ea014745ad2797501d8071f2",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0026,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_1f1e279f40a341be94d39582c3f07bf3",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0031,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_f2369e7d6c8f4b0c8106488e0d045040",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0041,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_afc7efba9f844983991fa3d189d590f5",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0026,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_c3fb38e44f2443feb02cfd3564d96fc3",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.002,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_d340976ef2f543a2a168b66f51c10beb",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_78c6bc2939a645c1a02c4cae35c0c79a",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0024,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_769e62c4f39a41fea7b3e75b03a144d5",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0024,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_8e25f26e4dc04645baac2d888405da77",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0021,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_fe795a3d5f804d128698b245460e110f",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_681dc89fa9bc4ccb9ead50121fe5b0aa",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0025,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_bcc11858c6c9496aa4960f750a0e846a",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0021,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_b7bf97be541c4646b582b31f21416147",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_70ceb860f1514053bb8314db63a326ef",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0033,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_e554a06582d14c8f99683436ae00fcba",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0025,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_4ae1a991a2954dc2b7c8e30465a08215",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0024,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_17f6da889fe34a25bd84a860ab77007a",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0025,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_d1d75cc1bc94400c9560324063ec5287",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.004,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_252f680bb20944a190aa1d1355e6b5d5",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0022,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_64c6d70e0ab547c29e3eb9bb9a98d0f6",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_f040265d2ae640c49d8614c218e06d61",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_a0cc103673c54d9a89a76f7218576a77",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0038,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_bab61e9f0dab4d7cb2b91e32f2fc64c7",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0024,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_f1e336e8600447259c14626ef98584d8",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0025,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 2
+    },
+    {
+      "id": "method_8be94f157fba42ec95ee906e4b53ae03",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 5,
+      "edge_count": 4,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 2,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_8bd35edb30bc4bc6b425113fa28d4320",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0035,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_6562f35901794b5e9f8f477796e7505b",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0019,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_9210344a5c964d4a94657848b2ce3f8f",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.002,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_69b5c6d56d384423a315b3c4905d81c8",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0019,
+      "node_count": 4,
+      "edge_count": 3,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 1,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_5fed1c9bbb4b493f85f9ae4127f28d6c",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0039,
+      "node_count": 3,
+      "edge_count": 2,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 0,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_ecbf46a7f49149cda31dd6d01799cf4f",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.002,
+      "node_count": 3,
+      "edge_count": 2,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 0,
+      "feedback_nodes_checked": 0
+    },
+    {
+      "id": "method_d6bab8275ed741ae959436712962e7ce",
+      "version": 1,
+      "stable_graph": true,
+      "no_dangling_edges": true,
+      "source_links_match_record": true,
+      "exact_feedback_versions": true,
+      "graph_seconds": 0.0023,
+      "node_count": 6,
+      "edge_count": 6,
+      "graph_kind": "record_relationships",
+      "source_nodes_checked": 0,
+      "feedback_nodes_checked": 3
+    }
+  ],
+  "unmeasured": [
+    "human_preference",
+    "revision_time",
+    "causal_answer_quality_gain",
+    "business_value",
+    "independent_OSS_reproduction"
+  ],
+  "limits": "Retrieval of expected methods and record integrity are measured. Source truth, expert identity, execution success, and answer quality are not inferred.",
+  "input_hashes": {
+    "queries": "6949dd037cfef66eb420a5b68203cdb2d2143ab6c2ab92523ab9c5731bb3f8bf",
+    "mapping": "477fc709e69cf2887303c1a87fb931808c0d601271c3a177e75b4e9c205d3e22"
+  },
+  "incremental_index": {
+    "methods": 55,
+    "embedded_fields": 0,
+    "reused_fields": 110,
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "embedding_spec": "openakashic-methods-qwen3-v1-lasttoken-l2-f32-max512",
+    "index_unchanged": true
+  },
+  "environment": "WSL loopback · frozen public corpus of 55 methods",
+  "raw_run_sha256": "5d0881465cb7ffc1aecc7bfc85c669da51a2fb0a34a1136cd350ea581228a33c",
+  "denominator_note": "Source/version checks exclude methods with no corresponding source/feedback nodes. Derived from the same frozen source snapshot; raw run unchanged.",
+  "legacy_regression": {
+    "schema": "prior-holdout-reused-as-regression-v1",
+    "at": "2026-10-27T17:40:40.316286+00:00",
+    "gold_sha256": "271581334583ea2f8ec7c8d75fdbf7e3f51b487193483b1f0a9a2707485e3780",
+    "limits": "Previously exposed 2026-10-27 holdout reused on expanded 55-method pool. Not a fresh independent holdout; no retuning on these results.",
+    "summary": {
+      "lexical": {
+        "positive_n": 12,
+        "top1": 0,
+        "top5": 0,
+        "no_material_n": 4,
+        "valid_abstentions": 4,
+        "conflict_n": 4,
+        "excluded_absent": 4,
+        "service_errors": 0,
+        "failures": [
+          {
+            "case": "hold-a01",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a02",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a03",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a04",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a05",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a06",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a07",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a08",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a09",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a10",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a11",
+            "type": "answerable",
+            "titles": []
+          },
+          {
+            "case": "hold-a12",
+            "type": "answerable",
+            "titles": []
+          }
+        ]
+      },
+      "hybrid": {
+        "positive_n": 12,
+        "top1": 11,
+        "top5": 12,
+        "no_material_n": 4,
+        "valid_abstentions": 0,
+        "conflict_n": 4,
+        "excluded_absent": 4,
+        "service_errors": 0,
+        "failures": [
+          {
+            "case": "hold-n01",
+            "type": "no_material",
+            "titles": [
+              "설명문을 독자 과제·개념·참조로 나눠 쓰기",
+              "입력 오류를 필드와 연결하고 복구 방법 전달하기"
+            ]
+          },
+          {
+            "case": "hold-n02",
+            "type": "no_material",
+            "titles": [
+              "실험 결과에서 관찰·해석·다음 행동 분리하기",
+              "입력 오류를 필드와 연결하고 복구 방법 전달하기"
+            ]
+          },
+          {
+            "case": "hold-n03",
+            "type": "no_material",
+            "titles": [
+              "설명문을 독자 과제·개념·참조로 나눠 쓰기"
+            ]
+          },
+          {
+            "case": "hold-n04",
+            "type": "no_material",
+            "titles": [
+              "SQLite 온라인 백업 및 복원본 검증"
+            ]
+          }
+        ]
+      }
+    },
+    "records": [
+      {
+        "case": "hold-a01",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "research-01-quality-screen"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a01",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "research-01-quality-screen"
+        ],
+        "keys": [
+          "research-01-quality-screen",
+          "collaboration-09-feedback-tracking",
+          "research-10-intake-check",
+          "research-09-sensitivity",
+          "method_5b230aa120c54d198e86887fcf8a4ab3"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "외부 데이터 품질 선별",
+          "리뷰 피드백 대응 추적",
+          "데이터 인수 체크리스트",
+          "결과 민감도 비교표",
+          "입력 오류를 필드와 연결하고 복구 방법 전달하기"
+        ]
+      },
+      {
+        "case": "hold-a02",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "research-03-missing-policy"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a02",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "research-03-missing-policy"
+        ],
+        "keys": [
+          "research-09-sensitivity",
+          "research-03-missing-policy",
+          "research-04-csv-schema",
+          "method_5b230aa120c54d198e86887fcf8a4ab3",
+          "research-05-time-series-merge"
+        ],
+        "top1": false,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "결과 민감도 비교표",
+          "결측값 처리 정책 비교",
+          "CSV 수집 스키마 점검",
+          "입력 오류를 필드와 연결하고 복구 방법 전달하기",
+          "다중 파일 시계열 통합"
+        ]
+      },
+      {
+        "case": "hold-a03",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "research-04-csv-schema"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a03",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "research-04-csv-schema"
+        ],
+        "keys": [
+          "research-04-csv-schema",
+          "research-05-time-series-merge"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "CSV 수집 스키마 점검",
+          "다중 파일 시계열 통합"
+        ]
+      },
+      {
+        "case": "hold-a04",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "research-05-time-series-merge"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a04",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "research-05-time-series-merge"
+        ],
+        "keys": [
+          "research-05-time-series-merge"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "다중 파일 시계열 통합"
+        ]
+      },
+      {
+        "case": "hold-a05",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "collaboration-05-source-ledger"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a05",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "collaboration-05-source-ledger"
+        ],
+        "keys": [
+          "collaboration-05-source-ledger",
+          "research-10-intake-check",
+          "research-01-quality-screen",
+          "collaboration-07-version-anchor",
+          "method_72c20c6ba92448e892491d9840fd691c"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "자료 출처 표와 요약 메모",
+          "데이터 인수 체크리스트",
+          "외부 데이터 품질 선별",
+          "협업 문서에 이름 있는 기준 버전 기록",
+          "읽은 내용을 가리고 회상한 뒤 오답 교정하기"
+        ]
+      },
+      {
+        "case": "hold-a06",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "collaboration-09-feedback-tracking"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a06",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "collaboration-09-feedback-tracking"
+        ],
+        "keys": [
+          "collaboration-09-feedback-tracking",
+          "collaboration-08-pull-request-review",
+          "collaboration-07-version-anchor",
+          "collaboration-03-comment-actions",
+          "method_5b230aa120c54d198e86887fcf8a4ab3"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "리뷰 피드백 대응 추적",
+          "PR 변경사항 검토",
+          "협업 문서에 이름 있는 기준 버전 기록",
+          "검토 댓글을 실행 항목으로 전환",
+          "입력 오류를 필드와 연결하고 복구 방법 전달하기"
+        ]
+      },
+      {
+        "case": "hold-a07",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "research-07-category-map"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a07",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "research-07-category-map"
+        ],
+        "keys": [
+          "research-07-category-map",
+          "research-04-csv-schema",
+          "collaboration-08-pull-request-review"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "범주값 정규화 감사",
+          "CSV 수집 스키마 점검",
+          "PR 변경사항 검토"
+        ]
+      },
+      {
+        "case": "hold-a08",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "collaboration-01-document-diff"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a08",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "collaboration-01-document-diff"
+        ],
+        "keys": [
+          "collaboration-01-document-diff",
+          "collaboration-04-change-note",
+          "collaboration-07-version-anchor",
+          "collaboration-09-feedback-tracking",
+          "research-04-csv-schema"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "두 문서 변경점 검토",
+          "기존 수정본 차이 설명 작성",
+          "협업 문서에 이름 있는 기준 버전 기록",
+          "리뷰 피드백 대응 추적",
+          "CSV 수집 스키마 점검"
+        ]
+      },
+      {
+        "case": "hold-a09",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "collaboration-02-suggested-edits"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a09",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "collaboration-02-suggested-edits"
+        ],
+        "keys": [
+          "collaboration-02-suggested-edits",
+          "collaboration-08-pull-request-review",
+          "collaboration-01-document-diff",
+          "collaboration-09-feedback-tracking",
+          "method_13dad5a5dcb942c382816e96049edcf6"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "문서 제안 편집 검토",
+          "PR 변경사항 검토",
+          "두 문서 변경점 검토",
+          "리뷰 피드백 대응 추적",
+          "확정 전 요약 확인과 값이 보존되는 수정 경로 만들기"
+        ]
+      },
+      {
+        "case": "hold-a10",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "operations-10-sqlite-backup"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a10",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "operations-10-sqlite-backup"
+        ],
+        "keys": [
+          "operations-10-sqlite-backup"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "SQLite 온라인 백업 및 복원본 검증"
+        ]
+      },
+      {
+        "case": "hold-a11",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "collaboration-03-comment-actions"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a11",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "collaboration-03-comment-actions"
+        ],
+        "keys": [
+          "collaboration-03-comment-actions",
+          "collaboration-10-action-register",
+          "collaboration-09-feedback-tracking",
+          "collaboration-07-version-anchor",
+          "collaboration-02-suggested-edits"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "검토 댓글을 실행 항목으로 전환",
+          "팀 지식 문서에서 조치 목록 만들기",
+          "리뷰 피드백 대응 추적",
+          "협업 문서에 이름 있는 기준 버전 기록",
+          "문서 제안 편집 검토"
+        ]
+      },
+      {
+        "case": "hold-a12",
+        "type": "answerable",
+        "mode": "lexical",
+        "available": true,
+        "expected": [
+          "collaboration-07-version-anchor"
+        ],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-a12",
+        "type": "answerable",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [
+          "collaboration-07-version-anchor"
+        ],
+        "keys": [
+          "collaboration-07-version-anchor",
+          "collaboration-09-feedback-tracking",
+          "collaboration-08-pull-request-review"
+        ],
+        "top1": true,
+        "top5": true,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "협업 문서에 이름 있는 기준 버전 기록",
+          "리뷰 피드백 대응 추적",
+          "PR 변경사항 검토"
+        ]
+      },
+      {
+        "case": "hold-n01",
+        "type": "no_material",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-n01",
+        "type": "no_material",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [
+          "method_103585915b604ffba57d547fd36da259",
+          "method_5b230aa120c54d198e86887fcf8a4ab3"
+        ],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "설명문을 독자 과제·개념·참조로 나눠 쓰기",
+          "입력 오류를 필드와 연결하고 복구 방법 전달하기"
+        ]
+      },
+      {
+        "case": "hold-n02",
+        "type": "no_material",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-n02",
+        "type": "no_material",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [
+          "method_21c0995c2768476da59e7115c73205e5",
+          "method_5b230aa120c54d198e86887fcf8a4ab3"
+        ],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "실험 결과에서 관찰·해석·다음 행동 분리하기",
+          "입력 오류를 필드와 연결하고 복구 방법 전달하기"
+        ]
+      },
+      {
+        "case": "hold-n03",
+        "type": "no_material",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-n03",
+        "type": "no_material",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [
+          "method_103585915b604ffba57d547fd36da259"
+        ],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "설명문을 독자 과제·개념·참조로 나눠 쓰기"
+        ]
+      },
+      {
+        "case": "hold-n04",
+        "type": "no_material",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-n04",
+        "type": "no_material",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [
+          "operations-10-sqlite-backup"
+        ],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": false,
+        "excluded_absent": false,
+        "titles": [
+          "SQLite 온라인 백업 및 복원본 검증"
+        ]
+      },
+      {
+        "case": "hold-c01",
+        "type": "constraint_conflict",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-c01",
+        "type": "constraint_conflict",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [
+          "research-04-csv-schema",
+          "method_d6bab8275ed741ae959436712962e7ce",
+          "method_5fed1c9bbb4b493f85f9ae4127f28d6c",
+          "operations-10-sqlite-backup"
+        ],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": false,
+        "excluded_absent": true,
+        "titles": [
+          "CSV 수집 스키마 점검",
+          "공개 예제 · 오프라인 문서 검색에서 원문 ID와 인용 보존",
+          "공개 예제 · 오프라인 문서 수량 집계",
+          "SQLite 온라인 백업 및 복원본 검증"
+        ]
+      },
+      {
+        "case": "hold-c02",
+        "type": "constraint_conflict",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-c02",
+        "type": "constraint_conflict",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-c03",
+        "type": "constraint_conflict",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-c03",
+        "type": "constraint_conflict",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-c04",
+        "type": "constraint_conflict",
+        "mode": "lexical",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      },
+      {
+        "case": "hold-c04",
+        "type": "constraint_conflict",
+        "mode": "hybrid",
+        "available": true,
+        "expected": [],
+        "keys": [],
+        "top1": false,
+        "top5": false,
+        "valid_abstention": true,
+        "excluded_absent": true,
+        "titles": []
+      }
+    ]
+  },
+  "public_projection": "All case IDs, expected/returned IDs, failures, graph audits and measured summaries retained. Duplicated method bodies omitted; public fixture supplies method content. Original raw run hash is retained.",
+  "context_selection_note": "The expected method ID selects the additional exact fetch (oracle assumption); no independent agent choice or same-quality answer evaluation."
+}

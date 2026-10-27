@@ -1,0 +1,6 @@
+# Public graph runtime; matches deploy/public-research/Dockerfile.
+# Closed memory/MCP is a separate service.
+fastapi==0.135.3
+pydantic==2.13.0
+uvicorn==0.44.0
+tiktoken==0.14.0

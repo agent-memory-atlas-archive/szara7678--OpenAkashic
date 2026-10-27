@@ -1,0 +1,316 @@
+{
+  "schema": "public-method-eval-v1",
+  "cases": [
+    {
+      "id": "hold-a01",
+      "type": "answerable",
+      "situation": "해안 관측소에서 새 공급자의 데이터를 받았는데 예외적으로 높은 수치 중 일부는 현장 일지에 설명돼 있다.",
+      "goal": "사용 목적에 맞춘 기준으로 관측값을 표시하되 정당화된 특이치의 원값과 사유도 행에 남기는 품질 점검 방법을 찾는다.",
+      "requires": [
+        "python"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "research-01-quality-screen"
+      ],
+      "excluded_keys": [],
+      "rationale": "사용 목적 기준으로 각 레코드를 분류하면서 정당화된 예외와 판정 이력을 보존한다."
+    },
+    {
+      "id": "hold-a02",
+      "type": "answerable",
+      "situation": "행사 참석 로그에는 빈 값, 날짜 결측 표식, 별도 코드인 “미상”이 섞여 있어 집계에서 빠지는 행을 알 수 없다.",
+      "goal": "결측 유형을 먼저 세고, 원본 표시를 유지한 채 처리 선택지별 표본 수와 결과 변화를 나란히 점검하는 절차를 만들고 싶다.",
+      "requires": [
+        "python"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "research-03-missing-policy"
+      ],
+      "excluded_keys": [],
+      "rationale": "결측 패턴과 대안 처리 결과의 영향 차이를 비교한다."
+    },
+    {
+      "id": "hold-a03",
+      "type": "answerable",
+      "situation": "월간 설문 결과를 한 테이블로 합치려는데 조사팀마다 헤더 철자, 날짜 표기, 구분자가 제각각이다.",
+      "goal": "각 원본 파일의 열 구조와 파싱 예외를 통합 전에 비교하는 방법을 알려줘.",
+      "requires": [
+        "python"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "research-04-csv-schema"
+      ],
+      "excluded_keys": [],
+      "rationale": "파일별 CSV 형식·필수 열·구분자 차이를 병합 전에 확인하는 목적이 명확하다."
+    },
+    {
+      "id": "hold-a04",
+      "type": "answerable",
+      "situation": "제조 설비가 월별 로그 파일을 만든다. 일부 장치는 UTC 오프셋이 다르고 월 경계에 같은 이벤트가 두 번 들어간다.",
+      "goal": "기간별 원천을 표시한 채 시간 열을 통일하고, 통합 결과에서 정렬 오류와 겹친 시각을 점검하는 절차가 필요하다.",
+      "requires": [
+        "python"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "research-05-time-series-merge"
+      ],
+      "excluded_keys": [],
+      "rationale": "다중 파일 시계열 연결과 시간 순서·중복 검사를 요청한다."
+    },
+    {
+      "id": "hold-a05",
+      "type": "answerable",
+      "situation": "지원금 결과 보고서에는 참고문헌이 붙었지만 어떤 수치 문장을 뒷받침하는지와 원문 어디까지 읽었는지 불분명하다.",
+      "goal": "주장별 출처, 확인 날짜, 실제 확인한 범위를 연결하고 불일치나 미확인 상태를 구분하는 기록 방식을 설계한다.",
+      "requires": [],
+      "forbids": [],
+      "expected_keys": [
+        "collaboration-05-source-ledger"
+      ],
+      "excluded_keys": [],
+      "rationale": "주장을 출처와 확인 범위에 연결해 검증 경계를 드러내는 절차다."
+    },
+    {
+      "id": "hold-a06",
+      "type": "answerable",
+      "situation": "Pull request reviewers have raised concerns about a migration diff, but the author has not tied each comment to a code change.",
+      "goal": "How can I close the feedback loop by mapping every review point to a commit or a reasoned decision to leave it unchanged?",
+      "requires": [
+        "browser",
+        "network"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "collaboration-09-feedback-tracking"
+      ],
+      "excluded_keys": [],
+      "rationale": "Cross-lingual: English request targets the Korean PR feedback tracking method."
+    },
+    {
+      "id": "hold-a07",
+      "type": "answerable",
+      "situation": "두 공급업체 문서에서 약어 대소문자와 띄어쓰기만 다른 코드값이 서로 다른 범주로 집계된다.",
+      "goal": "의미가 확인된 값만 표준 범주에 묶고 원문 표현과 변환 전후 빈도도 남기는 검토 방법은?",
+      "requires": [
+        "python"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "research-07-category-map"
+      ],
+      "excluded_keys": [],
+      "rationale": "문자열 차이를 감사하며 동치로 확정된 범주만 정규화한다."
+    },
+    {
+      "id": "hold-a08",
+      "type": "answerable",
+      "situation": "새 지역 규정 초안이 작년 승인 문안과 달라졌다. 이해관계자가 바뀐 구절만 보되 문서 레이아웃 변경은 따로 확인하길 원한다.",
+      "goal": "Google Docs에서 차이 문서를 만들고 중요한 본문 변경과 비교 도구가 놓칠 수 있는 요소를 검토하는 방법을 찾아줘.",
+      "requires": [
+        "browser",
+        "network"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "collaboration-01-document-diff"
+      ],
+      "excluded_keys": [],
+      "rationale": "두 문서 비교 기능을 사용한 뒤 레이아웃 등 비비교 요소를 별도 점검한다."
+    },
+    {
+      "id": "hold-a09",
+      "type": "answerable",
+      "situation": "외부 법률 고문이 문안을 고치되 회사 원문은 승인 전까지 그대로 유지해야 한다.",
+      "goal": "검토자가 제안한 변경을 문장에 표시하고 문서 소유자가 항목별로 받아들이거나 되돌릴 수 있는 온라인 절차가 필요하다.",
+      "requires": [
+        "browser",
+        "network"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "collaboration-02-suggested-edits"
+      ],
+      "excluded_keys": [],
+      "rationale": "제안 모드에서 원문을 분리하고 소유자가 제안을 검토하는 작업이다."
+    },
+    {
+      "id": "hold-a10",
+      "type": "answerable",
+      "situation": "The database team must create a testable duplicate from an authorized synthetic SQLite fixture without modifying the original file.",
+      "goal": "Use Python’s connection-level backup operation to write to a new isolated path, reopen that copy, check its integrity and compare table data against the source.",
+      "requires": [
+        "python",
+        "filesystem_write"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "operations-10-sqlite-backup"
+      ],
+      "excluded_keys": [],
+      "rationale": "Cross-lingual: English scenario requests the documented Python SQLite backup and independent destination verification workflow."
+    },
+    {
+      "id": "hold-a11",
+      "type": "answerable",
+      "situation": "품질 검토 회의에서 같은 단락에 대한 피드백이 댓글로만 남고 담당 편집자가 누군지 모른다.",
+      "goal": "검토 위치를 유지하면서 조치 담당자에게 배정하고 완료 표시까지 추적하는 Google Docs 댓글 작업 흐름을 알려줘.",
+      "requires": [
+        "browser",
+        "network"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "collaboration-03-comment-actions"
+      ],
+      "excluded_keys": [],
+      "rationale": "문서 댓글을 특정 담당자의 액션 아이템으로 배정하고 완료 상태를 추적한다."
+    },
+    {
+      "id": "hold-a12",
+      "type": "answerable",
+      "situation": "A documentation team wants a stable review checkpoint before copy-editing begins, so contributors can refer to the same revision by name.",
+      "goal": "Which Google Docs history workflow lets an editor label the selected revision and confirm the named checkpoint is visible to reviewers?",
+      "requires": [
+        "browser",
+        "network"
+      ],
+      "forbids": [],
+      "expected_keys": [
+        "collaboration-07-version-anchor"
+      ],
+      "excluded_keys": [],
+      "rationale": "Cross-lingual: English request targets the Korean named-version history workflow; editor access is required."
+    },
+    {
+      "id": "hold-n01",
+      "type": "no_material",
+      "situation": "지자체가 현장 안내문을 중국어·베트남어로 배포한다.",
+      "goal": "전문 번역가 자격 확인, 지역별 법률 검토, 역번역 검수와 시청 승인 서명을 묶은 번역 품질 프로세스를 설계하고 싶다.",
+      "requires": [],
+      "forbids": [],
+      "expected_keys": [],
+      "excluded_keys": [
+        "collaboration-02-suggested-edits",
+        "collaboration-06-review-round"
+      ],
+      "rationale": "문서 제안 편집은 있으나 번역 자격·역번역·법률 승인 절차는 다루지 않는다."
+    },
+    {
+      "id": "hold-n02",
+      "type": "no_material",
+      "situation": "연구팀이 캠페인 이메일을 무작위 배정해 전환율 차이를 평가한다.",
+      "goal": "사전 등록, 검정력 산출, 중간 분석 오류 통제, 다중 비교 보정을 포함하는 A/B 실험 계획을 세우고 싶다.",
+      "requires": [
+        "python"
+      ],
+      "forbids": [],
+      "expected_keys": [],
+      "excluded_keys": [
+        "research-09-sensitivity"
+      ],
+      "rationale": "분석 선택의 민감도 비교는 수록됐지만 실험 설계·검정력·다중 비교 절차는 없다."
+    },
+    {
+      "id": "hold-n03",
+      "type": "no_material",
+      "situation": "사내 제품 매뉴얼의 오류 보고 채널을 전 세계 고객에게 공개하려 한다.",
+      "goal": "문서 기여자 라이선스 확보, 저작권 표기, 법무 검토와 공개 배포 승인을 추적할 출판 워크플로가 필요하다.",
+      "requires": [],
+      "forbids": [],
+      "expected_keys": [],
+      "excluded_keys": [
+        "collaboration-05-source-ledger",
+        "collaboration-06-review-round"
+      ],
+      "rationale": "출처를 주장에 연결하는 방법은 있으나 저작권 정리와 공개 출판 승인 단계는 없다."
+    },
+    {
+      "id": "hold-n04",
+      "type": "no_material",
+      "situation": "A team needs to restore a PostgreSQL cluster after a corrupted primary and reconcile streaming replicas.",
+      "goal": "Find a platform-specific recovery runbook for WAL replay, failover, replica promotion and post-restore consistency checks.",
+      "requires": [
+        "network"
+      ],
+      "forbids": [],
+      "expected_keys": [],
+      "excluded_keys": [
+        "operations-05-incident-playbook",
+        "operations-10-sqlite-backup"
+      ],
+      "rationale": "일반 사고 대응과 SQLite 파일 백업만 다루며 PostgreSQL WAL·replica 복구법은 없다."
+    },
+    {
+      "id": "hold-c01",
+      "type": "constraint_conflict",
+      "situation": "검토자는 클라우드에 저장된 정책 초안 두 개를 비교해 차이 문서를 만들고 싶다. 이번 작업은 보안 격리 때문에 인터넷 연결 없이 수행해야 한다.",
+      "goal": "문서 링크를 열어 Google Docs 비교 기능으로 제안 차이를 생성해줘.",
+      "requires": [
+        "browser"
+      ],
+      "forbids": [
+        "network"
+      ],
+      "expected_keys": [],
+      "excluded_keys": [
+        "collaboration-01-document-diff"
+      ],
+      "rationale": "명시적 네트워크 금지와 온라인 문서 비교의 브라우저 접근 요구가 충돌한다."
+    },
+    {
+      "id": "hold-c02",
+      "type": "constraint_conflict",
+      "situation": "담당자가 원격 GitHub PR의 diff를 읽고 승인 또는 수정 요청을 제출해야 한다.",
+      "goal": "로컬에 내려받지 말고 GitHub 페이지에 접속해서 리뷰 상태와 줄 단위 의견을 남기는 절차를 수행하고 싶다.",
+      "requires": [
+        "browser"
+      ],
+      "forbids": [
+        "network"
+      ],
+      "expected_keys": [],
+      "excluded_keys": [
+        "collaboration-08-pull-request-review"
+      ],
+      "rationale": "원격 PR 조회와 리뷰 제출은 네트워크가 필요한데 요청은 오프라인만 허용한다."
+    },
+    {
+      "id": "hold-c03",
+      "type": "constraint_conflict",
+      "situation": "운영팀은 GitHub 저장소의 production 환경 보호 설정을 바꾸려고 한다. 변경은 GitHub 환경 설정 화면에서 직접 해야 한다.",
+      "goal": "브랜치 허용 범위와 필수 검토자를 설정하고 결과를 확인하는 절차를 인터넷 차단 상태에서 알려줘.",
+      "requires": [
+        "browser"
+      ],
+      "forbids": [
+        "network"
+      ],
+      "expected_keys": [],
+      "excluded_keys": [
+        "operations-01-environment-gate"
+      ],
+      "rationale": "대상 웹 서비스에 접속해 설정을 저장해야 하는 요청과 네트워크 금지가 양립하지 않는다."
+    },
+    {
+      "id": "hold-c04",
+      "type": "constraint_conflict",
+      "situation": "A reviewer needs to assign a follow-up action directly inside a shared Google Docs comment and mark it done there.",
+      "goal": "Describe the steps in the live Workspace document, but do not use any network connection during the task.",
+      "requires": [
+        "browser"
+      ],
+      "forbids": [
+        "network"
+      ],
+      "expected_keys": [],
+      "excluded_keys": [
+        "collaboration-03-comment-actions"
+      ],
+      "rationale": "실시간 Workspace 댓글에 액션을 할당하는 웹 작업에 네트워크 금지가 명시돼 있다."
+    }
+  ]
+}
