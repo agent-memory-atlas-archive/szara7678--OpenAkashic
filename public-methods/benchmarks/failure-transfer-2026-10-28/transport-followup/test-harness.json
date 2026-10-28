@@ -1,0 +1,148 @@
+{
+  "image": "sha256:5789aa194f757888f41fa3d48e14b6feaa1b57c0af0b56fcb1372d6474d3bff0",
+  "fixtures": 18,
+  "runs": [
+    {
+      "id": "join-0",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "join-1",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "join-2",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "join-3",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "join-4",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "join-5",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "search-0",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "search-1",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "search-2",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "search-3",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "search-4",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "search-5",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "backup-0",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "backup-1",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "backup-2",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "backup-3",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "backup-4",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    },
+    {
+      "id": "backup-5",
+      "reference_pass": true,
+      "known_fault_rejected": true,
+      "details": null
+    }
+  ],
+  "mutation_runs": [
+    {
+      "name": "fake_empty_backup",
+      "rejected": true
+    },
+    {
+      "name": "input_mutation",
+      "rejected": true
+    },
+    {
+      "name": "fk_falsely_valid",
+      "rejected": true
+    },
+    {
+      "name": "null_match_or_wrong_product",
+      "rejected": true
+    },
+    {
+      "name": "wrong_search_hash",
+      "rejected": true
+    },
+    {
+      "name": "wrong_search_id",
+      "rejected": true
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Synthetic correctness only; no measured transfer until generation and candidate evaluation.",
+    "Family-level n=3; 54 cases are clustered checks, not 54 independent trials.",
+    "Docker is risk reduction, not a formal hostile-code security boundary. Candidates share UID with supervisor inside isolated container; sufficiently hostile code may tamper with supervisor.",
+    "No generation candidate is executed outside Docker. Reference is not disclosed to generation.",
+    "Six fixtures per family offer limited coverage. Byte equality is independently observed from the actual created files, because different valid backup mechanisms produce different bytes."
+  ]
+}

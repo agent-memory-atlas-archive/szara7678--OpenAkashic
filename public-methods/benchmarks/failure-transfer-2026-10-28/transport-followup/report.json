@@ -1,0 +1,163 @@
+{
+  "schema": "openakashic-failure-transfer-result-v1",
+  "measured_at": "2026-10-28T05:55:38.141407+00:00",
+  "protocol_sha256": "1bdfae6d668f038396a938d495b42dd10012c6bc9ab8fa96fdb8f7bc42f15fc1",
+  "freeze_sha256": "b69266a505eb80ad2655bc0acd6f7e93a433d25d0f1fcd3d6da99135b7931ed1",
+  "frozen_at": "2026-10-28T05:52:08.199235+00:00",
+  "design": {
+    "schema": "openakashic-failure-transfer-transport-followup-v1",
+    "created_at": "2026-10-28T05:52:08.195398+00:00",
+    "requested_model": "gpt-6-luna",
+    "arms": [
+      "method_only",
+      "raw_experience",
+      "linked_experience"
+    ],
+    "families": [
+      "backup",
+      "join",
+      "search"
+    ],
+    "generated_programs": 9,
+    "fixtures_per_family": 6,
+    "planned_case_executions": 54,
+    "generation": "Fresh agent per arm; no primary outputs or grades disclosed. Same reference information and task contracts. Write source with PowerShell WriteAllText and UTF8 encoding directly to WSL UNC, never native-pipe source text. One implementation per family. No test access or execution.",
+    "primary": "All 6 frozen fixtures pass per program, 3 programs per arm. Report per-family case counts, exceptions, and check failures; 54 executions are not 54 independent generations.",
+    "hypotheses": [
+      "Does supplying concrete recorded risks improve objective implementation correctness over complete existing methods?",
+      "Does regrouping the exact same reports by stored outcome_id improve correctness over original report arrays?"
+    ],
+    "strong_baseline": "Identical complete current contracts plus existing method cautions. No stripping warnings or withholding requirements to manufacture gain.",
+    "source_scope": "Three deliberately selected public controlled examples; SQLite FK risk and search misses, join is a successful risk audit rather than a failed implementation.",
+    "controls": [
+      "All records manually selected: no retrieval or graph navigation efficacy measured.",
+      "Raw and linked experiences contain exactly identical full objects; linked regrouping only follows explicit outcome_id.",
+      "No private experiences, credentials, actual bank data, or real customer fixtures.",
+      "No inference of human utility, billing savings, generalization, statistical significance or model-family superiority.",
+      "Requested model label available; actual backend identity and billed usage may be unavailable and remain null."
+    ],
+    "pre_generation_correction": "Draft harness Korean strings were found corrupted in transport; corrected before protocol freeze or candidate generation. Draft preserved privately in runtime, not an experimental output.",
+    "docker_image": "sha256:5789aa194f757888f41fa3d48e14b6feaa1b57c0af0b56fcb1372d6474d3bff0",
+    "actual_billed_usage": null,
+    "actual_cost": null,
+    "original_freeze_sha256": "6101f94ecee8913e46bd095027495cea60bf93978615165ddc834e36f5094526",
+    "followup_reason": "Primary 17/18,17/18,18/18 differs only on Korean particle case; observed source files show method_only double-escaped Unicode and raw_experience question-mark suffix corruption. Preserve original outputs; regenerate ALL arms fresh with one shared reliable file transport. No per-output repairs. This uses previously evaluated fixtures, not a new holdout."
+  },
+  "summary": {
+    "method_only": {
+      "programs_fully_passed": 3,
+      "programs": 3,
+      "passed_cases": 18,
+      "cases": 18,
+      "families": {
+        "backup": {
+          "passed": 6,
+          "cases": 6
+        },
+        "join": {
+          "passed": 6,
+          "cases": 6
+        },
+        "search": {
+          "passed": 6,
+          "cases": 6
+        }
+      },
+      "input_characters": 11140,
+      "input_utf8_bytes": 13987,
+      "input_material_o200k_tokens": 3345,
+      "actual_usage": null,
+      "actual_cost": null,
+      "failures": []
+    },
+    "raw_experience": {
+      "programs_fully_passed": 2,
+      "programs": 3,
+      "passed_cases": 17,
+      "cases": 18,
+      "families": {
+        "backup": {
+          "passed": 6,
+          "cases": 6
+        },
+        "join": {
+          "passed": 5,
+          "cases": 6
+        },
+        "search": {
+          "passed": 6,
+          "cases": 6
+        }
+      },
+      "input_characters": 20514,
+      "input_utf8_bytes": 25852,
+      "input_material_o200k_tokens": 6537,
+      "actual_usage": null,
+      "actual_cost": null,
+      "failures": [
+        {
+          "family": "join",
+          "fixture": "join-1",
+          "result": {
+            "output": {
+              "left_blank": 2,
+              "right_blank": 1,
+              "left_duplicate_rows": 2,
+              "right_duplicate_rows": 2,
+              "matched_left_rows": 2,
+              "matched_right_rows": 2,
+              "unmatched_left_rows": 0,
+              "unmatched_right_rows": 0,
+              "inner_rows": 4,
+              "left_join_rows": 4,
+              "full_join_rows": 4,
+              "actual_cardinality": "many_to_many",
+              "expected_satisfied": false
+            },
+            "unchanged": true,
+            "actual_byte": null,
+            "backup_observed": null,
+            "input_unchanged": true,
+            "returncode": 0,
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    "linked_experience": {
+      "programs_fully_passed": 3,
+      "programs": 3,
+      "passed_cases": 18,
+      "cases": 18,
+      "families": {
+        "backup": {
+          "passed": 6,
+          "cases": 6
+        },
+        "join": {
+          "passed": 6,
+          "cases": 6
+        },
+        "search": {
+          "passed": 6,
+          "cases": 6
+        }
+      },
+      "input_characters": 21184,
+      "input_utf8_bytes": 26522,
+      "input_material_o200k_tokens": 6599,
+      "actual_usage": null,
+      "actual_cost": null,
+      "failures": []
+    }
+  },
+  "comparison": "Manually selected existing public method versus added real stored synthetic-example reports versus exact same reports regrouped by outcome_id. No independent retrieval comparison.",
+  "limits": [
+    "Three selected families, one implementation per arm and family. Six fixtures per program are clustered checks, not independent generations.",
+    "All arms already receive complete task contracts and baseline method caveats; ceiling effects possible.",
+    "Prior join case is successful risk detection, not an observed failed join. Backups expose FK inconsistency; search prior cases include actual misses.",
+    "No private or real customer data; examples are synthetic. No measured user benefit, reviewer time, actual billing or statistical superiority.",
+    "One agent generates three programs within each arm; within-arm context carryover possible. Requested model label is not independently verified backend identity.",
+    "Exact same experience objects and no additional claims in linked arm. This is packaging, not graph reasoning."
+  ]
+}

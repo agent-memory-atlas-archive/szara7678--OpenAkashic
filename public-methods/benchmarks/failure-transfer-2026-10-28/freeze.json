@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-10-28T05:47:58.132205+00:00",
+  "files": {
+    "public-records.json": "67e55733fa6fbb428e9b4548608c64b285d64754d6160f70aaad8d88403b73fe",
+    "tasks.json": "8d0181e986669d69ef7ba854d65f664b73707f02c862482b8f8f61c8a9e33b9b",
+    "fixtures.json": "7a7d385d0c7dd56e54d7e61c6ff5d1ddd80db3b4deb2d2f8ac044406d373d2d8",
+    "reference.py": "44da880e3679d7c131fb6bbcb3e414d4b920511b9f9742ecad8e8dec7e6fc626",
+    "harness.py": "f92bc51b546a5e15bbf8a6daa886c0f2612a05806260ac1ab492ba626b030bb9",
+    "runner.py": "b288b12e30ff7cfe726c4c6b826fd354433cc8c38b07180c873a30f2db335cd8",
+    "test-harness.json": "ebf9b04cd828716d16e1e48dc1a7ea17c77ad46a716e486f130077241b0fc6a8",
+    "method-material.json": "ed5ff664a874d4976ee034e89a00508aa476f077b5f681b230533fa3d7acaf1b",
+    "raw-experience.json": "1e9be19521d5a4333b59bfea2ed992626e591873f77cb30387119ca8852a0e73",
+    "linked-experience.json": "d462eb668168e3198e610d266d99c0ed6a65f8b70b9af735991fc37864b9e1a7",
+    "material-integrity.json": "c2dfd6bd9c7f46266f3081e3dcce66b6ffb8063e08b4e7d5a3217eafda8d4b8a",
+    "protocol.json": "559004966a2ed004844a365d548608248d597e2a27f29dec67a66e4178e9b329",
+    "prepare_inputs.py": "62333cdf78f7a724456eed740132861a44a333ee7a6271fce08c7dc911423afc",
+    "verify_frozen.py": "42afa76236bca61d89fafb9db4bb70536a11d1d5ff7c5d71385149ad06f911e0",
+    "build_report.py": "e796bbf1bcca6b0a1536a890aa562f599d6d67bc3dcefc55eb7e3cac457bcd9a",
+    "generation/method_only/input.json": "cc55129eb3ab9ca49752614135c8148597cdd610bbfd9293355dbc55b5dedd33",
+    "generation/linked_experience/input.json": "0ae9aadae2fa6684120b9fd009aeea2d8b6bf5b617084f325762e34bdc058dbf",
+    "generation/raw_experience/input.json": "1d04926a172d547a4dda1bf5411dfedadf65c318321da886a7a7e53ce5cf445e"
+  }
+}

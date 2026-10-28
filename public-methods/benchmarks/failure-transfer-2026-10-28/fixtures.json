@@ -1,0 +1,512 @@
+[
+  {
+    "id": "join-0",
+    "family": "join",
+    "payload": {
+      "left": [
+        {
+          "row_id": "L31",
+          "key": "orchid"
+        },
+        {
+          "row_id": "L32",
+          "key": "cedar"
+        }
+      ],
+      "right": [
+        {
+          "row_id": "R71",
+          "key": "cedar"
+        },
+        {
+          "row_id": "R72",
+          "key": "orchid"
+        }
+      ],
+      "expected_cardinality": "one_to_one"
+    },
+    "gold": {
+      "left_blank": 0,
+      "right_blank": 0,
+      "left_duplicate_rows": 0,
+      "right_duplicate_rows": 0,
+      "matched_left_rows": 2,
+      "matched_right_rows": 2,
+      "unmatched_left_rows": 0,
+      "unmatched_right_rows": 0,
+      "inner_rows": 2,
+      "left_join_rows": 2,
+      "full_join_rows": 2,
+      "actual_cardinality": "one_to_one",
+      "expected_satisfied": true
+    }
+  },
+  {
+    "id": "join-1",
+    "family": "join",
+    "payload": {
+      "left": [
+        {
+          "row_id": "L31",
+          "key": "oak"
+        },
+        {
+          "row_id": "L32",
+          "key": "oak"
+        },
+        {
+          "row_id": "L33",
+          "key": null
+        },
+        {
+          "row_id": "L34",
+          "key": "  "
+        }
+      ],
+      "right": [
+        {
+          "row_id": "R71",
+          "key": "oak"
+        },
+        {
+          "row_id": "R72",
+          "key": "oak"
+        },
+        {
+          "row_id": "R73",
+          "key": null
+        }
+      ],
+      "expected_cardinality": "one_to_one"
+    },
+    "gold": {
+      "left_blank": 2,
+      "right_blank": 1,
+      "left_duplicate_rows": 2,
+      "right_duplicate_rows": 2,
+      "matched_left_rows": 2,
+      "matched_right_rows": 2,
+      "unmatched_left_rows": 2,
+      "unmatched_right_rows": 1,
+      "inner_rows": 4,
+      "left_join_rows": 6,
+      "full_join_rows": 7,
+      "actual_cardinality": "many_to_many",
+      "expected_satisfied": false
+    }
+  },
+  {
+    "id": "join-2",
+    "family": "join",
+    "payload": {
+      "left": [
+        {
+          "row_id": "L31",
+          "key": "X"
+        },
+        {
+          "row_id": "L32",
+          "key": " X"
+        },
+        {
+          "row_id": "L33",
+          "key": "x"
+        }
+      ],
+      "right": [
+        {
+          "row_id": "R71",
+          "key": "X"
+        },
+        {
+          "row_id": "R72",
+          "key": "x"
+        },
+        {
+          "row_id": "R73",
+          "key": " X "
+        }
+      ],
+      "expected_cardinality": null
+    },
+    "gold": {
+      "left_blank": 0,
+      "right_blank": 0,
+      "left_duplicate_rows": 0,
+      "right_duplicate_rows": 0,
+      "matched_left_rows": 2,
+      "matched_right_rows": 2,
+      "unmatched_left_rows": 1,
+      "unmatched_right_rows": 1,
+      "inner_rows": 2,
+      "left_join_rows": 3,
+      "full_join_rows": 4,
+      "actual_cardinality": "one_to_one",
+      "expected_satisfied": null
+    }
+  },
+  {
+    "id": "join-3",
+    "family": "join",
+    "payload": {
+      "left": [
+        {
+          "row_id": "L31",
+          "key": "p"
+        },
+        {
+          "row_id": "L32",
+          "key": "q"
+        }
+      ],
+      "right": [
+        {
+          "row_id": "R71",
+          "key": "p"
+        },
+        {
+          "row_id": "R72",
+          "key": "p"
+        },
+        {
+          "row_id": "R73",
+          "key": "r"
+        }
+      ],
+      "expected_cardinality": "one_to_many"
+    },
+    "gold": {
+      "left_blank": 0,
+      "right_blank": 0,
+      "left_duplicate_rows": 0,
+      "right_duplicate_rows": 2,
+      "matched_left_rows": 1,
+      "matched_right_rows": 2,
+      "unmatched_left_rows": 1,
+      "unmatched_right_rows": 1,
+      "inner_rows": 2,
+      "left_join_rows": 3,
+      "full_join_rows": 4,
+      "actual_cardinality": "one_to_many",
+      "expected_satisfied": true
+    }
+  },
+  {
+    "id": "join-4",
+    "family": "join",
+    "payload": {
+      "left": [
+        {
+          "row_id": "L31",
+          "key": "t"
+        },
+        {
+          "row_id": "L32",
+          "key": "t"
+        },
+        {
+          "row_id": "L33",
+          "key": "v"
+        }
+      ],
+      "right": [
+        {
+          "row_id": "R71",
+          "key": "t"
+        },
+        {
+          "row_id": "R72",
+          "key": "w"
+        }
+      ],
+      "expected_cardinality": "many_to_one"
+    },
+    "gold": {
+      "left_blank": 0,
+      "right_blank": 0,
+      "left_duplicate_rows": 2,
+      "right_duplicate_rows": 0,
+      "matched_left_rows": 2,
+      "matched_right_rows": 1,
+      "unmatched_left_rows": 1,
+      "unmatched_right_rows": 1,
+      "inner_rows": 2,
+      "left_join_rows": 3,
+      "full_join_rows": 4,
+      "actual_cardinality": "many_to_one",
+      "expected_satisfied": true
+    }
+  },
+  {
+    "id": "join-5",
+    "family": "join",
+    "payload": {
+      "left": [
+        {
+          "row_id": "L31",
+          "key": "unused"
+        },
+        {
+          "row_id": "L32",
+          "key": "unused"
+        }
+      ],
+      "right": [
+        {
+          "row_id": "R71",
+          "key": "else"
+        }
+      ],
+      "expected_cardinality": "one_to_many"
+    },
+    "gold": {
+      "left_blank": 0,
+      "right_blank": 0,
+      "left_duplicate_rows": 2,
+      "right_duplicate_rows": 0,
+      "matched_left_rows": 0,
+      "matched_right_rows": 0,
+      "unmatched_left_rows": 2,
+      "unmatched_right_rows": 1,
+      "inner_rows": 0,
+      "left_join_rows": 2,
+      "full_join_rows": 3,
+      "actual_cardinality": "none",
+      "expected_satisfied": false
+    }
+  },
+  {
+    "id": "search-0",
+    "family": "search",
+    "payload": {
+      "docs": [
+        {
+          "id": "k9",
+          "body": "Quartz archive record."
+        },
+        {
+          "id": "k2",
+          "body": "Other volume."
+        }
+      ],
+      "query": "quartz",
+      "aliases": {}
+    },
+    "gold": [
+      "k9"
+    ]
+  },
+  {
+    "id": "search-1",
+    "family": "search",
+    "payload": {
+      "docs": [
+        {
+          "id": "h4",
+          "body": "\uc815\uc6d0\uc5d0\uc11c\ub294 \uaf43\uc744 \uad00\ucc30\ud55c\ub2e4."
+        },
+        {
+          "id": "h5",
+          "body": "\ub3c4\uc2dc\uc758 \uae30\ub85d\uc774\ub2e4."
+        }
+      ],
+      "query": "\uc815\uc6d0",
+      "aliases": {}
+    },
+    "gold": [
+      "h4"
+    ]
+  },
+  {
+    "id": "search-2",
+    "family": "search",
+    "payload": {
+      "docs": [
+        {
+          "id": "q8",
+          "body": "harbor mooring schedule"
+        },
+        {
+          "id": "q1",
+          "body": "ferry departure"
+        }
+      ],
+      "query": "pier",
+      "aliases": {}
+    },
+    "gold": []
+  },
+  {
+    "id": "search-3",
+    "family": "search",
+    "payload": {
+      "docs": [
+        {
+          "id": "a7",
+          "body": "harbor mooring schedule"
+        },
+        {
+          "id": "b7",
+          "body": "train schedule"
+        }
+      ],
+      "query": "pier",
+      "aliases": {
+        "pier": [
+          "harbor"
+        ]
+      }
+    },
+    "gold": [
+      "a7"
+    ]
+  },
+  {
+    "id": "search-4",
+    "family": "search",
+    "payload": {
+      "docs": [
+        {
+          "id": "z8",
+          "body": "\uff26\uff2f\uff38 alpha"
+        },
+        {
+          "id": "a8",
+          "body": "fox beta"
+        }
+      ],
+      "query": "fox",
+      "aliases": {}
+    },
+    "gold": [
+      "a8"
+    ]
+  },
+  {
+    "id": "search-5",
+    "family": "search",
+    "payload": {
+      "docs": [
+        {
+          "id": "m3",
+          "body": "networks and catalogues"
+        },
+        {
+          "id": "m4",
+          "body": "network catalog"
+        }
+      ],
+      "query": "net catalogue",
+      "aliases": {}
+    },
+    "gold": []
+  },
+  {
+    "id": "backup-0",
+    "family": "backup",
+    "setup_sql": "create table flora(code text primary key, payload blob); insert into flora values ('iris-47', X'00ff');",
+    "preexisting_destination": false,
+    "source_readonly": true,
+    "payload": {},
+    "gold": {
+      "status": "created",
+      "byte_clone": true,
+      "schema_equal": true,
+      "rows_equal": true,
+      "integrity_ok": true,
+      "foreign_key_violations": 0,
+      "clone_success": true,
+      "data_valid": true
+    }
+  },
+  {
+    "id": "backup-1",
+    "family": "backup",
+    "setup_sql": "create table parent(code integer primary key); create table child(code integer references parent(code)); insert into child values(4817);",
+    "preexisting_destination": false,
+    "source_readonly": true,
+    "payload": {},
+    "gold": {
+      "status": "created",
+      "byte_clone": true,
+      "schema_equal": true,
+      "rows_equal": true,
+      "integrity_ok": true,
+      "foreign_key_violations": 1,
+      "clone_success": true,
+      "data_valid": false
+    }
+  },
+  {
+    "id": "backup-2",
+    "family": "backup",
+    "setup_sql": "create table \"odd table\" (v text); insert into \"odd table\" values(NULL),('fresh'),('fresh'); create index ix on \"odd table\"(v);",
+    "preexisting_destination": false,
+    "source_readonly": true,
+    "payload": {},
+    "gold": {
+      "status": "created",
+      "byte_clone": true,
+      "schema_equal": true,
+      "rows_equal": true,
+      "integrity_ok": true,
+      "foreign_key_violations": 0,
+      "clone_success": true,
+      "data_valid": true
+    }
+  },
+  {
+    "id": "backup-3",
+    "family": "backup",
+    "setup_sql": "create table parent(code integer primary key); create table child(code integer references parent(code)); insert into parent values(713); insert into child values(713);",
+    "preexisting_destination": false,
+    "source_readonly": true,
+    "payload": {},
+    "gold": {
+      "status": "created",
+      "byte_clone": true,
+      "schema_equal": true,
+      "rows_equal": true,
+      "integrity_ok": true,
+      "foreign_key_violations": 0,
+      "clone_success": true,
+      "data_valid": true
+    }
+  },
+  {
+    "id": "backup-4",
+    "family": "backup",
+    "setup_sql": "create table journal(id integer primary key, note text); insert into journal values(83,'retain original');",
+    "preexisting_destination": false,
+    "source_readonly": true,
+    "payload": {},
+    "gold": {
+      "status": "created",
+      "byte_clone": true,
+      "schema_equal": true,
+      "rows_equal": true,
+      "integrity_ok": true,
+      "foreign_key_violations": 0,
+      "clone_success": true,
+      "data_valid": true
+    }
+  },
+  {
+    "id": "backup-5",
+    "family": "backup",
+    "setup_sql": "create table untouched(v text); insert into untouched values('never replace');",
+    "preexisting_destination": true,
+    "source_readonly": true,
+    "payload": {},
+    "gold": {
+      "status": "destination_exists",
+      "byte_clone": null,
+      "schema_equal": null,
+      "rows_equal": null,
+      "integrity_ok": null,
+      "foreign_key_violations": null,
+      "clone_success": false,
+      "data_valid": null
+    }
+  }
+]

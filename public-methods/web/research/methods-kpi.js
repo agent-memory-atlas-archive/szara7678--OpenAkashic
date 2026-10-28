@@ -11,6 +11,19 @@
     const verdict = section("효과가 있는가? 현재의 결론", "방법 검색과 근거 연결은 작동합니다. 더 좋은 산출물을 만든다는 일반적인 효과는 아직 입증되지 않았습니다.");
     verdict.classList.add("methods-kpi-verdict");
     verdict.append(n("p", "그래프는 연결을 탐색하는 화면과 API입니다. 에이전트가 모든 그래프를 읽도록 요구하지 않습니다. 상황·목적으로 짧게 검색하고 필요한 방법만 조회하는 흐름을 우선 사용합니다.", "methods-muted"));
+    if (report.failure_transfer) {
+      const f=report.failure_transfer;
+      const e=section("실패·예외 기록이 구현 오류를 줄였나", "SQLite 백업·표 결합·근거 검색의 세 과제. 같은 Luna 요청 모델에 방법만 / 원래 경험 기록 추가 / 동일 경험을 결과 ID로 연결한 기록을 제공했습니다. 각 조건 3개 프로그램 × 6개 고정 검사이며, 18개 독립 실험은 아닙니다.");
+      for (const [arm,label] of [["method_only","방법만"],["raw_experience","원래 경험 기록 추가"],["linked_experience","같은 경험을 연결해 제공"]]) {
+        const a=f.primary.summary[arm], b=f.followup.summary[arm];
+        metric(e,label,`첫 실행 ${a.passed_cases}/${a.cases} · 후속 ${b.passed_cases}/${b.cases}`,`후속에서 전체 검사를 통과한 프로그램 ${b.programs_fully_passed}/${b.programs}. 원생성물·실패를 수정하지 않고 보존했습니다.`);
+      }
+      e.append(n("p",f.conclusion,"methods-muted"));
+      e.append(n("p","첫 실행의 차이는 한글 저장·이스케이프 오류가 섞여 있었습니다. 후속은 저장 경로를 통일해 모든 조건을 새 에이전트로 다시 생성했습니다. 같은 검사 자료를 재사용한 후속이며 새로운 독립 검증이 아닙니다.","methods-muted"));
+      const totals=Object.values(f.followup.summary).map(x=>x.input_material_o200k_tokens===null?"미측정":x.input_material_o200k_tokens.toLocaleString());
+      metric(e,"후속 입력 자료 크기 · 같은 조건 순서",totals.join(" / ")+" 추정 토큰","방법과 현재 요구사항에 이미 주의점이 포함된 강한 기준선. 경험 추가가 항상 더 좋은 결과를 주지는 않습니다. 실제 청구량·비용·실무 효과 미측정.");
+      const a=n("a","고정 기준·18개 원코드·108회 검사·실패 원인 보기 ↗");a.href="https://github.com/szara7678/OpenAkashic/tree/main/public-methods/benchmarks/failure-transfer-2026-10-28";a.target="_blank";a.rel="noopener noreferrer";e.append(a);
+    }
     if (report.application_evaluation) {
       const q=report.application_evaluation;
       const e=section("새 실험 · 6개 과제, 18개 실제 답변", "장애 대응·인터뷰·팀 결정·안내문·학습·오픈소스 기여 과제를 답변 생성 전에 동결했습니다. Luna 세 조건: 자료 없음 / 동일 기록 평면 JSON / 동일 기록 중첩 JSON. 조건을 가린 Sol 평가입니다. 자료는 수동으로 골랐으며 검색이나 그래프 UI의 효과 시험은 아닙니다.");

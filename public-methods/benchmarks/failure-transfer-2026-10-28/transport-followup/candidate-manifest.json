@@ -1,0 +1,17 @@
+{
+  "method_only": {
+    "backup": "generation/method_only/backup.py",
+    "join": "generation/method_only/join.py",
+    "search": "generation/method_only/search.py"
+  },
+  "raw_experience": {
+    "backup": "generation/raw_experience/backup.py",
+    "join": "generation/raw_experience/join.py",
+    "search": "generation/raw_experience/search.py"
+  },
+  "linked_experience": {
+    "backup": "generation/linked_experience/backup.py",
+    "join": "generation/linked_experience/join.py",
+    "search": "generation/linked_experience/search.py"
+  }
+}

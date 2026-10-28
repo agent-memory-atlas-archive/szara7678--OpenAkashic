@@ -1,0 +1,1395 @@
+{
+  "family_n": 3,
+  "case_runs": 54,
+  "runs": [
+    {
+      "arm": "method_only",
+      "family": "join",
+      "fixture": "join-0",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 0,
+          "unmatched_right_rows": 0,
+          "inner_rows": 2,
+          "left_join_rows": 2,
+          "full_join_rows": 2,
+          "actual_cardinality": "one_to_one",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "join",
+      "fixture": "join-1",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 2,
+          "right_blank": 1,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 2,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 2,
+          "unmatched_right_rows": 1,
+          "inner_rows": 4,
+          "left_join_rows": 6,
+          "full_join_rows": 7,
+          "actual_cardinality": "many_to_many",
+          "expected_satisfied": false
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "join",
+      "fixture": "join-2",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "one_to_one",
+          "expected_satisfied": null
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "join",
+      "fixture": "join-3",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 2,
+          "matched_left_rows": 1,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "one_to_many",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "join",
+      "fixture": "join-4",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 1,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "many_to_one",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "join",
+      "fixture": "join-5",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 0,
+          "matched_right_rows": 0,
+          "unmatched_left_rows": 2,
+          "unmatched_right_rows": 1,
+          "inner_rows": 0,
+          "left_join_rows": 2,
+          "full_join_rows": 3,
+          "actual_cardinality": "none",
+          "expected_satisfied": false
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "search",
+      "fixture": "search-0",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "k9",
+            "quote": "Quartz archive record.",
+            "sha256": "e4976530a20e4016c8a5471f87e36b063f4b2050a873842815849825bf584f41"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "search",
+      "fixture": "search-1",
+      "passed": false,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "search",
+      "fixture": "search-2",
+      "passed": true,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "search",
+      "fixture": "search-3",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "a7",
+            "quote": "harbor mooring schedule",
+            "sha256": "5b471552a613385d5a5b95edecd33472dcd7f894d04a70c0ef3702e69bd61fef"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "search",
+      "fixture": "search-4",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "a8",
+            "quote": "fox beta",
+            "sha256": "071a1830c26a79e24292cfed462ddf0f0b76620929757b27af171fe401b459b1"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "search",
+      "fixture": "search-5",
+      "passed": true,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "backup",
+      "fixture": "backup-0",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "backup",
+      "fixture": "backup-1",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 1,
+          "clone_success": true,
+          "data_valid": false
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 1,
+          "clone_success": true,
+          "data_valid": false
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "backup",
+      "fixture": "backup-2",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "backup",
+      "fixture": "backup-3",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "backup",
+      "fixture": "backup-4",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "method_only",
+      "family": "backup",
+      "fixture": "backup-5",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "destination_exists",
+          "byte_clone": null,
+          "schema_equal": null,
+          "rows_equal": null,
+          "integrity_ok": null,
+          "foreign_key_violations": null,
+          "clone_success": false,
+          "data_valid": null
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "join",
+      "fixture": "join-0",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 0,
+          "unmatched_right_rows": 0,
+          "inner_rows": 2,
+          "left_join_rows": 2,
+          "full_join_rows": 2,
+          "actual_cardinality": "one_to_one",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "join",
+      "fixture": "join-1",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 2,
+          "right_blank": 1,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 2,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 2,
+          "unmatched_right_rows": 1,
+          "inner_rows": 4,
+          "left_join_rows": 6,
+          "full_join_rows": 7,
+          "actual_cardinality": "many_to_many",
+          "expected_satisfied": false
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "join",
+      "fixture": "join-2",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "one_to_one",
+          "expected_satisfied": null
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "join",
+      "fixture": "join-3",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 2,
+          "matched_left_rows": 1,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "one_to_many",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "join",
+      "fixture": "join-4",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 1,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "many_to_one",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "join",
+      "fixture": "join-5",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 0,
+          "matched_right_rows": 0,
+          "unmatched_left_rows": 2,
+          "unmatched_right_rows": 1,
+          "inner_rows": 0,
+          "left_join_rows": 2,
+          "full_join_rows": 3,
+          "actual_cardinality": "none",
+          "expected_satisfied": false
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "search",
+      "fixture": "search-0",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "k9",
+            "quote": "Quartz archive record.",
+            "sha256": "e4976530a20e4016c8a5471f87e36b063f4b2050a873842815849825bf584f41"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "search",
+      "fixture": "search-1",
+      "passed": false,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "search",
+      "fixture": "search-2",
+      "passed": true,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "search",
+      "fixture": "search-3",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "a7",
+            "quote": "harbor mooring schedule",
+            "sha256": "5b471552a613385d5a5b95edecd33472dcd7f894d04a70c0ef3702e69bd61fef"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "search",
+      "fixture": "search-4",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "a8",
+            "quote": "fox beta",
+            "sha256": "071a1830c26a79e24292cfed462ddf0f0b76620929757b27af171fe401b459b1"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "search",
+      "fixture": "search-5",
+      "passed": true,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "backup",
+      "fixture": "backup-0",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "backup",
+      "fixture": "backup-1",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 1,
+          "clone_success": true,
+          "data_valid": false
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 1,
+          "clone_success": true,
+          "data_valid": false
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "backup",
+      "fixture": "backup-2",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "backup",
+      "fixture": "backup-3",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "backup",
+      "fixture": "backup-4",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "raw_experience",
+      "family": "backup",
+      "fixture": "backup-5",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "destination_exists",
+          "byte_clone": null,
+          "schema_equal": null,
+          "rows_equal": null,
+          "integrity_ok": null,
+          "foreign_key_violations": null,
+          "clone_success": false,
+          "data_valid": null
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "join",
+      "fixture": "join-0",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 0,
+          "unmatched_right_rows": 0,
+          "inner_rows": 2,
+          "left_join_rows": 2,
+          "full_join_rows": 2,
+          "actual_cardinality": "one_to_one",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "join",
+      "fixture": "join-1",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 2,
+          "right_blank": 1,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 2,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 2,
+          "unmatched_right_rows": 1,
+          "inner_rows": 4,
+          "left_join_rows": 6,
+          "full_join_rows": 7,
+          "actual_cardinality": "many_to_many",
+          "expected_satisfied": false
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "join",
+      "fixture": "join-2",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "one_to_one",
+          "expected_satisfied": null
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "join",
+      "fixture": "join-3",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 0,
+          "right_duplicate_rows": 2,
+          "matched_left_rows": 1,
+          "matched_right_rows": 2,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "one_to_many",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "join",
+      "fixture": "join-4",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 2,
+          "matched_right_rows": 1,
+          "unmatched_left_rows": 1,
+          "unmatched_right_rows": 1,
+          "inner_rows": 2,
+          "left_join_rows": 3,
+          "full_join_rows": 4,
+          "actual_cardinality": "many_to_one",
+          "expected_satisfied": true
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "join",
+      "fixture": "join-5",
+      "passed": true,
+      "result": {
+        "output": {
+          "left_blank": 0,
+          "right_blank": 0,
+          "left_duplicate_rows": 2,
+          "right_duplicate_rows": 0,
+          "matched_left_rows": 0,
+          "matched_right_rows": 0,
+          "unmatched_left_rows": 2,
+          "unmatched_right_rows": 1,
+          "inner_rows": 0,
+          "left_join_rows": 2,
+          "full_join_rows": 3,
+          "actual_cardinality": "none",
+          "expected_satisfied": false
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "search",
+      "fixture": "search-0",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "k9",
+            "quote": "Quartz archive record.",
+            "sha256": "e4976530a20e4016c8a5471f87e36b063f4b2050a873842815849825bf584f41"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "search",
+      "fixture": "search-1",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "h4",
+            "quote": "\uc815\uc6d0\uc5d0\uc11c\ub294 \uaf43\uc744 \uad00\ucc30\ud55c\ub2e4.",
+            "sha256": "3e98b64468f55a09fe1ecc16bad9da4158478dc2ca304e3d5e5d816d1dcde9c7"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "search",
+      "fixture": "search-2",
+      "passed": true,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "search",
+      "fixture": "search-3",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "a7",
+            "quote": "harbor mooring schedule",
+            "sha256": "5b471552a613385d5a5b95edecd33472dcd7f894d04a70c0ef3702e69bd61fef"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "search",
+      "fixture": "search-4",
+      "passed": true,
+      "result": {
+        "output": [
+          {
+            "id": "a8",
+            "quote": "fox beta",
+            "sha256": "071a1830c26a79e24292cfed462ddf0f0b76620929757b27af171fe401b459b1"
+          }
+        ],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "search",
+      "fixture": "search-5",
+      "passed": true,
+      "result": {
+        "output": [],
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "backup",
+      "fixture": "backup-0",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "backup",
+      "fixture": "backup-1",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 1,
+          "clone_success": true,
+          "data_valid": false
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 1,
+          "clone_success": true,
+          "data_valid": false
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "backup",
+      "fixture": "backup-2",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "backup",
+      "fixture": "backup-3",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "backup",
+      "fixture": "backup-4",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "created",
+          "byte_clone": false,
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "unchanged": true,
+        "actual_byte": false,
+        "backup_observed": {
+          "schema_equal": true,
+          "rows_equal": true,
+          "integrity_ok": true,
+          "foreign_key_violations": 0,
+          "clone_success": true,
+          "data_valid": true
+        },
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "arm": "linked_experience",
+      "family": "backup",
+      "fixture": "backup-5",
+      "passed": true,
+      "result": {
+        "output": {
+          "status": "destination_exists",
+          "byte_clone": null,
+          "schema_equal": null,
+          "rows_equal": null,
+          "integrity_ok": null,
+          "foreign_key_violations": null,
+          "clone_success": false,
+          "data_valid": null
+        },
+        "unchanged": true,
+        "actual_byte": null,
+        "backup_observed": null,
+        "input_unchanged": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    }
+  ]
+}

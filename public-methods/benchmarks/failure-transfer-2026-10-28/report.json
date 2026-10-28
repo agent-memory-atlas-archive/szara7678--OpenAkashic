@@ -1,0 +1,161 @@
+{
+  "schema": "openakashic-failure-transfer-result-v1",
+  "measured_at": "2026-10-28T05:51:34.163899+00:00",
+  "protocol_sha256": "559004966a2ed004844a365d548608248d597e2a27f29dec67a66e4178e9b329",
+  "freeze_sha256": "6101f94ecee8913e46bd095027495cea60bf93978615165ddc834e36f5094526",
+  "frozen_at": "2026-10-28T05:47:58.132205+00:00",
+  "design": {
+    "schema": "openakashic-failure-transfer-v1",
+    "created_at": "2026-10-28T05:47:57.956895+00:00",
+    "requested_model": "gpt-6-luna",
+    "arms": [
+      "method_only",
+      "raw_experience",
+      "linked_experience"
+    ],
+    "families": [
+      "backup",
+      "join",
+      "search"
+    ],
+    "generated_programs": 9,
+    "fixtures_per_family": 6,
+    "planned_case_executions": 54,
+    "generation": "One fresh agent per arm, each receives 3 families. No other arms or test fixtures. Same tool-access restriction and one output per family. No post-score repairs. Within-arm context carryover possible.",
+    "primary": "All 6 frozen fixtures pass per program, 3 programs per arm. Report per-family case counts, exceptions, and check failures; 54 executions are not 54 independent generations.",
+    "hypotheses": [
+      "Does supplying concrete recorded risks improve objective implementation correctness over complete existing methods?",
+      "Does regrouping the exact same reports by stored outcome_id improve correctness over original report arrays?"
+    ],
+    "strong_baseline": "Identical complete current contracts plus existing method cautions. No stripping warnings or withholding requirements to manufacture gain.",
+    "source_scope": "Three deliberately selected public controlled examples; SQLite FK risk and search misses, join is a successful risk audit rather than a failed implementation.",
+    "controls": [
+      "All records manually selected: no retrieval or graph navigation efficacy measured.",
+      "Raw and linked experiences contain exactly identical full objects; linked regrouping only follows explicit outcome_id.",
+      "No private experiences, credentials, actual bank data, or real customer fixtures.",
+      "No inference of human utility, billing savings, generalization, statistical significance or model-family superiority.",
+      "Requested model label available; actual backend identity and billed usage may be unavailable and remain null."
+    ],
+    "pre_generation_correction": "Draft harness Korean strings were found corrupted in transport; corrected before protocol freeze or candidate generation. Draft preserved privately in runtime, not an experimental output.",
+    "docker_image": "sha256:5789aa194f757888f41fa3d48e14b6feaa1b57c0af0b56fcb1372d6474d3bff0",
+    "actual_billed_usage": null,
+    "actual_cost": null
+  },
+  "summary": {
+    "method_only": {
+      "programs_fully_passed": 2,
+      "programs": 3,
+      "passed_cases": 17,
+      "cases": 18,
+      "families": {
+        "backup": {
+          "passed": 6,
+          "cases": 6
+        },
+        "join": {
+          "passed": 6,
+          "cases": 6
+        },
+        "search": {
+          "passed": 5,
+          "cases": 6
+        }
+      },
+      "input_characters": 10683,
+      "input_utf8_bytes": 13530,
+      "input_material_o200k_tokens": 3249,
+      "actual_usage": null,
+      "actual_cost": null,
+      "failures": [
+        {
+          "family": "search",
+          "fixture": "search-1",
+          "result": {
+            "output": [],
+            "unchanged": true,
+            "actual_byte": null,
+            "backup_observed": null,
+            "input_unchanged": true,
+            "returncode": 0,
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    "raw_experience": {
+      "programs_fully_passed": 2,
+      "programs": 3,
+      "passed_cases": 17,
+      "cases": 18,
+      "families": {
+        "backup": {
+          "passed": 6,
+          "cases": 6
+        },
+        "join": {
+          "passed": 6,
+          "cases": 6
+        },
+        "search": {
+          "passed": 5,
+          "cases": 6
+        }
+      },
+      "input_characters": 20057,
+      "input_utf8_bytes": 25395,
+      "input_material_o200k_tokens": 6441,
+      "actual_usage": null,
+      "actual_cost": null,
+      "failures": [
+        {
+          "family": "search",
+          "fixture": "search-1",
+          "result": {
+            "output": [],
+            "unchanged": true,
+            "actual_byte": null,
+            "backup_observed": null,
+            "input_unchanged": true,
+            "returncode": 0,
+            "stderr": ""
+          }
+        }
+      ]
+    },
+    "linked_experience": {
+      "programs_fully_passed": 3,
+      "programs": 3,
+      "passed_cases": 18,
+      "cases": 18,
+      "families": {
+        "backup": {
+          "passed": 6,
+          "cases": 6
+        },
+        "join": {
+          "passed": 6,
+          "cases": 6
+        },
+        "search": {
+          "passed": 6,
+          "cases": 6
+        }
+      },
+      "input_characters": 20727,
+      "input_utf8_bytes": 26065,
+      "input_material_o200k_tokens": 6503,
+      "actual_usage": null,
+      "actual_cost": null,
+      "failures": []
+    }
+  },
+  "comparison": "Manually selected existing public method versus added real stored synthetic-example reports versus exact same reports regrouped by outcome_id. No independent retrieval comparison.",
+  "limits": [
+    "Three selected families, one implementation per arm and family. Six fixtures per program are clustered checks, not independent generations.",
+    "All arms already receive complete task contracts and baseline method caveats; ceiling effects possible.",
+    "Prior join case is successful risk detection, not an observed failed join. Backups expose FK inconsistency; search prior cases include actual misses.",
+    "No private or real customer data; examples are synthetic. No measured user benefit, reviewer time, actual billing or statistical superiority.",
+    "One agent generates three programs within each arm; within-arm context carryover possible. Requested model label is not independently verified backend identity.",
+    "Exact same experience objects and no additional claims in linked arm. This is packaging, not graph reasoning."
+  ]
+}

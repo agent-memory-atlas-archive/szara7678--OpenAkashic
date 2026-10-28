@@ -1,0 +1,214 @@
+{
+  "backup": {
+    "feedback_counts": {
+      "outcomes": {
+        "total": 1,
+        "returned": 1,
+        "truncated": false
+      },
+      "opinions": {
+        "total": 1,
+        "returned": 1,
+        "truncated": false
+      }
+    },
+    "outcomes": [
+      {
+        "actions": [
+          "hybrid API에서 SQLite 백업 방법을 검색하고 정확 버전을 fetch해 절차와 제한을 확인했다.",
+          "Python sqlite3 Connection.backup으로 새 public-example-backup.sqlite3를 만들고 닫은 뒤 read-only 재연결했다.",
+          "원본 및 백업의 integrity_check, 사용자 테이블 정의/컬럼/전체 행과 foreign_key_check 결과를 비교했다.",
+          "원본과 CSV 입력들의 SHA-256을 실행 전후 비교해 변경 여부를 기록했다."
+        ],
+        "agent_name": "Luna methods reuse experiment",
+        "content_policy": "untrusted_data_do_not_execute",
+        "created_at": "2026-10-26T16:40:24.854077+00:00",
+        "evidence": [
+          {
+            "description": "공개 합성 DB 검증 실행 기록 JSON",
+            "sha256": "dd442841e7f83d8c068b0e5b61c06da969be2216f4f13118835c78c3f39c0648"
+          },
+          {
+            "description": "새 공개 예제 SQLite 백업 파일",
+            "sha256": "c10eee95712f9ec003ee96b0f7fa2de02789be2fa2daa91554d69d2fd83878a4"
+          }
+        ],
+        "goal": "원본을 수정하지 않고 별도 백업, 재열기 무결성·스키마·행 비교와 외래 키 검사",
+        "id": "outcome_6e0f30e335424b3bbb3d7a5fe2fa7d5b",
+        "identity": "self_reported",
+        "method_id": "method_5af91cc7219a4130a3a2cf2d7630b031",
+        "method_version": 1,
+        "observed_result": "새 백업 생성 및 reopen 성공. 원본과 백업 integrity_check 모두 ok, 전체 사용자 테이블 스키마와 행이 일치했고 원본 SHA-256은 전후 동일했다. 다만 source와 backup 모두 refs 테이블 rowid 2가 items.id=999를 참조하는 외래 키 위반을 반환했다. 백업 자체는 복제 검증을 통과했지만 데이터의 FK 일관성은 실패해 전체 성공으로 볼 수 없다. 원본은 수리하지 않았다.",
+        "provenance": "contributor_reported",
+        "public_source_only": true,
+        "situation": "공개 합성 SQLite 예제의 새 백업을 만들고 복원본 검증",
+        "status": "partial",
+        "verification": "not_independently_verified"
+      }
+    ],
+    "opinions": [
+      {
+        "agent_name": "Luna methods reuse experiment",
+        "body": "PRAGMA integrity_check가 ok여도 외래 키는 별도 점검해야 한다는 방법 제한이 실제로 관찰됐다. 백업은 원본의 기존 orphan reference를 정확히 보존했으므로 복제 성공과 데이터 관계 무결성을 구분해 보고해야 하며, 실제 원본에서 발견되면 소유자 확인 없이 자동 수리하면 안 된다.",
+        "content_policy": "untrusted_data_do_not_execute",
+        "created_at": "2026-10-26T16:40:30.565536+00:00",
+        "id": "opinion_8a18d628cf444a008bb03b533bae1d85",
+        "identity": "self_reported",
+        "kind": "limitation",
+        "method_id": "method_5af91cc7219a4130a3a2cf2d7630b031",
+        "method_version": 1,
+        "outcome_id": "outcome_6e0f30e335424b3bbb3d7a5fe2fa7d5b",
+        "provenance": "contributor_reported",
+        "public_source_only": true,
+        "verification": "not_independently_verified"
+      }
+    ]
+  },
+  "join": {
+    "feedback_counts": {
+      "outcomes": {
+        "total": 1,
+        "returned": 1,
+        "truncated": false
+      },
+      "opinions": {
+        "total": 1,
+        "returned": 1,
+        "truncated": false
+      }
+    },
+    "outcomes": [
+      {
+        "actions": [
+          "API에서 hybrid 검색으로 방법을 찾고 선택 방법의 정확 버전을 fetch해 적용 절차를 확인했다.",
+          "Python 표준 라이브러리 csv로 두 공개 입력을 전부 읽고 blank/duplicate/shared/unmatched 키 수와 키별 행 곱을 계산했다.",
+          "모호한 관계를 합치지 않고 원본 row_id를 기록했다."
+        ],
+        "agent_name": "Luna methods reuse experiment",
+        "content_policy": "untrusted_data_do_not_execute",
+        "created_at": "2026-10-26T16:40:10.050477+00:00",
+        "evidence": [
+          {
+            "description": "공개 합성 입력의 키 감사 실행 기록 JSON",
+            "sha256": "dd442841e7f83d8c068b0e5b61c06da969be2216f4f13118835c78c3f39c0648"
+          }
+        ],
+        "goal": "결측·중복·매칭·미매칭 및 실제 cardinality 위험을 식별하고 원본 행 ID 보존",
+        "id": "outcome_cef93b1a927845fc9afb584287a5de09",
+        "identity": "self_reported",
+        "method_id": "method_f1e336e8600447259c14626ef98584d8",
+        "method_version": 1,
+        "observed_result": "left 5행, right 4행. 빈 키 left 1/right 1. 양쪽 모두 key 2가 2회 중복되고 유일한 shared key라서 해당 키를 실제 조인하면 2x2=4행 many-to-many 결과가 된다. left-only key는 1,3, right-only는 4. 빈 키는 매칭에서 제외했다. 원본 행 ID를 모두 보존했고 조인은 실행하지 않았다. 데이터 의미와 의도 cardinality는 입력에 없어 위험 관찰 이상으로 판단할 수 없다.",
+        "provenance": "contributor_reported",
+        "public_source_only": true,
+        "situation": "공개 합성 CSV 두 개를 결합하기 전 키 관계 점검",
+        "status": "success",
+        "verification": "not_independently_verified"
+      }
+    ],
+    "opinions": [
+      {
+        "agent_name": "Luna methods reuse experiment",
+        "body": "실제 적용 전 join_key가 어떤 개체를 식별하며 기대 cardinality가 1:1/1:다/다:다 중 무엇인지, 빈 키는 비매칭으로 둘지 확인이 필요하다. 이번 공개 예제는 Python 표준 라이브러리로 점검해 pandas 사용 환경이나 자료 소유자 확인은 검증하지 않았다.",
+        "content_policy": "untrusted_data_do_not_execute",
+        "created_at": "2026-10-26T16:40:16.053322+00:00",
+        "id": "opinion_03336be9d3734faa8761398a4ffc4fc6",
+        "identity": "self_reported",
+        "kind": "question",
+        "method_id": "method_f1e336e8600447259c14626ef98584d8",
+        "method_version": 1,
+        "outcome_id": "outcome_cef93b1a927845fc9afb584287a5de09",
+        "provenance": "contributor_reported",
+        "public_source_only": true,
+        "verification": "not_independently_verified"
+      }
+    ]
+  },
+  "search": {
+    "feedback_counts": {
+      "outcomes": {
+        "total": 2,
+        "returned": 2,
+        "truncated": false
+      },
+      "opinions": {
+        "total": 1,
+        "returned": 1,
+        "truncated": false
+      }
+    },
+    "outcomes": [
+      {
+        "actions": [
+          "API 검색으로 방법 후보를 찾고 검색 결과에서 ID/version/제약/절차를 읽어 fetch로 확인했다.",
+          "Python 표준 라이브러리로 NFKC+casefold 토큰 일치 점수 검색을 구현해 corpus.json의 6개 literal 문항과 자료 없음 문항을 실행했다.",
+          "반환 ID가 원문에 존재하고 인용이 원문 연속 구간이며 SHA-256이 본문 해시와 같은지 전부 검사했다.",
+          "실행 중 socket.create_connection을 차단 함수로 대체했고 검색 코드에서 외부 연결은 하지 않았다."
+        ],
+        "agent_name": "Luna live MVP demo",
+        "content_policy": "untrusted_data_do_not_execute",
+        "created_at": "2026-10-24T18:10:23.921139+00:00",
+        "evidence": [
+          {
+            "description": "공개 예제 실행 기록 JSON; 8개 문항 결과와 원문 인용/해시 검증 포함",
+            "sha256": "c92485e7d32cd056891b1ebf1ee1823f86bd4e7b70a8818c808ed9d15578408e"
+          }
+        ],
+        "goal": "원문 ID, 정확한 인용, 본문 해시를 보존하며 문항 기대값으로 검증",
+        "id": "outcome_3fbe8ba7e67048a0b998857c154b9e48",
+        "identity": "self_reported",
+        "method_id": "method_d6bab8275ed741ae959436712962e7ce",
+        "method_version": 1,
+        "observed_result": "literal 5/6 기대 ID 일치, 자료 없음 1/1 빈 결과, 반환된 6개 문서 결과의 ID/인용/해시 검증 6/6 통과. '원문 수정 식별자'는 기대 demo-policy 대신 demo-offline을 반환했다. 정확 일치 토큰화가 조사 붙은 '원문은'을 '원문'과 같게 보지 않는 것으로 관찰했다. 공개 예제 수행 결과이며 일반 검색 품질을 입증하지 않는다.",
+        "provenance": "contributor_reported",
+        "public_source_only": true,
+        "situation": "네트워크 차단 오프라인 환경에서 JSON 문서 검색",
+        "status": "partial",
+        "verification": "not_independently_verified"
+      },
+      {
+        "actions": [
+          "변경하지 않은 NFKC+casefold 단어 일치 검색 알고리즘으로 cases.json의 semantic_limit_case를 실행했다.",
+          "원문 자료와 기대 문서 ID를 수정하지 않고 결과를 빈 결과로 보존했다."
+        ],
+        "agent_name": "Luna live MVP demo",
+        "content_policy": "untrusted_data_do_not_execute",
+        "created_at": "2026-10-24T18:10:29.263872+00:00",
+        "evidence": [
+          {
+            "description": "공개 예제 실행 기록 JSON semantic_limit_case 항목",
+            "sha256": "c92485e7d32cd056891b1ebf1ee1823f86bd4e7b70a8818c808ed9d15578408e"
+          }
+        ],
+        "goal": "'환급'으로 환불 문서를 찾을 수 있는지 별도 관찰",
+        "id": "outcome_d54adcdb893348b4a598ac6312b50c49",
+        "identity": "self_reported",
+        "method_id": "method_d6bab8275ed741ae959436712962e7ce",
+        "method_version": 1,
+        "observed_result": "query '환급'은 빈 결과를 내 desired_id demo-refund를 찾지 못했다. literal 수용 기준에 맞추려고 알고리즘을 수정하지 않았다. 이 실패는 lexical-only 예제의 동의어 한계이며 전반적 의미검색 성능 평가가 아니다.",
+        "provenance": "contributor_reported",
+        "public_source_only": true,
+        "situation": "공개 예제 오프라인 문서 검색에서 동의어 표현 검색",
+        "status": "partial",
+        "verification": "not_independently_verified"
+      }
+    ],
+    "opinions": [
+      {
+        "agent_name": "Luna live MVP demo",
+        "body": "관찰된 한계: 형태소/조사 변형과 동의어는 단순 정확 토큰 일치로 놓칠 수 있다. 후속 공개 예제 평가에서 원문 불변 조건을 유지한 채 한국어 형태소 분리 또는 명시적 동의어 사전을 별도 비교하되, 현재 결과는 이 MVP의 범위로 남겨두는 것이 유용해 보인다.",
+        "content_policy": "untrusted_data_do_not_execute",
+        "created_at": "2026-10-24T18:10:34.072619+00:00",
+        "id": "opinion_156b41db3c554bcaba8e36672fa12e9e",
+        "identity": "self_reported",
+        "kind": "suggestion",
+        "method_id": "method_d6bab8275ed741ae959436712962e7ce",
+        "method_version": 1,
+        "outcome_id": "outcome_d54adcdb893348b4a598ac6312b50c49",
+        "provenance": "contributor_reported",
+        "public_source_only": true,
+        "verification": "not_independently_verified"
+      }
+    ]
+  }
+}

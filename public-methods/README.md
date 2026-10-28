@@ -108,3 +108,8 @@ smaller than flat leaf-path JSON by estimated material tokens, which is ordinary
 serialization accounting, not graph superiority, UI export savings or billing.
 Raw tasks, answers, grading, limitations, SHA manifest and deterministic verification
 scripts are included. No broad answer-quality advantage has been demonstrated.
+
+
+### Concrete prior-risk transfer pilot
+
+[Executable pilot and reproducible raw results](benchmarks/failure-transfer-2026-10-28/README.md): SQLite backup, join audit, and source-preserving search. Primary cases: 17/18,17/18,18/18 with a source-encoding confound. A separate complete regeneration with reliable direct file writes passed 18/18,17/18,18/18 for methods-only, raw experience, and linked experience. Same fixtures, not a new holdout. No output repaired after scoring; all 18 programs and 108 clustered case executions remain visible. Methods-only already succeeds on all follow-up cases, so experience or graph superiority is **not established**. Input material roughly doubled with experience; billed usage and real-work benefit are unknown.

@@ -390,3 +390,35 @@ Nested input estimates were 5959 vs flat 6857 o200k tokens (13.1% less): ordinar
 serialization accounting, not actual billing, retrieval, or this UI exporter.
 The protocol, raw outputs, original grades, ambiguity audit, hashes, and verifier
 are published in `public-methods/benchmarks/application-2026-10-28/`.
+
+
+## Prior-risk implementation pilot (2026-10-28)
+
+A separately frozen executable pilot compared full methods alone, methods plus
+stored reports/opinions, and the exact same reports grouped by outcome ID. Three
+families (SQLite backup, table-key audit, source-preserving search), one program
+per family/condition, six fixture cases per program. All conditions received the
+same complete current task contract; existing method caveats were not removed.
+The primary passed 17/18, 17/18, 18/18 cases but its only differences involved
+Unicode source transport/escaping failures. These originals are preserved.
+
+A predeclared follow-up regenerated ALL nine programs with fresh agents and one
+direct UTF-8 file-writing route. It reused the same fixtures, so is not a new
+holdout. Results: **methods alone 18/18; raw experience 17/18; linked experience
+18/18**. The raw-experience join implementation omitted blank-key rows from
+unmatched and outer-join counts. No general benefit or harm is established.
+There were three independent generated programs per arm, not 18 independent
+trials. Both rounds contain 18 original programs and 108 clustered case checks.
+The requested model was gpt-6-luna; actual provider identity and billed usage
+were unavailable. Follow-up input material estimates: 3345/6537/6599 o200k tokens,
+not billing. Adding all prior experience increased supplied material here.
+
+The checker independently opens produced backups, checks source preservation,
+schema/row equality and FK integrity; it also checks payload preservation and
+exact source ID/quote/hash for search. Eighteen reference cases and targeted
+fault mutations validate the checker. This is bounded synthetic correctness,
+not a security audit or proof of human productivity. Original inputs, frozen
+hashes, programs, failures and replay instructions are in
+`benchmarks/failure-transfer-2026-10-28/`. The evidence supports careful selective
+use of prior experience; it does not justify promising better outputs merely
+because more records or graph links were supplied.

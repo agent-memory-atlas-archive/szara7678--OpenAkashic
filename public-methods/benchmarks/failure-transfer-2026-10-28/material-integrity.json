@@ -1,0 +1,10 @@
+{
+  "identical_full_feedback_objects": true,
+  "no_added_claims": true,
+  "grouping": "exact outcome_id only",
+  "families": [
+    "backup",
+    "join",
+    "search"
+  ]
+}

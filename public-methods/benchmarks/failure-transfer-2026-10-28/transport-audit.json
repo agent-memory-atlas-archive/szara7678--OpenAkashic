@@ -1,0 +1,15 @@
+{
+  "original_counts": [
+    17,
+    17,
+    18
+  ],
+  "denominator": 18,
+  "only_failed_case": "search-1",
+  "method_only": "source regex and suffix values double escaped",
+  "raw_experience": "source suffix strings replaced by question marks",
+  "linked_experience": "source has valid escapes",
+  "interpretation": "Original gap is confounded by artifact production and cannot establish experience-packaging benefit. All outputs and scores retained.",
+  "followup_freeze": "b69266a505eb80ad2655bc0acd6f7e93a433d25d0f1fcd3d6da99135b7931ed1",
+  "followup_new_holdout": false
+}

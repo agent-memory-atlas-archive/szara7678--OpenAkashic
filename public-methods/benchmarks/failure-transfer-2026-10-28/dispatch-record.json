@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-28T05:49:13.457842+00:00",
+  "requested_model": "gpt-6-luna",
+  "agents": {
+    "method_only": "failure_method_generation",
+    "raw_experience": "failure_raw_generation",
+    "linked_experience": "failure_linked_generation"
+  },
+  "conditions": "fresh fork none, identical outer instruction except assigned input/output directory, no test execution or external research allowed",
+  "unicode_instruction": "Use ASCII Python source Unicode escapes; do not pipe literal Korean source text",
+  "actual_backend_identity": null,
+  "actual_usage": null,
+  "generation_elapsed_seconds": null
+}
