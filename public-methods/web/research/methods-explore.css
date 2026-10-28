@@ -5,3 +5,5 @@
 @media(max-width:640px){.controls>.focus-row{display:block;grid-column:1/-1}.controls>.list-heading{display:flex;grid-column:1/-1;margin-top:12px}.controls>.node-list{display:block;grid-column:1/-1;max-height:105px}.controls>.focus-row>label{margin-top:10px}.node-list button{font-size:11px;min-height:38px}}
 
 #atlas-back{font-size:10px;min-height:32px;padding:4px 9px;margin-bottom:16px;background:transparent}#atlas-back:disabled{opacity:.35;cursor:default}
+
+.network-node text{pointer-events:auto}.network-node circle.network-hit{r:18;fill:transparent;stroke:none;pointer-events:all}@media(min-width:1101px) and (max-width:1599px){.atlas-shell{height:720px;min-height:720px}.controls,.inspector{max-height:720px;overflow-y:auto}}

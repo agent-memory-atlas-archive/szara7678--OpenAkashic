@@ -44,7 +44,7 @@
     const ids=new Set(visible.map(n=>n.id)),links=graph.edges.filter(e=>ids.has(e.source)&&ids.has(e.target)),edges=$("atlas-edges"),nodes=$("atlas-nodes");edges.replaceChildren();nodes.replaceChildren();
     for(const e of links){const a=points.get(e.source),b=points.get(e.target);const l=svg("line",{x1:a.x,y1:a.y,x2:b.x,y2:b.y,class:"network-edge"+(e.relation==="categorized_as"?" category":""),"data-source":e.source,"data-target":e.target});l.append(svg("title",{}));l.firstChild.textContent=relations[e.relation]||e.relation;edges.append(l);}
     for(const n of visible){const p=points.get(n.id),degree=neighbors(n.id).length,g=svg("g",{class:"network-node "+n.kind,"data-node-id":n.id,transform:`translate(${p.x} ${p.y})`,tabindex:"0",role:"button","aria-label":`${types[n.kind]}: ${n.label.length>120?n.label.slice(0,120)+"…":n.label}`,"aria-pressed":String(selected?.id===n.id)});const radius=n.kind==="category"?10:n.kind==="method"?5.5:3.7;
-      g.append(svg("circle",{r:radius}));const t=svg("title",{});t.textContent=`${types[n.kind]} · ${n.label} · 연결 ${degree}개`;g.append(t);
+      g.append(svg("circle",{r:18,class:"network-hit"}),svg("circle",{r:radius}));const t=svg("title",{});t.textContent=`${types[n.kind]} · ${n.label} · 연결 ${degree}개`;g.append(t);
       if(["method","category"].includes(n.kind)){const text=svg("text",{x:0,y:n.kind==="category"?-18:18,"text-anchor":"middle"});text.textContent=n.label.length>15?n.label.slice(0,15)+"…":n.label;g.append(text);}
       g.onclick=()=>choose(n.id);g.onkeydown=event=>{if(["Enter"," "].includes(event.key)){event.preventDefault();choose(n.id,true,true);}};g.onmouseenter=()=>highlight(n.id);g.onmouseleave=()=>highlight(selected?.id);nodes.append(g);
     }

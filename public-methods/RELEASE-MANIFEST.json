@@ -77,7 +77,7 @@
     },
     {
       "path": "public-methods/api/scripts/benchmark_method_navigation.py",
-      "sha256": "7d8bd0d3dfeb05e85ef37154e19c59c9c0300c1fa30bccfcf172b57773a1d258"
+      "sha256": "d3a7bbd4cf1bc754224f186dd9b84015769711595981ca48918efdf73d6d50e0"
     },
     {
       "path": "public-methods/api/scripts/benchmark_methods.py",
@@ -149,7 +149,7 @@
     },
     {
       "path": "public-methods/docs/public-methods.md",
-      "sha256": "0cbab213f8c220f6da9ecfbcc663912182c51c8e42bb445ddf6cb21d233d9b41"
+      "sha256": "89e028dce5f5637fe5f188d4a98a0fdee4ab1a3e72fde974e347a79a9c0959fc"
     },
     {
       "path": "public-methods/examples/prior-regression-queries.json",
@@ -249,7 +249,7 @@
     },
     {
       "path": "public-methods/web/research/methods-explore.css",
-      "sha256": "62569421222594720391cc8ee1546f2e4fa8ba0d9733515affe715abe57d4d2e"
+      "sha256": "7169fb23970d9d81ecb698eeb70c4b72bfd18b3c2f957aa6ce50517a8ed343bf"
     },
     {
       "path": "public-methods/web/research/methods-explore.html",
@@ -257,7 +257,7 @@
     },
     {
       "path": "public-methods/web/research/methods-explore.js",
-      "sha256": "d767bbdcc69deeb0791cd83bb2e78f23ae27792f421b2536cf8240d32eeec271"
+      "sha256": "3e49e50afa77673d6eb9d7636d70da2de937ba0feaaacd346412049cedd411f5"
     },
     {
       "path": "public-methods/web/research/methods-graph.js",

@@ -8,7 +8,7 @@ from pathlib import Path
 import statistics
 import time
 from urllib.parse import urlencode
-from urllib.request import build_opener, ProxyHandler
+from urllib.request import Request, build_opener, ProxyHandler
 from app.research_method_context import counted
 from app.research_store import digest
 
@@ -17,7 +17,7 @@ def run(endpoint):
     opener = build_opener(ProxyHandler({}))
     def get(path):
         started = time.perf_counter()
-        with opener.open(endpoint.rstrip('/')+'/research/api/methods'+path, timeout=30) as response:
+        with opener.open(Request(endpoint.rstrip('/')+'/research/api/methods'+path, headers={'User-Agent':'OpenAkashic-Verification/0.3 (+https://github.com/szara7678/OpenAkashic)','Accept':'application/json'}), timeout=30) as response:
             data = json.load(response)
         return data, round(time.perf_counter()-started, 6)
     catalog, _ = get('/catalog?limit=24');items=list(catalog['items'])
