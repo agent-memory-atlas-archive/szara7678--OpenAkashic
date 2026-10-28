@@ -1,0 +1,7 @@
+{
+  "recorded_at_utc": "2026-10-28T15:40:40.657392+00:00",
+  "stage": "During candidate execution; no answer contents or correctness viewed",
+  "observation": "Some agents produced a final response but did not create answer.json despite the common instruction. No reruns or prompt changes.",
+  "analysis": "Retain strict artifact score as compliance-sensitive primary. Also report exact final JSON content as a labeled secondary diagnostic when the file is absent. Report both side by side; do not select only the more favorable measure. Non-JSON final responses are not repaired. Blind rubric grades delivered content without rewarding file writing.",
+  "other_caveat": "Broker concurrent response logging may repeat mutable call labels. Usage is summed over all receipt lines and checked against CLI aggregate; never deduplicate by this label."
+}

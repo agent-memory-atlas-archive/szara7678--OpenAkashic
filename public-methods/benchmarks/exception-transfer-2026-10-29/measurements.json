@@ -1,0 +1,1369 @@
+[
+  {
+    "id": "base-t1-r1",
+    "arm": "base",
+    "task": "T1",
+    "repeat": 1,
+    "input_tokens": 32274,
+    "cached_input_tokens": 20096,
+    "output_tokens": 1653,
+    "total_tokens": 33927,
+    "timing": {
+      "id": "base-t1-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 24.123768504010513,
+      "started_epoch": 1793201806.0404093,
+      "ended_epoch": 1793201830.1641788
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": 3,
+      "q3": 1,
+      "q4": 3,
+      "q5": false,
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t1-r1",
+    "arm": "flat",
+    "task": "T1",
+    "repeat": 1,
+    "input_tokens": 22581,
+    "cached_input_tokens": 0,
+    "output_tokens": 718,
+    "total_tokens": 23299,
+    "timing": {
+      "id": "flat-t1-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 19.06462041498162,
+      "started_epoch": 1793201830.5157328,
+      "ended_epoch": 1793201849.5803535
+    },
+    "artifact_file_present": false,
+    "artifact_schema_valid": false,
+    "final_json_parse_error": null,
+    "answer_source": "final",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": 3,
+      "q3": 1,
+      "q4": 3,
+      "q5": false,
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 0,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 2,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_a072f5b7563349648d444d6d14bca3fd",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t1-r1",
+    "arm": "structured",
+    "task": "T1",
+    "repeat": 1,
+    "input_tokens": 49863,
+    "cached_input_tokens": 34944,
+    "output_tokens": 1361,
+    "total_tokens": 51224,
+    "timing": {
+      "id": "structured-t1-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 30.136791261960752,
+      "started_epoch": 1793201849.9841638,
+      "ended_epoch": 1793201880.1209552
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": 3,
+      "q3": 1,
+      "q4": 3,
+      "q5": false,
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 4,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 3,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_a072f5b7563349648d444d6d14bca3fd",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t2-r1",
+    "arm": "flat",
+    "task": "T2",
+    "repeat": 1,
+    "input_tokens": 22873,
+    "cached_input_tokens": 10112,
+    "output_tokens": 649,
+    "total_tokens": 23522,
+    "timing": {
+      "id": "flat-t2-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 15.652443900995422,
+      "started_epoch": 1793201880.4825127,
+      "ended_epoch": 1793201896.134957
+    },
+    "artifact_file_present": false,
+    "artifact_schema_valid": false,
+    "final_json_parse_error": null,
+    "answer_source": "final",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": "old",
+      "q3": false,
+      "q4": true,
+      "q5": "unknown",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 0,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 2,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t2-r1",
+    "arm": "structured",
+    "task": "T2",
+    "repeat": 1,
+    "input_tokens": 64684,
+    "cached_input_tokens": 35072,
+    "output_tokens": 1470,
+    "total_tokens": 66154,
+    "timing": {
+      "id": "structured-t2-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 32.441081555967685,
+      "started_epoch": 1793201896.4855192,
+      "ended_epoch": 1793201928.9266005
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": "old",
+      "q3": false,
+      "q4": true,
+      "q5": "unknown",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 5,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 2,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "base-t2-r1",
+    "arm": "base",
+    "task": "T2",
+    "repeat": 1,
+    "input_tokens": 32193,
+    "cached_input_tokens": 20224,
+    "output_tokens": 1327,
+    "total_tokens": 33520,
+    "timing": {
+      "id": "base-t2-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 21.316376905015204,
+      "started_epoch": 1793201929.270537,
+      "ended_epoch": 1793201950.586914
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": "old",
+      "q3": false,
+      "q4": true,
+      "q5": "unknown",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t3-r1",
+    "arm": "structured",
+    "task": "T3",
+    "repeat": 1,
+    "input_tokens": 49116,
+    "cached_input_tokens": 34560,
+    "output_tokens": 1456,
+    "total_tokens": 50572,
+    "timing": {
+      "id": "structured-t3-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 38.61264462600229,
+      "started_epoch": 1793201950.9381068,
+      "ended_epoch": 1793201989.550752
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "binding_error",
+      "q2": "4",
+      "q3": false,
+      "q4": "binding_error",
+      "q5": "conversion_error",
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 4,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 2,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_357e9b4ba01840d4b02c481d1b3fe0b4",
+      "method_e48a6d9199284c6baa42ced19cdf3b4c"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "base-t3-r1",
+    "arm": "base",
+    "task": "T3",
+    "repeat": 1,
+    "input_tokens": 10088,
+    "cached_input_tokens": 0,
+    "output_tokens": 475,
+    "total_tokens": 10563,
+    "timing": {
+      "id": "base-t3-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 11.694000550021883,
+      "started_epoch": 1793201989.920936,
+      "ended_epoch": 1793202001.6149366
+    },
+    "artifact_file_present": false,
+    "artifact_schema_valid": false,
+    "final_json_parse_error": null,
+    "answer_source": "final",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "binding_error",
+      "q2": "4",
+      "q3": false,
+      "q4": "binding_error",
+      "q5": "conversion_error",
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 0,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 1,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t3-r1",
+    "arm": "flat",
+    "task": "T3",
+    "repeat": 1,
+    "input_tokens": 77910,
+    "cached_input_tokens": 48000,
+    "output_tokens": 1417,
+    "total_tokens": 79327,
+    "timing": {
+      "id": "flat-t3-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 34.60026126302546,
+      "started_epoch": 1793202001.9981163,
+      "ended_epoch": 1793202036.598378
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "binding_error",
+      "q2": "42",
+      "q3": false,
+      "q4": "binding_error",
+      "q5": "conversion_error",
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": false,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 5,
+    "strict_artifact_points": 5,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 6,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 3,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_357e9b4ba01840d4b02c481d1b3fe0b4",
+      "method_62fd49754e2542da802845cb2fa8608c",
+      "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_a072f5b7563349648d444d6d14bca3fd",
+      "method_bdb09528304b462cbcf7981db052a2e7",
+      "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+      "method_ca9a0e9cfe634cba9c28b0b086b12670",
+      "method_db0a40d480064c61bd720e62b232ca5d",
+      "method_e48a6d9199284c6baa42ced19cdf3b4c",
+      "method_f6a1798ca0f4474589bdbd5bf74eae8a"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "base-t4-r1",
+    "arm": "base",
+    "task": "T4",
+    "repeat": 1,
+    "input_tokens": 32444,
+    "cached_input_tokens": 20352,
+    "output_tokens": 1400,
+    "total_tokens": 33844,
+    "timing": {
+      "id": "base-t4-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 29.288327115005814,
+      "started_epoch": 1793202036.977546,
+      "ended_epoch": 1793202066.2658734
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "pending/idle",
+      "q2": 0,
+      "q3": true,
+      "q4": 1,
+      "q5": "missing_query_fn",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t4-r1",
+    "arm": "flat",
+    "task": "T4",
+    "repeat": 1,
+    "input_tokens": 36418,
+    "cached_input_tokens": 22656,
+    "output_tokens": 1420,
+    "total_tokens": 37838,
+    "timing": {
+      "id": "flat-t4-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 26.27933023998048,
+      "started_epoch": 1793202066.6276314,
+      "ended_epoch": 1793202092.9069617
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "pending/idle",
+      "q2": 0,
+      "q3": true,
+      "q4": 1,
+      "q5": "missing_query_fn",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t4-r1",
+    "arm": "structured",
+    "task": "T4",
+    "repeat": 1,
+    "input_tokens": 50130,
+    "cached_input_tokens": 40320,
+    "output_tokens": 1418,
+    "total_tokens": 51548,
+    "timing": {
+      "id": "structured-t4-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 28.836649464035872,
+      "started_epoch": 1793202093.2626958,
+      "ended_epoch": 1793202122.0993452
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "pending/idle",
+      "q2": 0,
+      "q3": true,
+      "q4": 1,
+      "q5": "missing_query_fn",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 4,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 2,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_a072f5b7563349648d444d6d14bca3fd",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t1-r2",
+    "arm": "flat",
+    "task": "T1",
+    "repeat": 2,
+    "input_tokens": 36319,
+    "cached_input_tokens": 19840,
+    "output_tokens": 1557,
+    "total_tokens": 37876,
+    "timing": {
+      "id": "flat-t1-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 87.58182324800873,
+      "started_epoch": 1793202122.4627059,
+      "ended_epoch": 1793202210.0445294
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": 3,
+      "q3": 1,
+      "q4": 3,
+      "q5": false,
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_a072f5b7563349648d444d6d14bca3fd",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t1-r2",
+    "arm": "structured",
+    "task": "T1",
+    "repeat": 2,
+    "input_tokens": 35484,
+    "cached_input_tokens": 11776,
+    "output_tokens": 905,
+    "total_tokens": 36389,
+    "timing": {
+      "id": "structured-t1-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 26.929252468049526,
+      "started_epoch": 1793202210.3984427,
+      "ended_epoch": 1793202237.3276951
+    },
+    "artifact_file_present": false,
+    "artifact_schema_valid": false,
+    "final_json_parse_error": null,
+    "answer_source": "final",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": 3,
+      "q3": 1,
+      "q4": 3,
+      "q5": false,
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 0,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 3,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_a072f5b7563349648d444d6d14bca3fd"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "base-t1-r2",
+    "arm": "base",
+    "task": "T1",
+    "repeat": 2,
+    "input_tokens": 32421,
+    "cached_input_tokens": 20096,
+    "output_tokens": 1739,
+    "total_tokens": 34160,
+    "timing": {
+      "id": "base-t1-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 28.986094933003187,
+      "started_epoch": 1793202237.685669,
+      "ended_epoch": 1793202266.6717637
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": 3,
+      "q3": 1,
+      "q4": 3,
+      "q5": false,
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t2-r2",
+    "arm": "structured",
+    "task": "T2",
+    "repeat": 2,
+    "input_tokens": 36080,
+    "cached_input_tokens": 29824,
+    "output_tokens": 1433,
+    "total_tokens": 37513,
+    "timing": {
+      "id": "structured-t2-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 22.97057688597124,
+      "started_epoch": 1793202267.015908,
+      "ended_epoch": 1793202289.9864852
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": "old",
+      "q3": false,
+      "q4": true,
+      "q5": "unknown",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "base-t2-r2",
+    "arm": "base",
+    "task": "T2",
+    "repeat": 2,
+    "input_tokens": 43734,
+    "cached_input_tokens": 41216,
+    "output_tokens": 1687,
+    "total_tokens": 45421,
+    "timing": {
+      "id": "base-t2-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 26.02772696199827,
+      "started_epoch": 1793202290.3318064,
+      "ended_epoch": 1793202316.3595335
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": "old",
+      "q3": false,
+      "q4": true,
+      "q5": "unknown",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 4,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t2-r2",
+    "arm": "flat",
+    "task": "T2",
+    "repeat": 2,
+    "input_tokens": 22883,
+    "cached_input_tokens": 15360,
+    "output_tokens": 740,
+    "total_tokens": 23623,
+    "timing": {
+      "id": "flat-t2-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 22.219206061970908,
+      "started_epoch": 1793202316.7366364,
+      "ended_epoch": 1793202338.9558423
+    },
+    "artifact_file_present": false,
+    "artifact_schema_valid": false,
+    "final_json_parse_error": null,
+    "answer_source": "final",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": true,
+      "q2": "old",
+      "q3": false,
+      "q4": true,
+      "q5": "unknown",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 0,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 2,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_86c23320abe64370845a7ddbb14701dc",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "base-t3-r2",
+    "arm": "base",
+    "task": "T3",
+    "repeat": 2,
+    "input_tokens": 31760,
+    "cached_input_tokens": 25216,
+    "output_tokens": 1456,
+    "total_tokens": 33216,
+    "timing": {
+      "id": "base-t3-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 36.511571859009564,
+      "started_epoch": 1793202339.3243513,
+      "ended_epoch": 1793202375.8359234
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "binding_error",
+      "q2": "4",
+      "q3": false,
+      "q4": "binding_error",
+      "q5": "conversion_error",
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t3-r2",
+    "arm": "flat",
+    "task": "T3",
+    "repeat": 2,
+    "input_tokens": 35807,
+    "cached_input_tokens": 29696,
+    "output_tokens": 1448,
+    "total_tokens": 37255,
+    "timing": {
+      "id": "flat-t3-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 24.174689106992446,
+      "started_epoch": 1793202376.4452069,
+      "ended_epoch": 1793202400.6198962
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "binding_error",
+      "q2": "4",
+      "q3": false,
+      "q4": "binding_error",
+      "q5": "conversion_error",
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_357e9b4ba01840d4b02c481d1b3fe0b4",
+      "method_8bd35edb30bc4bc6b425113fa28d4320",
+      "method_e48a6d9199284c6baa42ced19cdf3b4c"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t3-r2",
+    "arm": "structured",
+    "task": "T3",
+    "repeat": 2,
+    "input_tokens": 65439,
+    "cached_input_tokens": 22272,
+    "output_tokens": 1678,
+    "total_tokens": 67117,
+    "timing": {
+      "id": "structured-t3-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 37.054840339988004,
+      "started_epoch": 1793202400.99716,
+      "ended_epoch": 1793202438.0520005
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "binding_error",
+      "q2": "4",
+      "q3": false,
+      "q4": "binding_error",
+      "q5": "conversion_error",
+      "q6": "unknown"
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 5,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 3,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_357e9b4ba01840d4b02c481d1b3fe0b4",
+      "method_5af91cc7219a4130a3a2cf2d7630b031",
+      "method_e48a6d9199284c6baa42ced19cdf3b4c"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "flat-t4-r2",
+    "arm": "flat",
+    "task": "T4",
+    "repeat": 2,
+    "input_tokens": 33782,
+    "cached_input_tokens": 28800,
+    "output_tokens": 1412,
+    "total_tokens": 35194,
+    "timing": {
+      "id": "flat-t4-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 29.386223384004552,
+      "started_epoch": 1793202438.4352028,
+      "ended_epoch": 1793202467.8214264
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "pending/idle",
+      "q2": 0,
+      "q3": true,
+      "q4": 1,
+      "q5": "missing_query_fn",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 3,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 1,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_681dc89fa9bc4ccb9ead50121fe5b0aa"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "structured-t4-r2",
+    "arm": "structured",
+    "task": "T4",
+    "repeat": 2,
+    "input_tokens": 50131,
+    "cached_input_tokens": 42880,
+    "output_tokens": 1394,
+    "total_tokens": 51525,
+    "timing": {
+      "id": "structured-t4-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 60.30987234599888,
+      "started_epoch": 1793202468.193406,
+      "ended_epoch": 1793202528.5032787
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "pending/idle",
+      "q2": 0,
+      "q3": true,
+      "q4": 1,
+      "q5": "missing_query_fn",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 4,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 2,
+    "retrieval_errors": 0,
+    "retrieved_ids": [
+      "method_09f7fcaa51f64d4aad1881e12729264a",
+      "method_a072f5b7563349648d444d6d14bca3fd",
+      "method_bdb09528304b462cbcf7981db052a2e7"
+    ],
+    "graph_traversal": false
+  },
+  {
+    "id": "base-t4-r2",
+    "arm": "base",
+    "task": "T4",
+    "repeat": 2,
+    "input_tokens": 44229,
+    "cached_input_tokens": 28032,
+    "output_tokens": 1909,
+    "total_tokens": 46138,
+    "timing": {
+      "id": "base-t4-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 31.64328944304725,
+      "started_epoch": 1793202528.8788536,
+      "ended_epoch": 1793202560.5221426
+    },
+    "artifact_file_present": true,
+    "artifact_schema_valid": true,
+    "final_json_parse_error": null,
+    "answer_source": "file",
+    "answer_schema_valid": true,
+    "schema_errors": [],
+    "decisions": {
+      "q1": "pending/idle",
+      "q2": 0,
+      "q3": true,
+      "q4": 1,
+      "q5": "missing_query_fn",
+      "q6": false
+    },
+    "matches": {
+      "q1": true,
+      "q2": true,
+      "q3": true,
+      "q4": true,
+      "q5": true,
+      "q6": true
+    },
+    "content_points": 6,
+    "strict_artifact_points": 6,
+    "max_points": 6,
+    "actual_models": [
+      "gpt-6-luna"
+    ],
+    "usage_receipts_match_cli": true,
+    "model_call_count": 4,
+    "model_receipts_complete": true,
+    "isolation_pass": true,
+    "retrieval_requests": 0,
+    "retrieval_errors": 0,
+    "retrieved_ids": [],
+    "graph_traversal": false
+  }
+]

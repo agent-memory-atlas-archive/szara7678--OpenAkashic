@@ -1,0 +1,180 @@
+{
+  "package": "@tanstack/query-core",
+  "version": "5.90.5",
+  "node": "v22.22.2",
+  "observations": [
+    {
+      "id": "query-cancel-unread",
+      "mode": "unread",
+      "transportKind": "manually resolved promise; optional local AbortSignal listener; no HTTP",
+      "before": {
+        "status": "success",
+        "fetchStatus": "fetching",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "afterUnsubscribe": {
+        "status": "success",
+        "fetchStatus": "fetching",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "signalAbortedAfterUnsubscribe": null,
+      "afterTransportSettlement": {
+        "status": "success",
+        "fetchStatus": "idle",
+        "data": "new-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "transport": {
+        "started": 1,
+        "completed": 1,
+        "aborted": 0,
+        "signalRead": false
+      }
+    },
+    {
+      "id": "query-cancel-read-only",
+      "mode": "read-only",
+      "transportKind": "manually resolved promise; optional local AbortSignal listener; no HTTP",
+      "before": {
+        "status": "success",
+        "fetchStatus": "fetching",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "afterUnsubscribe": {
+        "status": "success",
+        "fetchStatus": "idle",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "signalAbortedAfterUnsubscribe": true,
+      "afterTransportSettlement": {
+        "status": "success",
+        "fetchStatus": "idle",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "transport": {
+        "started": 1,
+        "completed": 1,
+        "aborted": 0,
+        "signalRead": true
+      }
+    },
+    {
+      "id": "query-cancel-consumed",
+      "mode": "consumed",
+      "transportKind": "manually resolved promise; optional local AbortSignal listener; no HTTP",
+      "before": {
+        "status": "success",
+        "fetchStatus": "fetching",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "afterUnsubscribe": {
+        "status": "success",
+        "fetchStatus": "idle",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "signalAbortedAfterUnsubscribe": true,
+      "afterTransportSettlement": {
+        "status": "success",
+        "fetchStatus": "idle",
+        "data": "previous-data",
+        "error": null,
+        "isInvalidated": false
+      },
+      "transport": {
+        "started": 1,
+        "completed": 0,
+        "aborted": 1,
+        "signalRead": true
+      }
+    },
+    {
+      "id": "query-disabled-valid-function",
+      "initial": {
+        "state": {
+          "status": "pending",
+          "fetchStatus": "idle",
+          "error": null,
+          "isInvalidated": false
+        },
+        "calls": 0
+      },
+      "afterInvalidationAndClientRefetch": {
+        "state": {
+          "status": "pending",
+          "fetchStatus": "idle",
+          "error": null,
+          "isInvalidated": true
+        },
+        "calls": 0
+      },
+      "afterObserverManualRefetch": {
+        "state": {
+          "status": "success",
+          "fetchStatus": "idle",
+          "data": "manual-data",
+          "error": null,
+          "isInvalidated": false
+        },
+        "calls": 1,
+        "resultStatus": "success"
+      }
+    },
+    {
+      "id": "query-disabled-cached",
+      "state": {
+        "status": "success",
+        "fetchStatus": "idle",
+        "data": "preexisting-cache",
+        "error": null,
+        "isInvalidated": false
+      },
+      "calls": 0
+    },
+    {
+      "id": "query-skipToken-manual-refetch",
+      "initial": {
+        "status": "pending",
+        "fetchStatus": "idle",
+        "error": null,
+        "isInvalidated": false
+      },
+      "afterInvalidation": {
+        "status": "pending",
+        "fetchStatus": "idle",
+        "error": null,
+        "isInvalidated": true
+      },
+      "afterObserverManualRefetch": {
+        "status": "error",
+        "fetchStatus": "idle",
+        "error": {
+          "name": "Error",
+          "message": "Missing queryFn: '[\"skip\"]'"
+        },
+        "isInvalidated": true
+      },
+      "result": {
+        "status": "error",
+        "error": {
+          "name": "Error",
+          "message": "Missing queryFn: '[\"skip\"]'"
+        }
+      }
+    }
+  ]
+}

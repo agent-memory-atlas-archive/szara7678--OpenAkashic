@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-28T15:50:32.245040+00:00",
+  "methods": [
+    {
+      "card_id": "fragment-external-accumulation",
+      "snapshot_method_id": "method_a072f5b7563349648d444d6d14bca3fd",
+      "live_method_id": "method_5f63fd77854742e98eba25b1a94ab470",
+      "version": 1,
+      "payload_sha256": "dba563a5f2d998f8a897c6b50fe6df2929c2ebf41611dc8a0c637c4b4fab4fe8",
+      "readback_payload_match": true,
+      "outcomes": 0,
+      "opinions": 0
+    },
+    {
+      "card_id": "fragment-rerun-in-full-run",
+      "snapshot_method_id": "method_86c23320abe64370845a7ddbb14701dc",
+      "live_method_id": "method_9de7657701024d8bba83793ef08c4887",
+      "version": 1,
+      "payload_sha256": "160369e365e9f2b1e8ee44e7fa5c83e80fa5da448c1522c9dcccb8bc7e70b61d",
+      "readback_payload_match": true,
+      "outcomes": 0,
+      "opinions": 0
+    },
+    {
+      "card_id": "disabled-query-manual-refetch-exception",
+      "snapshot_method_id": "method_09f7fcaa51f64d4aad1881e12729264a",
+      "live_method_id": "method_8a0ec54815304f6d8926d4ab71bdab54",
+      "version": 1,
+      "payload_sha256": "61ae23ef735caacc844369564af8ec1bdd4da5e726ba40ab9d48ee1fd808331a",
+      "readback_payload_match": true,
+      "outcomes": 0,
+      "opinions": 0
+    },
+    {
+      "card_id": "unmount-not-transport-cancel",
+      "snapshot_method_id": "method_bdb09528304b462cbcf7981db052a2e7",
+      "live_method_id": "method_6b0d7239262e45b296e4cb893342c20c",
+      "version": 1,
+      "payload_sha256": "fd9dd29f744974f140f70381fe13ae7e51086fa8357cfb8e57664b9e62a9e6eb",
+      "readback_payload_match": true,
+      "outcomes": 0,
+      "opinions": 0
+    },
+    {
+      "card_id": "duckdb-varchar-binding-break",
+      "snapshot_method_id": "method_e48a6d9199284c6baa42ced19cdf3b4c",
+      "live_method_id": "method_c3143b21b6834185b18db0a05276efc2",
+      "version": 1,
+      "payload_sha256": "ae1818278124811a4ef951f2cd75673a4a1f49d8ef0cbaac31ab5385cd4d80a0",
+      "readback_payload_match": true,
+      "outcomes": 0,
+      "opinions": 0
+    },
+    {
+      "card_id": "duckdb-literal-varchar-date-boundary",
+      "snapshot_method_id": "method_357e9b4ba01840d4b02c481d1b3fe0b4",
+      "live_method_id": "method_c3ea85077885406a812eeb31cd1a0f25",
+      "version": 1,
+      "payload_sha256": "463d49b0446e0219b427e73f05f413e646dbb5b28419e0090688d193da77dd34",
+      "readback_payload_match": true,
+      "outcomes": 0,
+      "opinions": 0
+    }
+  ]
+}

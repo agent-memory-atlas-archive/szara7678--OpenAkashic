@@ -1,0 +1,4 @@
+FROM python:3.11.14-slim-bookworm
+RUN pip install --no-cache-dir duckdb==0.10.0 streamlit==1.46.0
+WORKDIR /work
+ENV PYTHONDONTWRITEBYTECODE=1 HOME=/tmp

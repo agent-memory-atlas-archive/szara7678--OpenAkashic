@@ -1,0 +1,20 @@
+{
+  "decisions": {
+    "q1": "pending/idle",
+    "q2": 0,
+    "q3": true,
+    "q4": 1,
+    "q5": "missing_query_fn",
+    "q6": false
+  },
+  "rationale": {
+    "q1": "캐시 데이터가 없고 enabled:false이므로 초기 상태는 pending이며 fetchStatus는 idle입니다.",
+    "q2": "비활성 쿼리는 invalidateQueries의 기본 refetch 대상에서 제외되고 refetchQueries도 비활성 쿼리를 건너뛰므로 queryFn이 실행되지 않습니다.",
+    "q3": "invalidateQueries는 일치하는 쿼리를 무효화 표시하고, refetch가 생략되어 이 시점에도 isInvalidated가 true입니다.",
+    "q4": "반환된 수동 refetch는 enabled:false와 무관하게 유효한 queryFn을 실행하므로 누적 호출은 1회입니다.",
+    "q5": "skipToken은 실행 가능한 queryFn이 아니므로 수동 refetch 시 Missing query function 오류가 쿼리에 기록됩니다.",
+    "q6": "캐시 데이터로 마운트하면 success일 수 있으며, 이는 이번 마운트에서 네트워크 요청을 완료했다는 뜻이 아닙니다."
+  },
+  "fix": "수동 버튼 구성은 enabled:false를 유지하고 버튼에서 result.refetch()를 호출하세요. 초기 로딩 UI는 isLoading(또는 isPending && isFetching)처럼 실제 첫 요청 진행을 반영하는 조건으로 표시하고, isPending만으로 로딩 표시하면 비활성 대기 상태도 로딩처럼 보일 수 있습니다. 무효화 표시는 isInvalidated일 뿐 실제 요청 완료나 성공을 뜻하지 않습니다. 자동 조회 구성은 입력이 준비되면 enabled 조건을 true로 전환하세요. skipToken 상태에서는 refetch할 실행 함수가 없으므로, 호출 가능성이 있다면 유효한 queryFn을 제공하고 enabled로 자동 실행만 제어하세요.",
+  "limitations": "판단은 문제에 명시된 TanStack Query v5.90.5, 온라인 상태, 단일 observer 및 별도 캐시 변경이 없는 조건에 한정하며 실제 라이브러리 실행으로 검증하지 않았습니다."
+}

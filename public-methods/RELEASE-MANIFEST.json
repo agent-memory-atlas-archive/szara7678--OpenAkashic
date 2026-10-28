@@ -1,7 +1,7 @@
 {
   "schema": "public-methods-release-manifest-v2",
-  "previous_public_commit": "d3c8981a306e77b88b9080ce156c1e4829141e80",
-  "scope": "Isolated fresh-agent availability and required-lookup pilot with actual usage and preserved negative results",
+  "previous_public_commit": "466c627ea1f8fd27a55afdc21546503e7918019f",
+  "scope": "Version-scoped documentation-transfer pilot, preserved strong flat baseline and all outcomes",
   "files": [
     {
       "path": "public-methods/.gitignore",
@@ -21,7 +21,7 @@
     },
     {
       "path": "public-methods/README.md",
-      "sha256": "0e3ee27a36af9210b10ade653e8f71c2cc0f4cf84c9234cbfdd381da3ac1dd28"
+      "sha256": "8929ec8cbd5fa636b7492e8ece0cb55fbee40c2a7998917ec35ec70b2c2886e4"
     },
     {
       "path": "public-methods/api/app/__init__.py",
@@ -234,6 +234,1002 @@
     {
       "path": "public-methods/benchmarks/atlas-v2-export-2026-10-28.json",
       "sha256": "d4f0fc8f14f6b3b25fa0bc9bc431154c91d5b716a5adbee14c4b8de5f7cea84f"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/README.md",
+      "sha256": "5c8f9ef91c082bf4cf85609c50be604e01070d7de1c98011f1ab62b0f8c6685e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/answer.json",
+      "sha256": "7afdfe151749fbc8488dbf2985a5fed9482c986d8be8c2d5241de197913fe26a"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/final.txt",
+      "sha256": "3ad570add79f73faf065c0914b55cf991847b0643e0f216e9907218ec8dd69f7"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/frozen-prompt.txt",
+      "sha256": "ee701f1a49ff43174114365b2d4912d6b7f7c162e673dbfea0c0477031ed2236"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/model-receipts.jsonl",
+      "sha256": "41db2442d9fe024197e7a90273a0e9837e8da68021a458861f9b4893ca433dcb"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/request-audit.jsonl",
+      "sha256": "75240a68433e6f79d65a8c2e5f7fb9d2b230f72b46a376a3ca2ff9825ee69e58"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/timing.json",
+      "sha256": "6d032f00a76814f444e1b0120e631bdbbcde7e281b5abd5270642a7ea130356d"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r1/trace-public.jsonl",
+      "sha256": "9e0e2da4e3134e87bc64cb0e53aea3c288a0440109dc6e2045b1dd46439f363e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/answer.json",
+      "sha256": "bf84796a6be9ff777a818a3bfc2102ccc9b5b5243a7023d0e956eff95bf7b9e5"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/final.txt",
+      "sha256": "7add777f41144de95ce6c1e7d1c9b982f858c61e22628768eb45d16869c4a797"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/frozen-prompt.txt",
+      "sha256": "ee701f1a49ff43174114365b2d4912d6b7f7c162e673dbfea0c0477031ed2236"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/model-receipts.jsonl",
+      "sha256": "96ffb033fd3a2522356eafdb6517ab8ecf923e78c823a751c3ca75019496bae9"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/request-audit.jsonl",
+      "sha256": "e96cec2db412ff7e711c04349e9192c4fe2e8151c649a2a0e95a97e33db135d4"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/timing.json",
+      "sha256": "6b632b8a3411441ce16b818b8492685086443ec37251b9939b5cdd7146a8ae8d"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t1-r2/trace-public.jsonl",
+      "sha256": "18404184989214264a7dcb801f57ff093f6b7663fb08113bcca5dbaf07aab785"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/answer.json",
+      "sha256": "cbce1ded27a43bd413c9dc248f14de3f076b11aba04cff4ff861b8cbe57e9269"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/final.txt",
+      "sha256": "f6aced00c06b76ea742a217adbac406ea2bc42a285e0af9604f51a292b1ac65b"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/frozen-prompt.txt",
+      "sha256": "2685d89916dd165bcba635a7f435aff8f6d1ddcffba1b491108bd4ec452c5f46"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/model-receipts.jsonl",
+      "sha256": "3cea382989104175f422bcf2ef472ed192204a7fccb7cd9269e0fc1289ee0df9"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/timing.json",
+      "sha256": "02dc2dcaef429168c8a6cf482fefa1a81673bfa6a8e054d0e076a771b8974aae"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r1/trace-public.jsonl",
+      "sha256": "ac1a1dcaf17097647504a8768946ddce64042d05ef4bff4e0516d76823113b88"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/answer.json",
+      "sha256": "4556c4adb471a7c699825cdcd28d6099803a43213817dbb20b451d11512b85ba"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/final.txt",
+      "sha256": "348e5b1552f65ecc7eb0a5190d419991be8d83961006c795e7ee12ee2635709e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/frozen-prompt.txt",
+      "sha256": "2685d89916dd165bcba635a7f435aff8f6d1ddcffba1b491108bd4ec452c5f46"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/model-receipts.jsonl",
+      "sha256": "3286d7b46850ce3937ffd88358e8499af4dfbd02cae8ead56a4342b24dc626eb"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/request-audit.jsonl",
+      "sha256": "c4810dad4f4a0e925f5c3515128c68f0476e59dcc14b47ce428972bcef018362"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/timing.json",
+      "sha256": "970ead55c2eab2e8b3e03834ac030b571e00cbc3704e794930fd8895484123b2"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t2-r2/trace-public.jsonl",
+      "sha256": "39baadd9ab4e8d99f6feaff8011720214c043b427158fb8969d755cc2f2a9b98"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r1/final.txt",
+      "sha256": "389464b3aa3a370d67f825e6a5ada423e6c2268b256162366d2bd3025a1ce5f1"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r1/frozen-prompt.txt",
+      "sha256": "b840a6d43a825dcf8faa642b6598ff5097e3d2018ddb291cdfa1ccd7cbcc6daa"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r1/model-receipts.jsonl",
+      "sha256": "1444a3a91bdc18a3fc2fdcae24f298121fd4e6a90dee0d4cb869a02ff7308d71"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r1/request-audit.jsonl",
+      "sha256": "a13ab3153330baae3f1eedc4093bf0263052f5950998893a2c403a7c5826e98a"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r1/timing.json",
+      "sha256": "5af63ec10e8606d22bcdbf41272a2f499d16d3a6e18f3d4e457b75217fc85321"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r1/trace-public.jsonl",
+      "sha256": "1765d5feece567203ebfd7b62466d1c7c51114355d64cbd84fa28e3976643493"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/answer.json",
+      "sha256": "bb7512fa80284762c865425d121f4e868591af07a13f5d1bdfe7b7ee34c845af"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/final.txt",
+      "sha256": "a9e378b1f4314b5c507b42dd4bc6a6b79b94c78e6ff158624abe33b89c3bfa7a"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/frozen-prompt.txt",
+      "sha256": "b840a6d43a825dcf8faa642b6598ff5097e3d2018ddb291cdfa1ccd7cbcc6daa"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/model-receipts.jsonl",
+      "sha256": "a5893fb098e10d5910f5a942449e2525e03dd8ac45ee6d8c5290062842281d53"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/timing.json",
+      "sha256": "b279d77b87fe649b888223735882daa2fbbb6a75e897e4538bf4d4945656ebd2"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t3-r2/trace-public.jsonl",
+      "sha256": "ef49ca956f26fdb020c3b6f37714d73ba2f998576249a470520e07513e0c15ec"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/answer.json",
+      "sha256": "9ea14e25ab75133c0e220345fa1bff2bef3e08f0e75ecf8ecef08293e85aa8ff"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/final.txt",
+      "sha256": "c20baf8a7edd02f8265f76e679a1c50df48645cd27869bf31776f813f487dd54"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/frozen-prompt.txt",
+      "sha256": "dae70f5e484e4862822c2ecfe9605533cad0dbfcc9d11f2320fa9ab077faa9bd"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/model-receipts.jsonl",
+      "sha256": "fe0c4c8beebd6797f98c4454f299855fc2ffca1f53db60c218f6419af3dcde28"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/timing.json",
+      "sha256": "2a6794805810d4199d824985e0c213806e8a95bfb09b23349282c56e21b059d3"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r1/trace-public.jsonl",
+      "sha256": "c3b052279bdb5520dd3ea1500dbb50ca5025cbd28664ad9c54488f72c6efac5f"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/answer.json",
+      "sha256": "590120e6834517e387dfb6864d31ad6a07cd7a0bd8dad87468e503ce914cc4ed"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/final.txt",
+      "sha256": "4ee6ca3cb8df121af7e45983328c979e9dbf82e8620cc402806629ac61f74013"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/frozen-prompt.txt",
+      "sha256": "dae70f5e484e4862822c2ecfe9605533cad0dbfcc9d11f2320fa9ab077faa9bd"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/model-receipts.jsonl",
+      "sha256": "7b4070491383ef6fd312c5f7f1b017fc57900c5f734c642001b1ad6c6726800f"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/request-audit.jsonl",
+      "sha256": "c4810dad4f4a0e925f5c3515128c68f0476e59dcc14b47ce428972bcef018362"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/timing.json",
+      "sha256": "8ab37b2f32eab693fcc43f137b92ce17f2dd5be856c597a5ff36a0e76669df4c"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/base-t4-r2/trace-public.jsonl",
+      "sha256": "6ca6e8c104dea35bc2fd65086f69c4940737d12950d1b273125b4a9fc9bfddec"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/final.txt",
+      "sha256": "f7854f81a7af4190b0aad417a088e6619770a717d986a15eac747d90d8553a4a"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/frozen-prompt.txt",
+      "sha256": "9f96259c1924587d2fa753386f7526bdefbee60e316deb22f10801c94e25930e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/model-receipts.jsonl",
+      "sha256": "b4c7c9426866948e0ab72bb30377287ae9598e40842b93ecd3a8ca67cb12f502"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/request-audit.jsonl",
+      "sha256": "4d53f955fe01602e17c25c0a38d9d063b8d20d711c531985f9b28145f4c383b3"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/retrieval.jsonl",
+      "sha256": "b5458630a1744fbd9bb6d583ea2d3631451726161ce2a503e69dbed1d215da76"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/timing.json",
+      "sha256": "e0779d473d97ac892a513e1790a7ad598ee27ae23994b12e69fa8c63d076e11d"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r1/trace-public.jsonl",
+      "sha256": "6e90930566c05a54f0d4d67e72e70a186fc47c9dc1df252cdd591ed841b801c5"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/answer.json",
+      "sha256": "fdb7dbac339389ba6c385fbff51133f32bc55d94cc93ef37673595833eac7dd2"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/final.txt",
+      "sha256": "a95cc238b4cab0b2e012f2e4f487842e6b8069e7ef27e89146a71f38b81aabde"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/frozen-prompt.txt",
+      "sha256": "9f96259c1924587d2fa753386f7526bdefbee60e316deb22f10801c94e25930e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/model-receipts.jsonl",
+      "sha256": "d9494050239e736b196792d1f6a01d99df429df56933acee3d8558eba17574ed"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/retrieval.jsonl",
+      "sha256": "38c0b24ecd99e29439ee0dcc4022af824580bdc8e361cba05f45aab491ee88e3"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/timing.json",
+      "sha256": "ff780b7ac6afaea6a72b87c141bd7acea1a968aa85bc5c38b2860480091fef34"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t1-r2/trace-public.jsonl",
+      "sha256": "1d2379443fac5eb98c79be30b68cb818b7f18bec09cabb02e912afecf2bed7ab"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/final.txt",
+      "sha256": "5a3de0d4add003f05823f7e5f175b5cf9bbdc02a6f2cca8de76b74c1ff804b88"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/frozen-prompt.txt",
+      "sha256": "e3bd8792759faa387f1d29f0fb35a5f07fee03cf741e3fed1e0da59f84edddd4"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/model-receipts.jsonl",
+      "sha256": "aa1dfecbb85de24a260ac24bcaecfbd231f87f45234913d61ac71beafd156905"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/request-audit.jsonl",
+      "sha256": "4d53f955fe01602e17c25c0a38d9d063b8d20d711c531985f9b28145f4c383b3"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/retrieval.jsonl",
+      "sha256": "4e45939d91faabd4a48fe594dd502e41853468a9c53a0696c1ec2ed22fa37a87"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/timing.json",
+      "sha256": "6e986dbe90d841b1968699a6d55877f44615108c0094ca174f2da940c6247f96"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r1/trace-public.jsonl",
+      "sha256": "37ccc6f982886567dcfdf8107d07ab10adcc32c62ae95e6a84e94cb90c0a1001"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/final.txt",
+      "sha256": "9beb33fd519cb6fadb13814296325ae5a02ca5e11bff05289113eecb520d84e1"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/frozen-prompt.txt",
+      "sha256": "e3bd8792759faa387f1d29f0fb35a5f07fee03cf741e3fed1e0da59f84edddd4"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/model-receipts.jsonl",
+      "sha256": "a5cf7b39f0b35f1c217ec62b286f57fef41d8550773acfef137553acd3fb23c9"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/request-audit.jsonl",
+      "sha256": "4d53f955fe01602e17c25c0a38d9d063b8d20d711c531985f9b28145f4c383b3"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/retrieval.jsonl",
+      "sha256": "bc8d4003638c4ae60616936700b380d860a4344db5677587c6451142be50c904"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/timing.json",
+      "sha256": "2a56cf3b16ed10e4ec9888d74c3046a4cf77c3e5579e54d76f85df0862f2c6e3"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t2-r2/trace-public.jsonl",
+      "sha256": "6f0c853c8cb50fe34f8b648af055652aff358759da31835638571187a3c80d87"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/answer.json",
+      "sha256": "40e48f92f1d5591e88cc0b9e846fced4ff798de16e94567ccd7953b96a153e7e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/final.txt",
+      "sha256": "dade076fbe7259b27a3fb6d45f264b11a683ef996cfc9ef319762ff4fd4f081b"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/frozen-prompt.txt",
+      "sha256": "d9ad759d739a22ad1484f88ddee6b1d4577285bcdfabf2314dedfaae37d3aa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/model-receipts.jsonl",
+      "sha256": "b68d540ac703854f74ba9ee2731c906f819fa52484fc1baba5e303f15d99f00e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/request-audit.jsonl",
+      "sha256": "921bd8ca79a3b8ed3ab3de1ea94ba52a768de7e08122c2b4731fcee033ecdbb5"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/retrieval.jsonl",
+      "sha256": "5eff338cf7e10c8fff4c5ecff7ff9c805396a947801b4a51b4adbb8d3ddf94c3"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/timing.json",
+      "sha256": "db75cefa9e41a14e5a189d5dfb4d05e9585d5d26700d3557898f994f1c90cab7"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r1/trace-public.jsonl",
+      "sha256": "c9095aa4b274bf8c6a1f997b54af7ed5dfc80622829055e570ca504098509ffe"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/answer.json",
+      "sha256": "88b24e155cc9ee6e11c3bebe9999a1fb126f6d3b29cb13f3803c4efcba172e4b"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/final.txt",
+      "sha256": "e6de5cf64c0bcabd2db2bdbcd0b0858d324ab4dbc2bdb968c87629c3e1e44755"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/frozen-prompt.txt",
+      "sha256": "d9ad759d739a22ad1484f88ddee6b1d4577285bcdfabf2314dedfaae37d3aa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/model-receipts.jsonl",
+      "sha256": "a62f163619574b1b3fe0435144a6c67e57fd34f02ae2e707d6b3c2cc5955b811"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/retrieval.jsonl",
+      "sha256": "2c8efe3bb4d76c81f697e2d16388bedadee63ceb9be3a0fbb8d8fb677de8879c"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/timing.json",
+      "sha256": "13d355143133495e105f4a373b15463c7fb098d6993c3957ee1b7b3f6d281feb"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t3-r2/trace-public.jsonl",
+      "sha256": "e988defb4d2d8f7e896c0f6c514d82555a87deaf30d687f3010af7635a497185"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/answer.json",
+      "sha256": "7e453c48405b7021d4bac84406f4c28d777f97aca653439638662e7c5f5bedd7"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/final.txt",
+      "sha256": "5eb1edeb31ad661a72615234e71de7c326098c8c7ddf237e6947aff0125dfdfd"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/frozen-prompt.txt",
+      "sha256": "402b3af437b5084b76c12ed00bdb64d680041a77cddbca3f922bcafa5e160533"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/model-receipts.jsonl",
+      "sha256": "98933c223f94895441b2ac2654793afa93ff18f6e4d9824d9afc014168ac5a16"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/retrieval.jsonl",
+      "sha256": "3ace4e4aeaaad9deb7fc728b25e53407d2874dd9291f968ca303e7c315702bf7"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/timing.json",
+      "sha256": "5a6e885950b28dcb10a00ebe1c6921d297714f08613dec46840efbbb028654c8"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r1/trace-public.jsonl",
+      "sha256": "5dd94409f4a488eddfad2fed18b6df13857c5538e7e83a1fda40f6c66b447cac"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/answer.json",
+      "sha256": "4d032e12f5265bef7baa7d9c5ece4fa5ad9d8be1e914ca94a58cc942ffb9268e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/final.txt",
+      "sha256": "7dbb6b3e785f8a598bcbf3ae6e7a455624e78f574b8fa725c812e9479903710a"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/frozen-prompt.txt",
+      "sha256": "402b3af437b5084b76c12ed00bdb64d680041a77cddbca3f922bcafa5e160533"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/model-receipts.jsonl",
+      "sha256": "3358c0a111426413e05df76072b9fcfc22c320192bb5f36e8eb3e4d32e4b03f0"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/retrieval.jsonl",
+      "sha256": "0c2af5eb59baac39ea9a61ccd03bffdd611655d048104ad94d386e659dbee631"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/timing.json",
+      "sha256": "98e1182c884c1c33b81e882c6b1170bf7feaab9a41175d88411b76b00f8796ab"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/flat-t4-r2/trace-public.jsonl",
+      "sha256": "c1c9c5d6672d8eda8323b673f430fd866725a5914bec3469039cf0545cf1ec05"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/answer.json",
+      "sha256": "521857f647e331ad05054baba13a5a19d762ef347b1a4467e029ad0948d799aa"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/final.txt",
+      "sha256": "aff497aec8f99176b7e7b8e7aaf8262d12224bd5cf5b9ceac440b15cad8c6181"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/frozen-prompt.txt",
+      "sha256": "9f96259c1924587d2fa753386f7526bdefbee60e316deb22f10801c94e25930e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/model-receipts.jsonl",
+      "sha256": "ad4269bcd44d542924ae6932e4ce548453b051ecffa1b901978b7c2c334e4a15"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/request-audit.jsonl",
+      "sha256": "70cbb46066d39825accb6ba4f413423737d23ed8006e197f6357310ad8de134b"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/retrieval.jsonl",
+      "sha256": "f3f82c34194493df141e15fb125d6024461806c8f7d61bf13b9c0aea09b2058b"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/timing.json",
+      "sha256": "bdf81d99fcd30e255c49d36b4db190de60992d3bd92b64c3c4df82cefcde5cd1"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r1/trace-public.jsonl",
+      "sha256": "2f8150ce8ace6b1753aa0acbbca0173d310832e8c5fc686c0d5e72c3d92a159c"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/final.txt",
+      "sha256": "812609259651fb5b4897cdb6c7fa39d6a3b48ddc5d013b9124bc2f6d366368bf"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/frozen-prompt.txt",
+      "sha256": "9f96259c1924587d2fa753386f7526bdefbee60e316deb22f10801c94e25930e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/model-receipts.jsonl",
+      "sha256": "89f7d2d97a3860dc03cf367fc97050e2c0f41886c712878e5f1a62bf1b34b0c1"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/retrieval.jsonl",
+      "sha256": "53ace1d24ae13269c4ccc3cae4b843ea52e5742dcf94639620049ceb5f62ca78"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/timing.json",
+      "sha256": "8a111ab6da32e27a9e527482309547c9870c5118cff4918744e9cc9e5e62f015"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t1-r2/trace-public.jsonl",
+      "sha256": "13646498ff8ecd12668b970c36b6fec58aec6a8bcac0c124b551b06f9a8def51"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/answer.json",
+      "sha256": "3e499e9efc6f78e076f8bb8c8d35910b97a82cfdd3983ce51187bdd9a939fea2"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/final.txt",
+      "sha256": "a411054b773999ced02e4ea4b9af18882ec3edd1fcf03b2219c8f43c6a4adbcc"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/frozen-prompt.txt",
+      "sha256": "e3bd8792759faa387f1d29f0fb35a5f07fee03cf741e3fed1e0da59f84edddd4"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/model-receipts.jsonl",
+      "sha256": "0cc71a73cc876e70dc3fd0c203f4b1a8e8f2600e452967b5adb5708d8820352f"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/request-audit.jsonl",
+      "sha256": "cea0caf7a5076fb184362d7128f81ae807786e775c9571e204c7492f71b29ff5"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/retrieval.jsonl",
+      "sha256": "3aaa89e2ad99c7d5bb27f4a1b30ad6650b5328e419ee8e591b4b549f28f40ee5"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/timing.json",
+      "sha256": "f887a583bcbab0d857040947051ea473e375b3038fb5ea423df5329641f1d382"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r1/trace-public.jsonl",
+      "sha256": "cf4ca48a949026bc5f0228beb033d46a7b5bc3591b69548dd601a6db8f3c3218"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/answer.json",
+      "sha256": "bb9ab21f1a733011e87422130f076e06ea66ab5395cfff11ab44235f05949dec"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/final.txt",
+      "sha256": "80993c8d52bc231a967fff2a73e7c913b6fd57e239e4baab6c8b79ab6da053c0"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/frozen-prompt.txt",
+      "sha256": "e3bd8792759faa387f1d29f0fb35a5f07fee03cf741e3fed1e0da59f84edddd4"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/model-receipts.jsonl",
+      "sha256": "590891bd4757de71cdef8b523c589ccbf29aad270dcb88bb0ddfd29c27b26e17"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/request-audit.jsonl",
+      "sha256": "40f9e5fd104780b8ddd9ef24d933b2bc0916f71f25a042dac6dcf152e431fa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/retrieval.jsonl",
+      "sha256": "89e17ee480f08e0b6d51166ba939bb491598805f03641370e772005896b1c17b"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/timing.json",
+      "sha256": "658d34f2b502d7e640b476f85b36d828c909b90ce67d8586e646aa418feeeead"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t2-r2/trace-public.jsonl",
+      "sha256": "51a2a319aca210f6a7b7599e92ac9408ef0248521fe0bbab01d8056656a6c150"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/answer.json",
+      "sha256": "4e10b9cc844a0e03987e10bf6f97023d9cf4e31696e12bf3423292100cd8f197"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/final.txt",
+      "sha256": "4a55bd4e502589835b34c6160cd17cacfc7b09f9f73ea64ce7a6f913d3d62b75"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/frozen-prompt.txt",
+      "sha256": "d9ad759d739a22ad1484f88ddee6b1d4577285bcdfabf2314dedfaae37d3aa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/model-receipts.jsonl",
+      "sha256": "257e1fffa937b87d8be72c0c9af61574f526abad601b6e1045ff3d53f7c10111"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/request-audit.jsonl",
+      "sha256": "c4810dad4f4a0e925f5c3515128c68f0476e59dcc14b47ce428972bcef018362"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/retrieval.jsonl",
+      "sha256": "4676c84508ced83b51ce75bf77ac721a095818496c0286e1754d6023c0986978"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/timing.json",
+      "sha256": "3b00b4a6e2baec3649cbd95684c9d084156caac4a9c3f9c3fdf6402c79fcd06a"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r1/trace-public.jsonl",
+      "sha256": "6714e0f4a50d92353d0ab5443f5557d24be1dccc676d01dcce6fe54cecd2532e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/answer.json",
+      "sha256": "d4c17574dd898a582a955990e65106fc8e553b43104291bdd15854863fd1ffa9"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/final.txt",
+      "sha256": "f1b9d1066ce78c2014c034d5ef3d01d3f0a29077f97584257de8a191312c5285"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/frozen-prompt.txt",
+      "sha256": "d9ad759d739a22ad1484f88ddee6b1d4577285bcdfabf2314dedfaae37d3aa52"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/model-receipts.jsonl",
+      "sha256": "b8b8224c8baf1ce6eb134017b67a99190645642c48d307e654acde82edab5856"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/request-audit.jsonl",
+      "sha256": "cea0caf7a5076fb184362d7128f81ae807786e775c9571e204c7492f71b29ff5"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/retrieval.jsonl",
+      "sha256": "0fa7d929fe5d206c842862014c6d236acf21eb3d9e5a8ca4454e269f27f619b2"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/timing.json",
+      "sha256": "a9d4f9576f53786a1e4168643d8b38b8dfadab035521cecd1f1ef3d2b58a2d32"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t3-r2/trace-public.jsonl",
+      "sha256": "709b269fcc9ac527876c133ab88717aa0b14c23978af4871d595d03118f50afd"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/answer.json",
+      "sha256": "59b7872abf3b82a61661780ca9ab774c840d01ffd8c58d4dc3dcab43f028dfab"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/final.txt",
+      "sha256": "75e86c862d12883ae6b553490dbeaeee0c7b03771cdf14de1409c11484d1bddb"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/frozen-prompt.txt",
+      "sha256": "402b3af437b5084b76c12ed00bdb64d680041a77cddbca3f922bcafa5e160533"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/model-receipts.jsonl",
+      "sha256": "14c7ef375fd53bef05b1004802d1c7004f9dcc12f0f5bc83b7fd15b804dd9dec"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/request-audit.jsonl",
+      "sha256": "c4810dad4f4a0e925f5c3515128c68f0476e59dcc14b47ce428972bcef018362"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/retrieval.jsonl",
+      "sha256": "936c79e2517b379d2340b997f833425b2edaba32d22d1b2808c8d99d876edaa0"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/timing.json",
+      "sha256": "412a05c6c288228227285037664a2379b6850b91856ec3f5c236003fd1fa4aac"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r1/trace-public.jsonl",
+      "sha256": "5fbd3d3266384684e442520e33c6c6eb4723bb28809bfd6ad0d1817e6c387472"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/answer.json",
+      "sha256": "92d56a482abf3c088aefaae7436ceb1ad307543a58f7efc4f90808c13bb7a8ec"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/final.txt",
+      "sha256": "d37c0d845c67a9d9b1c6e3646a1a69e28e1dc82d87aa6276dcd4bba48e376d66"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/frozen-prompt.txt",
+      "sha256": "402b3af437b5084b76c12ed00bdb64d680041a77cddbca3f922bcafa5e160533"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/isolation.json",
+      "sha256": "232034dbae0af9c7a2995a110bc2be8d409876d59a593e5519a82aca4a863319"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/model-receipts.jsonl",
+      "sha256": "930698da68fcff668a93c46edc2c30dc55dd9b7c27b4e11c01a8ec31bfc0a38e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/request-audit.jsonl",
+      "sha256": "c4810dad4f4a0e925f5c3515128c68f0476e59dcc14b47ce428972bcef018362"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/retrieval.jsonl",
+      "sha256": "ff84051eec3f8752407edfd6e9102542149e4cc83260dd0030b6d65cd25c82f9"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/timing.json",
+      "sha256": "47e3dc7d14657c97e1904c77312f82b8c5efd064aba602ea0156e4cf250b4129"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/artifacts/structured-t4-r2/trace-public.jsonl",
+      "sha256": "f4993ca0aa8f9fc450a2a054cc763fb446a647b9d1f8609d8a9672c60bad9582"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/build_report.py",
+      "sha256": "3da899fd6336ee13f4ced8b593d84fcffe52670ccfbc3131524b7a0757880024"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/corpus/freeze.json",
+      "sha256": "505bcff1391f191f6dea2a567c61f6e0449923793ad8256755622ca1a2a09ffa"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/corpus/method-payloads.json",
+      "sha256": "c04e3f343d0b6d1f3fc9bab5ea079aa16756b10ee021c50ca3f96fc2e096d87c"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/corpus/source-cards.json",
+      "sha256": "49e4a6fd64c0d8a7924f68d8e9171714b7991bc7765f37d510150e6e40cbb66c"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/corpus/sources.md",
+      "sha256": "15f6b77f38c17abc4a501df5b8e9e1d6940a70d78f35d583865fb7ff1b237c8f"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/execution/order.json",
+      "sha256": "7d5f8857f591fe4b064f28241afdead68b7c3896da9c018fe5a534ed70a10f15"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/execution/preflight-fixed.json",
+      "sha256": "b06375bab11b6041374c1bb6347b16dd1c658ddaef9f3dfb66b803ccd9a0812c"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/experiment-freeze.json",
+      "sha256": "ec10526fb63ded3679359bc9da24d30ccd1678a6b523b08a1d9b5f7a117f530a"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/freeze_experiment.py",
+      "sha256": "cc1a33b1266d489712a09ba50aa38c5cfc92c0d6b3bbf1ad69d8e8ad67131b61"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/grading/blind-grades.json",
+      "sha256": "c21956990bddaa6be0f3612084e2d60edecea95f88bf0bcfe9555343d75d3a1c"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/grading/blind-key.json",
+      "sha256": "b7fa7c29925bbcda71c1109013fb698d52c0895098d9ea8c2f426aa0113cd3f8"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/grading/blind-packet.json",
+      "sha256": "ccd3d2c9db6725db27fc4c277692f00e05e965b30da240b0bf4afa4b5c247d84"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/harness/broker.py",
+      "sha256": "04dc4973c14e38a4f3483514e5151d3611dceaf3d205ddbdabc831f25242e0e8"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/harness/flat_view.py",
+      "sha256": "2d78524d3654a5f7d519ec1e67172a7340347e1cdfdef4fa10e27aa6cea70085"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/harness/inside.py",
+      "sha256": "cc8135f4452a7a285ae65f344e993446bb4e5b50f22a2a843f92f83d64d1695e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/harness/oa.py",
+      "sha256": "9b3b54575e29c04b743c14941311c74446bcf2777ecf4080df9502c5344474ed"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/harness/probe.py",
+      "sha256": "bce90657ae7bbb59328a8fdb21bc82bc893bf5ed78724d14eb6e383aa110b088"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/harness/relay.py",
+      "sha256": "05405bad5bbb30ea3ecce2d4f3b302bcb50a594b90584e845ab7432170befb1f"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/harness/run_candidate.py",
+      "sha256": "1ef75444117dac8081d1011b73e3ffdb4f2dd41387287cc8f9c3f40eccf06967"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/measurements.json",
+      "sha256": "568fe758aa6efa8f42d0324a8aa0835be0392eaa355f78508a2d7d27622a4f27"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/objective-summary.json",
+      "sha256": "bcb6d379b65f78f270f301b40875519e89ec2cdd05e342963b502981e0239527"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/protocol/README.md",
+      "sha256": "752e453ead22014d3255e1eb55cc42d6557743097e3f0a4b4c429b1d3b8bbaa4"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/protocol/SHA256SUMS",
+      "sha256": "5fe08e4e886f52406dedcdbfe67133d0632fa7c5fca488b5ee4d20b962f48c76"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/protocol/gold.json",
+      "sha256": "598f5b8151796ada14047562583db44578676236f35c9f1863e8766edaa02b86"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/protocol/tasks.json",
+      "sha256": "df77ee12ebd0d5e35990023976097fdf4130ede6d0c57d5b88665fa271ac9bb4"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/publication/public-readback.json",
+      "sha256": "ce0df96f0de9b7017e9dbf545484bcddc6a7bc8c6c5f7f6c984b521451031014"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/publication/receipt.json",
+      "sha256": "229072afcb407ed21cdee20e282e0fc7950ab6a7462b610043942c31381863dd"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/replay_archived.py",
+      "sha256": "6a551b1b5bfe148d466ae28acb08dcd2c048559e58fc5ead86baab09d98531ec"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/report.json",
+      "sha256": "ef6f9e3edaa9cec95f8b6c5a3c9d9cb96ffee18ba72065cfb71822c9f68b7699"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/run_batch.py",
+      "sha256": "df7823d440fd20166094d3bc52d655504fbb3cdb8437dd1c4866d6a56c466a76"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/score_and_blind.py",
+      "sha256": "6cbdcc73d11d88ee1aa040e922f2604b1b02ebc1058f6331f96ec672ac3f1f28"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/submission-analysis-note.json",
+      "sha256": "ea330cc9887f52b20aa60453f2557747f4bc779681785f0b69bd8baa1ee2c1b7"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/Dockerfile.node",
+      "sha256": "66e80d6925d6774ddf89cc7c81f3c884da4cf0f180e8088f2793978f7d5bf98e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/Dockerfile.python",
+      "sha256": "a18c822653f2018f5f9cc75c76c3632b96139016c688d9577605f2e1ecdd9c70"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/package-lock.json",
+      "sha256": "719877a9f4479d1811c58b2ecea0c35f2425176181958b10c02f3e255dcb86a6"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/probe-duckdb.py",
+      "sha256": "88cfae56c4baff019b5018bad3f2b56714701acfd2589b811cda4e0272a26471"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/probe-query.cjs",
+      "sha256": "9160cae4e50040e7bec6e46f56bd2b49e2f0a6652b8aadf8c55b57a94f1b62fd"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/probe-streamlit.py",
+      "sha256": "e49725dac62af6ba5b30986bd3c51d7c079541f25434b9353d44b368a0ae7b98"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/python-freeze.txt",
+      "sha256": "fc9a608f8587d3aa3a2067eb8cc92284c120958a356018568fbe48dc2267b173"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/raw-duckdb.json",
+      "sha256": "66091769c46a1c93ceabd36271722ef857acb8ddbb16afa05c8f6147553ac21f"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/raw-query.json",
+      "sha256": "34e765fd81d654b41079d03510113cc9012dba6db625845d0f3c42f72594f2d8"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/raw-streamlit.json",
+      "sha256": "f2340711227f8b7e36d8dd9a2aa7a1a3fdd7b2ae9ddcd02ad216d4d99ef14b92"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/run-probes.sh",
+      "sha256": "2d7e6f7cd6b33e22f5a820cdee0fa0bcf1280e7d4f0563a1d07300fec7d8f98e"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/sha256-manifest.json",
+      "sha256": "d764d0cbd03397e8fbfcd6a2779d7985e3f2a2cfa14a14cdd502880b956dcc51"
+    },
+    {
+      "path": "public-methods/benchmarks/exception-transfer-2026-10-29/upstream/upstream-summary.json",
+      "sha256": "c4adde1cdd9c6faf4894b18f5930637cbd00d254b752d0c02a98ceb0216a21b4"
     },
     {
       "path": "public-methods/benchmarks/failure-transfer-2026-10-28/README.md",
@@ -1034,6 +2030,10 @@
     {
       "path": "public-methods/docs/public-methods.md",
       "sha256": "95268947b36485efbab445b00c1409335572b7e1e6202347a013eb67ca7049a3"
+    },
+    {
+      "path": "public-methods/examples/documented-exceptions.json",
+      "sha256": "ee2fe608ad80ab1c4c908e01b62c490a6b445dd801c226c7053ad79b667aebb9"
     },
     {
       "path": "public-methods/examples/prior-regression-queries.json",

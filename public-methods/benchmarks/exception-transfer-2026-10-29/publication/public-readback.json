@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-28T15:51:51.274057+00:00",
+  "checks": [
+    {
+      "id": "method_5f63fd77854742e98eba25b1a94ab470",
+      "public_readback": true,
+      "title": "Streamlit fragment: 부분 재실행이 외부 컨테이너를 비우지 않는 경우",
+      "sources": 1
+    },
+    {
+      "id": "method_9de7657701024d8bba83793ef08c4887",
+      "public_readback": true,
+      "title": "Streamlit fragment: fragment 함수 안에서도 부분 rerun이 금지되는 실행",
+      "sources": 1
+    },
+    {
+      "id": "method_8a0ec54815304f6d8926d4ab71bdab54",
+      "public_readback": true,
+      "title": "TanStack Query: 비활성 쿼리의 수동 실행 예외와 skipToken",
+      "sources": 3
+    },
+    {
+      "id": "method_6b0d7239262e45b296e4cb893342c20c",
+      "public_readback": true,
+      "title": "TanStack Query: 구독 해제와 실제 요청 취소가 달라지는 경계",
+      "sources": 2
+    },
+    {
+      "id": "method_c3143b21b6834185b18db0a05276efc2",
+      "public_readback": true,
+      "title": "DuckDB SQL: 업그레이드 후 문자열 함수의 숫자 인수가 바인딩 오류를 내는 경우",
+      "sources": 1
+    },
+    {
+      "id": "method_c3ea85077885406a812eeb31cd1a0f25",
+      "public_readback": true,
+      "title": "DuckDB SQL: 동일한 날짜 문자열도 리터럴과 VARCHAR의 비교가 다른 경우",
+      "sources": 1
+    },
+    {
+      "query": "query-cancellation",
+      "results": [
+        "method_8a0ec54815304f6d8926d4ab71bdab54",
+        "method_6b0d7239262e45b296e4cb893342c20c",
+        "method_9de7657701024d8bba83793ef08c4887"
+      ]
+    }
+  ]
+}

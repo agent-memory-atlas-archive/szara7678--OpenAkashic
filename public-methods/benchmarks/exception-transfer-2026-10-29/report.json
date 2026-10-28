@@ -1,0 +1,118 @@
+{
+  "schema": "exception-transfer-report-v1",
+  "created_at_utc": "2026-10-28T15:54:58.685007+00:00",
+  "candidate_model": "gpt-6-luna",
+  "grading_model": "gpt-6.1-sol",
+  "summary": [
+    {
+      "arm": "base",
+      "runs": 8,
+      "content_points": 48,
+      "strict_artifact_points": 42,
+      "rubric_points": 47,
+      "max_points_each": 48,
+      "artifact_files": 7,
+      "wall_seconds": 209.59115627111169,
+      "retrieval_requests": 0,
+      "input_tokens": 259143,
+      "cached_input_tokens": 175232,
+      "output_tokens": 11646,
+      "total_tokens": 270789,
+      "task_content": {
+        "T1": 12,
+        "T2": 12,
+        "T3": 12,
+        "T4": 12
+      }
+    },
+    {
+      "arm": "flat",
+      "runs": 8,
+      "content_points": 47,
+      "strict_artifact_points": 29,
+      "rubric_points": 45,
+      "max_points_each": 48,
+      "artifact_files": 5,
+      "wall_seconds": 258.9585976199596,
+      "retrieval_requests": 10,
+      "input_tokens": 288573,
+      "cached_input_tokens": 174464,
+      "output_tokens": 9361,
+      "total_tokens": 297934,
+      "task_content": {
+        "T1": 12,
+        "T2": 12,
+        "T3": 11,
+        "T4": 12
+      }
+    },
+    {
+      "arm": "structured",
+      "runs": 8,
+      "content_points": 48,
+      "strict_artifact_points": 42,
+      "rubric_points": 45,
+      "max_points_each": 48,
+      "artifact_files": 7,
+      "wall_seconds": 277.29170894797426,
+      "retrieval_requests": 18,
+      "input_tokens": 400927,
+      "cached_input_tokens": 251648,
+      "output_tokens": 11115,
+      "total_tokens": 412042,
+      "task_content": {
+        "T1": 12,
+        "T2": 12,
+        "T3": 12,
+        "T4": 12
+      }
+    }
+  ],
+  "conclusion": "No quality or efficiency advantage was established. Delivered decision content scored 48/48 without retrieval, 47/48 with the same corpus flattened, and 48/48 with OpenAkashic structured references. The single flat error contradicted its own correct rationale, so it is not evidence of superior knowledge. Blind model explanation scores were 47/48, 45/48 and 45/48 respectively. Structured access used 52.2% more total provider tokens than no retrieval and 38.3% more than flat, with no explanation advantage. Strict requested-file scores were 42/48, 29/48 and 42/48; missing files are disclosed separately. These four selected tasks have a baseline ceiling and do not establish general usefulness or uselessness.",
+  "comparison": {
+    "structured_vs_base_token_change_percent": 52.16349260863624,
+    "structured_vs_flat_token_change_percent": 38.299757664449174,
+    "structured_vs_base_observed_time_change_percent": 32.3012449004719
+  },
+  "gates": {
+    "exploratory_utility_met": false,
+    "representation_value_met": false,
+    "same_quality_30_percent_token_reduction_met": false,
+    "reason": "Base content ceiling, lower model rubric, higher token usage; one flat serialization inconsistency is not a knowledge advantage."
+  },
+  "integrity": {
+    "all24_models_exact": true,
+    "all24_provider_cli_usage_match": true,
+    "all24_receipts_complete": true,
+    "all24_isolation_pass": true,
+    "all24_valid_delivered_json": true,
+    "missing_requested_files": 5,
+    "retrieval_http_errors": 0,
+    "retrieval_runs": 16,
+    "graph_traversal_tested": false
+  },
+  "unmeasured": {
+    "dollar_cost": null,
+    "curation_actual_tokens": null,
+    "grader_actual_tokens": null,
+    "human_expertise_quality": null,
+    "real_user_task_success": null,
+    "production_latency": null
+  },
+  "evidence_boundary": [
+    "4 tasks across 3 families with 2 repeats, not 48 independent cases",
+    "Curated version-specific documentation task families, not randomly sampled new production failures",
+    "Same-pool same-retriever flat baseline; no claim about all RAG or graph architectures",
+    "Final-response fallback analysis clarified during execution before content inspection; strict file results preserved",
+    "One anonymized model grader; no human evaluator and imperfect style blinding",
+    "Fresh agent state, not cold provider prefix cache; cached tokens included in input",
+    "Serial runs but shared host and provider response delays; no isolated performance inference",
+    "No output or rubric tuning, no failed candidate replacement",
+    "Independent upstream tests do not establish whole Streamlit UI or actual HTTP behavior"
+  ],
+  "next_decision": {
+    "adopt": "Version, applicability, source and observed limits remain explicit; preserve measured failures and offline replay",
+    "do_not_adopt": "Mandatory retrieval as default or mass generic-document expansion based on a hoped-for benefit",
+    "next_evidence_needed": "Real public failure/application episodes with before/after state, context constraints, attempted alternatives and measurable outcomes; compare against same-information flat records before graph-value claims"
+  }
+}

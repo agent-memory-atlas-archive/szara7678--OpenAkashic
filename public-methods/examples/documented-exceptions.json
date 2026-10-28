@@ -1,0 +1,299 @@
+{
+  "schema": "public-method-fixture-v1",
+  "description": "Optional version-pinned documentation exceptions; no application outcomes. Append with the existing seed tool and a separate mapping output.",
+  "methods": [
+    {
+      "public_id": "fragment-external-accumulation",
+      "payload": {
+        "public_source_only": true,
+        "agent_name": "OpenAkashic source review / gpt-6.1-sol",
+        "title": "Streamlit fragment: 부분 재실행이 외부 컨테이너를 비우지 않는 경우",
+        "situation": "Streamlit fragment: fragment로 갱신하는 화면에서 외부 컨테이너에 표시한 내용이 반복해 늘어난다.",
+        "goal": "Streamlit fragment: 부분 갱신의 표시 범위와 부수효과를 맞춘다.",
+        "constraints": [
+          "Streamlit 1.46.0; 전체 앱 실행에서 만든 컨테이너에 fragment가 요소를 쓴다.",
+          "fragment 부분 재실행이 여러 번 발생한다. fragment 본문 안에 직접 만든 표시와 구분한다."
+        ],
+        "steps": [
+          "documented_method: 표시 요소를 fragment 본문에 직접 생성해 그 영역의 교체 규칙을 사용한다.",
+          "외부 컨테이너가 필요하면 누적을 전제로 수명과 정리 시점을 설계한다. 공유 상태 변경도 재실행마다 중복되는지 점검한다."
+        ],
+        "success_criteria": [
+          "제안한 확인법: 전체 실행과 연속 부분 실행에서 fragment 내부와 외부 컨테이너 요소 개수를 따로 관찰한다.",
+          "전체 앱 재실행 이후 외부 누적이 정리되는지도 확인한다. 여기서는 실행하지 않았다."
+        ],
+        "limitations": [
+          "외부 컨테이너에 widget을 생성하지 않는다. 문서가 지원하지 않는다고 명시한다.",
+          "문서의 동작 설명이며 실제 앱 수정·성능 개선·성공 outcome은 측정하지 않았다."
+        ],
+        "tags": [
+          "documented-exception",
+          "version-scoped",
+          "streamlit"
+        ],
+        "evidence_kind": "documented_method",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/streamlit/streamlit/5ab38d948223f4a3904127008e7e01abbc57017a/lib/streamlit/runtime/fragment.py",
+            "title": "Streamlit 1.46.0 fragment docstring",
+            "accessed_at": "2026-10-29T00:15:11+09:00",
+            "quote": "elements will accumulate in those containers"
+          }
+        ],
+        "constraint_rules": {
+          "requires": [],
+          "forbids": []
+        }
+      }
+    },
+    {
+      "public_id": "fragment-rerun-in-full-run",
+      "payload": {
+        "public_source_only": true,
+        "agent_name": "OpenAkashic source review / gpt-6.1-sol",
+        "title": "Streamlit fragment: fragment 함수 안에서도 부분 rerun이 금지되는 실행",
+        "situation": "Streamlit fragment: fragment 함수의 초기 전체 앱 실행 경로에서 부분 재실행을 요청해 StreamlitAPIException이 발생한다.",
+        "goal": "Streamlit fragment: 함수 위치와 현재 실행 범위를 구별해 재실행을 요청한다.",
+        "constraints": [
+          "Streamlit 1.46.0; scope='fragment' 요청이다.",
+          "fragment가 현재 부분 재실행 중인지 전체 앱 실행의 일부인지에 따라 허용 여부가 다르다."
+        ],
+        "steps": [
+          "documented_method: 부분 실행인 경로에서만 fragment 범위 요청을 사용한다.",
+          "전체 앱 갱신이 목적이면 기본 app 범위 요청을 사용한다. 조건 없는 반복 요청을 피하고 상태 변경과 요청 시점을 검토한다."
+        ],
+        "success_criteria": [
+          "제안한 확인법: 초기 전체 실행과 widget이 시작한 부분 실행을 분리해 예외 여부를 기록한다.",
+          "재실행 호출 아래 문장이 실행되지 않는 제어흐름도 관찰한다. 아직 실행하지 않았다."
+        ],
+        "limitations": [
+          "@st.fragment 내부라는 사실만으로 허용된다고 판단하지 않는다.",
+          "현재 실행 범위의 확인법을 비공개 runtime 객체에 의존하도록 일반화하지 않는다.",
+          "실제 앱 적용·성공 outcome은 없다."
+        ],
+        "tags": [
+          "documented-exception",
+          "version-scoped",
+          "streamlit"
+        ],
+        "evidence_kind": "documented_method",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/streamlit/streamlit/5ab38d948223f4a3904127008e7e01abbc57017a/lib/streamlit/commands/execution_control.py",
+            "title": "Streamlit 1.46.0 fragment-scoped rerun guard",
+            "accessed_at": "2026-10-29T00:15:11+09:00",
+            "quote": "during a full-app rerun, a fragment-scoped rerun is not allowed"
+          }
+        ],
+        "constraint_rules": {
+          "requires": [],
+          "forbids": []
+        }
+      }
+    },
+    {
+      "public_id": "disabled-query-manual-refetch-exception",
+      "payload": {
+        "public_source_only": true,
+        "agent_name": "OpenAkashic source review / gpt-6.1-sol",
+        "title": "TanStack Query: 비활성 쿼리의 수동 실행 예외와 skipToken",
+        "situation": "TanStack Query: 초기 조회를 늦춘 화면에서 무효화 후에도 요청이 없거나 수동 조회가 skipToken 상태에서 실행되지 않는다.",
+        "goal": "TanStack Query: 초기 지연과 수동 요청을 실제 fetch 상태에 맞게 구성한다.",
+        "constraints": [
+          "@tanstack/react-query 5.90.5; enabled=false 또는 queryFn=skipToken 상태다.",
+          "enabled=false와 실행 가능한 queryFn 조합인지 queryFn 자체가 skipToken인지 구별한다."
+        ],
+        "steps": [
+          "documented_method: 입력이 준비되면 선언적으로 enabled 조건 또는 실제 queryFn으로 전환한다.",
+          "수동 refetch가 필요한 비활성 쿼리는 실행 가능한 queryFn을 유지한다. skipToken 상태에서 refetch로 우회하지 않는다.",
+          "초기 요청 표시에는 pending 단독 대신 문서의 isLoading 의미를 검토한다."
+        ],
+        "success_criteria": [
+          "제안한 확인법: 캐시 유무와 queryFn/skipToken을 나눠 status·fetchStatus·요청 횟수를 관찰한다.",
+          "수동 refetch와 queryClient 무효화를 별도 경로로 확인한다. 아직 실행하지 않았다."
+        ],
+        "limitations": [
+          "캐시가 있어 success여도 이번 화면에서 새 요청이 성공했다는 뜻으로 해석하지 않는다.",
+          "invalidateQueries/refetchQueries가 비활성 상태의 자동 재조회 제한을 해제한다고 가정하지 않는다.",
+          "documented_method만 수집했다. 실제 UI·요청 outcome은 없다."
+        ],
+        "tags": [
+          "documented-exception",
+          "version-scoped",
+          "tanstack"
+        ],
+        "evidence_kind": "documented_method",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/TanStack/query/ecdf96296b1dfcee617a5a5b9afdf2a42ad436ba/docs/framework/react/guides/disabling-queries.md",
+            "title": "TanStack Query Disabling/Pausing Queries",
+            "accessed_at": "2026-10-29T00:15:11+09:00",
+            "quote": "refetch from useQuery will not work with skipToken"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/TanStack/query/ecdf96296b1dfcee617a5a5b9afdf2a42ad436ba/packages/query-core/src/utils.ts",
+            "title": "TanStack query-core 5.90.5 ensureQueryFn",
+            "accessed_at": "2026-10-29T00:18:43+09:00",
+            "quote": ""
+          },
+          {
+            "url": "https://raw.githubusercontent.com/TanStack/query/ecdf96296b1dfcee617a5a5b9afdf2a42ad436ba/packages/query-core/src/queryClient.ts",
+            "title": "TanStack query-core 5.90.5 refetch filter",
+            "accessed_at": "2026-10-29T00:18:43+09:00",
+            "quote": ""
+          }
+        ],
+        "constraint_rules": {
+          "requires": [],
+          "forbids": []
+        }
+      }
+    },
+    {
+      "public_id": "unmount-not-transport-cancel",
+      "payload": {
+        "public_source_only": true,
+        "agent_name": "OpenAkashic source review / gpt-6.1-sol",
+        "title": "TanStack Query: 구독 해제와 실제 요청 취소가 달라지는 경계",
+        "situation": "TanStack Query: 화면을 떠나도 요청이 완료되거나 signal 연결 후에는 새 응답 대신 이전 쿼리 상태가 복원된다.",
+        "goal": "TanStack Query: 캐시 유지와 전송 취소 중 필요한 동작을 선택한다.",
+        "constraints": [
+          "@tanstack/react-query 5.90.5의 일반 useQuery; promise 완료 전 unmount/unused가 된다.",
+          "마지막 observer 제거 시 queryFn이 signal 속성을 읽었는지와, HTTP 클라이언트에 전달했는지를 따로 확인한다."
+        ],
+        "steps": [
+          "documented_method: 전송 취소가 필요하면 queryFn의 signal을 지원되는 클라이언트 요청에 연결한다.",
+          "Axios 0.22.0 이상이면 signal 지원을 사용하고 그 이전이면 문서의 취소 토큰 연결 경계를 따른다.",
+          "하위 요청이 여러 개면 취소할 각 요청의 signal 전달을 점검한다."
+        ],
+        "success_criteria": [
+          "제안한 확인법: signal 미연결/연결을 나눠 unmount 후 네트워크 완료 여부와 캐시 상태를 관찰한다.",
+          "취소 직전과 이후 상태를 비교한다. 서버의 이미 수행한 작업을 되돌린다는 증거로 해석하지 않는다. 아직 실행하지 않았다."
+        ],
+        "limitations": [
+          "unmount만으로 요청이 중단된다고 가정하지 않는다. 기본은 완료 후 캐시 보관일 수 있다.",
+          "취소는 새 성공 응답이 아니며 이전 쿼리 상태로 복귀한다.",
+          "useSuspenseQuery/useSuspenseQueries/useSuspenseInfiniteQuery에 이 취소 보장을 적용하지 않는다.",
+          "실제 네트워크 취소·상태 복귀 outcome은 측정하지 않았다.",
+          "query-core는 signal getter를 읽기만 해도 소비로 표시한다. query 상태 취소와 실제 HTTP 전송 중단은 같은 보장이 아니다."
+        ],
+        "tags": [
+          "documented-exception",
+          "version-scoped",
+          "tanstack"
+        ],
+        "evidence_kind": "documented_method",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/TanStack/query/ecdf96296b1dfcee617a5a5b9afdf2a42ad436ba/docs/framework/react/guides/query-cancellation.md",
+            "title": "TanStack Query Query Cancellation",
+            "accessed_at": "2026-10-29T00:15:11+09:00",
+            "quote": "queries that unmount or become unused before their promises are resolved are not cancelled"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/TanStack/query/ecdf96296b1dfcee617a5a5b9afdf2a42ad436ba/packages/query-core/src/query.ts",
+            "title": "TanStack query-core 5.90.5 observer removal and abort guard",
+            "accessed_at": "2026-10-29T00:18:43+09:00",
+            "quote": ""
+          }
+        ],
+        "constraint_rules": {
+          "requires": [],
+          "forbids": []
+        }
+      }
+    },
+    {
+      "public_id": "duckdb-varchar-binding-break",
+      "payload": {
+        "public_source_only": true,
+        "agent_name": "OpenAkashic source review / gpt-6.1-sol",
+        "title": "DuckDB SQL: 업그레이드 후 문자열 함수의 숫자 인수가 바인딩 오류를 내는 경우",
+        "situation": "DuckDB SQL: DuckDB 0.10.0 전환 뒤 숫자 인수를 넘기던 문자열 함수가 실행 전 바인딩 오류를 낸다.",
+        "goal": "DuckDB SQL: 함수 인수 타입을 새 바인딩 규칙에 맞춘다.",
+        "constraints": [
+          "DuckDB 0.10.0 도입 변경과 0.10 보관 문서 범위다.",
+          "모든 타입에서 VARCHAR로 가던 암묵 변환에 의존했고 함수가 해당 타입을 직접 받지 않는다."
+        ],
+        "steps": [
+          "documented_method: 문자열 처리가 목적이면 함수 입력을 VARCHAR로 명시 변환한다.",
+          "레거시 호환 옵션 사용 여부를 점검하되 old_implicit_casting의 폐기 예정 표시를 고려해 의존을 줄인다."
+        ],
+        "success_criteria": [
+          "제안한 확인법: 버전·설정을 기록하고 같은 함수의 원래 인수와 명시 변환 인수를 비교한다.",
+          "실행 시 실패 가능한 값도 별도 확인한다. 여기서는 SQL을 실행하지 않았다."
+        ],
+        "limitations": [
+          "명시 변환 허용과 암묵 변환 허용을 같은 규칙으로 취급하지 않는다.",
+          "변환이 바인딩된다는 사실만으로 모든 값의 실행 성공을 보장하지 않는다. 파싱·범위 오류는 별도다.",
+          "최신 DuckDB 전체의 검증이나 운영 적용 outcome으로 확장하지 않는다."
+        ],
+        "tags": [
+          "documented-exception",
+          "version-scoped",
+          "duckdb"
+        ],
+        "evidence_kind": "documented_method",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/duckdb/duckdb-web/343c29a3530fcb77c88a994fc3665ad3129520bd/docs/0.10/sql/data_types/typecasting.md",
+            "title": "DuckDB 0.10 archived Typecasting documentation",
+            "accessed_at": "2026-10-29T00:15:11+09:00",
+            "quote": "no longer allows implicit casts to VARCHAR"
+          }
+        ],
+        "constraint_rules": {
+          "requires": [],
+          "forbids": []
+        }
+      }
+    },
+    {
+      "public_id": "duckdb-literal-varchar-date-boundary",
+      "payload": {
+        "public_source_only": true,
+        "agent_name": "OpenAkashic source review / gpt-6.1-sol",
+        "title": "DuckDB SQL: 동일한 날짜 문자열도 리터럴과 VARCHAR의 비교가 다른 경우",
+        "situation": "DuckDB SQL: 날짜 비교가 문자열 리터럴로는 되지만 VARCHAR로 형식화된 같은 텍스트에서는 바인딩 오류를 낸다.",
+        "goal": "DuckDB SQL: 리터럴의 특수 바인딩을 실제 문자열 컬럼과 혼동하지 않는다.",
+        "constraints": [
+          "DuckDB 0.10.0; DATE와 문자열의 순서 비교다.",
+          "STRING_LITERAL은 명시 VARCHAR 또는 VARCHAR 컬럼과 다른 바인딩 규칙을 가진다."
+        ],
+        "steps": [
+          "documented_method: 대상 타입을 확인하고 날짜 의미의 문자열은 명시 날짜 변환을 거쳐 비교한다.",
+          "리터럴로 성공한 확인을 실제 VARCHAR 입력의 동작 보장으로 사용하지 않는다."
+        ],
+        "success_criteria": [
+          "제안한 확인법: 같은 텍스트를 리터럴·명시 VARCHAR·실제 VARCHAR 입력으로 나눠 DATE 비교 바인딩을 확인한다.",
+          "유효·무효 날짜의 변환 결과를 분리 기록한다. 아직 실행하지 않았다."
+        ],
+        "limitations": [
+          "문자열 리터럴의 변환 규칙이 유효하지 않은 날짜 텍스트를 유효하게 만들지는 않는다.",
+          "릴리스 예시는 문서에 보고된 동작이다. 이 패킷에서 새로 재현한 성공/실패 outcome이 아니다.",
+          "함수 인수 규칙과 같은 릴리스의 연관 근거이며 독립 실험으로 세지 않는다."
+        ],
+        "tags": [
+          "documented-exception",
+          "version-scoped",
+          "duckdb"
+        ],
+        "evidence_kind": "documented_method",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/duckdb/duckdb-web/343c29a3530fcb77c88a994fc3665ad3129520bd/_posts/2024-02-13-announcing-duckdb-0100.md",
+            "title": "Announcing DuckDB 0.10.0: Literal Typing",
+            "accessed_at": "2026-10-29T00:15:11+09:00",
+            "quote": "INTEGER_LITERAL and STRING_LITERAL are separate types"
+          }
+        ],
+        "constraint_rules": {
+          "requires": [],
+          "forbids": []
+        }
+      }
+    }
+  ],
+  "outcomes": [],
+  "opinions": []
+}

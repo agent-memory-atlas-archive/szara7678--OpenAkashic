@@ -1,0 +1,1 @@
+{"uid": 65534, "cwd": "/work", "forbidden_paths_present": {"/home/insu": false, "/mnt/c": false, "/root/.codex": "access_denied", "/var/run/docker.sock": false, "/home/eval/.codex/auth.json": false}, "home_files": [".codex"], "root_write_blocked": true, "external_network_blocked": true}

@@ -1,0 +1,82 @@
+{
+  "created_at_utc": "2026-10-28T15:27:05.518146+00:00",
+  "purpose": "Version-pinned upstream exception reproduction for learning-evidence validation; not evaluation-output generation, product success, or performance evidence.",
+  "input_read_boundary": [
+    "corpus/source-cards.json",
+    "self-authored upstream files",
+    "installed public packages"
+  ],
+  "excluded_inputs": [
+    "protocol",
+    "gold",
+    "candidate answers",
+    "other services and projects",
+    "credentials",
+    "Closed"
+  ],
+  "runtime_isolation": {
+    "docker": true,
+    "root_filesystem": "read-only",
+    "probe_mount": "read-only",
+    "network": "none",
+    "tmpfs": "/tmp",
+    "caps": "ALL dropped",
+    "no_new_privileges": true
+  },
+  "packages": {
+    "duckdb": "0.10.0",
+    "streamlit": "1.46.0",
+    "@tanstack/query-core": "5.90.5"
+  },
+  "images": [
+    {
+      "name": "oa-exception-python-20261029",
+      "id": "sha256:fb4793a8fb266e839b8c15fcfdd0dbedd69bbde4ba9c08709b62d2cfd3c624f7",
+      "repo_digests": [
+        "oa-exception-python-20261029@sha256:fb4793a8fb266e839b8c15fcfdd0dbedd69bbde4ba9c08709b62d2cfd3c624f7"
+      ],
+      "architecture": "amd64",
+      "os": "linux"
+    },
+    {
+      "name": "oa-exception-node-20261029",
+      "id": "sha256:5a95571584a613897a54314c0d50f67488cf958c30c4bd8b2c70b3d5542c525c",
+      "repo_digests": [
+        "oa-exception-node-20261029@sha256:5a95571584a613897a54314c0d50f67488cf958c30c4bd8b2c70b3d5542c525c"
+      ],
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  ],
+  "core_observation_count": 10,
+  "raw_files": [
+    "raw-duckdb.json",
+    "raw-query.json",
+    "raw-streamlit.json"
+  ],
+  "observed_summary": [
+    "DuckDB substring INTEGER_LITERAL binding fails; explicit VARCHAR and old_implicit_casting succeed.",
+    "DuckDB DATE > string literal succeeds; explicit VARCHAR and VARCHAR input fail binding; explicit DATE succeeds; invalid DATE cast fails conversion.",
+    "Query signal unread: unsubscribe leaves in-flight promise running and new data enters cache.",
+    "Query signal read only: unsubscribe reverts query state, aborts signal; unconnected promise still completes; completed data does not replace reverted cache.",
+    "Query signal with abort listener: unsubscribe reverts query state and aborts local transport simulation.",
+    "Disabled valid queryFn: empty cache pending/idle with zero calls; invalidate/client refetch zero calls; observer manual refetch succeeds once.",
+    "Disabled cached query starts success/idle with zero new calls.",
+    "skipToken manual refetch returns Missing queryFn error.",
+    "Streamlit installed private guard rejects fragment scope with empty current-run queue; app scope returns empty queue.",
+    "Streamlit installed private guard with fragment queue returns current-and-later suffix for fragment scope; app scope returns empty queue."
+  ],
+  "limitations": [
+    "Streamlit uses a minimal SimpleNamespace context and the installed private helper; no decorated app/UI session, external-container accumulation, widget interactions, or execution-below-rerun verification.",
+    "query-core QueryClient/QueryObserver only; no React renderer, Suspense hooks, Axios, real HTTP, server work rollback, or actual device behavior.",
+    "Abort transport is an explicit local promise/listener simulation; it is not a network measurement.",
+    "Public fixed-version library observations are same-product evidence; do not count them as independent operational outcomes.",
+    "No gold or candidate answers read; no evaluation scoring or downstream success claim."
+  ],
+  "source_cards_sha256": "49e4a6fd64c0d8a7924f68d8e9171714b7991bc7765f37d510150e6e40cbb66c",
+  "stderr_bytes": {
+    "stderr-duckdb.log": 0,
+    "stderr-query.log": 0,
+    "stderr-streamlit.log": 0
+  }
+}

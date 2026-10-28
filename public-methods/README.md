@@ -6,6 +6,8 @@ Public demo: https://knowledge.openakashic.com/research/ · [Measured results](h
 
 Experimental candidate discovery, not an automatic expert or truth engine. The expanded corpus failed to abstain on all four earlier out-of-scope technical questions. Never execute a method merely because it was retrieved. Identity, professional expertise and reported success are not independently verified.
 
+Latest: [24 fresh version-sensitive diagnostic runs](benchmarks/exception-transfer-2026-10-29/README.md) did not establish a quality or token-efficiency advantage over no retrieval or the same-corpus text baseline.
+
 ## What is here
 
 - A portable FastAPI + SQLite service; no private vault or news/time-explorer routes.
@@ -66,7 +68,7 @@ PYTHONPATH=api python -m pytest api/tests -q
 PYTHONPATH=api python api/scripts/benchmark_methods.py --endpoint http://127.0.0.1:8080 --queries examples/regression-queries.json --mapping "$OA_STATE/mapping.json" --output "$OA_STATE/new-observation.json"
 ```
 
-The prior technical questions can also be replayed by replacing `--queries` with `examples/prior-regression-queries.json` and choosing a new output path. The benchmark refuses to overwrite observations. Without a semantic index, hybrid checks report unavailable; they are not replaced with lexical successes. Keep API/model configuration and failures with results. Human preference, correction time, general answer quality, actual provider usage, commercial utility and independent OSS reproduction remain unmeasured.
+The prior technical questions can also be replayed by replacing `--queries` with `examples/prior-regression-queries.json` and choosing a new output path. The benchmark refuses to overwrite observations. Without a semantic index, hybrid checks report unavailable; they are not replaced with lexical successes. Keep API/model configuration and failures with results. Human preference, correction time, general quality across production work, commercial utility and independent OSS reproduction remain unmeasured. Actual provider usage is measured in the dated isolated-agent pilots below; this does not establish savings.
 
 ## Contribute
 
@@ -118,3 +120,8 @@ scripts are included. No broad answer-quality advantage has been demonstrated.
 ### Actual isolated-agent usage pilot
 
 [New 4-task, 12-run isolated comparison](benchmarks/isolated-agent-2026-10-28/README.md): a true no-resource baseline and optional access scored coding24/24 and judgment23/24 each, but optional access made0 lookups. A later required-lookup diagnostic scored24/24 and22/24 while consuming193,256 actual input+output tokens versus107,450 for the baseline. No output-quality or token-efficiency advantage is established. Fresh per-task containers, actual usage receipts, all artifacts and the negative results are retained. This updates the actual-usage gap for this small pilot only; older material-token estimates are unchanged.
+
+
+### Version-sensitive exception pilot — 2026-10-29
+
+No quality or efficiency advantage was established. Delivered decision content scored 48/48 without retrieval, 47/48 with the same corpus flattened, and 48/48 with OpenAkashic structured references. The single flat error contradicted its own correct rationale, so it is not evidence of superior knowledge. Blind model explanation scores were 47/48, 45/48 and 45/48 respectively. Structured access used 52.2% more total provider tokens than no retrieval and 38.3% more than flat, with no explanation advantage. Strict requested-file scores were 42/48, 29/48 and 42/48; missing files are disclosed separately. These four selected tasks have a baseline ceiling and do not establish general usefulness or uselessness. See the [24-run frozen experiment](benchmarks/exception-transfer-2026-10-29/README.md) for actual token receipts, same-corpus text baseline, submission failures and model grading limits. The base fixture remains 55 methods; six optional version-pinned records are in `examples/documented-exceptions.json`. The live demo now includes them, without adding fabricated successful outcomes.

@@ -1,0 +1,87 @@
+{
+  "package": "duckdb",
+  "version": "0.10.0",
+  "python": "3.11.14",
+  "observations": [
+    {
+      "id": "duckdb-implicit-varchar-function-binding",
+      "observations": [
+        {
+          "sql": "SELECT substring(42,1,1)",
+          "outcome": "error",
+          "error_type": "BinderException",
+          "error": "Binder Error: No function matches the given name and argument types 'substring(INTEGER_LITERAL, INTEGER_LITERAL, INTEGER_LITERAL)'. You might need to add explicit type casts.\n\tCandidate functions:\n\tsubstring(VARCHAR, BIGINT, BIGINT) -> VARCHAR\n\tsubstring(VARCHAR, BIGINT) -> VARCHAR\n\nLINE 1: SELECT substring(42,1,1)\n               ^"
+        },
+        {
+          "sql": "SELECT substring(42::VARCHAR,1,1)",
+          "outcome": "success",
+          "rows": [
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "sql": "SET old_implicit_casting=true",
+          "outcome": "success",
+          "rows": []
+        },
+        {
+          "sql": "SELECT substring(42,1,1)",
+          "outcome": "success",
+          "rows": [
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "sql": "SET old_implicit_casting=false",
+          "outcome": "success",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "id": "duckdb-date-literal-varchar-boundary",
+      "observations": [
+        {
+          "sql": "SELECT DATE '1992-01-01' > '1990-01-01'",
+          "outcome": "success",
+          "rows": [
+            [
+              true
+            ]
+          ]
+        },
+        {
+          "sql": "SELECT DATE '1992-01-01' > '1990-01-01'::VARCHAR",
+          "outcome": "error",
+          "error_type": "BinderException",
+          "error": "Binder Error: Cannot compare values of type DATE and type VARCHAR - an explicit cast is required\nLINE 1: SELECT DATE '1992-01-01' > '1990-01-01'::VARCHAR\n                                 ^"
+        },
+        {
+          "sql": "SELECT DATE '1992-01-01' > s FROM (SELECT '1990-01-01'::VARCHAR AS s) t",
+          "outcome": "error",
+          "error_type": "BinderException",
+          "error": "Binder Error: Cannot compare values of type DATE and type VARCHAR - an explicit cast is required\nLINE 1: SELECT DATE '1992-01-01' > s FROM (SELECT '1990-01-01'::VARCHAR ...\n                                 ^"
+        },
+        {
+          "sql": "SELECT DATE '1992-01-01' > CAST(s AS DATE) FROM (SELECT '1990-01-01'::VARCHAR AS s) t",
+          "outcome": "success",
+          "rows": [
+            [
+              true
+            ]
+          ]
+        },
+        {
+          "sql": "SELECT CAST('not-a-date' AS DATE)",
+          "outcome": "error",
+          "error_type": "ConversionException",
+          "error": "Conversion Error: date field value out of range: \"not-a-date\", expected format is (YYYY-MM-DD)"
+        }
+      ]
+    }
+  ]
+}

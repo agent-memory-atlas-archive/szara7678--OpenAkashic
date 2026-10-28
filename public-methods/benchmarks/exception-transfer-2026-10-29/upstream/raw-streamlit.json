@@ -1,0 +1,59 @@
+{
+  "package": "streamlit",
+  "version": "1.46.0",
+  "python": "3.11.14",
+  "level": "installed private guard unit probe with minimal context; no Streamlit UI/session execution",
+  "guard_source_sha256": "17a4d849680cb2a3e5491bd15e87c090bcf6128f4dce7f7f7fbf44563d71ba2d",
+  "observations": [
+    {
+      "id": "streamlit-full-run-fragment-guard",
+      "observations": [
+        {
+          "scope": "fragment",
+          "input_queue": [],
+          "current_fragment_id": "inside-decorated-fragment",
+          "outcome": "error",
+          "error_type": "StreamlitAPIException",
+          "error": "scope=\"fragment\" can only be specified from `@st.fragment`-decorated functions during fragment reruns."
+        },
+        {
+          "scope": "app",
+          "input_queue": [],
+          "current_fragment_id": "inside-decorated-fragment",
+          "outcome": "success",
+          "returned_queue": []
+        }
+      ]
+    },
+    {
+      "id": "streamlit-fragment-run-queue",
+      "observations": [
+        {
+          "scope": "fragment",
+          "input_queue": [
+            "earlier",
+            "current",
+            "later"
+          ],
+          "current_fragment_id": "current",
+          "outcome": "success",
+          "returned_queue": [
+            "current",
+            "later"
+          ]
+        },
+        {
+          "scope": "app",
+          "input_queue": [
+            "earlier",
+            "current",
+            "later"
+          ],
+          "current_fragment_id": "current",
+          "outcome": "success",
+          "returned_queue": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-10-28T15:24:31Z",
+  "source_cards_sha256": "49e4a6fd64c0d8a7924f68d8e9171714b7991bc7765f37d510150e6e40cbb66c",
+  "sources_md_sha256": "15f6b77f38c17abc4a501df5b8e9e1d6940a70d78f35d583865fb7ff1b237c8f",
+  "new_documented_methods": 6,
+  "new_outcomes": 0,
+  "new_opinions": 0,
+  "mapping": {
+    "fragment-external-accumulation": "method_a072f5b7563349648d444d6d14bca3fd",
+    "fragment-rerun-in-full-run": "method_86c23320abe64370845a7ddbb14701dc",
+    "disabled-query-manual-refetch-exception": "method_09f7fcaa51f64d4aad1881e12729264a",
+    "unmount-not-transport-cancel": "method_bdb09528304b462cbcf7981db052a2e7",
+    "duckdb-varchar-binding-break": "method_e48a6d9199284c6baa42ced19cdf3b4c",
+    "duckdb-literal-varchar-date-boundary": "method_357e9b4ba01840d4b02c481d1b3fe0b4"
+  },
+  "source_before_task": true
+}

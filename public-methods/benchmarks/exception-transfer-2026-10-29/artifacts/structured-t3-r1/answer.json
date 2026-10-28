@@ -1,0 +1,20 @@
+{
+  "decisions": {
+    "q1": "binding_error",
+    "q2": "4",
+    "q3": false,
+    "q4": "binding_error",
+    "q5": "conversion_error",
+    "q6": "unknown"
+  },
+  "rationale": {
+    "q1": "0.10.0에서는 숫자에서 VARCHAR로의 암묵 변환이 허용되지 않아 substring 인수 바인딩에 실패합니다.",
+    "q2": "명시적으로 VARCHAR로 바꾸면 '42'의 첫 글자인 '4'가 반환됩니다.",
+    "q3": "문자열 리터럴은 날짜 타입에 맞춰 비교할 수 있고 두 날짜가 같으므로 greater-than은 false입니다.",
+    "q4": "명시적 VARCHAR 값은 문자열 리터럴의 특수 규칙을 적용받지 않아 DATE와 VARCHAR 비교가 바인딩되지 않습니다.",
+    "q5": "TINYINT 변환은 지원되지만 999는 해당 범위를 벗어나 변환 오류입니다.",
+    "q6": "VARCHAR에서 DATE 변환 가능 여부는 실제 값에 달려 있고 목록이 없어 전체 행 성공 여부를 알 수 없습니다."
+  },
+  "fix": "A의 문자열 처리 목적에는 SELECT substring(CAST(42 AS VARCHAR), 1, 1);을 사용합니다. D의 날짜 비교 목적에는 SELECT d > CAST('1992-01-01' AS DATE) ... 를 사용합니다. F는 SELECT TRY_CAST(raw_date AS DATE) ... 로 변환 실패를 NULL로 식별한 뒤 실패 행을 격리하거나 거부하는 정책을 정하고, NULL로 바뀐 행을 별도로 집계·처리합니다. TRY_CAST가 실패를 숨겨도 된다는 정책을 대신하지는 않습니다. old_implicit_casting=true를 장기 호환책으로 검토한다면 이를 지원하는 정확한 배포 버전·설정 범위, 모든 연결의 일관된 적용, 종속 쿼리의 회귀 동작과 추후 업그레이드 제약을 확인한 뒤 제한적으로 사용합니다.",
+  "limitations": "판정은 DuckDB 0.10.0 및 제시된 설정에 한정한 정적 검토이며 라이브러리를 실행하지 않았습니다. F의 실제 raw_date 값이 없으므로 실패 행의 존재나 전 행 성공을 판단할 수 없습니다."
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "arm": "base",
+    "content_points": 48,
+    "strict_artifact_points": 42,
+    "file_present": 7,
+    "max_points": 48,
+    "tokens": 270789,
+    "seconds": 209.59115627111169,
+    "reads": 0,
+    "usage_verified": true
+  },
+  {
+    "arm": "flat",
+    "content_points": 47,
+    "strict_artifact_points": 29,
+    "file_present": 5,
+    "max_points": 48,
+    "tokens": 297934,
+    "seconds": 258.9585976199596,
+    "reads": 10,
+    "usage_verified": true
+  },
+  {
+    "arm": "structured",
+    "content_points": 48,
+    "strict_artifact_points": 42,
+    "file_present": 7,
+    "max_points": 48,
+    "tokens": 412042,
+    "seconds": 277.29170894797426,
+    "reads": 18,
+    "usage_verified": true
+  }
+]

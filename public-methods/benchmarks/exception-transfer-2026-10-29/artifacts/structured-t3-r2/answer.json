@@ -1,0 +1,20 @@
+{
+  "decisions": {
+    "q1": "binding_error",
+    "q2": "4",
+    "q3": false,
+    "q4": "binding_error",
+    "q5": "conversion_error",
+    "q6": "unknown"
+  },
+  "rationale": {
+    "q1": "0.10.0에서는 숫자에서 VARCHAR로의 암묵 변환이 허용되지 않아 substring 인수 바인딩이 실패합니다.",
+    "q2": "명시적 VARCHAR 변환 후 substring은 첫 글자인 \"4\"를 반환합니다.",
+    "q3": "문자열 리터럴은 DATE와 비교할 때 날짜로 해석되며 두 날짜가 같으므로 결과는 false입니다.",
+    "q4": "명시 VARCHAR 값은 문자열 리터럴의 특수 규칙을 받지 않아 DATE와 VARCHAR 비교가 바인딩되지 않습니다.",
+    "q5": "TINYINT 형 변환 자체는 지원되지만 999는 범위를 벗어나 변환 오류가 납니다.",
+    "q6": "raw_date의 값 목록이 없어 날짜로 변환 가능한지 판단할 수 없습니다."
+  },
+  "fix": "A 문자열 처리를 위해 substring(CAST(42 AS VARCHAR), 1, 1)을 사용합니다. D 날짜 비교를 위해 d > CAST('1992-01-01' AS DATE)로 쓰거나 날짜 리터럴과 비교합니다. F 불량값 정책을 정한 뒤 CAST 대신 TRY_CAST(raw_date AS DATE)로 변환 실패를 NULL로 표시하고, NULL 행을 격리·기록하거나 명시적으로 제외합니다. 실패 행을 허용하지 않는 정책이면 변환 전 유효성 검증 후 실패 행을 거부·격리합니다. old_implicit_casting=true는 레거시 호환을 위한 임시 선택지일 수 있으나 장기 의존 전에는 배포 환경에서 옵션 지원 여부, 적용 범위와 영향, 폐기 여부 및 업그레이드 계획을 확인하고 명시 변환으로 전환해야 합니다.",
+  "limitations": "DuckDB 0.10.0 및 old_implicit_casting=false 조건에 한정한 코드 검토입니다. SQL은 실행하지 않았습니다. F의 실제 값과 변환 실패 행 수는 확인할 수 없으므로 전체 성공 여부를 단정할 수 없습니다."
+}
