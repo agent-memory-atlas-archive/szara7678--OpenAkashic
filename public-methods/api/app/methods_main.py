@@ -37,7 +37,7 @@ def health():
 @app.get("/research/", include_in_schema=False)
 @app.get("/research/methods/", include_in_schema=False)
 def home():
-    return FileResponse(WEB / "methods.html")
+    return FileResponse(WEB / "methods-explore.html")
 
 
 @app.get("/research/methods/design-lab/", include_in_schema=False)
@@ -64,5 +64,10 @@ def design_example(condition: Literal["unaided", "direct", "retrieval"], asset: 
 
 
 @app.get("/research/{asset}", include_in_schema=False)
-def asset(asset: Literal["methods.js", "methods.css", "methods-graph.js", "methods-kpi.html", "methods-kpi.js"]):
+def asset(asset: Literal["methods.js", "methods.css", "methods-graph.js", "methods-kpi.html", "methods-kpi.js", "methods-explore.js", "methods-explore.css"]):
     return FileResponse(WEB / asset)
+
+
+@app.get("/research/methods/library/", include_in_schema=False)
+def methods_library():
+    return FileResponse(WEB / "methods.html")

@@ -374,7 +374,7 @@ def investigation(investigation_id: str):
 
 @router.get("/", include_in_schema=False)
 def index():
-    return FileResponse(WEB / "methods.html")
+    return FileResponse(WEB / "methods-explore.html")
 
 
 @router.get("/pilot", include_in_schema=False)
@@ -397,7 +397,7 @@ def time_reader():
 @router.get("/methods", include_in_schema=False)
 @router.get("/methods/", include_in_schema=False)
 def methods_reader():
-    return FileResponse(WEB / "methods.html")
+    return FileResponse(WEB / "methods-explore.html")
 
 
 @router.get("/methods/design-lab", include_in_schema=False)
@@ -432,5 +432,10 @@ def methods_design_example(
 
 
 @router.get("/{asset}", include_in_schema=False)
-def asset(asset: Literal["app.js", "style.css", "pilot.js", "memory.js", "memory.css", "time.js", "time.css", "methods.js", "methods.css", "methods-graph.js", "methods-kpi.html", "methods-kpi.js"]):
+def asset(asset: Literal["app.js", "style.css", "pilot.js", "memory.js", "memory.css", "time.js", "time.css", "methods.js", "methods.css", "methods-graph.js", "methods-kpi.html", "methods-kpi.js", "methods-explore.js", "methods-explore.css"]):
     return FileResponse(WEB / asset)
+
+
+@router.get("/methods/library/", include_in_schema=False)
+def methods_library():
+    return FileResponse(WEB / "methods.html")

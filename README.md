@@ -16,3 +16,10 @@ The current portable implementation lives in **`public-methods/`**. It includes 
 Closed Akashic personal memory and Open Time Machine are separate services. Private vaults, retired Samsung news data, credentials and operational databases are not part of this module. Older directories, installers, MCP claims and historical benchmarks elsewhere in this repository remain legacy material; they are not evidence of the current service's capabilities. Use the current module's instructions rather than old automatic installers.
 
 Code license: Apache-2.0. Linked third-party originals retain their own rights; [attribution and fixture scope](public-methods/NOTICE.md).
+
+
+### Relationship atlas update
+
+The public home page now offers global/local record navigation inspired by Graph Commons, Kumu and Obsidian. Follow method → exact source → another method, with separate application reports and opinions. See [the atlas](https://knowledge.openakashic.com/research/) and [the evidence report](https://knowledge.openakashic.com/research/methods-kpi.html).
+
+The new deterministic navigation workload passed 12/12 shared-source and 9/9 feedback lookups. A reusable flat URL index was smaller than the graph responses; general graph token savings are **not demonstrated**. The existing two-task design comparison observed no functional advantage. Record lookup success is not proof of better outputs. Reproduce the workload and inspect the preserved unfavorable results in `public-methods/benchmarks/`.

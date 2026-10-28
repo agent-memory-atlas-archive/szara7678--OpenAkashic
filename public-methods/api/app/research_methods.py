@@ -232,6 +232,16 @@ def get_method_graph(method_id: Annotated[str, Field(min_length=1, max_length=10
         raise HTTPException(404, str(exc)) from exc
 
 
+@router.get("/network")
+def method_network(domain: Annotated[str, Query(max_length=100)] = "", limit: Annotated[int, Query(ge=1, le=100)] = 80, focus: Annotated[str, Query(max_length=100, pattern=r"^[A-Za-z0-9_:\-]*$")] = "", depth: Annotated[int, Query(ge=1, le=2)] = 1):
+    from app.research_method_graph import network_graph
+    try:
+        validate_public_text(domain)
+        return network_graph(method_store(), domain, limit, focus, depth)
+    except ValueError as exc:
+        raise HTTPException(422, str(exc)) from exc
+
+
 @router.get("/evaluation/report")
 def method_evaluation_report():
     from pathlib import Path

@@ -8,6 +8,26 @@
     const response = await fetch("/research/api/methods/evaluation/report", {credentials:"omit"});
     if (!response.ok) throw new Error("not_ready"); const report = await response.json(); const s = report.summary;
     status.textContent = `측정 시각 ${new Date(report.measured_at).toLocaleString("ko-KR", {timeZone:"Asia/Seoul"})} KST · 같은 편집자가 만든 개발 회귀 · ${report.environment || "고정된 공개 코퍼스"}`;
+    const verdict = section("효과가 있는가? 현재의 결론", "방법 검색과 근거 연결은 작동합니다. 더 좋은 산출물을 만든다는 일반적인 효과는 아직 입증되지 않았습니다.");
+    verdict.classList.add("methods-kpi-verdict");
+    verdict.append(n("p", "그래프는 연결을 탐색하는 화면과 API입니다. 에이전트가 모든 그래프를 읽도록 요구하지 않습니다. 상황·목적으로 짧게 검색하고 필요한 방법만 조회하는 흐름을 우선 사용합니다.", "methods-muted"));
+    if (report.navigation_workload) {
+      const nav = report.navigation_workload, v=nav.summary;
+      const e = section("새 측정 · 연결을 따라 기록 찾기", `측정 ${new Date(nav.measured_at).toLocaleString("ko-KR",{timeZone:"Asia/Seoul"})} KST · 현재 코퍼스의 정확한 URL·ID 조회. 자연어 답변 생성이나 사람의 탐색 시험이 아닙니다.`);
+      metric(e,"같은 출처를 등록한 방법 모두 찾기",`${v.source_success} / ${v.source_tasks}`,"등록된 ID·버전을 평면 원기록과 대조했습니다. 출처의 진실성 검증이 아닙니다.");
+      metric(e,"정확한 버전의 적용 보고·의견 찾기",`${v.feedback_success} / ${v.feedback_tasks}`,"보고와 의견의 ID·버전을 비교. 보고된 성공을 독립적으로 검증한 것은 아닙니다.");
+      metric(e,"출처 탐색 · 그래프 응답 합계",`${v.shared_graph_tokens.toLocaleString()} 토큰`,`${v.source_tasks}개 출처 · 반복 메타데이터 포함 · o200k JSON 자료`);
+      metric(e,"강한 비교 기준 · 평면 URL 색인 한 번 읽기",`${v.flat_index_once_tokens.toLocaleString()} 토큰`,"같은 공개 원기록으로 실제 구성한 전체 URL→방법 참조 색인. 메모리에서 재사용할 수 있습니다.");
+      e.append(n("p","이 과제에서는 재사용 가능한 평면 색인이 더 작았습니다. 그래프가 항상 토큰을 줄인다는 근거로 쓰지 않습니다.","methods-muted"));
+      metric(e,"적용 기록 읽기 · 그래프 / 방법 전체",`${v.feedback_graph_tokens.toLocaleString()} / ${v.feedback_direct_tokens.toLocaleString()}`,`같은 ${v.feedback_tasks}개 방법 합계. 필요한 필드만 남긴 평면 투영은 ${v.feedback_flat_projection_tokens.toLocaleString()} 토큰으로 더 작음. 답변 품질·청구량 비교 아님.`);
+    }
+    if (report.output_quality_comparison) {
+      const q=report.output_quality_comparison;
+      const e=section("실제 산출물 비교 · 우위는 관찰되지 않음",`기존 공개 실험 ${q.generated_at} · 합성 디자인 과제 2개에 자료 없음 / 원문 직접 참조 / 아카식 검색의 세 조건을 적용했습니다. 이번 회차에 새로 생성한 결과가 아닙니다.`);
+      metric(e,"전시 페이지 기능 과제", "세 조건 모두 7 / 7", "기능 차이 없음. 시각 검토는 모델 의견이며 동률 항목도 있었습니다.");
+      metric(e,"공방 예약 페이지 기능 과제", "세 조건 모두 12 / 12", "사람의 선호·수정 시간·실제 예약 성과·청구 토큰은 미측정.");
+      const a=n("a","여섯 산출물과 비교 기준 직접 보기 →");a.href="/research/methods/design-lab/";e.append(a);
+    }
     const retrieval = section("상황과 목적에 맞는 방법 찾기", "표현을 바꾼 16개 질문과 범위 밖 질문 4개. 같은 코퍼스와 질문을 두 검색 방식에 적용했습니다.");
     for (const [mode,label] of [["hybrid","단어·의미 결합"],["lexical","단어 검색"]]) {
       const r = s[mode];metric(retrieval, `${label} · 첫 번째 후보`, `${r.top1} / ${r.positive_n}`, `5개 후보 내 ${r.top5}/${r.positive_n} · 범위 밖 정상 기권 ${r.valid_abstentions}/${r.negative_n} · 서비스 오류 ${r.service_errors}`);

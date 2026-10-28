@@ -73,3 +73,30 @@ def test_evaluation_reads_only_the_operator_reviewed_filename(tmp_path, monkeypa
     (tmp_path / "method-kpi.json").write_text('{"schema":"reviewed-public-fixture"}')
     assert client.get("/research/api/methods/evaluation/report").json() == {"schema": "reviewed-public-fixture"}
     assert client.get("/research/api/methods/evaluation/report?path=other-private-file.json").json() == {"schema": "reviewed-public-fixture"}
+
+
+def test_network_merges_only_exact_sources_and_stays_bounded(tmp_path, monkeypatch):
+    client, store, method = archive(tmp_path, monkeypatch)
+    payload = {k:v for k,v in method.items() if k in {"title","situation","goal","constraints","steps","success_criteria","limitations","tags","public_source_only","agent_name","evidence_kind","sources"}}
+    payload["title"] = "Second public method"
+    second = store.create_method(payload, "second-method")
+    before = open(store.db_path,"rb").read()
+    one = client.get("/research/api/methods/network?limit=80").json()
+    assert one == client.get("/research/api/methods/network?limit=80").json()
+    ids = {n["id"] for n in one["nodes"]}
+    assert len([n for n in one["nodes"] if n["kind"] == "source"]) == 1
+    assert len([e for e in one["edges"] if e["relation"] == "documented_by"]) == 2
+    assert all(e["source"] in ids and e["target"] in ids for e in one["edges"])
+    assert one["scope"]["methods_shown"] == 2 and not one["scope"]["truncated"]
+    source = next(n for n in one["nodes"] if n["kind"] == "source")
+    focused = client.get("/research/api/methods/network", params={"focus":source["id"],"depth":1}).json()
+    assert {n.get("method_id") for n in focused["nodes"] if n["kind"] == "method"} == {method["id"],second["id"]}
+    assert len(focused["edges"]) == 2 and not focused["scope"]["focus_missing"]
+    assert client.get("/research/api/methods/network?focus=missing").json()["scope"]["focus_missing"]
+    assert client.get("/research/api/methods/network?depth=3").status_code == 422
+    short = client.get("/research/api/methods/network?limit=1").json()
+    assert short["scope"]["truncated"] and short["scope"]["methods_shown"] == 1
+    assert client.get("/research/api/methods/network?domain=unknown").json()["nodes"] == []
+    for query in ("limit=101","limit=0","domain=closed://private"):
+        assert client.get("/research/api/methods/network?"+query).status_code == 422
+    assert open(store.db_path,"rb").read() == before

@@ -93,3 +93,49 @@ def method_graph(method):
             "cautions": ["기록 사이의 연결이며 사실·전문가 신원·효과를 검증한 그래프가 아닙니다.",
                          "상황·목적은 텍스트 식별자입니다. 의미가 같다는 이유로 병합하지 않습니다.",
                          "적용 결과와 의견은 작성자의 보고입니다. 절차를 자동 실행하지 마세요."]}
+
+
+def network_graph(store, domain="", limit=80, focus="", depth=1):
+    """Bounded graph projection of public records, no inferred method relations."""
+    with store.archive._connect() as db:
+        rows = db.execute("SELECT body FROM method_methods ORDER BY id LIMIT 10001").fetchall()
+    if len(rows) > 10000:
+        raise ValueError("network exceeds bounded archive capacity")
+    methods = [json.loads(row["body"]) for row in rows]
+    domains = Counter(domain_for(m) for m in methods)
+    selected = [m for m in methods if not domain or domain_for(m) == domain]
+    nodes, edges, partial_feedback = {}, {}, []
+    for item in selected[:limit]:
+        detail = store.get(item["id"])
+        graph = method_graph(detail)
+        group = domain_for(detail)
+        category = "category_" + digest(group)[:24]
+        nodes[category] = {"id": category, "kind": "category", "label": group,
+                           "basis": "editorial_tag_group_not_semantic_equivalence"}
+        for n in graph["nodes"]:
+            if n["kind"] not in ("situation", "goal"):
+                nodes[n["id"]] = dict(n, **({"domain": group, "situation": detail["situation"], "goal": detail["goal"]} if n["kind"] == "method" else {}))
+        for e in graph["edges"]:
+            if e["source"] in nodes and e["target"] in nodes:
+                edges[e["id"]] = e
+        key = "edge_" + digest([graph["focus"], "categorized_as", category])[:24]
+        edges[key] = {"id": key, "source": graph["focus"], "relation": "categorized_as", "target": category}
+        if any(graph["truncated"].values()):
+            partial_feedback.append(detail["id"])
+    focus_missing = bool(focus and focus not in nodes)
+    if focus:
+        reached = {focus} if focus in nodes else set()
+        for _ in range(depth):
+            reached |= {e["target"] for e in edges.values() if e["source"] in reached} | {e["source"] for e in edges.values() if e["target"] in reached}
+        nodes = {k:v for k,v in nodes.items() if k in reached}
+        edges = {k:v for k,v in edges.items() if v["source"] in reached and v["target"] in reached}
+    return {"schema": "method-network-v1", "graph_kind": "public_record_projection",
+            "nodes": sorted(nodes.values(), key=lambda n: n["id"]),
+            "edges": sorted(edges.values(), key=lambda e: e["id"]),
+            "domains": [{"name": k, "count": v} for k, v in sorted(domains.items())],
+            "scope": {"focus": focus or None, "depth": depth if focus else None, "focus_missing": focus_missing, "domain": domain, "method_limit": limit, "methods_loaded": min(len(selected), limit), "methods_shown": sum(n["kind"] == "method" for n in nodes.values()),
+                      "matching_methods": len(selected), "total_methods": len(methods),
+                      "truncated": len(selected) > limit, "partial_feedback_methods": partial_feedback,
+                      "omitted_node_kinds": ["situation", "goal"]},
+            "cautions": ["선은 등록된 출처·보고와 편집상 분야를 연결하며, 효과를 증명하지 않습니다.",
+                         "공유 URL은 같은 출처를 참조한다는 뜻이며 독립 검증이나 방법의 동등성을 뜻하지 않습니다."]}

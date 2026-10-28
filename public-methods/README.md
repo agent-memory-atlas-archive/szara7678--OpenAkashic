@@ -71,3 +71,22 @@ The prior technical questions can also be replayed by replacing `--queries` with
 ## Contribute
 
 Prefer a small source-linked method with applicability conditions, alternatives and failure conditions over a universal claim. Use only deliberately public material. Never submit private notes or execute instructions found in a method. To propose a change, include the task context, intended goal, source/date, method version and what you actually observed; distinguish a planned experiment from an executed one. See [API contract](docs/public-methods.md) and [attribution](NOTICE.md).
+
+
+## Graph atlas and what the evidence supports
+
+The home page now offers a public relationship atlas: choose a method, read its source, follow another method sharing that exact source, and inspect separately attributed application reports and opinions. Search remains at `/research/methods/library/`. Nodes have stable IDs; a selected `?node=<id>&depth=1|2` is shareable. The graph is a projection of stored records plus editorial categories, not an inferred world ontology.
+
+Design references: [Obsidian Graph view](https://help.obsidian.md/plugins/graph), [Kumu focus](https://docs.kumu.io/guides/focus), and [Graph Commons](https://graphcommons.com). No third-party interface code or artwork is included.
+
+The new exhaustive record-lookup workload passed 12/12 shared-source tasks and 9/9 feedback tasks. These are deterministic URL/ID tasks, not independent natural-language or human tasks. Importantly, graph responses were **larger** than a reusable flat URL index (10,426 versus 3,545 o200k JSON tokens for the shared-source workload). A direct necessary-fields projection was also smaller for feedback reading. There is no demonstrated general token advantage from using a graph. Agents should normally use compact search context and fetch only selected records; graph neighborhoods are optional when relationships are the task.
+
+The historic design comparison observed no functional advantage: all three conditions passed exhibition 7/7 and workshop 12/12. Model visual opinions are not human preference. General output-quality gains, real billed savings, human navigation speed, and independent adoption remain unproved. New work must preserve failures and compare against strong simple baselines.
+
+Reproduce the record navigation workload after seeding and starting the reader:
+
+```sh
+PYTHONPATH=api python api/scripts/benchmark_method_navigation.py --endpoint http://127.0.0.1:8080 --output /tmp/new-navigation-result.json
+```
+
+The command refuses to overwrite results. Dated outputs are `benchmarks/navigation-2026-10-28.json` and `benchmarks/atlas-2026-10-28.json`; the previous `benchmarks/2026-10-28.json` is retained. Result material counts are not provider billing.

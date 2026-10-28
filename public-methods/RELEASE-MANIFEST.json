@@ -1,345 +1,287 @@
 {
-  "prepared_at": "2026-10-27T17:44:41.693166+00:00",
-  "source_head": "f2cf35b",
+  "schema": "public-methods-release-manifest-v2",
+  "previous_public_commit": "9cc43398848a5f966ae1181e3b78a2a29d7c8c97",
+  "scope": "Public method atlas and reproducible record navigation; no private or Samsung data",
   "files": [
     {
-      "path": "README.md",
-      "sha256": "08909f3207070d81a52969a78434b94f2f12da9375fa334f2348fb079c921133",
-      "bytes": 2108
-    },
-    {
       "path": "public-methods/.gitignore",
-      "sha256": "06d710c321e185fce75d29d95d0be57e29c9fc936a7d97ef1f3c9903d2b1e67e",
-      "bytes": 58
-    },
-    {
-      "path": "public-methods/README.md",
-      "sha256": "8a013ec531a9916430e30d99666441132ffc0b0d45bbb8b9845b9b88af37ef80",
-      "bytes": 6413
-    },
-    {
-      "path": "public-methods/NOTICE.md",
-      "sha256": "6f07ba9a5f943049c0dfe20a9026708106b10d4cc3ae3faff650ec9c41c08002",
-      "bytes": 1183
-    },
-    {
-      "path": "public-methods/LICENSE",
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
-      "bytes": 11357
+      "sha256": "06d710c321e185fce75d29d95d0be57e29c9fc936a7d97ef1f3c9903d2b1e67e"
     },
     {
       "path": "public-methods/Dockerfile",
-      "sha256": "25174f5be78767c43a4bad852aff6652dd23d818be7811026ac818a07bc56ead",
-      "bytes": 459
+      "sha256": "25174f5be78767c43a4bad852aff6652dd23d818be7811026ac818a07bc56ead"
     },
     {
-      "path": "public-methods/examples/public-methods.json",
-      "sha256": "810686535cd3d79b8d4ddb0e06f80bee1888d52bf7d4647fd25351a4e66235e7",
-      "bytes": 147703
+      "path": "public-methods/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
-      "path": "public-methods/examples/prior-regression-queries.json",
-      "sha256": "271581334583ea2f8ec7c8d75fdbf7e3f51b487193483b1f0a9a2707485e3780",
-      "bytes": 13631
+      "path": "public-methods/NOTICE.md",
+      "sha256": "6f07ba9a5f943049c0dfe20a9026708106b10d4cc3ae3faff650ec9c41c08002"
     },
     {
-      "path": "public-methods/examples/regression-queries.json",
-      "sha256": "6949dd037cfef66eb420a5b68203cdb2d2143ab6c2ab92523ab9c5731bb3f8bf",
-      "bytes": 6146
-    },
-    {
-      "path": "public-methods/api/requirements-test.txt",
-      "sha256": "97297643398215812b2d55213cdf74f44eb57f7d3ca8b257bce7676f109c2bd7",
-      "bytes": 56
-    },
-    {
-      "path": "public-methods/api/requirements-public.txt",
-      "sha256": "fb3c91ca47d4b898e73ade6f1887b8871a78f4d0490670cfda90aedddb5ff47b",
-      "bytes": 177
-    },
-    {
-      "path": "public-methods/benchmarks/2026-10-28.json",
-      "sha256": "64c3d78f2a13a03d045d02cd0151f7d36382ffb366712f95d596e9a1a9fe8977",
-      "bytes": 79607
-    },
-    {
-      "path": "public-methods/docs/judgment-methods.md",
-      "sha256": "4166aa2a26961e2034a06d8894cf3a85ef92c5dd003728d9362a46688cf0ad2d",
-      "bytes": 6466
-    },
-    {
-      "path": "public-methods/docs/method-design-evaluation.md",
-      "sha256": "348f4dc42b17766a78ef1dfb635c1f5a8a8a087d59aa1c99e2c513c7e18fb6f0",
-      "bytes": 4604
-    },
-    {
-      "path": "public-methods/docs/public-methods.md",
-      "sha256": "a885dd9ddfeb847bdca6e9045be2ca813f5e201a4e8fcb5647098a9df623c646",
-      "bytes": 19465
-    },
-    {
-      "path": "public-methods/web/research/methods-graph.js",
-      "sha256": "f61243d8f4ef6cd8660d2de104ac26c6b5e97260718cbb39613841f3be96a341",
-      "bytes": 4479
-    },
-    {
-      "path": "public-methods/web/research/methods.html",
-      "sha256": "c9f14daf529986bad88d3bfe387fe8d20020450c0a6aa170702227d1a16b5468",
-      "bytes": 6599
-    },
-    {
-      "path": "public-methods/web/research/methods-kpi.html",
-      "sha256": "6542d76928f1e791bf610940c15c7a8d2915d1f998cb5cde66d019ce9a7dd92b",
-      "bytes": 2023
-    },
-    {
-      "path": "public-methods/web/research/methods-kpi.js",
-      "sha256": "98a762dd719825fe4e8ae6c868c8bdd26078b93b1d9140591f293788ca921a2b",
-      "bytes": 5278
-    },
-    {
-      "path": "public-methods/web/research/methods.css",
-      "sha256": "d1595c285065c2783f7267e2071440e38bc62a696bb6b23e2dad15843196157d",
-      "bytes": 11807
-    },
-    {
-      "path": "public-methods/web/research/methods.js",
-      "sha256": "dd826ee08f7f64d700c1aa566a93351b69139a98b5228e80ad22154eb4ed70f3",
-      "bytes": 23236
-    },
-    {
-      "path": "public-methods/web/research/design-lab/lab.css",
-      "sha256": "5e3592c538cde5f596b2d2624668631bee1847f1e1637c5968d43e31f102fc81",
-      "bytes": 3691
-    },
-    {
-      "path": "public-methods/web/research/design-lab/lab.js",
-      "sha256": "58b5e87c1029ff0bd556efd7ce7b869a55c5c64bf60eea3e515bb7afc9e5b831",
-      "bytes": 3182
-    },
-    {
-      "path": "public-methods/web/research/design-lab/index.html",
-      "sha256": "3218821ad3517ce392350e2f02a02dd5fe76b8cc502b03d87a10baafb9815c46",
-      "bytes": 5730
-    },
-    {
-      "path": "public-methods/web/research/design-lab/unaided/workshop.js",
-      "sha256": "8ccf8fab8bbb683392b0ae6f21947a532d0166408b7bf49d0b67f643ce862d65",
-      "bytes": 3404
-    },
-    {
-      "path": "public-methods/web/research/design-lab/unaided/workshop.html",
-      "sha256": "1e3f3d76f2413efe00d4d999f33eb0624f2817d66339eaea0a2cb573fff8d5a2",
-      "bytes": 6167
-    },
-    {
-      "path": "public-methods/web/research/design-lab/unaided/exhibition.html",
-      "sha256": "22b01a5f4db61ddc45395014f524beecdf853dffe579d5fc056460d5354960cc",
-      "bytes": 6681
-    },
-    {
-      "path": "public-methods/web/research/design-lab/unaided/exhibition.css",
-      "sha256": "0a1e100c42fd69a0b773d55ca125d3bc415c65bc9393069d3960b595b1dcda9c",
-      "bytes": 4786
-    },
-    {
-      "path": "public-methods/web/research/design-lab/unaided/workshop.css",
-      "sha256": "1fcfb479e6efd9b5cd945d310d36431bf73082b51d32f18a15237ab25d45ae6f",
-      "bytes": 5954
-    },
-    {
-      "path": "public-methods/web/research/design-lab/unaided/exhibition.js",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0
-    },
-    {
-      "path": "public-methods/web/research/design-lab/retrieval/workshop.js",
-      "sha256": "e02f8897f394071f7e8291a69b47ba9920adf7dc92c94b4aac6ef670c7a1032b",
-      "bytes": 4731
-    },
-    {
-      "path": "public-methods/web/research/design-lab/retrieval/workshop.html",
-      "sha256": "a20ef26ab9473146c3dd57b1bf49c92ccee7ccc506fec3efcd3a65edfb2be5b5",
-      "bytes": 5881
-    },
-    {
-      "path": "public-methods/web/research/design-lab/retrieval/exhibition.html",
-      "sha256": "28c75cda36c1c393792da59dbf552cf5cb6a8c1aba439a75bf9bb2049a4b41df",
-      "bytes": 6902
-    },
-    {
-      "path": "public-methods/web/research/design-lab/retrieval/exhibition.css",
-      "sha256": "0cc23ace7d94bf8a5d1019564f3d9bfab6aba39b0be007fafac7b43840ec150a",
-      "bytes": 4503
-    },
-    {
-      "path": "public-methods/web/research/design-lab/retrieval/workshop.css",
-      "sha256": "4af99dcf538e531e4e9d83e1b27f0256971b301eae332d4ce3227698ab94440c",
-      "bytes": 5757
-    },
-    {
-      "path": "public-methods/web/research/design-lab/retrieval/exhibition.js",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0
-    },
-    {
-      "path": "public-methods/web/research/design-lab/direct/workshop.js",
-      "sha256": "bb0758291c067cb886c07b3374f9e6a6ca0ceb52670f648e52c187ebdc74ef38",
-      "bytes": 4167
-    },
-    {
-      "path": "public-methods/web/research/design-lab/direct/workshop.html",
-      "sha256": "0281c27088244ebd3986510e98594769506c550b0935b64c0a24b601a9b9d6df",
-      "bytes": 5877
-    },
-    {
-      "path": "public-methods/web/research/design-lab/direct/exhibition.html",
-      "sha256": "e1aef600fe4054ae8dacb88af6eed911f8a4896cac45ae8d5f72eecd4b231a8d",
-      "bytes": 4956
-    },
-    {
-      "path": "public-methods/web/research/design-lab/direct/exhibition.css",
-      "sha256": "2cb505b1f41d4f5221e4c8ef6cbd1f05a7158ddd02629ece31c2f4158c0681dc",
-      "bytes": 5127
-    },
-    {
-      "path": "public-methods/web/research/design-lab/direct/workshop.css",
-      "sha256": "fa7afca5e04fc5dfa9666683a5b5f9c1c5fe918280eb370866301528126be963",
-      "bytes": 5499
-    },
-    {
-      "path": "public-methods/web/research/design-lab/direct/exhibition.js",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0
-    },
-    {
-      "path": "public-methods/api/tests/test_method_graph.py",
-      "sha256": "04409125ca1cc5966bbb9ea02c3f53f0a84d19487f41690851a680fe7e3bfd37",
-      "bytes": 4634
-    },
-    {
-      "path": "public-methods/api/tests/test_method_embedding_server.py",
-      "sha256": "f8101b092d533e48e810dd13590aaaa0e88e33224ba4524908529c76a234faae",
-      "bytes": 3753
-    },
-    {
-      "path": "public-methods/api/tests/test_method_agent_client.py",
-      "sha256": "17394bc2660ccfc2a825de0e7db8d4970dbd13de28126f0d1c43c8a16c30ba05",
-      "bytes": 7236
-    },
-    {
-      "path": "public-methods/api/tests/test_methods_standalone.py",
-      "sha256": "a977bed14672635ed6f427173974d693704edfa49ea28d7e7dd8d1e20846ad66",
-      "bytes": 672
-    },
-    {
-      "path": "public-methods/api/tests/test_research_methods.py",
-      "sha256": "eec185c48820f6268cf7cf72369acb189bdf02a9c63369162123aaf594acdf46",
-      "bytes": 16641
-    },
-    {
-      "path": "public-methods/api/tests/test_method_semantic_search.py",
-      "sha256": "f602cea12d77043a0183b295e9de2b207a858345fa3408710b2d1829f8f83e6f",
-      "bytes": 14519
-    },
-    {
-      "path": "public-methods/api/tests/test_method_context.py",
-      "sha256": "75ae4434d7e5d633b50eff747c2e9b0c6f49cbb8122544e2b9521c1e7d2655eb",
-      "bytes": 1865
-    },
-    {
-      "path": "public-methods/api/scripts/method_embedding_server.py",
-      "sha256": "fb701f82f129ebc4d296c5ddcf78043e0d8207be516a81eecc50254c8872078c",
-      "bytes": 11909
-    },
-    {
-      "path": "public-methods/api/scripts/benchmark_methods.py",
-      "sha256": "ec0b96fd9b523e3f5f1e6d9bb99074a4dba8be1d5c7f10989a3604ace53d52bb",
-      "bytes": 8565
-    },
-    {
-      "path": "public-methods/api/scripts/method_agent.py",
-      "sha256": "2c6d36b3d3bce5e5e6acd8369f65bc475e98761e480f1a5ade50d92976ce6c61",
-      "bytes": 7680
-    },
-    {
-      "path": "public-methods/api/scripts/index_methods.py",
-      "sha256": "41548d7ef4d06d63f2c11fa94dca73c7eb0445c5d70f1fe5d741e10677b0b27b",
-      "bytes": 1379
-    },
-    {
-      "path": "public-methods/api/scripts/seed_methods.py",
-      "sha256": "53efaf052ed25b470d4a326b4add8c65a6f096cc766d97b8370f20db4fb6a011",
-      "bytes": 2842
-    },
-    {
-      "path": "public-methods/api/app/utils.py",
-      "sha256": "0aa361e99316d59e416dea07d32d653cd348424258284db43d5c56bf8e2e26f1",
-      "bytes": 895
+      "path": "public-methods/README.md",
+      "sha256": "85a94f535c661d4fa0e2e48cbc04305b6aab29aab10c56eee26c01f165f04501"
     },
     {
       "path": "public-methods/api/app/__init__.py",
-      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-      "bytes": 1
-    },
-    {
-      "path": "public-methods/api/app/research_method_context.py",
-      "sha256": "faad78a6f1f2cf4f373622580b704d5414d84a0b3fd2ee1c0decb79db2160150",
-      "bytes": 2471
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
       "path": "public-methods/api/app/methods_main.py",
-      "sha256": "d74bd88027f7d74ef07e8b15217a2abe72a1df7b401aa262de1648bd5621e390",
-      "bytes": 2933
-    },
-    {
-      "path": "public-methods/api/app/research_method_graph.py",
-      "sha256": "557b57e46e453dd7dbe7dd09b1693e7334949b77388bcfb922fcc6ad89ac869c",
-      "bytes": 5734
-    },
-    {
-      "path": "public-methods/api/app/research_connectors.py",
-      "sha256": "8099d8152d7d10e6b64a3cf660f23ff69fe796870fd23d442e0267b2f5f9948d",
-      "bytes": 13632
-    },
-    {
-      "path": "public-methods/api/app/research_method_search.py",
-      "sha256": "f1c57229c9d87a7681d159767933f3058b6b1d6a2537330b5835baf1f4c3dcbd",
-      "bytes": 21969
-    },
-    {
-      "path": "public-methods/api/app/research_store.py",
-      "sha256": "f6c61be5a9c029d12cac91c02bc7d2bb90f7cdba845ce74fad6a36f6d570f3a8",
-      "bytes": 16428
-    },
-    {
-      "path": "public-methods/api/app/research_method_store.py",
-      "sha256": "856a98a3fc4bfff59d1d730a86dfbf31602b520b8edd01137fe0c23f034e8aeb",
-      "bytes": 9944
-    },
-    {
-      "path": "public-methods/api/app/research_methods.py",
-      "sha256": "59ada8c20a4cf62f0c15746b2784ad80fbc3ee5a6047ad45d55a380d2d5a751e",
-      "bytes": 11194
+      "sha256": "f63eb395091452577fde35391f27be425284d872af5224b64a55a80bd4693eba"
     },
     {
       "path": "public-methods/api/app/research.py",
-      "sha256": "21548f077f73e69a01f3f68cb6a96ff0c014d2bcb9b13d00f4eab586df6c2689",
-      "bytes": 21516
+      "sha256": "a59334df520d68c2c8c4b1fbf5f33ef87a0a82f39e515f4ceab1a226eaf006dc"
     },
     {
-      "path": ".github/workflows/public-methods.yml",
-      "sha256": "0c83a6d9076fefe7ab826340c23863f37a5c31fd7e42e7f62ff3ee72cd2ce467",
-      "bytes": 656
+      "path": "public-methods/api/app/research_connectors.py",
+      "sha256": "8099d8152d7d10e6b64a3cf660f23ff69fe796870fd23d442e0267b2f5f9948d"
     },
     {
-      "path": "pyproject.toml",
-      "sha256": "02de37b8b0e3c622a86d6f5a22893d8411f5f4f58c679d5af1911bc37bf4c2d8",
-      "bytes": 1384
+      "path": "public-methods/api/app/research_method_context.py",
+      "sha256": "faad78a6f1f2cf4f373622580b704d5414d84a0b3fd2ee1c0decb79db2160150"
+    },
+    {
+      "path": "public-methods/api/app/research_method_graph.py",
+      "sha256": "068de43288466830a693dfbb976e179fd849b959b23098f9e34eb292a0d55182"
+    },
+    {
+      "path": "public-methods/api/app/research_method_search.py",
+      "sha256": "f1c57229c9d87a7681d159767933f3058b6b1d6a2537330b5835baf1f4c3dcbd"
+    },
+    {
+      "path": "public-methods/api/app/research_method_store.py",
+      "sha256": "856a98a3fc4bfff59d1d730a86dfbf31602b520b8edd01137fe0c23f034e8aeb"
+    },
+    {
+      "path": "public-methods/api/app/research_methods.py",
+      "sha256": "67cfbee6c176577a4b544b5e4ded23ca693508bbdab8d07044c42187c7b7eac5"
+    },
+    {
+      "path": "public-methods/api/app/research_store.py",
+      "sha256": "f6c61be5a9c029d12cac91c02bc7d2bb90f7cdba845ce74fad6a36f6d570f3a8"
+    },
+    {
+      "path": "public-methods/api/app/utils.py",
+      "sha256": "0aa361e99316d59e416dea07d32d653cd348424258284db43d5c56bf8e2e26f1"
+    },
+    {
+      "path": "public-methods/api/requirements-public.txt",
+      "sha256": "fb3c91ca47d4b898e73ade6f1887b8871a78f4d0490670cfda90aedddb5ff47b"
+    },
+    {
+      "path": "public-methods/api/requirements-test.txt",
+      "sha256": "97297643398215812b2d55213cdf74f44eb57f7d3ca8b257bce7676f109c2bd7"
+    },
+    {
+      "path": "public-methods/api/scripts/benchmark_method_navigation.py",
+      "sha256": "7d8bd0d3dfeb05e85ef37154e19c59c9c0300c1fa30bccfcf172b57773a1d258"
+    },
+    {
+      "path": "public-methods/api/scripts/benchmark_methods.py",
+      "sha256": "ec0b96fd9b523e3f5f1e6d9bb99074a4dba8be1d5c7f10989a3604ace53d52bb"
+    },
+    {
+      "path": "public-methods/api/scripts/index_methods.py",
+      "sha256": "41548d7ef4d06d63f2c11fa94dca73c7eb0445c5d70f1fe5d741e10677b0b27b"
+    },
+    {
+      "path": "public-methods/api/scripts/method_agent.py",
+      "sha256": "2c6d36b3d3bce5e5e6acd8369f65bc475e98761e480f1a5ade50d92976ce6c61"
+    },
+    {
+      "path": "public-methods/api/scripts/method_embedding_server.py",
+      "sha256": "fb701f82f129ebc4d296c5ddcf78043e0d8207be516a81eecc50254c8872078c"
+    },
+    {
+      "path": "public-methods/api/scripts/seed_methods.py",
+      "sha256": "53efaf052ed25b470d4a326b4add8c65a6f096cc766d97b8370f20db4fb6a011"
+    },
+    {
+      "path": "public-methods/api/tests/test_method_agent_client.py",
+      "sha256": "17394bc2660ccfc2a825de0e7db8d4970dbd13de28126f0d1c43c8a16c30ba05"
+    },
+    {
+      "path": "public-methods/api/tests/test_method_context.py",
+      "sha256": "75ae4434d7e5d633b50eff747c2e9b0c6f49cbb8122544e2b9521c1e7d2655eb"
+    },
+    {
+      "path": "public-methods/api/tests/test_method_embedding_server.py",
+      "sha256": "f8101b092d533e48e810dd13590aaaa0e88e33224ba4524908529c76a234faae"
+    },
+    {
+      "path": "public-methods/api/tests/test_method_graph.py",
+      "sha256": "a0b0f6aa900d4af98935c82e38c7a5e5315d6f0c99933bc06ddbdd3119b0db89"
+    },
+    {
+      "path": "public-methods/api/tests/test_method_semantic_search.py",
+      "sha256": "f602cea12d77043a0183b295e9de2b207a858345fa3408710b2d1829f8f83e6f"
+    },
+    {
+      "path": "public-methods/api/tests/test_methods_standalone.py",
+      "sha256": "a977bed14672635ed6f427173974d693704edfa49ea28d7e7dd8d1e20846ad66"
+    },
+    {
+      "path": "public-methods/api/tests/test_research_methods.py",
+      "sha256": "eec185c48820f6268cf7cf72369acb189bdf02a9c63369162123aaf594acdf46"
+    },
+    {
+      "path": "public-methods/benchmarks/2026-10-28.json",
+      "sha256": "64c3d78f2a13a03d045d02cd0151f7d36382ffb366712f95d596e9a1a9fe8977"
+    },
+    {
+      "path": "public-methods/benchmarks/atlas-2026-10-28.json",
+      "sha256": "1a2c36833bedec8d4220ee8ab47ef926dc429e31345e431b201f60a6722521fa"
+    },
+    {
+      "path": "public-methods/benchmarks/navigation-2026-10-28.json",
+      "sha256": "2d4e2dfe208a44cfba94624ce9eebbcd1ebd5cc74d4215d26f12f0856e15c5c0"
+    },
+    {
+      "path": "public-methods/docs/judgment-methods.md",
+      "sha256": "4166aa2a26961e2034a06d8894cf3a85ef92c5dd003728d9362a46688cf0ad2d"
+    },
+    {
+      "path": "public-methods/docs/method-design-evaluation.md",
+      "sha256": "348f4dc42b17766a78ef1dfb635c1f5a8a8a087d59aa1c99e2c513c7e18fb6f0"
+    },
+    {
+      "path": "public-methods/docs/public-methods.md",
+      "sha256": "0cbab213f8c220f6da9ecfbcc663912182c51c8e42bb445ddf6cb21d233d9b41"
+    },
+    {
+      "path": "public-methods/examples/prior-regression-queries.json",
+      "sha256": "271581334583ea2f8ec7c8d75fdbf7e3f51b487193483b1f0a9a2707485e3780"
+    },
+    {
+      "path": "public-methods/examples/public-methods.json",
+      "sha256": "810686535cd3d79b8d4ddb0e06f80bee1888d52bf7d4647fd25351a4e66235e7"
+    },
+    {
+      "path": "public-methods/examples/regression-queries.json",
+      "sha256": "6949dd037cfef66eb420a5b68203cdb2d2143ab6c2ab92523ab9c5731bb3f8bf"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/direct/exhibition.css",
+      "sha256": "2cb505b1f41d4f5221e4c8ef6cbd1f05a7158ddd02629ece31c2f4158c0681dc"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/direct/exhibition.html",
+      "sha256": "e1aef600fe4054ae8dacb88af6eed911f8a4896cac45ae8d5f72eecd4b231a8d"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/direct/exhibition.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/direct/workshop.css",
+      "sha256": "fa7afca5e04fc5dfa9666683a5b5f9c1c5fe918280eb370866301528126be963"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/direct/workshop.html",
+      "sha256": "0281c27088244ebd3986510e98594769506c550b0935b64c0a24b601a9b9d6df"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/direct/workshop.js",
+      "sha256": "bb0758291c067cb886c07b3374f9e6a6ca0ceb52670f648e52c187ebdc74ef38"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/index.html",
+      "sha256": "3218821ad3517ce392350e2f02a02dd5fe76b8cc502b03d87a10baafb9815c46"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/lab.css",
+      "sha256": "5e3592c538cde5f596b2d2624668631bee1847f1e1637c5968d43e31f102fc81"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/lab.js",
+      "sha256": "58b5e87c1029ff0bd556efd7ce7b869a55c5c64bf60eea3e515bb7afc9e5b831"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/retrieval/exhibition.css",
+      "sha256": "0cc23ace7d94bf8a5d1019564f3d9bfab6aba39b0be007fafac7b43840ec150a"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/retrieval/exhibition.html",
+      "sha256": "28c75cda36c1c393792da59dbf552cf5cb6a8c1aba439a75bf9bb2049a4b41df"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/retrieval/exhibition.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/retrieval/workshop.css",
+      "sha256": "4af99dcf538e531e4e9d83e1b27f0256971b301eae332d4ce3227698ab94440c"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/retrieval/workshop.html",
+      "sha256": "a20ef26ab9473146c3dd57b1bf49c92ccee7ccc506fec3efcd3a65edfb2be5b5"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/retrieval/workshop.js",
+      "sha256": "e02f8897f394071f7e8291a69b47ba9920adf7dc92c94b4aac6ef670c7a1032b"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/unaided/exhibition.css",
+      "sha256": "0a1e100c42fd69a0b773d55ca125d3bc415c65bc9393069d3960b595b1dcda9c"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/unaided/exhibition.html",
+      "sha256": "22b01a5f4db61ddc45395014f524beecdf853dffe579d5fc056460d5354960cc"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/unaided/exhibition.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/unaided/workshop.css",
+      "sha256": "1fcfb479e6efd9b5cd945d310d36431bf73082b51d32f18a15237ab25d45ae6f"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/unaided/workshop.html",
+      "sha256": "1e3f3d76f2413efe00d4d999f33eb0624f2817d66339eaea0a2cb573fff8d5a2"
+    },
+    {
+      "path": "public-methods/web/research/design-lab/unaided/workshop.js",
+      "sha256": "8ccf8fab8bbb683392b0ae6f21947a532d0166408b7bf49d0b67f643ce862d65"
+    },
+    {
+      "path": "public-methods/web/research/methods-explore.css",
+      "sha256": "62569421222594720391cc8ee1546f2e4fa8ba0d9733515affe715abe57d4d2e"
+    },
+    {
+      "path": "public-methods/web/research/methods-explore.html",
+      "sha256": "00831b5fe9117804c2feec285bf2e0f7d7077e5e61702359e80d7a068880dd17"
+    },
+    {
+      "path": "public-methods/web/research/methods-explore.js",
+      "sha256": "d767bbdcc69deeb0791cd83bb2e78f23ae27792f421b2536cf8240d32eeec271"
+    },
+    {
+      "path": "public-methods/web/research/methods-graph.js",
+      "sha256": "f61243d8f4ef6cd8660d2de104ac26c6b5e97260718cbb39613841f3be96a341"
+    },
+    {
+      "path": "public-methods/web/research/methods-kpi.html",
+      "sha256": "6542d76928f1e791bf610940c15c7a8d2915d1f998cb5cde66d019ce9a7dd92b"
+    },
+    {
+      "path": "public-methods/web/research/methods-kpi.js",
+      "sha256": "8457e19671ff9e45c817da7765075f762d64080f37840c3a0131183e1850536b"
+    },
+    {
+      "path": "public-methods/web/research/methods.css",
+      "sha256": "23e7e42cac7161ad229ee61815faeb5a23df989b4a9e931ceefd7ff3ba5638ad"
+    },
+    {
+      "path": "public-methods/web/research/methods.html",
+      "sha256": "b2de24dd81c17c529e42a45b93346cc7679ea908a0d57b2304d7331414a1b83f"
+    },
+    {
+      "path": "public-methods/web/research/methods.js",
+      "sha256": "dd826ee08f7f64d700c1aa566a93351b69139a98b5228e80ad22154eb4ed70f3"
     }
-  ],
-  "credential_values_excluded": true,
-  "dataset_methods": 55,
-  "dataset_outcomes": 10,
-  "dataset_opinions": 9
+  ]
 }

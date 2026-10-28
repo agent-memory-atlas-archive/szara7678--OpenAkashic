@@ -1,0 +1,882 @@
+{
+  "schema": "method-navigation-workload-v1",
+  "measured_at": "2026-10-28T02:08:25.475143+00:00",
+  "method_count": 55,
+  "case_definition_sha256": "2b19f89b592ae642e582f3e8ee3a3c47c3d32f9e057af5c2ba2ec41bb555a225",
+  "cases": {
+    "sources": [
+      {
+        "source_url": "https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments",
+        "expected_refs": [
+          [
+            "method_769e62c4f39a41fea7b3e75b03a144d5",
+            1
+          ],
+          [
+            "method_8e25f26e4dc04645baac2d888405da77",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://docs.github.com/en/pull-requests/how-tos/review-pull-requests",
+        "expected_refs": [
+          [
+            "method_681dc89fa9bc4ccb9ead50121fe5b0aa",
+            1
+          ],
+          [
+            "method_bcc11858c6c9496aa4960f750a0e846a",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/design-guides/incident-management",
+        "expected_refs": [
+          [
+            "method_1f1e279f40a341be94d39582c3f07bf3",
+            1
+          ],
+          [
+            "method_afc7efba9f844983991fa3d189d590f5",
+            1
+          ],
+          [
+            "method_c3fb38e44f2443feb02cfd3564d96fc3",
+            1
+          ],
+          [
+            "method_f2369e7d6c8f4b0c8106488e0d045040",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://pandas.pydata.org/docs/user_guide/io.html",
+        "expected_refs": [
+          [
+            "method_8bd35edb30bc4bc6b425113fa28d4320",
+            1
+          ],
+          [
+            "method_8be94f157fba42ec95ee906e4b53ae03",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+        "expected_refs": [
+          [
+            "method_6562f35901794b5e9f8f477796e7505b",
+            1
+          ],
+          [
+            "method_f040265d2ae640c49d8614c218e06d61",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/anthropics/skills/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md",
+        "expected_refs": [
+          [
+            "method_0b8450340161413d96cd38d879e84ae3",
+            1
+          ],
+          [
+            "method_fa79358fbb3143459eaeab135bcdb023",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://support.google.com/docs/answer/18512262?hl=en",
+        "expected_refs": [
+          [
+            "method_252f680bb20944a190aa1d1355e6b5d5",
+            1
+          ],
+          [
+            "method_4ae1a991a2954dc2b7c8e30465a08215",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://support.google.com/docs/answer/6033474?hl=en",
+        "expected_refs": [
+          [
+            "method_70ceb860f1514053bb8314db63a326ef",
+            1
+          ],
+          [
+            "method_d1d75cc1bc94400c9560324063ec5287",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://support.google.com/docs/answer/65129",
+        "expected_refs": [
+          [
+            "method_17f6da889fe34a25bd84a860ab77007a",
+            1
+          ],
+          [
+            "method_70ceb860f1514053bb8314db63a326ef",
+            1
+          ],
+          [
+            "method_fe795a3d5f804d128698b245460e110f",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://www.pon.harvard.edu/tag/reservation-price/",
+        "expected_refs": [
+          [
+            "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+            1
+          ],
+          [
+            "method_db0a40d480064c61bd720e62b232ca5d",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://www.usgs.gov/data-management/data-management-plans",
+        "expected_refs": [
+          [
+            "method_64c6d70e0ab547c29e3eb9bb9a98d0f6",
+            1
+          ],
+          [
+            "method_9210344a5c964d4a94657848b2ce3f8f",
+            1
+          ],
+          [
+            "method_a0cc103673c54d9a89a76f7218576a77",
+            1
+          ],
+          [
+            "method_e554a06582d14c8f99683436ae00fcba",
+            1
+          ]
+        ]
+      },
+      {
+        "source_url": "https://www.usgs.gov/data-management/manage-quality",
+        "expected_refs": [
+          [
+            "method_64c6d70e0ab547c29e3eb9bb9a98d0f6",
+            1
+          ],
+          [
+            "method_69b5c6d56d384423a315b3c4905d81c8",
+            1
+          ]
+        ]
+      }
+    ],
+    "feedback": [
+      {
+        "id": "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_4282d88416604c6b8ff91ef44cdb7a62"
+        ],
+        "expected_opinions": [
+          "opinion_a4c4912a27ef4d3a82b2c3f210b3b597"
+        ]
+      },
+      {
+        "id": "method_72c20c6ba92448e892491d9840fd691c",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_e18cab1c16bf4423b9539fe6349b88a1"
+        ],
+        "expected_opinions": [
+          "opinion_b11904b5623445ef8bdf2b1c2e677274"
+        ]
+      },
+      {
+        "id": "method_710ecbba8f2742ba93b4a68ff2143aae",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_ba90f8aa272641918e1869ff6be96612"
+        ],
+        "expected_opinions": [
+          "opinion_678d5208c4b841e6aed8d5631096f336"
+        ]
+      },
+      {
+        "id": "method_769519565d9e4eb68ce27c60bc879490",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_714e5173989748499b84f50607e134a7"
+        ],
+        "expected_opinions": [
+          "opinion_3d2d2bd53a2946daa72c769e83581657"
+        ]
+      },
+      {
+        "id": "method_13dad5a5dcb942c382816e96049edcf6",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_13c1969e05df4e978539754e81f2d2fe"
+        ],
+        "expected_opinions": [
+          "opinion_467999ba755f40e8ad39e83f88a7dc4d"
+        ]
+      },
+      {
+        "id": "method_0b8450340161413d96cd38d879e84ae3",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_749327aa53bd4c2fba1b5daf731765ae"
+        ],
+        "expected_opinions": [
+          "opinion_9c9534851b4343439b02fc58960e097b"
+        ]
+      },
+      {
+        "id": "method_5af91cc7219a4130a3a2cf2d7630b031",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_6e0f30e335424b3bbb3d7a5fe2fa7d5b"
+        ],
+        "expected_opinions": [
+          "opinion_8a18d628cf444a008bb03b533bae1d85"
+        ]
+      },
+      {
+        "id": "method_f1e336e8600447259c14626ef98584d8",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_cef93b1a927845fc9afb584287a5de09"
+        ],
+        "expected_opinions": [
+          "opinion_03336be9d3734faa8761398a4ffc4fc6"
+        ]
+      },
+      {
+        "id": "method_d6bab8275ed741ae959436712962e7ce",
+        "version": 1,
+        "expected_outcomes": [
+          "outcome_3fbe8ba7e67048a0b998857c154b9e48",
+          "outcome_d54adcdb893348b4a598ac6312b50c49"
+        ],
+        "expected_opinions": [
+          "opinion_156b41db3c554bcaba8e36672fa12e9e"
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "kind": "shared_source",
+      "source_url": "https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments",
+      "focus": "source_95202ecc27a4c598d7e6c880",
+      "expected_refs": [
+        [
+          "method_769e62c4f39a41fea7b3e75b03a144d5",
+          1
+        ],
+        [
+          "method_8e25f26e4dc04645baac2d888405da77",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_769e62c4f39a41fea7b3e75b03a144d5",
+          1
+        ],
+        [
+          "method_8e25f26e4dc04645baac2d888405da77",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 783,
+      "flat_index_lookup_tokens": 104,
+      "elapsed_seconds": 0.027974
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://docs.github.com/en/pull-requests/how-tos/review-pull-requests",
+      "focus": "source_8df6d27d3ff51caa9e87347f",
+      "expected_refs": [
+        [
+          "method_681dc89fa9bc4ccb9ead50121fe5b0aa",
+          1
+        ],
+        [
+          "method_bcc11858c6c9496aa4960f750a0e846a",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_681dc89fa9bc4ccb9ead50121fe5b0aa",
+          1
+        ],
+        [
+          "method_bcc11858c6c9496aa4960f750a0e846a",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 764,
+      "flat_index_lookup_tokens": 99,
+      "elapsed_seconds": 0.025905
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/design-guides/incident-management",
+      "focus": "source_bdbe392cbedf10b0ace87fe9",
+      "expected_refs": [
+        [
+          "method_1f1e279f40a341be94d39582c3f07bf3",
+          1
+        ],
+        [
+          "method_afc7efba9f844983991fa3d189d590f5",
+          1
+        ],
+        [
+          "method_c3fb38e44f2443feb02cfd3564d96fc3",
+          1
+        ],
+        [
+          "method_f2369e7d6c8f4b0c8106488e0d045040",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_1f1e279f40a341be94d39582c3f07bf3",
+          1
+        ],
+        [
+          "method_afc7efba9f844983991fa3d189d590f5",
+          1
+        ],
+        [
+          "method_c3fb38e44f2443feb02cfd3564d96fc3",
+          1
+        ],
+        [
+          "method_f2369e7d6c8f4b0c8106488e0d045040",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 1201,
+      "flat_index_lookup_tokens": 186,
+      "elapsed_seconds": 0.026599
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://pandas.pydata.org/docs/user_guide/io.html",
+      "focus": "source_650c69742cd6264fcf44c4e7",
+      "expected_refs": [
+        [
+          "method_8bd35edb30bc4bc6b425113fa28d4320",
+          1
+        ],
+        [
+          "method_8be94f157fba42ec95ee906e4b53ae03",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_8bd35edb30bc4bc6b425113fa28d4320",
+          1
+        ],
+        [
+          "method_8be94f157fba42ec95ee906e4b53ae03",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 791,
+      "flat_index_lookup_tokens": 97,
+      "elapsed_seconds": 0.027207
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+      "focus": "source_11a0ca3244a7f1ff1521293e",
+      "expected_refs": [
+        [
+          "method_6562f35901794b5e9f8f477796e7505b",
+          1
+        ],
+        [
+          "method_f040265d2ae640c49d8614c218e06d61",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_6562f35901794b5e9f8f477796e7505b",
+          1
+        ],
+        [
+          "method_f040265d2ae640c49d8614c218e06d61",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 782,
+      "flat_index_lookup_tokens": 96,
+      "elapsed_seconds": 0.026673
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://raw.githubusercontent.com/anthropics/skills/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md",
+      "focus": "source_b532586070a17007864f3cbd",
+      "expected_refs": [
+        [
+          "method_0b8450340161413d96cd38d879e84ae3",
+          1
+        ],
+        [
+          "method_fa79358fbb3143459eaeab135bcdb023",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_0b8450340161413d96cd38d879e84ae3",
+          1
+        ],
+        [
+          "method_fa79358fbb3143459eaeab135bcdb023",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 816,
+      "flat_index_lookup_tokens": 144,
+      "elapsed_seconds": 0.026647
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://support.google.com/docs/answer/18512262?hl=en",
+      "focus": "source_42070f1fa34103dfdf8720ea",
+      "expected_refs": [
+        [
+          "method_252f680bb20944a190aa1d1355e6b5d5",
+          1
+        ],
+        [
+          "method_4ae1a991a2954dc2b7c8e30465a08215",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_252f680bb20944a190aa1d1355e6b5d5",
+          1
+        ],
+        [
+          "method_4ae1a991a2954dc2b7c8e30465a08215",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 765,
+      "flat_index_lookup_tokens": 101,
+      "elapsed_seconds": 0.026048
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://support.google.com/docs/answer/6033474?hl=en",
+      "focus": "source_5e10193afa0d5636dd3d0f4a",
+      "expected_refs": [
+        [
+          "method_70ceb860f1514053bb8314db63a326ef",
+          1
+        ],
+        [
+          "method_d1d75cc1bc94400c9560324063ec5287",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_70ceb860f1514053bb8314db63a326ef",
+          1
+        ],
+        [
+          "method_d1d75cc1bc94400c9560324063ec5287",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 781,
+      "flat_index_lookup_tokens": 94,
+      "elapsed_seconds": 0.02633
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://support.google.com/docs/answer/65129",
+      "focus": "source_3dbcb0b24a1a5f9e4a1239b1",
+      "expected_refs": [
+        [
+          "method_17f6da889fe34a25bd84a860ab77007a",
+          1
+        ],
+        [
+          "method_70ceb860f1514053bb8314db63a326ef",
+          1
+        ],
+        [
+          "method_fe795a3d5f804d128698b245460e110f",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_17f6da889fe34a25bd84a860ab77007a",
+          1
+        ],
+        [
+          "method_70ceb860f1514053bb8314db63a326ef",
+          1
+        ],
+        [
+          "method_fe795a3d5f804d128698b245460e110f",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 1007,
+      "flat_index_lookup_tokens": 132,
+      "elapsed_seconds": 0.027542
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://www.pon.harvard.edu/tag/reservation-price/",
+      "focus": "source_258846853091d479723b395e",
+      "expected_refs": [
+        [
+          "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+          1
+        ],
+        [
+          "method_db0a40d480064c61bd720e62b232ca5d",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_c3aa4545035847fbb1d95ebdce5ed1ce",
+          1
+        ],
+        [
+          "method_db0a40d480064c61bd720e62b232ca5d",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 763,
+      "flat_index_lookup_tokens": 114,
+      "elapsed_seconds": 0.028896
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://www.usgs.gov/data-management/data-management-plans",
+      "focus": "source_2656007ac256d98530608d14",
+      "expected_refs": [
+        [
+          "method_64c6d70e0ab547c29e3eb9bb9a98d0f6",
+          1
+        ],
+        [
+          "method_9210344a5c964d4a94657848b2ce3f8f",
+          1
+        ],
+        [
+          "method_a0cc103673c54d9a89a76f7218576a77",
+          1
+        ],
+        [
+          "method_e554a06582d14c8f99683436ae00fcba",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_64c6d70e0ab547c29e3eb9bb9a98d0f6",
+          1
+        ],
+        [
+          "method_9210344a5c964d4a94657848b2ce3f8f",
+          1
+        ],
+        [
+          "method_a0cc103673c54d9a89a76f7218576a77",
+          1
+        ],
+        [
+          "method_e554a06582d14c8f99683436ae00fcba",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 1172,
+      "flat_index_lookup_tokens": 177,
+      "elapsed_seconds": 0.028713
+    },
+    {
+      "kind": "shared_source",
+      "source_url": "https://www.usgs.gov/data-management/manage-quality",
+      "focus": "source_50d04904abc3d27a9f34ee06",
+      "expected_refs": [
+        [
+          "method_64c6d70e0ab547c29e3eb9bb9a98d0f6",
+          1
+        ],
+        [
+          "method_69b5c6d56d384423a315b3c4905d81c8",
+          1
+        ]
+      ],
+      "returned_refs": [
+        [
+          "method_64c6d70e0ab547c29e3eb9bb9a98d0f6",
+          1
+        ],
+        [
+          "method_69b5c6d56d384423a315b3c4905d81c8",
+          1
+        ]
+      ],
+      "success": true,
+      "graph_tokens": 801,
+      "flat_index_lookup_tokens": 100,
+      "elapsed_seconds": 0.025898
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_7c5dc3d99bfc4e03ba08ebe209259bae",
+      "expected_outcomes": [
+        "outcome_4282d88416604c6b8ff91ef44cdb7a62"
+      ],
+      "returned_outcomes": [
+        "outcome_4282d88416604c6b8ff91ef44cdb7a62"
+      ],
+      "expected_opinions": [
+        "opinion_a4c4912a27ef4d3a82b2c3f210b3b597"
+      ],
+      "returned_opinions": [
+        "opinion_a4c4912a27ef4d3a82b2c3f210b3b597"
+      ],
+      "success": true,
+      "graph_tokens": 1102,
+      "direct_method_tokens": 1189,
+      "flat_projection_tokens": 787,
+      "elapsed_seconds": 0.002383
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_72c20c6ba92448e892491d9840fd691c",
+      "expected_outcomes": [
+        "outcome_e18cab1c16bf4423b9539fe6349b88a1"
+      ],
+      "returned_outcomes": [
+        "outcome_e18cab1c16bf4423b9539fe6349b88a1"
+      ],
+      "expected_opinions": [
+        "opinion_b11904b5623445ef8bdf2b1c2e677274"
+      ],
+      "returned_opinions": [
+        "opinion_b11904b5623445ef8bdf2b1c2e677274"
+      ],
+      "success": true,
+      "graph_tokens": 1035,
+      "direct_method_tokens": 1074,
+      "flat_projection_tokens": 695,
+      "elapsed_seconds": 0.002167
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_710ecbba8f2742ba93b4a68ff2143aae",
+      "expected_outcomes": [
+        "outcome_ba90f8aa272641918e1869ff6be96612"
+      ],
+      "returned_outcomes": [
+        "outcome_ba90f8aa272641918e1869ff6be96612"
+      ],
+      "expected_opinions": [
+        "opinion_678d5208c4b841e6aed8d5631096f336"
+      ],
+      "returned_opinions": [
+        "opinion_678d5208c4b841e6aed8d5631096f336"
+      ],
+      "success": true,
+      "graph_tokens": 1035,
+      "direct_method_tokens": 1103,
+      "flat_projection_tokens": 711,
+      "elapsed_seconds": 0.002068
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_769519565d9e4eb68ce27c60bc879490",
+      "expected_outcomes": [
+        "outcome_714e5173989748499b84f50607e134a7"
+      ],
+      "returned_outcomes": [
+        "outcome_714e5173989748499b84f50607e134a7"
+      ],
+      "expected_opinions": [
+        "opinion_3d2d2bd53a2946daa72c769e83581657"
+      ],
+      "returned_opinions": [
+        "opinion_3d2d2bd53a2946daa72c769e83581657"
+      ],
+      "success": true,
+      "graph_tokens": 1024,
+      "direct_method_tokens": 1162,
+      "flat_projection_tokens": 717,
+      "elapsed_seconds": 0.001828
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_13dad5a5dcb942c382816e96049edcf6",
+      "expected_outcomes": [
+        "outcome_13c1969e05df4e978539754e81f2d2fe"
+      ],
+      "returned_outcomes": [
+        "outcome_13c1969e05df4e978539754e81f2d2fe"
+      ],
+      "expected_opinions": [
+        "opinion_467999ba755f40e8ad39e83f88a7dc4d"
+      ],
+      "returned_opinions": [
+        "opinion_467999ba755f40e8ad39e83f88a7dc4d"
+      ],
+      "success": true,
+      "graph_tokens": 1501,
+      "direct_method_tokens": 1833,
+      "flat_projection_tokens": 1451,
+      "elapsed_seconds": 0.002112
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_0b8450340161413d96cd38d879e84ae3",
+      "expected_outcomes": [
+        "outcome_749327aa53bd4c2fba1b5daf731765ae"
+      ],
+      "returned_outcomes": [
+        "outcome_749327aa53bd4c2fba1b5daf731765ae"
+      ],
+      "expected_opinions": [
+        "opinion_9c9534851b4343439b02fc58960e097b"
+      ],
+      "returned_opinions": [
+        "opinion_9c9534851b4343439b02fc58960e097b"
+      ],
+      "success": true,
+      "graph_tokens": 1525,
+      "direct_method_tokens": 1880,
+      "flat_projection_tokens": 1450,
+      "elapsed_seconds": 0.002255
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_5af91cc7219a4130a3a2cf2d7630b031",
+      "expected_outcomes": [
+        "outcome_6e0f30e335424b3bbb3d7a5fe2fa7d5b"
+      ],
+      "returned_outcomes": [
+        "outcome_6e0f30e335424b3bbb3d7a5fe2fa7d5b"
+      ],
+      "expected_opinions": [
+        "opinion_8a18d628cf444a008bb03b533bae1d85"
+      ],
+      "returned_opinions": [
+        "opinion_8a18d628cf444a008bb03b533bae1d85"
+      ],
+      "success": true,
+      "graph_tokens": 1454,
+      "direct_method_tokens": 1620,
+      "flat_projection_tokens": 957,
+      "elapsed_seconds": 0.002573
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_f1e336e8600447259c14626ef98584d8",
+      "expected_outcomes": [
+        "outcome_cef93b1a927845fc9afb584287a5de09"
+      ],
+      "returned_outcomes": [
+        "outcome_cef93b1a927845fc9afb584287a5de09"
+      ],
+      "expected_opinions": [
+        "opinion_03336be9d3734faa8761398a4ffc4fc6"
+      ],
+      "returned_opinions": [
+        "opinion_03336be9d3734faa8761398a4ffc4fc6"
+      ],
+      "success": true,
+      "graph_tokens": 1139,
+      "direct_method_tokens": 1213,
+      "flat_projection_tokens": 767,
+      "elapsed_seconds": 0.00215
+    },
+    {
+      "kind": "feedback",
+      "method_id": "method_d6bab8275ed741ae959436712962e7ce",
+      "expected_outcomes": [
+        "outcome_3fbe8ba7e67048a0b998857c154b9e48",
+        "outcome_d54adcdb893348b4a598ac6312b50c49"
+      ],
+      "returned_outcomes": [
+        "outcome_3fbe8ba7e67048a0b998857c154b9e48",
+        "outcome_d54adcdb893348b4a598ac6312b50c49"
+      ],
+      "expected_opinions": [
+        "opinion_156b41db3c554bcaba8e36672fa12e9e"
+      ],
+      "returned_opinions": [
+        "opinion_156b41db3c554bcaba8e36672fa12e9e"
+      ],
+      "success": true,
+      "graph_tokens": 1178,
+      "direct_method_tokens": 1671,
+      "flat_projection_tokens": 1112,
+      "elapsed_seconds": 0.021379
+    }
+  ],
+  "summary": {
+    "source_tasks": 12,
+    "source_success": 12,
+    "feedback_tasks": 9,
+    "feedback_success": 9,
+    "shared_graph_tokens": 10426,
+    "flat_index_once_tokens": 3545,
+    "flat_lookup_tokens": 1444,
+    "all_full_records_once_tokens": 35441,
+    "feedback_graph_tokens": 10993,
+    "feedback_direct_tokens": 12745,
+    "feedback_flat_projection_tokens": 8647,
+    "median_graph_seconds": 0.025905
+  },
+  "limits": [
+    "Exhaustive tasks generated from this stored corpus, not independent natural-language questions.",
+    "Deterministic URL and record ID lookup; no model generated or graded answers.",
+    "The flat URL index uses the exact same stored references and is a strong baseline. It can be reused.",
+    "Counts are o200k JSON transport material, not billed usage or latency of model reasoning.",
+    "Graph versus direct record material includes different structural fields; no claim of equal answer quality.",
+    "Human navigation speed, novel task output quality and independent OSS adoption remain unmeasured."
+  ]
+}

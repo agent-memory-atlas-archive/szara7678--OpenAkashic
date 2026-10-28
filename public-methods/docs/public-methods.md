@@ -344,3 +344,16 @@ See `docs/method-design-evaluation.md` for the frozen checks, same-model control
 blind model review, original-artifact preservation and remaining uncertainty.
 All three conditions passed the same functional checks; superiority, actual
 audience preference and cost savings have not been established.
+
+
+## Atlas explorer and measured limits (2026-10-28)
+
+The home page is the public record atlas; the situation/goal search remains at `/research/methods/library/`. The atlas takes inspiration from Obsidian's global/local graph, Kumu focus, and Graph Commons node inspector. No source code, styles or third-party assets were copied.
+
+`GET /research/api/methods/network?limit=80` projects method-version, exact source URL, outcome, opinion and editorial category nodes. `domain` filters exact editorial groups. Limit is 1–100, at most 10,000 archive methods are inspected, and truncation is explicit. `focus=<stable-node-id>&depth=1|2` returns a bounded neighborhood; `scope.focus_missing` distinguishes a missing focus from a known empty relationship. An absent node under a truncated scope is not evidence of global absence. Category edges are presentation metadata, not inferred equivalence. Situation/goal text is in method node fields but not separate nodes in the overview.
+
+The UI offers category filtering, title/situation/goal filtering, one/two-hop focus, source/feedback toggles, keyboard node selection, pan/zoom, neighboring-record navigation and a plain method list. Source nodes connect exact same-URL references, not independently verified evidence. The full method page retains conditions, procedure, success criteria and limitations.
+
+`api/scripts/benchmark_method_navigation.py --endpoint http://127.0.0.1:8080 --output /tmp/navigation-result.json` compares exhaustive shared-source and feedback record lookup against original public records; it refuses to overwrite results. This is deterministic record traversal, not language-model reasoning or an independent user test. A reusable flat URL index is a stronger baseline than reading all method bodies each time. In the observed 55-method run, shared-source lookups passed 12/12 and feedback lookups 9/9. Graph source responses totaled 10,426 o200k JSON tokens versus 3,545 for reading the entire reusable flat index once. Feedback graph responses were 10,993 versus full method records 12,745; a necessary-fields-only flat projection was smaller at 8,647. Therefore the graph itself has no demonstrated general token-efficiency advantage. Billed usage and answer quality are unmeasured.
+
+The existing synthetic design comparison also remains visible: all three conditions passed both exhibition 7/7 and workshop 12/12; no functional advantage was observed. Candidate retrieval success, record integrity, token material, task quality, human utility and independent adoption must remain separate measures. Do not market these checks as proven superior outputs.
