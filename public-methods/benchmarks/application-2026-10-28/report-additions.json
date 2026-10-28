@@ -1,0 +1,64 @@
+{
+  "korean_summary": {
+    "headline": "6개 합성 과제에서는 지식 제공의 전반적 품질 우위를 확인하지 못했습니다.",
+    "findings": [
+      "과제별 의미 기준은 무지원 24/24, 동일 자료 평면형 23/24, 동일 자료 중첩형 23/24였고, 모델 판단 점수는 모두 35/36이었습니다.",
+      "중첩형은 동일 기록의 입력 토큰 추정량을 평면형보다 13.1% 줄였습니다. 실제 사용 토큰·비용 절감은 측정하지 못했습니다.",
+      "220단어 제한 준수는 무지원 6/6, 평면형 3/6, 중첩형 6/6이었습니다. 소규모 단일 생성 결과이므로 일반화하지 않습니다.",
+      "자료 제공 두 조건은 안내문에서 근거 없는 홍보 최상급을 제거했지만, 무지원은 원문 표현을 남겼습니다. 실무에서 사실과 과장을 나누는 예시이며 실제 사용자 효과를 검증한 것은 아닙니다.",
+      "인터뷰와 의사결정 과제에서는 자료가 있어도 유도 질문이나 기한 미준수 위험이 남았습니다."
+    ],
+    "conclusion": "현재 근거는 출처와 한계가 보존되는 참고 자료 전달 및 입력 형식의 작은 효율 차이까지입니다. 그래프 사용, 실제 작업 성과, 인간 선호 또는 광범위한 답변 품질 개선을 입증하지 않습니다.",
+    "grade_ambiguity": "T6의 범위 확인 기준에 일관되지 않은 채점 해석이 발견되었습니다. 원점수는 보존했으며, 엄격/완화 해석을 각각 일관되게 적용하면 세 조건이 모두 23/24 또는 24/24로 동률입니다. 원점수 1점 차이는 우위의 근거가 아닙니다."
+  },
+  "publishable_claims": [
+    "Across six synthetic corpus-aligned single-run tasks, all conditions scored 35/36 on blind model judgment; no overall output-quality advantage established.",
+    "Original criterion totals were 24/24 unaided and 23/24 each supplied-record condition. A task6 grading ambiguity makes that gap unreliable: all tie at 23 under strict reading or 24 under permissive reading.",
+    "Identical full public records in nested JSON used 5959 versus 6857 o200k_base estimated input tokens, a 13.1 percent reduction versus flat leaf-path JSON; actual usage and cost unavailable.",
+    "Word cap adherence was 6/6 unaided, 3/6 flat and 6/6 nested; small single-run observation only."
+  ],
+  "model_provenance": {
+    "generation_requested_model": "gpt-6-luna",
+    "review_requested_model": "gpt-6-sol",
+    "review_evidence": "Actual collaboration.spawn_agent call used model=gpt-6-sol and fork_turns=none. Fresh Sol in messages was shorthand.",
+    "backend_model_identity_independently_verified": false,
+    "provider_usage": null
+  },
+  "grade_adjudication": {
+    "schema": "atlas-grade-adjudication-v1",
+    "kind": "post-hoc unblinded evaluator audit; not independent blind regrading",
+    "original_grades_preserved": true,
+    "issue": {
+      "task_id": "T6",
+      "criterion": "confirm scope before submission",
+      "frozen_wording_requires_maintainer_confirmation": false,
+      "inconsistency": "Original grader accepted a conditional focused question plus scope checks in unaided, but required explicit maintainer confirmation in flat/compact. The frozen criterion does not specify unconditional maintainer confirmation.",
+      "answer_evidence": {
+        "unaided": "If the goal remains unclear, ask a focused question before coding; review diff before PR.",
+        "flat_same_records": "If intended change is unclear, prepare a question; define narrow scope and prepare exact-scope summary before submission.",
+        "compact_same_records": "Follow stated process; seek guidance if behavior must change; review diff for scope before submission."
+      }
+    },
+    "resolution": "Do not choose a new winner. Treat this one binary criterion as ambiguous; retain original scores and report sensitivity. No rubric changes or answer reruns.",
+    "sensitivity": {
+      "original_criterion_passes_model_reviewed": {
+        "unaided": 24,
+        "flat_same_records": 23,
+        "compact_same_records": 23
+      },
+      "consistent_strict_explicit_maintainer_scope_confirmation": {
+        "unaided": 23,
+        "flat_same_records": 23,
+        "compact_same_records": 23
+      },
+      "consistent_permissive_pre_submission_scope_review": {
+        "unaided": 24,
+        "flat_same_records": 24,
+        "compact_same_records": 24
+      }
+    },
+    "conclusion": "All conditions tie under both consistent readings. Original one-point criterion advantage for unaided is not robust. Subjective judgment remains 35/36 for every condition.",
+    "independence_caveat": "The same evaluation coordinator inspected labels for this audit; no second blind human or model adjudicator was used."
+  },
+  "criterion_label": "criterion_passes_model_reviewed: semantic task criteria graded by a model, not automatic objective tests; raw blind grades retain original objective_* field names as audit evidence."
+}

@@ -1,0 +1,47 @@
+{
+  "instruction": "Answer every task in English, at most 220 words per task. Do not use tools or browse for substantive content. Use supplied public material if relevant; explain evidence limits without claiming outcomes were independently verified. Return JSON list of task_id and answer.",
+  "tasks": [
+    {
+      "id": "T1",
+      "domain": "Incident triage",
+      "situation": "After an app deployment error rate rose from 1% to 8%. Logs have not been read.",
+      "goal": "Write a safe investigation and recovery decision plan for the next 30 minutes.",
+      "constraints": "One responder; no production-data deletion; do not assert a confirmed cause."
+    },
+    {
+      "id": "T2",
+      "domain": "User research",
+      "situation": "People abandon a library reservation app. Why is unknown. Five interviews are scheduled next week.",
+      "goal": "Write exactly five interview questions plus a recording and analysis plan.",
+      "constraints": "20 minutes per interview; no leading questions or feature preference vote."
+    },
+    {
+      "id": "T3",
+      "domain": "Team decision",
+      "situation": "Design, engineering and sales keep meeting about onboarding without deciding. One option must be chosen by Friday.",
+      "goal": "Write a decision plan with roles, evidence and deadline.",
+      "constraints": "Four participants; no external customer research budget; no forced unanimity."
+    },
+    {
+      "id": "T4",
+      "domain": "Public communication",
+      "situation": "Course draft: The most innovative learning! November 3, 14:00, Civic Hall floor 2, free, capacity 20, registration closes October 31, phone 02-000-0000.",
+      "goal": "Rewrite as a short announcement that lets a first visitor register.",
+      "constraints": "Preserve date, time, place, price, capacity, deadline and phone; no invented facts."
+    },
+    {
+      "id": "T5",
+      "domain": "Learning",
+      "situation": "An exam on 20 concepts is in seven days. Reading feels familiar but the learner cannot explain with the book closed.",
+      "goal": "Write a seven-day review and assessment schedule.",
+      "constraints": "20 minutes daily, 140 minutes total; no app purchase; no pass guarantee."
+    },
+    {
+      "id": "T6",
+      "domain": "Open source",
+      "situation": "A first-time contributor wants a PR to improve slow search. They have not read prior issues or contribution rules.",
+      "goal": "Write preparation steps for a contribution a maintainer can review.",
+      "constraints": "Do not submit a PR yet; preserve existing behavior; do not fabricate speedup numbers."
+    }
+  ]
+}

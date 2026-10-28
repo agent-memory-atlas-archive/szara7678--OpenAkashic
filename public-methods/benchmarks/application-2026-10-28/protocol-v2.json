@@ -1,0 +1,96 @@
+{
+  "comparison": "Identical full selected public records; flat leaf paths vs compact nested JSON, losslessly equivalent. Not UI exporter validation.",
+  "conditions": [
+    "unaided",
+    "flat_same_records",
+    "compact_same_records"
+  ],
+  "correction": "Initial Korean stdin fixture was corrupted by shell encoding before generation. Superseded by this ASCII protocol; no task outputs had been generated.",
+  "generation": "same model; fresh condition agent; <=220 words/task; no tools except reading assigned input and writing own output",
+  "rubric": {
+    "judgment": "Method fit 0-2; actionable specificity 0-2; evidence and uncertainty boundaries 0-2. Blind reviewer sees no condition names.",
+    "limits": "Six synthetic corpus-aligned cases, single generation each; no real-world outcome or statistical superiority.",
+    "objective": "Four task-specific checks, each 0/1; constraints violations separately. Semantic assessor judgment, not verified execution."
+  },
+  "schema": "atlas-usefulness-protocol-v2",
+  "tasks": [
+    {
+      "checks": [
+        "30-minute allocation",
+        "hypothesis versus evidence",
+        "recovery or stop criterion",
+        "no data deletion"
+      ],
+      "constraints": "One responder; no production-data deletion; do not assert a confirmed cause.",
+      "domain": "Incident triage",
+      "goal": "Write a safe investigation and recovery decision plan for the next 30 minutes.",
+      "id": "T1",
+      "situation": "After an app deployment error rate rose from 1% to 8%. Logs have not been read."
+    },
+    {
+      "checks": [
+        "five questions",
+        "specific past behavior",
+        "20-minute allocation",
+        "observation versus inference"
+      ],
+      "constraints": "20 minutes per interview; no leading questions or feature preference vote.",
+      "domain": "User research",
+      "goal": "Write exactly five interview questions plus a recording and analysis plan.",
+      "id": "T2",
+      "situation": "People abandon a library reservation app. Why is unknown. Five interviews are scheduled next week."
+    },
+    {
+      "checks": [
+        "one decision owner",
+        "Friday deadline",
+        "decision evidence",
+        "consultation versus decision"
+      ],
+      "constraints": "Four participants; no external customer research budget; no forced unanimity.",
+      "domain": "Team decision",
+      "goal": "Write a decision plan with roles, evidence and deadline.",
+      "id": "T3",
+      "situation": "Design, engineering and sales keep meeting about onboarding without deciding. One option must be chosen by Friday."
+    },
+    {
+      "checks": [
+        "November 3 and 14:00",
+        "Civic Hall floor 2",
+        "free and capacity 20",
+        "October 31 and phone"
+      ],
+      "constraints": "Preserve date, time, place, price, capacity, deadline and phone; no invented facts.",
+      "domain": "Public communication",
+      "goal": "Rewrite as a short announcement that lets a first visitor register.",
+      "id": "T4",
+      "situation": "Course draft: The most innovative learning! November 3, 14:00, Civic Hall floor 2, free, capacity 20, registration closes October 31, phone 02-000-0000."
+    },
+    {
+      "checks": [
+        "seven-day schedule",
+        "20 minutes daily",
+        "closed-book recall",
+        "check and correct errors"
+      ],
+      "constraints": "20 minutes daily, 140 minutes total; no app purchase; no pass guarantee.",
+      "domain": "Learning",
+      "goal": "Write a seven-day review and assessment schedule.",
+      "id": "T5",
+      "situation": "An exam on 20 concepts is in seven days. Reading feels familiar but the learner cannot explain with the book closed."
+    },
+    {
+      "checks": [
+        "read contribution rules",
+        "search existing discussions",
+        "reproduction or measurement",
+        "confirm scope before submission"
+      ],
+      "constraints": "Do not submit a PR yet; preserve existing behavior; do not fabricate speedup numbers.",
+      "domain": "Open source",
+      "goal": "Write preparation steps for a contribution a maintainer can review.",
+      "id": "T6",
+      "situation": "A first-time contributor wants a PR to improve slow search. They have not read prior issues or contribution rules."
+    }
+  ]
+}

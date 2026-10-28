@@ -1,0 +1,817 @@
+{
+  "schema": "atlas-bounded-application-evaluation-v1",
+  "generated_at": "2026-10-28T03:14:39.408783+00:00",
+  "status": "complete",
+  "protocol_sha256": "5d6bb8e2f982d1183e23d7c5f25592dcb22b690763f4e62c50c1444fbca6acbb",
+  "design": {
+    "tasks": 6,
+    "outputs": 18,
+    "generation_model": "gpt-6-luna",
+    "review_model": "gpt-6-sol",
+    "replicates_per_task_condition": 1,
+    "blind_review": "condition labels hidden; task-wise shuffled answer IDs; answer content can reveal source availability",
+    "baseline": "same complete public records as flat leaf-path JSON vs nested compact JSON; unaided third arm",
+    "task_selection": "synthetic corpus-aligned, manually chosen records before generation; T2 adjacent product-experiment evidence only",
+    "initial_fixture_error": "Korean stdin corrupted before generation; ASCII v2 frozen and used for all arms; initial artifacts retained as rejected audit inputs"
+  },
+  "summary": {
+    "unaided": {
+      "criterion_passes_model_reviewed": 24,
+      "criterion_possible": 24,
+      "judgment_total": 35,
+      "judgment_possible": 36,
+      "word_limit_passes": 6,
+      "outputs": 6,
+      "constraint_violations": [],
+      "unsupported_claims": [
+        {
+          "task_id": "T4",
+          "items": [
+            "Repeats the unsubstantiated superlative 'The most innovative learning!' from the draft."
+          ]
+        }
+      ]
+    },
+    "flat_same_records": {
+      "criterion_passes_model_reviewed": 23,
+      "criterion_possible": 24,
+      "judgment_total": 35,
+      "judgment_possible": 36,
+      "word_limit_passes": 3,
+      "outputs": 6,
+      "constraint_violations": [
+        {
+          "task_id": "T2",
+          "items": [
+            "Question 3 presupposes an expectation mismatch; question 4 presupposes stopping."
+          ]
+        }
+      ],
+      "unsupported_claims": []
+    },
+    "compact_same_records": {
+      "criterion_passes_model_reviewed": 23,
+      "criterion_possible": 24,
+      "judgment_total": 35,
+      "judgment_possible": 36,
+      "word_limit_passes": 6,
+      "outputs": 6,
+      "constraint_violations": [
+        {
+          "task_id": "T3",
+          "items": [
+            "Allows the Approver to defer choosing an option on Friday if a fact is missing, despite the fixed choice requirement."
+          ]
+        }
+      ],
+      "unsupported_claims": []
+    }
+  },
+  "material": {
+    "input_estimates": {
+      "unaided-input.json": {
+        "utf8_bytes": 2617,
+        "characters": 2617,
+        "tokens_o200k_base": 597,
+        "sha256": "9ce9eef736ae40a03259ae05a69e17c136fbb34426ed74fe77f6b26a77ea5ee4"
+      },
+      "flat_same_records-input.json": {
+        "utf8_bytes": 24600,
+        "characters": 20064,
+        "tokens_o200k_base": 6857,
+        "sha256": "bc315347521f935e3da7e76bcdf835d5548a58ad9a91e2691fb82cf63cdce82a"
+      },
+      "compact_same_records-input.json": {
+        "utf8_bytes": 23967,
+        "characters": 19431,
+        "tokens_o200k_base": 5959,
+        "sha256": "9bfbab44ce12b829a74111743915d3962fba96999efd391b0f98662d3ca03565"
+      }
+    },
+    "compact_vs_flat_token_estimate_reduction": 0.13096106168878519,
+    "actual_provider_usage": null,
+    "actual_cost": null,
+    "timing_comparison": null,
+    "interpretation": "Artifact token estimates only, not billed/provider tokens or costs."
+  },
+  "by_condition": {
+    "unaided": [
+      {
+        "blind_id": "T1-B",
+        "objective_checks": [
+          {
+            "check": "30-minute allocation",
+            "pass": true,
+            "evidence": "Allocates all 30 minutes across five time windows."
+          },
+          {
+            "check": "hypothesis versus evidence",
+            "pass": true,
+            "evidence": "Separates observed metrics and log inspection from any cause conclusion."
+          },
+          {
+            "check": "recovery or stop criterion",
+            "pass": true,
+            "evidence": "Verifies error rate and core flows; escalates if recovery is not evident."
+          },
+          {
+            "check": "no data deletion",
+            "pass": true,
+            "evidence": "Explicitly prohibits production-data deletion."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 174,
+        "word_limit_pass": true,
+        "notes": "Clear mitigation thresholds and post-change check.",
+        "task_id": "T1"
+      },
+      {
+        "blind_id": "T2-B",
+        "objective_checks": [
+          {
+            "check": "five questions",
+            "pass": true,
+            "evidence": "Contains exactly five numbered interview questions."
+          },
+          {
+            "check": "specific past behavior",
+            "pass": true,
+            "evidence": "Starts with the last reservation attempt and asks what happened next."
+          },
+          {
+            "check": "20-minute allocation",
+            "pass": true,
+            "evidence": "Allocates 2+15+3 minutes per interview."
+          },
+          {
+            "check": "observation versus inference",
+            "pass": true,
+            "evidence": "Separates factual summaries, observed evidence, and interpretation."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 167,
+        "word_limit_pass": true,
+        "notes": "Concise consent, recording, and comparison plan.",
+        "task_id": "T2"
+      },
+      {
+        "blind_id": "T3-A",
+        "objective_checks": [
+          {
+            "check": "one decision owner",
+            "pass": true,
+            "evidence": "Names a single decision owner."
+          },
+          {
+            "check": "Friday deadline",
+            "pass": true,
+            "evidence": "Requires the owner to choose and communicate by Friday."
+          },
+          {
+            "check": "decision evidence",
+            "pass": true,
+            "evidence": "Uses existing design, engineering, and sales evidence with assumptions labeled."
+          },
+          {
+            "check": "consultation versus decision",
+            "pass": true,
+            "evidence": "Others present evidence and objections; owner chooses without unanimity."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 169,
+        "word_limit_pass": true,
+        "notes": "Useful Wednesday/Thursday/Friday cadence and reversible fallback.",
+        "task_id": "T3"
+      },
+      {
+        "blind_id": "T4-A",
+        "objective_checks": [
+          {
+            "check": "November 3 and 14:00",
+            "pass": true,
+            "evidence": "Includes November 3 at 14:00."
+          },
+          {
+            "check": "Civic Hall floor 2",
+            "pass": true,
+            "evidence": "Includes Civic Hall, floor 2."
+          },
+          {
+            "check": "free and capacity 20",
+            "pass": true,
+            "evidence": "States free admission and capacity of 20."
+          },
+          {
+            "check": "October 31 and phone",
+            "pass": true,
+            "evidence": "Gives October 31 deadline and registration phone number."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 1,
+        "constraint_violations": [],
+        "unsupported_claims": [
+          "Repeats the unsubstantiated superlative 'The most innovative learning!' from the draft."
+        ],
+        "word_count": 35,
+        "word_limit_pass": true,
+        "notes": "All logistics are intact; promotional superlative remains unsupported.",
+        "task_id": "T4"
+      },
+      {
+        "blind_id": "T5-B",
+        "objective_checks": [
+          {
+            "check": "seven-day schedule",
+            "pass": true,
+            "evidence": "Lists Day 1 through Day 7."
+          },
+          {
+            "check": "20 minutes daily",
+            "pass": true,
+            "evidence": "States 20 minutes daily and 140 total."
+          },
+          {
+            "check": "closed-book recall",
+            "pass": true,
+            "evidence": "Requires closed-book memory retrieval and mixed tests."
+          },
+          {
+            "check": "check and correct errors",
+            "pass": true,
+            "evidence": "Directs checking and correcting each session, with a weak-item list."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 152,
+        "word_limit_pass": true,
+        "notes": "Practical schedule, though per-day subtask minutes are not broken down.",
+        "task_id": "T5"
+      },
+      {
+        "blind_id": "T6-A",
+        "objective_checks": [
+          {
+            "check": "read contribution rules",
+            "pass": true,
+            "evidence": "Directs reading the contribution guide and development instructions."
+          },
+          {
+            "check": "search existing discussions",
+            "pass": true,
+            "evidence": "Directs searching prior issues and pull requests."
+          },
+          {
+            "check": "reproduction or measurement",
+            "pass": true,
+            "evidence": "Calls for reproducible fixture, environment, baseline method, and tests."
+          },
+          {
+            "check": "confirm scope before submission",
+            "pass": true,
+            "evidence": "Asks a focused question before coding if goal is unclear and checks compatibility and scope before PR."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 176,
+        "word_limit_pass": true,
+        "notes": "No PR is submitted; behavior preservation and measurement limits are explicit.",
+        "task_id": "T6"
+      }
+    ],
+    "flat_same_records": [
+      {
+        "blind_id": "T1-A",
+        "objective_checks": [
+          {
+            "check": "30-minute allocation",
+            "pass": true,
+            "evidence": "Uses 0-5, 5-12, 12-20, and 20-30 minute windows."
+          },
+          {
+            "check": "hypothesis versus evidence",
+            "pass": true,
+            "evidence": "Says not to assume a cause and reads logs before inferring one."
+          },
+          {
+            "check": "recovery or stop criterion",
+            "pass": true,
+            "evidence": "Requires stable metrics and working key flows before confirming recovery; escalates if worsening."
+          },
+          {
+            "check": "no data deletion",
+            "pass": true,
+            "evidence": "Explicitly says not to delete production data."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 206,
+        "word_limit_pass": true,
+        "notes": "Specific, reversible incident decision plan with owner authorization and monitoring.",
+        "task_id": "T1"
+      },
+      {
+        "blind_id": "T2-C",
+        "objective_checks": [
+          {
+            "check": "five questions",
+            "pass": true,
+            "evidence": "Contains exactly five numbered interview questions."
+          },
+          {
+            "check": "specific past behavior",
+            "pass": true,
+            "evidence": "Asks about the most recent attempt and its action sequence."
+          },
+          {
+            "check": "20-minute allocation",
+            "pass": true,
+            "evidence": "Allocates 2+12+4+2 minutes per interview."
+          },
+          {
+            "check": "observation versus inference",
+            "pass": true,
+            "evidence": "Explicitly distinguishes observed behavior from interpretation and notes limited inference."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 1,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [
+          "Question 3 presupposes an expectation mismatch; question 4 presupposes stopping."
+        ],
+        "unsupported_claims": [],
+        "word_count": 224,
+        "word_limit_pass": false,
+        "notes": "Questions are mostly episode based, but two prompts may steer the account.",
+        "task_id": "T2"
+      },
+      {
+        "blind_id": "T3-C",
+        "objective_checks": [
+          {
+            "check": "one decision owner",
+            "pass": true,
+            "evidence": "Names one Approver with actual authority."
+          },
+          {
+            "check": "Friday deadline",
+            "pass": true,
+            "evidence": "Calls for a Friday review and decision."
+          },
+          {
+            "check": "decision evidence",
+            "pass": true,
+            "evidence": "Gathers existing funnel, support/sales, effort, risk, and design evidence."
+          },
+          {
+            "check": "consultation versus decision",
+            "pass": true,
+            "evidence": "Contributors advise while Approver makes the choice despite disagreement."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 232,
+        "word_limit_pass": false,
+        "notes": "Explicit fallback chooses a reversible option or retains current flow.",
+        "task_id": "T3"
+      },
+      {
+        "blind_id": "T4-B",
+        "objective_checks": [
+          {
+            "check": "November 3 and 14:00",
+            "pass": true,
+            "evidence": "Includes November 3 at 14:00."
+          },
+          {
+            "check": "Civic Hall floor 2",
+            "pass": true,
+            "evidence": "Includes Civic Hall, floor 2."
+          },
+          {
+            "check": "free and capacity 20",
+            "pass": true,
+            "evidence": "States free admission and capacity of 20."
+          },
+          {
+            "check": "October 31 and phone",
+            "pass": true,
+            "evidence": "Gives October 31 deadline and registration phone number."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 28,
+        "word_limit_pass": true,
+        "notes": "Short, direct registration instructions with all supplied facts.",
+        "task_id": "T4"
+      },
+      {
+        "blind_id": "T5-A",
+        "objective_checks": [
+          {
+            "check": "seven-day schedule",
+            "pass": true,
+            "evidence": "Lists Day 1 through Day 7."
+          },
+          {
+            "check": "20 minutes daily",
+            "pass": true,
+            "evidence": "Each day sums to 20 minutes; states 140 minutes total."
+          },
+          {
+            "check": "closed-book recall",
+            "pass": true,
+            "evidence": "Uses memory-first explanations and closed-book assessments."
+          },
+          {
+            "check": "check and correct errors",
+            "pass": true,
+            "evidence": "Checks against course material and tracks/corrects gaps."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 207,
+        "word_limit_pass": true,
+        "notes": "Detailed time budget and final score denominator.",
+        "task_id": "T5"
+      },
+      {
+        "blind_id": "T6-B",
+        "objective_checks": [
+          {
+            "check": "read contribution rules",
+            "pass": true,
+            "evidence": "Directs reading the contribution guide and related documentation."
+          },
+          {
+            "check": "search existing discussions",
+            "pass": true,
+            "evidence": "Directs checking issues, discussions, changes, and pull requests."
+          },
+          {
+            "check": "reproduction or measurement",
+            "pass": true,
+            "evidence": "Calls for local reproduction and repeated baseline timings."
+          },
+          {
+            "check": "confirm scope before submission",
+            "pass": false,
+            "evidence": "Does not actually confirm proposed change scope with maintainers before submission; only prepares an unposted question and checks format."
+          }
+        ],
+        "objective_total": 3,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 226,
+        "word_limit_pass": false,
+        "notes": "Strong preparation and measurement plan; maintainer scope confirmation remains implicit.",
+        "task_id": "T6"
+      }
+    ],
+    "compact_same_records": [
+      {
+        "blind_id": "T1-C",
+        "objective_checks": [
+          {
+            "check": "30-minute allocation",
+            "pass": true,
+            "evidence": "Allocates 0-5, 5-12, 12-20, and 20-30 minutes."
+          },
+          {
+            "check": "hypothesis versus evidence",
+            "pass": true,
+            "evidence": "Calls the release a possible trigger and says the cause is not established."
+          },
+          {
+            "check": "recovery or stop criterion",
+            "pass": true,
+            "evidence": "Requires indicator recovery and stability over an observation window, with escalation otherwise."
+          },
+          {
+            "check": "no data deletion",
+            "pass": true,
+            "evidence": "Explicitly says not to delete production data."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 215,
+        "word_limit_pass": true,
+        "notes": "Good evidence preservation, reversible response, and authority caveat.",
+        "task_id": "T1"
+      },
+      {
+        "blind_id": "T2-A",
+        "objective_checks": [
+          {
+            "check": "five questions",
+            "pass": true,
+            "evidence": "Contains exactly five numbered interview questions."
+          },
+          {
+            "check": "specific past behavior",
+            "pass": true,
+            "evidence": "Asks about the last real reservation attempt and subsequent actions."
+          },
+          {
+            "check": "20-minute allocation",
+            "pass": true,
+            "evidence": "Allocates 2+14+4 minutes per interview."
+          },
+          {
+            "check": "observation versus inference",
+            "pass": true,
+            "evidence": "Distinguishes recorded statements from interpretation and limits claims from five interviews."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 219,
+        "word_limit_pass": true,
+        "notes": "Neutral episode questions and a useful evidence table.",
+        "task_id": "T2"
+      },
+      {
+        "blind_id": "T3-B",
+        "objective_checks": [
+          {
+            "check": "one decision owner",
+            "pass": true,
+            "evidence": "Defines one Approver with actual authority."
+          },
+          {
+            "check": "Friday deadline",
+            "pass": true,
+            "evidence": "Sets Friday as the decision deadline."
+          },
+          {
+            "check": "decision evidence",
+            "pass": true,
+            "evidence": "Calls for available funnel, support, usability, effort, risk, and assumption evidence."
+          },
+          {
+            "check": "consultation versus decision",
+            "pass": true,
+            "evidence": "Driver and Contributors advise; Approver decides without unanimity."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 1,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [
+          "Allows the Approver to defer choosing an option on Friday if a fact is missing, despite the fixed choice requirement."
+        ],
+        "unsupported_claims": [],
+        "word_count": 192,
+        "word_limit_pass": true,
+        "notes": "Sound role and evidence plan, but its fallback can miss the required Friday choice.",
+        "task_id": "T3"
+      },
+      {
+        "blind_id": "T4-C",
+        "objective_checks": [
+          {
+            "check": "November 3 and 14:00",
+            "pass": true,
+            "evidence": "Includes November 3 at 14:00."
+          },
+          {
+            "check": "Civic Hall floor 2",
+            "pass": true,
+            "evidence": "Includes Civic Hall, floor 2."
+          },
+          {
+            "check": "free and capacity 20",
+            "pass": true,
+            "evidence": "States free and capacity 20."
+          },
+          {
+            "check": "October 31 and phone",
+            "pass": true,
+            "evidence": "Gives October 31 deadline and registration phone number."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 30,
+        "word_limit_pass": true,
+        "notes": "Clear logistics and call to register; no extra factual claims.",
+        "task_id": "T4"
+      },
+      {
+        "blind_id": "T5-C",
+        "objective_checks": [
+          {
+            "check": "seven-day schedule",
+            "pass": true,
+            "evidence": "Lists Day 1 through Day 7."
+          },
+          {
+            "check": "20 minutes daily",
+            "pass": true,
+            "evidence": "Defines a 10+7+3 minute routine and 140 total."
+          },
+          {
+            "check": "closed-book recall",
+            "pass": true,
+            "evidence": "Requires written recall before looking at answers and final closed-book assessment."
+          },
+          {
+            "check": "check and correct errors",
+            "pass": true,
+            "evidence": "Checks source material, corrects errors, and logs gaps."
+          }
+        ],
+        "objective_total": 4,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 185,
+        "word_limit_pass": true,
+        "notes": "Strong retrieval routine; day-specific focus can be read as adapting the general 20-concept routine.",
+        "task_id": "T5"
+      },
+      {
+        "blind_id": "T6-C",
+        "objective_checks": [
+          {
+            "check": "read contribution rules",
+            "pass": true,
+            "evidence": "Directs reading contribution guide and project process."
+          },
+          {
+            "check": "search existing discussions",
+            "pass": true,
+            "evidence": "Directs checking issues, discussions, and recent changes."
+          },
+          {
+            "check": "reproduction or measurement",
+            "pass": true,
+            "evidence": "Calls for reproduction, timing method, and before/after comparison."
+          },
+          {
+            "check": "confirm scope before submission",
+            "pass": false,
+            "evidence": "Seeks maintainer guidance only if behavior must change; does not otherwise confirm scope with maintainers."
+          }
+        ],
+        "objective_total": 3,
+        "method_fit": 2,
+        "actionability": 2,
+        "evidence_boundaries": 2,
+        "constraint_violations": [],
+        "unsupported_claims": [],
+        "word_count": 193,
+        "word_limit_pass": true,
+        "notes": "Preserves behavior and avoids fabricated speedup; scope confirmation is conditional.",
+        "task_id": "T6"
+      }
+    ]
+  },
+  "measured": {
+    "mechanical": "answer count, frozen hashes, same-record leaf equality, whitespace word limit, input material token estimate",
+    "semantic_model_assessment": "objective rubric criteria and all subjective quality scores are model assessed; not executed task results"
+  },
+  "limitations": [
+    "Six English synthetic tasks and Korean public records; no randomized human users, repetitions or significance test.",
+    "Manual record selection excludes retrieval errors and does not test network visualization or UI exporter.",
+    "Single condition agent generates all six tasks; sequential context/task carryover may affect answers.",
+    "One blind model judge; rubric ceiling and scoring bias possible. Objective semantic checks remain judgments, not external verification.",
+    "No real incident recovery, interviews, learning retention, registration, OSS contribution or real-world outcome measured.",
+    "Compact format is lossless nesting, not a validated task-specific reasoning system.",
+    "No claims about the public contributor outcomes being independently verified.",
+    "Actual provider token usage, reasoning tokens, cache, latency and billing unavailable."
+  ],
+  "korean_summary": {
+    "headline": "6개 합성 과제에서는 지식 제공의 전반적 품질 우위를 확인하지 못했습니다.",
+    "findings": [
+      "과제별 의미 기준은 무지원 24/24, 동일 자료 평면형 23/24, 동일 자료 중첩형 23/24였고, 모델 판단 점수는 모두 35/36이었습니다.",
+      "중첩형은 동일 기록의 입력 토큰 추정량을 평면형보다 13.1% 줄였습니다. 실제 사용 토큰·비용 절감은 측정하지 못했습니다.",
+      "220단어 제한 준수는 무지원 6/6, 평면형 3/6, 중첩형 6/6이었습니다. 소규모 단일 생성 결과이므로 일반화하지 않습니다.",
+      "자료 제공 두 조건은 안내문에서 근거 없는 홍보 최상급을 제거했지만, 무지원은 원문 표현을 남겼습니다. 실무에서 사실과 과장을 나누는 예시이며 실제 사용자 효과를 검증한 것은 아닙니다.",
+      "인터뷰와 의사결정 과제에서는 자료가 있어도 유도 질문이나 기한 미준수 위험이 남았습니다."
+    ],
+    "conclusion": "현재 근거는 출처와 한계가 보존되는 참고 자료 전달 및 입력 형식의 작은 효율 차이까지입니다. 그래프 사용, 실제 작업 성과, 인간 선호 또는 광범위한 답변 품질 개선을 입증하지 않습니다.",
+    "grade_ambiguity": "T6의 범위 확인 기준에 일관되지 않은 채점 해석이 발견되었습니다. 원점수는 보존했으며, 엄격/완화 해석을 각각 일관되게 적용하면 세 조건이 모두 23/24 또는 24/24로 동률입니다. 원점수 1점 차이는 우위의 근거가 아닙니다."
+  },
+  "publishable_claims": [
+    "Across six synthetic corpus-aligned single-run tasks, all conditions scored 35/36 on blind model judgment; no overall output-quality advantage established.",
+    "Original criterion totals were 24/24 unaided and 23/24 each supplied-record condition. A task6 grading ambiguity makes that gap unreliable: all tie at 23 under strict reading or 24 under permissive reading.",
+    "Identical full public records in nested JSON used 5959 versus 6857 o200k_base estimated input tokens, a 13.1 percent reduction versus flat leaf-path JSON; actual usage and cost unavailable.",
+    "Word cap adherence was 6/6 unaided, 3/6 flat and 6/6 nested; small single-run observation only."
+  ],
+  "model_provenance": {
+    "generation_requested_model": "gpt-6-luna",
+    "review_requested_model": "gpt-6-sol",
+    "review_evidence": "Actual collaboration.spawn_agent call used model=gpt-6-sol and fork_turns=none. Fresh Sol in messages was shorthand.",
+    "backend_model_identity_independently_verified": false,
+    "provider_usage": null
+  },
+  "grade_adjudication": {
+    "schema": "atlas-grade-adjudication-v1",
+    "kind": "post-hoc unblinded evaluator audit; not independent blind regrading",
+    "original_grades_preserved": true,
+    "issue": {
+      "task_id": "T6",
+      "criterion": "confirm scope before submission",
+      "frozen_wording_requires_maintainer_confirmation": false,
+      "inconsistency": "Original grader accepted a conditional focused question plus scope checks in unaided, but required explicit maintainer confirmation in flat/compact. The frozen criterion does not specify unconditional maintainer confirmation.",
+      "answer_evidence": {
+        "unaided": "If the goal remains unclear, ask a focused question before coding; review diff before PR.",
+        "flat_same_records": "If intended change is unclear, prepare a question; define narrow scope and prepare exact-scope summary before submission.",
+        "compact_same_records": "Follow stated process; seek guidance if behavior must change; review diff for scope before submission."
+      }
+    },
+    "resolution": "Do not choose a new winner. Treat this one binary criterion as ambiguous; retain original scores and report sensitivity. No rubric changes or answer reruns.",
+    "sensitivity": {
+      "original_criterion_passes_model_reviewed": {
+        "unaided": 24,
+        "flat_same_records": 23,
+        "compact_same_records": 23
+      },
+      "consistent_strict_explicit_maintainer_scope_confirmation": {
+        "unaided": 23,
+        "flat_same_records": 23,
+        "compact_same_records": 23
+      },
+      "consistent_permissive_pre_submission_scope_review": {
+        "unaided": 24,
+        "flat_same_records": 24,
+        "compact_same_records": 24
+      }
+    },
+    "conclusion": "All conditions tie under both consistent readings. Original one-point criterion advantage for unaided is not robust. Subjective judgment remains 35/36 for every condition.",
+    "independence_caveat": "The same evaluation coordinator inspected labels for this audit; no second blind human or model adjudicator was used."
+  },
+  "criterion_label": "criterion_passes_model_reviewed: semantic task criteria graded by a model, not automatic objective tests; raw blind grades retain original objective_* field names as audit evidence."
+}

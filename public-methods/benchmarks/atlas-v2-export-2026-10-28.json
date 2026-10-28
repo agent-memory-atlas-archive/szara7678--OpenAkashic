@@ -1,0 +1,20 @@
+{
+  "schema": "method-ui-export-readback-v1",
+  "methods": [
+    {
+      "method_id": "method_13dad5a5dcb942c382816e96049edcf6",
+      "version": "1",
+      "conditions_steps_criteria_limitations_sources_present": true,
+      "full_feedback_equal": true
+    },
+    {
+      "method_id": "method_5b230aa120c54d198e86887fcf8a4ab3",
+      "version": "1",
+      "conditions_steps_criteria_limitations_sources_present": true,
+      "full_feedback_equal": true
+    }
+  ],
+  "characters": 5205,
+  "automatic_execution": false,
+  "quality_gain_test": false
+}

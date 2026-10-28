@@ -90,3 +90,21 @@ PYTHONPATH=api python api/scripts/benchmark_method_navigation.py --endpoint http
 ```
 
 The command refuses to overwrite results. Dated outputs are `benchmarks/navigation-2026-10-28.json` and `benchmarks/atlas-2026-10-28.json`; the previous `benchmarks/2026-10-28.json` is retained. Result material counts are not provider billing.
+
+
+### Interactive method atlas and application study
+
+Cursor-anchored wheel zoom, node/background drag, double-click neighborhoods,
+keyboard/Home/Escape controls, responsive filter/list, and a larger-map view.
+Compare up to three methods and copy/download exact-version conditions, sources,
+and returned feedback for an agent. No automatic execution or server-side
+transmission of the optional task text. Physical mobile pinch remains unverified.
+
+New [six-task application study](benchmarks/application-2026-10-28/README.txt):
+18 real answers across unaided, flat same-record JSON, and nested same-record JSON.
+All conditions score 35/36 on one blind model judgment. A rubric ambiguity is
+preserved and audited; it does not establish a winner. Nested input is 13.1%
+smaller than flat leaf-path JSON by estimated material tokens, which is ordinary
+serialization accounting, not graph superiority, UI export savings or billing.
+Raw tasks, answers, grading, limitations, SHA manifest and deterministic verification
+scripts are included. No broad answer-quality advantage has been demonstrated.

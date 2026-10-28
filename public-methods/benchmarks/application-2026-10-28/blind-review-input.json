@@ -1,0 +1,316 @@
+{
+  "rubric": {
+    "judgment": "Method fit 0-2; actionable specificity 0-2; evidence and uncertainty boundaries 0-2. Blind reviewer sees no condition names.",
+    "limits": "Six synthetic corpus-aligned cases, single generation each; no real-world outcome or statistical superiority.",
+    "objective": "Four task-specific checks, each 0/1; constraints violations separately. Semantic assessor judgment, not verified execution."
+  },
+  "instruction": "Grade each answer independently. Objective checks: four binary semantic checks in task.checks, with short evidence. Judgment: method_fit/actionability/evidence_boundaries each 0-2. Record task constraint violations and invented facts or unsupported verified-outcome claims. Source names need not be present; assess boundaries fairly for answers without supplied sources. Also count word-budget violations using whitespace words <=220. Do not guess condition or see other files. Scores are model judgments, not real task execution.",
+  "answers": [
+    {
+      "blind_id": "T1-A",
+      "task": {
+        "checks": [
+          "30-minute allocation",
+          "hypothesis versus evidence",
+          "recovery or stop criterion",
+          "no data deletion"
+        ],
+        "constraints": "One responder; no production-data deletion; do not assert a confirmed cause.",
+        "domain": "Incident triage",
+        "goal": "Write a safe investigation and recovery decision plan for the next 30 minutes.",
+        "id": "T1",
+        "situation": "After an app deployment error rate rose from 1% to 8%. Logs have not been read."
+      },
+      "answer": "0-5 min: Treat the rise (1% to 8%) as an active incident; note start time, affected versions/regions, current rate and user impact from dashboards. As the sole responder, own triage and updates; page the on-call/incident lead or service owner through the established channel if available. Do not assume a cause.\n5-12 min: Read deployment/change records and relevant application, dependency and platform logs for the affected window, using approved read-only access. Compare error types and traffic with the pre-deploy baseline; preserve timestamps and a brief evidence log. Avoid exposing secrets or copying unnecessary user data.\n12-20 min: Check whether errors are still rising, which users/functions are affected, and whether health checks, latency, saturation or dependencies also changed. If impact is material or worsening, escalate.\n20-30 min: Decide with the authorized service owner whether to pause rollout or roll back to the last known-good version, based on timing, evidence, rollback safety and reversibility. Do not delete production data. If authorized and rollback is safe, perform it and watch error rate and key functions; otherwise contain via an approved reversible measure or continue escalation. Record decision, owner and time. Confirm recovery only after metrics stabilize and key flows work; send a status update and leave cause unconfirmed pending follow-up."
+    },
+    {
+      "blind_id": "T1-B",
+      "task": {
+        "checks": [
+          "30-minute allocation",
+          "hypothesis versus evidence",
+          "recovery or stop criterion",
+          "no data deletion"
+        ],
+        "constraints": "One responder; no production-data deletion; do not assert a confirmed cause.",
+        "domain": "Incident triage",
+        "goal": "Write a safe investigation and recovery decision plan for the next 30 minutes.",
+        "id": "T1",
+        "situation": "After an app deployment error rate rose from 1% to 8%. Logs have not been read."
+      },
+      "answer": "For the next 30 minutes, preserve evidence and reduce risk without assuming a cause. Minutes 0-5: acknowledge the 8% error rate, note deployment time/version and current metrics, and alert the on-call/incident channel. Check dashboards for affected endpoints, regions, traffic, latency, and whether errors are still rising. Do not delete production data or make unrelated changes. Minutes 5-12: inspect deployment health, recent change list, alerts, and a small sample of sanitized logs; record timestamps and error types. Avoid exposing secrets or personal data. Minutes 12-18: compare the new version with the prior 1% baseline and check dependencies/configuration. If impact is severe or increasing and rollback is known, safe, and authorized, roll back using the documented procedure; otherwise pause rollout or route to the incident owner for a safe mitigation decision. Minutes 18-25: verify error rate and core flows after any change; keep monitoring and preserve logs. Minutes 25-30: report observed facts, actions, remaining impact, and next owner/check-in. If recovery is not evident, escalate and continue containment; do not declare a cause until evidence supports it."
+    },
+    {
+      "blind_id": "T1-C",
+      "task": {
+        "checks": [
+          "30-minute allocation",
+          "hypothesis versus evidence",
+          "recovery or stop criterion",
+          "no data deletion"
+        ],
+        "constraints": "One responder; no production-data deletion; do not assert a confirmed cause.",
+        "domain": "Incident triage",
+        "goal": "Write a safe investigation and recovery decision plan for the next 30 minutes.",
+        "id": "T1",
+        "situation": "After an app deployment error rate rose from 1% to 8%. Logs have not been read."
+      },
+      "answer": "0–5 min: Treat the rise from 1% to 8% as a potentially serious incident; record start time, affected versions, routes, regions, and current error/traffic levels. As the sole responder, own investigation and status updates. Use the established incident channel and escalation path if available; do not assume they are staffed. 5–12 min: Read deployment and application logs for the affected window, compare with the prior baseline, and inspect latency, traffic, dependency health, and user impact. Preserve relevant logs and timestamps; avoid exposing secrets. Do not infer a cause until evidence supports it. 12–20 min: Check whether errors correlate with the new release and whether a known-good rollback is available and safe. Follow the service's rollback procedure; if impact is continuing and the release is the likely trigger, prefer reversible rollback over ad hoc edits. If rollback risk or authority is unclear, escalate and state the uncertainty. Do not delete production data. 20–30 min: Verify error rate, latency, and key user flows after any mitigation; continue monitoring and communicate status, actions, and remaining uncertainty. If errors remain elevated, escalate with evidence and consider further mitigation under policy. Record a timeline and follow-up review items. Close only when service indicators recover and remain stable for the defined observation window; the available facts do not establish a cause."
+    },
+    {
+      "blind_id": "T2-A",
+      "task": {
+        "checks": [
+          "five questions",
+          "specific past behavior",
+          "20-minute allocation",
+          "observation versus inference"
+        ],
+        "constraints": "20 minutes per interview; no leading questions or feature preference vote.",
+        "domain": "User research",
+        "goal": "Write exactly five interview questions plus a recording and analysis plan.",
+        "id": "T2",
+        "situation": "People abandon a library reservation app. Why is unknown. Five interviews are scheduled next week."
+      },
+      "answer": "Questions (ask about the most recent real attempt, without suggesting causes):\n1. Tell me about the last time you tried to reserve a library item, from deciding to reserve through what happened next.\n2. What, if anything, did you expect to happen at each step?\n3. Was there a point when you paused, changed course, or stopped? What was happening then?\n4. What did you do after that, if anything, and what influenced that choice?\n5. Is there anything else about that attempt or a later one that would help me understand your experience?\n\nPlan: Use a 20-minute guide: 2 minutes for consent and context, about 14 for the five questions and neutral follow-ups, and 4 for recap and close. With consent, audio-record; otherwise take notes. Store recordings and notes securely with participant IDs, separate contact details, and delete them on the agreed schedule. Record exact wording for key moments and distinguish observed statements from interviewer interpretation. After all five interviews, summarize each journey, mark abandonment points and reported expectations, then compare recurring patterns and divergent cases. Keep a small evidence table linking each theme to anonymized excerpts and participant counts. Treat five interviews as exploratory evidence about these participants, not a measure of prevalence or market demand; set any follow-up hypothesis and test criterion before a later test."
+    },
+    {
+      "blind_id": "T2-B",
+      "task": {
+        "checks": [
+          "five questions",
+          "specific past behavior",
+          "20-minute allocation",
+          "observation versus inference"
+        ],
+        "constraints": "20 minutes per interview; no leading questions or feature preference vote.",
+        "domain": "User research",
+        "goal": "Write exactly five interview questions plus a recording and analysis plan.",
+        "id": "T2",
+        "situation": "People abandon a library reservation app. Why is unknown. Five interviews are scheduled next week."
+      },
+      "answer": "Interview questions (ask neutrally and use the same core prompts):\n1. Tell me about the last time you tried to reserve a library item.\n2. What were you trying to accomplish at each step?\n3. Where, if anywhere, did you pause, change course, or stop?\n4. What did you expect to happen at that point, and what happened?\n5. What did you do next, and what influenced that choice?\n\nPlan: Use 20 minutes: 2 minutes for consent and context, 15 for the five prompts and follow-ups (\"What happened next?\"), 3 for a neutral recap and anything missed. With permission, record audio; otherwise take notes. Explain purpose, access, retention, and that participation is voluntary. Use participant IDs, store recordings securely, restrict access, and delete them on the stated schedule. After each session, write a brief factual summary. Compare the five accounts for repeated steps, breakdowns, workarounds, and differences; keep quotes de-identified and distinguish observed evidence from interpretation. Five interviews reveal possible patterns, not prevalence or proof of cause."
+    },
+    {
+      "blind_id": "T2-C",
+      "task": {
+        "checks": [
+          "five questions",
+          "specific past behavior",
+          "20-minute allocation",
+          "observation versus inference"
+        ],
+        "constraints": "20 minutes per interview; no leading questions or feature preference vote.",
+        "domain": "User research",
+        "goal": "Write exactly five interview questions plus a recording and analysis plan.",
+        "id": "T2",
+        "situation": "People abandon a library reservation app. Why is unknown. Five interviews are scheduled next week."
+      },
+      "answer": "Hypothesis to examine: people abandon because some step in finding, selecting, or completing a library reservation fails to fit their situation. Treat this as a question, not a conclusion.\n\nAsk these five open questions, allowing probes such as 'What happened next?':\n1. Tell me about the most recent time you tried to reserve a library item, from what prompted you to start.\n2. What did you do at each step, and where, if anywhere, did you pause or stop?\n3. What were you expecting at that point, and what happened instead?\n4. What did you do after stopping, and how did you meet the original need?\n5. Thinking of that attempt, what else about the process or your circumstances affected what you did?\n\n20 minutes: 2 minutes explain purpose, voluntary participation, recording permission and confidentiality; 12 minutes discuss a recent episode; 4 minutes clarify sequence and alternatives; 2 minutes participant correction and close. If recording is declined, take notes. Store recordings/notes securely with identifiers removed; restrict access and set a deletion date.\n\nBefore interviews, write the hypothesis, coding categories and decision threshold. Afterward, summarize each episode: steps, friction, abandonment point, workaround, and uncertainty. Compare across all five, count cases with denominator five, retain disconfirming cases, and distinguish observed behavior from interpretation. Use results to choose a follow-up test, not claim market-wide demand or causality."
+    },
+    {
+      "blind_id": "T3-A",
+      "task": {
+        "checks": [
+          "one decision owner",
+          "Friday deadline",
+          "decision evidence",
+          "consultation versus decision"
+        ],
+        "constraints": "Four participants; no external customer research budget; no forced unanimity.",
+        "domain": "Team decision",
+        "goal": "Write a decision plan with roles, evidence and deadline.",
+        "id": "T3",
+        "situation": "Design, engineering and sales keep meeting about onboarding without deciding. One option must be chosen by Friday."
+      },
+      "answer": "At the start, name one decision owner (the fourth participant or an agreed sponsor) who will choose by Friday; unanimity is not required. The other three own design, engineering, and sales perspectives. Today, the owner writes the decision in one sentence, the options under consideration, the deadline, and criteria such as user task clarity, implementation effort/risk, and sales impact. Each role brings existing evidence by Wednesday: design summarizes current onboarding friction or usability observations; engineering estimates effort and risks from the current system; sales brings relevant patterns from existing conversations or records, with no invented customer claims. The owner separates facts, assumptions, and unknowns. On Thursday, hold one time-boxed meeting: each role presents evidence briefly, participants identify tradeoffs, and the owner asks for objections and a workable mitigation. The owner records the chosen option, rationale, risks, and a small follow-up measure. By Friday, communicate the decision and who will implement/check it. If evidence is thin, choose the most reversible option and explicitly note what future signal would prompt reconsideration."
+    },
+    {
+      "blind_id": "T3-B",
+      "task": {
+        "checks": [
+          "one decision owner",
+          "Friday deadline",
+          "decision evidence",
+          "consultation versus decision"
+        ],
+        "constraints": "Four participants; no external customer research budget; no forced unanimity.",
+        "domain": "Team decision",
+        "goal": "Write a decision plan with roles, evidence and deadline.",
+        "id": "T3",
+        "situation": "Design, engineering and sales keep meeting about onboarding without deciding. One option must be chosen by Friday."
+      },
+      "answer": "Today, write the decision question in one sentence, list the onboarding options, the user and business impact, what must be true for each option, and the Friday decision deadline. Assign roles among the four participants explicitly: one Driver to prepare the comparison and keep the process moving; one Approver with existing authority to choose; the remaining two as Contributors, with design, engineering, and sales evidence represented. If no one has clear approval authority, ask the group to establish who does before proceeding; do not infer authority from job title. The Driver gathers available internal evidence by Thursday: current funnel or support data if accessible, usability observations already on hand, implementation effort, risks, and assumptions. No external research is required; label gaps rather than filling them with guesses. Ask each participant to submit a brief recommendation against agreed criteria, including trade-offs and a reversible next step. By Friday at a stated time, the Approver selects an option or records what missing fact prevents a responsible choice and sets a short follow-up deadline. Record rationale, dissent, owner, and next action, then notify relevant teams. Unanimity is unnecessary; the decision and rationale must be clear."
+    },
+    {
+      "blind_id": "T3-C",
+      "task": {
+        "checks": [
+          "one decision owner",
+          "Friday deadline",
+          "decision evidence",
+          "consultation versus decision"
+        ],
+        "constraints": "Four participants; no external customer research budget; no forced unanimity.",
+        "domain": "Team decision",
+        "goal": "Write a decision plan with roles, evidence and deadline.",
+        "id": "T3",
+        "situation": "Design, engineering and sales keep meeting about onboarding without deciding. One option must be chosen by Friday."
+      },
+      "answer": "By today, write the decision question: 'Which one onboarding option will we implement first?' Define the affected flow, decision deadline (Friday, with time/time zone), constraints, and what is out of scope. Name one Driver to collect evidence and maintain the record, and one Approver who has actual authority to choose. The four participants can be the Driver, Approver, and two Contributors (design and engineering/sales as agreed); the remaining function contributes through one of these roles. The Approver must be explicitly accepted by the group; do not infer authority. All four are informed when the decision is recorded.\n\nDriver: by Wednesday, gather the current funnel or completion data already available, support/sales themes with source and sample limits, implementation effort and risks, and design rationale. No external research is assumed. List feasible options, including keeping current onboarding, and state assumptions and missing evidence. By Thursday, circulate a one-page comparison against agreed criteria (user friction, reach, effort, risk, reversibility). Invite each participant to submit evidence or a concern by a fixed time.\n\nOn Friday, hold a time-boxed review. Contributors advise; the Approver decides even if views differ, records rationale, uncertainties, owner, next action and a review date. If evidence is tied or incomplete, choose the smallest reversible option or explicitly retain the current flow if safe, with a measurable checkpoint. Notify all four and stop reopening unless new material evidence or a defined trigger appears."
+    },
+    {
+      "blind_id": "T4-A",
+      "task": {
+        "checks": [
+          "November 3 and 14:00",
+          "Civic Hall floor 2",
+          "free and capacity 20",
+          "October 31 and phone"
+        ],
+        "constraints": "Preserve date, time, place, price, capacity, deadline and phone; no invented facts.",
+        "domain": "Public communication",
+        "goal": "Rewrite as a short announcement that lets a first visitor register.",
+        "id": "T4",
+        "situation": "Course draft: The most innovative learning! November 3, 14:00, Civic Hall floor 2, free, capacity 20, registration closes October 31, phone 02-000-0000."
+      },
+      "answer": "Join us for \"The most innovative learning!\" on November 3 at 14:00 at Civic Hall, floor 2. Admission is free, and capacity is limited to 20 people. Registration closes October 31. To register, call 02-000-0000."
+    },
+    {
+      "blind_id": "T4-B",
+      "task": {
+        "checks": [
+          "November 3 and 14:00",
+          "Civic Hall floor 2",
+          "free and capacity 20",
+          "October 31 and phone"
+        ],
+        "constraints": "Preserve date, time, place, price, capacity, deadline and phone; no invented facts.",
+        "domain": "Public communication",
+        "goal": "Rewrite as a short announcement that lets a first visitor register.",
+        "id": "T4",
+        "situation": "Course draft: The most innovative learning! November 3, 14:00, Civic Hall floor 2, free, capacity 20, registration closes October 31, phone 02-000-0000."
+      },
+      "answer": "Free course - November 3\n\nJoin us November 3 at 14:00 at Civic Hall, floor 2. Admission is free; capacity is 20.\n\nRegister by October 31: call 02-000-0000."
+    },
+    {
+      "blind_id": "T4-C",
+      "task": {
+        "checks": [
+          "November 3 and 14:00",
+          "Civic Hall floor 2",
+          "free and capacity 20",
+          "October 31 and phone"
+        ],
+        "constraints": "Preserve date, time, place, price, capacity, deadline and phone; no invented facts.",
+        "domain": "Public communication",
+        "goal": "Rewrite as a short announcement that lets a first visitor register.",
+        "id": "T4",
+        "situation": "Course draft: The most innovative learning! November 3, 14:00, Civic Hall floor 2, free, capacity 20, registration closes October 31, phone 02-000-0000."
+      },
+      "answer": "Course announcement\n\nJoin us for a learning course on November 3 at 14:00.\n\nCivic Hall, floor 2\nFree · Capacity: 20 people\nRegister by October 31.\n\nFor registration, call 02-000-0000."
+    },
+    {
+      "blind_id": "T5-A",
+      "task": {
+        "checks": [
+          "seven-day schedule",
+          "20 minutes daily",
+          "closed-book recall",
+          "check and correct errors"
+        ],
+        "constraints": "20 minutes daily, 140 minutes total; no app purchase; no pass guarantee.",
+        "domain": "Learning",
+        "goal": "Write a seven-day review and assessment schedule.",
+        "id": "T5",
+        "situation": "An exam on 20 concepts is in seven days. Reading feels familiar but the learner cannot explain with the book closed."
+      },
+      "answer": "Use the 20 minutes each day for closed-book retrieval, checking against the original course material, and correcting errors. Prepare a list of the 20 concepts and a reliable answer source. For each concept, record an initial rating: explained accurately, partial, or unable. Keep answers before checking and track correct, partial, and missing concepts.\n\nDay 1: 4 min organize concepts; 10 min attempt brief explanations for all 20 from memory; 6 min check and mark gaps.\nDay 2: 10 min retrieve concepts 1-10; 7 min check/correct; 3 min revisit yesterday's gaps.\nDay 3: Same schedule for concepts 11-20.\nDay 4: 12 min mixed closed-book explanations of all concepts; 8 min verify and log errors.\nDay 5: 12 min focus on weakest concepts, still from memory first; 8 min check and correct.\nDay 6: 15 min mixed, no-notes assessment of all 20; 5 min check, count accurate explanations and list remaining gaps.\nDay 7: 12 min delayed closed-book assessment of all 20 using the same rubric; 8 min check against sources and correct remaining errors.\n\nTotal: 140 minutes. Report the Day 7 score and denominator, not familiarity or time spent as mastery. This schedule cannot guarantee a pass; the assessment is a limited check, not proof of long-term retention."
+    },
+    {
+      "blind_id": "T5-B",
+      "task": {
+        "checks": [
+          "seven-day schedule",
+          "20 minutes daily",
+          "closed-book recall",
+          "check and correct errors"
+        ],
+        "constraints": "20 minutes daily, 140 minutes total; no app purchase; no pass guarantee.",
+        "domain": "Learning",
+        "goal": "Write a seven-day review and assessment schedule.",
+        "id": "T5",
+        "situation": "An exam on 20 concepts is in seven days. Reading feels familiar but the learner cannot explain with the book closed."
+      },
+      "answer": "Use 20 minutes daily, totaling 140 minutes. Each session: close the book, retrieve from memory first, then check and correct. Day 1: list all 20 concepts from memory and mark gaps. Day 2: explain concepts 1-7 aloud or in brief notes without looking; check them. Day 3: do the same for 8-14. Day 4: do the same for 15-20, then revisit Day 1 gaps. Day 5: shuffle all 20 prompts and give a short definition plus one example for each; check accuracy. Day 6: take a closed-book mixed test, focusing on distinctions among easily confused concepts; use remaining time to correct errors. Day 7: repeat a short closed-book assessment of all concepts, then review only missed or uncertain items. Keep a simple list of correct, partial, and missed explanations so practice targets weak knowledge. Familiarity while reading is not evidence of recall; this schedule supports preparation but cannot guarantee an exam result."
+    },
+    {
+      "blind_id": "T5-C",
+      "task": {
+        "checks": [
+          "seven-day schedule",
+          "20 minutes daily",
+          "closed-book recall",
+          "check and correct errors"
+        ],
+        "constraints": "20 minutes daily, 140 minutes total; no app purchase; no pass guarantee.",
+        "domain": "Learning",
+        "goal": "Write a seven-day review and assessment schedule.",
+        "id": "T5",
+        "situation": "An exam on 20 concepts is in seven days. Reading feels familiar but the learner cannot explain with the book closed."
+      },
+      "answer": "Use the same 20-minute routine each day: 10 minutes answering prompts from memory across the 20 concepts, 7 minutes checking against the book or course notes and correcting errors, and 3 minutes logging confidence and concepts to revisit. Do not look at answers until the recall attempt is written.\n\nDay 1: Make one prompt per concept; attempt all 20 briefly and mark gaps.\nDay 2: Recall concepts 1–10; check and correct.\nDay 3: Recall concepts 11–20; check and correct.\nDay 4: Mix all 20 prompts; explain answers aloud or in writing, then correct.\nDay 5: Focus recall on missed or uncertain concepts, then do a short mixed check.\nDay 6: Closed-book practice across all 20; check answers and revisit errors.\nDay 7: Before rereading, take a final closed-book assessment across all 20; compare with source material, correct remaining errors, and stop.\n\nTotal: 7 × 20 = 140 minutes. Track correct, partial, and missing answers separately; familiarity after rereading is not a score. Use the actual course materials as the answer key. This schedule cannot guarantee a pass, and one-week performance does not establish long-term retention."
+    },
+    {
+      "blind_id": "T6-A",
+      "task": {
+        "checks": [
+          "read contribution rules",
+          "search existing discussions",
+          "reproduction or measurement",
+          "confirm scope before submission"
+        ],
+        "constraints": "Do not submit a PR yet; preserve existing behavior; do not fabricate speedup numbers.",
+        "domain": "Open source",
+        "goal": "Write preparation steps for a contribution a maintainer can review.",
+        "id": "T6",
+        "situation": "A first-time contributor wants a PR to improve slow search. They have not read prior issues or contribution rules."
+      },
+      "answer": "First, read the contribution guide, code of conduct, development/test instructions, and relevant search documentation. Search prior issues, pull requests, and release notes for existing discussions or known constraints; if the goal remains unclear, ask a focused question before coding. Reproduce the slow-search behavior on a small, representative fixture and record the exact query, dataset conditions, environment, and baseline method without publishing unsupported speed claims. Trace the search path and identify a narrow change that could improve it. Write down expected behavior and edge cases, including empty queries, ordering, filtering, and errors, then inspect tests and callers to understand compatibility. Make a minimal local change that preserves current results and interfaces. Add or update focused tests for behavior and edge cases, and run the project's documented checks. Review the diff for unrelated edits, data changes, and accidental formatting churn. Prepare a concise summary of the problem, approach, evidence, checks run, and limitations. Once preparation is complete, the contributor can open a reviewable PR; do not claim a speedup without repeatable measurements, and do not submit one yet."
+    },
+    {
+      "blind_id": "T6-B",
+      "task": {
+        "checks": [
+          "read contribution rules",
+          "search existing discussions",
+          "reproduction or measurement",
+          "confirm scope before submission"
+        ],
+        "constraints": "Do not submit a PR yet; preserve existing behavior; do not fabricate speedup numbers.",
+        "domain": "Open source",
+        "goal": "Write preparation steps for a contribution a maintainer can review.",
+        "id": "T6",
+        "situation": "A first-time contributor wants a PR to improve slow search. They have not read prior issues or contribution rules."
+      },
+      "answer": "1. Read the project README, contribution guide, code of conduct and search-related documentation. Check open and closed issues, discussions, recent changes and existing pull requests for duplicate reports or preferred direction. If the intended change is unclear, prepare a question for the project's normal discussion channel; do not post it without checking the project's rules.\n2. Reproduce the slow-search concern locally with a representative, non-sensitive fixture. Record environment, command, dataset shape and baseline timings across repeat runs. Avoid publishing private or user data. If a reliable baseline cannot be measured, describe the observation without a numeric speedup claim.\n3. Inspect the search path and identify a small, evidence-backed change. Write down expected behavior, edge cases, compatibility concerns and how existing behavior will be preserved. Consider an unchanged control and compare equivalent runs if measuring performance.\n4. Make the change on a branch and keep it narrowly scoped. Add or update focused coverage for relevant search behavior and run the checks required by the repository. Review the diff for unrelated edits, generated files and accidental data or secrets.\n5. Prepare a draft summary for maintainer review: problem and reproduction steps, rationale, exact scope, behavior preserved, checks run and results, measured performance method/results if available, and remaining uncertainty. Do not submit the PR yet. Confirm project-specific format and sign-off requirements first. Preparation does not imply acceptance or adoption."
+    },
+    {
+      "blind_id": "T6-C",
+      "task": {
+        "checks": [
+          "read contribution rules",
+          "search existing discussions",
+          "reproduction or measurement",
+          "confirm scope before submission"
+        ],
+        "constraints": "Do not submit a PR yet; preserve existing behavior; do not fabricate speedup numbers.",
+        "domain": "Open source",
+        "goal": "Write preparation steps for a contribution a maintainer can review.",
+        "id": "T6",
+        "situation": "A first-time contributor wants a PR to improve slow search. They have not read prior issues or contribution rules."
+      },
+      "answer": "1. Read the repository README, contribution guide, code of conduct, and relevant search documentation. Check open and closed issues, discussions, and recent changes for duplicate proposals or known constraints. Follow the project's stated process before starting work. 2. Reproduce the slow-search behavior using a small, documented example. Record environment, query, dataset size, and how timing is measured; do not claim a speedup before measuring it. 3. Identify the likely bottleneck from profiling or other evidence. Write down current behavior and compatibility expectations, including ordering, matching, errors, and edge cases. 4. Propose the smallest change that addresses the measured issue while preserving existing behavior. If behavior must change, describe that separately and seek maintainer guidance before implementation. 5. Prepare a focused branch and add or update relevant tests. Compare before-and-after behavior and performance under the same conditions; report raw measurements and limitations without inventing numbers. 6. Review the diff for scope, documentation, style, and accidental behavior changes. Draft (but do not submit) a concise PR description with problem, evidence, approach, tests, and known trade-offs. Confirm it follows project templates and contribution rules. Maintainer acceptance and actual speed improvement remain unverified until review and measurement."
+    }
+  ]
+}

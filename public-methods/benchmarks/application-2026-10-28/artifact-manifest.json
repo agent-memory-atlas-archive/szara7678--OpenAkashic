@@ -1,0 +1,12 @@
+{
+  "protocol-v2.json": "5d6bb8e2f982d1183e23d7c5f25592dcb22b690763f4e62c50c1444fbca6acbb",
+  "selected-records.json": "09ea9f5cf49769f9d3ed087742c3c1018692eb10bf12d97fe2fd76c1cf072aca",
+  "unaided-input.json": "9ce9eef736ae40a03259ae05a69e17c136fbb34426ed74fe77f6b26a77ea5ee4",
+  "flat_same_records-input.json": "bc315347521f935e3da7e76bcdf835d5548a58ad9a91e2691fb82cf63cdce82a",
+  "compact_same_records-input.json": "9bfbab44ce12b829a74111743915d3962fba96999efd391b0f98662d3ca03565",
+  "unaided-output.json": "a1f25dd1a82b50b4f3146d4d9c96b96ed0770c462781ae53d1a9dd65f3ced649",
+  "flat_same_records-output.json": "72ecd636484534be872f402d8484496fb971221151085260df16d7299795ba16",
+  "compact_same_records-output.json": "0a712cfb7aa5c2474d9b16e7024cc59bfc894cdb3c36060c8ca92c3b30998f11",
+  "blind-review-input.json": "f95b20aa05f1bc5443e9fb1d2fa9fa8d4b1143cb85b151382d019312fcd57313",
+  "blind-key.json": "dbca4531f857965a6b60d9480c5d769c9bcf6ff30dbbcb5faaf8746210786bd3"
+}

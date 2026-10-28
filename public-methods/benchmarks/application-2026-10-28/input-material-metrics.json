@@ -1,0 +1,24 @@
+{
+  "metrics": {
+    "unaided-input.json": {
+      "utf8_bytes": 2617,
+      "characters": 2617,
+      "tokens_o200k_base": 597,
+      "sha256": "9ce9eef736ae40a03259ae05a69e17c136fbb34426ed74fe77f6b26a77ea5ee4"
+    },
+    "flat_same_records-input.json": {
+      "utf8_bytes": 24600,
+      "characters": 20064,
+      "tokens_o200k_base": 6857,
+      "sha256": "bc315347521f935e3da7e76bcdf835d5548a58ad9a91e2691fb82cf63cdce82a"
+    },
+    "compact_same_records-input.json": {
+      "utf8_bytes": 23967,
+      "characters": 19431,
+      "tokens_o200k_base": 5959,
+      "sha256": "9bfbab44ce12b829a74111743915d3962fba96999efd391b0f98662d3ca03565"
+    }
+  },
+  "actual_provider_usage": null,
+  "note": "Input artifact estimates only; not actual prompt, completion, cached, reasoning or billable token usage. o200k_base is an estimate, not a claim about provider tokenizer."
+}

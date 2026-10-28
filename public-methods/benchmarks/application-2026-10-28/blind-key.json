@@ -1,0 +1,92 @@
+[
+  {
+    "blind_id": "T1-A",
+    "condition": "flat_same_records",
+    "task_id": "T1"
+  },
+  {
+    "blind_id": "T1-B",
+    "condition": "unaided",
+    "task_id": "T1"
+  },
+  {
+    "blind_id": "T1-C",
+    "condition": "compact_same_records",
+    "task_id": "T1"
+  },
+  {
+    "blind_id": "T2-A",
+    "condition": "compact_same_records",
+    "task_id": "T2"
+  },
+  {
+    "blind_id": "T2-B",
+    "condition": "unaided",
+    "task_id": "T2"
+  },
+  {
+    "blind_id": "T2-C",
+    "condition": "flat_same_records",
+    "task_id": "T2"
+  },
+  {
+    "blind_id": "T3-A",
+    "condition": "unaided",
+    "task_id": "T3"
+  },
+  {
+    "blind_id": "T3-B",
+    "condition": "compact_same_records",
+    "task_id": "T3"
+  },
+  {
+    "blind_id": "T3-C",
+    "condition": "flat_same_records",
+    "task_id": "T3"
+  },
+  {
+    "blind_id": "T4-A",
+    "condition": "unaided",
+    "task_id": "T4"
+  },
+  {
+    "blind_id": "T4-B",
+    "condition": "flat_same_records",
+    "task_id": "T4"
+  },
+  {
+    "blind_id": "T4-C",
+    "condition": "compact_same_records",
+    "task_id": "T4"
+  },
+  {
+    "blind_id": "T5-A",
+    "condition": "flat_same_records",
+    "task_id": "T5"
+  },
+  {
+    "blind_id": "T5-B",
+    "condition": "unaided",
+    "task_id": "T5"
+  },
+  {
+    "blind_id": "T5-C",
+    "condition": "compact_same_records",
+    "task_id": "T5"
+  },
+  {
+    "blind_id": "T6-A",
+    "condition": "unaided",
+    "task_id": "T6"
+  },
+  {
+    "blind_id": "T6-B",
+    "condition": "flat_same_records",
+    "task_id": "T6"
+  },
+  {
+    "blind_id": "T6-C",
+    "condition": "compact_same_records",
+    "task_id": "T6"
+  }
+]

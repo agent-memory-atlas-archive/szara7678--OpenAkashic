@@ -1,7 +1,7 @@
 {
   "schema": "public-methods-release-manifest-v2",
-  "previous_public_commit": "9cc43398848a5f966ae1181e3b78a2a29d7c8c97",
-  "scope": "Public method atlas and reproducible record navigation; no private or Samsung data",
+  "previous_public_commit": "2cba94830c4d573ff6f1088084d3b44bf9cd97f0",
+  "scope": "Method atlas controls, comparison, exact-record briefing and bounded application evidence; public materials only",
   "files": [
     {
       "path": "public-methods/.gitignore",
@@ -21,7 +21,7 @@
     },
     {
       "path": "public-methods/README.md",
-      "sha256": "85a94f535c661d4fa0e2e48cbc04305b6aab29aab10c56eee26c01f165f04501"
+      "sha256": "4c60a9600827f69761039e5de327348ac3fcac3805b03572019396014a0b2112"
     },
     {
       "path": "public-methods/api/app/__init__.py",
@@ -132,8 +132,108 @@
       "sha256": "64c3d78f2a13a03d045d02cd0151f7d36382ffb366712f95d596e9a1a9fe8977"
     },
     {
+      "path": "public-methods/benchmarks/application-2026-10-28/README.txt",
+      "sha256": "abbe2e8a7e34e406e4f6d9c89c171e6da65bd50165010c2bb6052e3691d2f7dd"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/artifact-manifest.json",
+      "sha256": "90f49f78dcae2f8faaee1f5be8041efb61cb198d31898480f46ad1de991c6c50"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/blind-grades.json",
+      "sha256": "d55b86ff5c0f692de846079cccb8e20faf153b2a26f265ef95452cc02a79d453"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/blind-key.json",
+      "sha256": "dbca4531f857965a6b60d9480c5d769c9bcf6ff30dbbcb5faaf8746210786bd3"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/blind-review-input.json",
+      "sha256": "f95b20aa05f1bc5443e9fb1d2fa9fa8d4b1143cb85b151382d019312fcd57313"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/build_report.py",
+      "sha256": "2eb42436502a6ce1251ff64b66ef61cec7f42da12920c0b09f03ca5fe6702453"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/bundle-manifest.json",
+      "sha256": "75f5a56d6863dfb7a89d206fa1d76bd6eedb97ccca59944caf04700de49bbad8"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/compact_same_records-input.json",
+      "sha256": "9bfbab44ce12b829a74111743915d3962fba96999efd391b0f98662d3ca03565"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/compact_same_records-output.json",
+      "sha256": "0a712cfb7aa5c2474d9b16e7024cc59bfc894cdb3c36060c8ca92c3b30998f11"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/flat_same_records-input.json",
+      "sha256": "bc315347521f935e3da7e76bcdf835d5548a58ad9a91e2691fb82cf63cdce82a"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/flat_same_records-output.json",
+      "sha256": "72ecd636484534be872f402d8484496fb971221151085260df16d7299795ba16"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/grade-adjudication.json",
+      "sha256": "1e2c527556853be8ba6c1beb46b26245154ec61af6ca0b51cd616699bc1badf7"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/input-integrity.json",
+      "sha256": "08e671b7164af80511f6510986a0ad1372d5c30ca870628b6445b12f5a63528b"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/input-material-metrics.json",
+      "sha256": "4e9ef91e3c603af0429ccdecb242273c807692facd21b2e68c279490cf18a840"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/mechanical-checks.json",
+      "sha256": "169f06be2d553ae058d94f129939feccb2e26e9fcbc02a66e702598307366e71"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/protocol-v2.json",
+      "sha256": "5d6bb8e2f982d1183e23d7c5f25592dcb22b690763f4e62c50c1444fbca6acbb"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/protocol-v2.sha256",
+      "sha256": "19f28901c37798f70ade75b824be3bc8f476a5ae840156e8ea2a8682556afa75"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/report-additions.json",
+      "sha256": "d8f3aeee4e16dde380845ce52c379454ec96276c40fbb5ed8b97f5c95d269c3b"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/report.json",
+      "sha256": "0f5e73b6006db26f95d4dbc60845dabaf62b5596f3eb1821e90f20c0d70db8a7"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/selected-records.json",
+      "sha256": "09ea9f5cf49769f9d3ed087742c3c1018692eb10bf12d97fe2fd76c1cf072aca"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/unaided-input.json",
+      "sha256": "9ce9eef736ae40a03259ae05a69e17c136fbb34426ed74fe77f6b26a77ea5ee4"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/unaided-output.json",
+      "sha256": "64abe7f813c1fad697a454211e636d447fd10b600989b78608470cfd61af4417"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/verify_artifacts.py",
+      "sha256": "153df5c6466fdcae0234825f93486ce3b97501bdbb48afb441433817165fd37e"
+    },
+    {
+      "path": "public-methods/benchmarks/application-2026-10-28/verify_bundle.py",
+      "sha256": "9a8250b5a885072508f2d3368cc80497c9eeccda6fcbb91043f94c3972ad9b42"
+    },
+    {
       "path": "public-methods/benchmarks/atlas-2026-10-28.json",
       "sha256": "1a2c36833bedec8d4220ee8ab47ef926dc429e31345e431b201f60a6722521fa"
+    },
+    {
+      "path": "public-methods/benchmarks/atlas-v2-export-2026-10-28.json",
+      "sha256": "d4f0fc8f14f6b3b25fa0bc9bc431154c91d5b716a5adbee14c4b8de5f7cea84f"
     },
     {
       "path": "public-methods/benchmarks/navigation-2026-10-28.json",
@@ -149,7 +249,7 @@
     },
     {
       "path": "public-methods/docs/public-methods.md",
-      "sha256": "89e028dce5f5637fe5f188d4a98a0fdee4ab1a3e72fde974e347a79a9c0959fc"
+      "sha256": "c04b3da7877221ac17431f6fd66ff66c6a47d1864dbdb2c67eb3233db570333c"
     },
     {
       "path": "public-methods/examples/prior-regression-queries.json",
@@ -249,15 +349,15 @@
     },
     {
       "path": "public-methods/web/research/methods-explore.css",
-      "sha256": "7169fb23970d9d81ecb698eeb70c4b72bfd18b3c2f957aa6ce50517a8ed343bf"
+      "sha256": "c30dd07ae085a565162ef4a0876e2ebfd699990ffe74da4ab9cc60b87e881f1b"
     },
     {
       "path": "public-methods/web/research/methods-explore.html",
-      "sha256": "00831b5fe9117804c2feec285bf2e0f7d7077e5e61702359e80d7a068880dd17"
+      "sha256": "006a2da6c8eaa7ec2176857a827a04595837432abfaa6218258da72387363cf7"
     },
     {
       "path": "public-methods/web/research/methods-explore.js",
-      "sha256": "3e49e50afa77673d6eb9d7636d70da2de937ba0feaaacd346412049cedd411f5"
+      "sha256": "c34d3f59ec691a68a78932c149915679eaddebe4aeefb2cc708298cb86c2ff54"
     },
     {
       "path": "public-methods/web/research/methods-graph.js",
@@ -269,7 +369,7 @@
     },
     {
       "path": "public-methods/web/research/methods-kpi.js",
-      "sha256": "8457e19671ff9e45c817da7765075f762d64080f37840c3a0131183e1850536b"
+      "sha256": "39cb22e8607ff4f4921a84c6aa508bcad1ce59c6b25f48b6316db116c1d3e18c"
     },
     {
       "path": "public-methods/web/research/methods.css",

@@ -359,3 +359,34 @@ The UI offers category filtering, title/situation/goal filtering, one/two-hop fo
 The existing synthetic design comparison also remains visible: all three conditions passed both exhibition 7/7 and workshop 12/12; no functional advantage was observed. Candidate retrieval success, record integrity, token material, task quality, human utility and independent adoption must remain separate measures. Do not market these checks as proven superior outputs.
 
 Public HTTP clients should send an honest nonempty application User-Agent. During deployment verification, the edge rejected Python urllib's default identifier with Cloudflare 1010; the explicit `OpenAkashic-Verification/0.3 (+https://github.com/szara7678/OpenAkashic)` identifier succeeded without changing any edge security settings. The navigation benchmark sets this header. Public browser and application-client verification are separate.
+
+
+## Atlas interaction and application evidence (2026-10-28)
+
+The atlas now supports cursor-anchored wheel zoom (35–600%), background panning,
+node repositioning, double-click one-hop focus, Home to fit, Escape to return,
+keyboard navigation, a larger-map view, and an accessible filter/list drawer.
+Pointer coordinates use the SVG screen matrix, including letterboxing. Two-pointer
+pinch handling is implemented; physical mobile pinch remains unverified.
+Design references: [Obsidian Graph view](https://obsidian.md/help/plugins/graph)
+and [Kumu Focus](https://docs.kumu.io/guides/focus). No external UI code/assets copied.
+
+Readers can compare up to three exact method records and copy/download a Markdown
+brief containing conditions, procedures, criteria, limitations, source URLs, and
+the returned full outcome/opinion records with IDs and method versions. The brief
+retains contributor-reported boundaries and partial-feedback warnings. It is
+assembled in the browser; the optional task is not sent to the server. It does not
+automatically execute source instructions or claim combined method effectiveness.
+Selection is per page, not an account-synchronized collection.
+
+A new frozen six-task, three-condition experiment generated 18 real model outputs
+with no post-evaluation answer fixes. Inputs were manually selected same public
+records, supplied as flat leaf-path JSON versus nested JSON, with an unaided arm.
+All three conditions scored 35/36 on one blind model's quality judgments. Original
+semantic rubric totals 24/24, 23/24, 23/24 contain a grading ambiguity; an unblinded
+audit preserved the grades and showed ties under both consistent interpretations.
+This does not establish general output-quality or graph superiority.
+Nested input estimates were 5959 vs flat 6857 o200k tokens (13.1% less): ordinary
+serialization accounting, not actual billing, retrieval, or this UI exporter.
+The protocol, raw outputs, original grades, ambiguity audit, hashes, and verifier
+are published in `public-methods/benchmarks/application-2026-10-28/`.

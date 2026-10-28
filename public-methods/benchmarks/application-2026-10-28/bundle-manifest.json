@@ -1,0 +1,29 @@
+{
+  "schema": "public-allowlist-bundle-v1",
+  "files": {
+    "README.txt": "abbe2e8a7e34e406e4f6d9c89c171e6da65bd50165010c2bb6052e3691d2f7dd",
+    "artifact-manifest.json": "90f49f78dcae2f8faaee1f5be8041efb61cb198d31898480f46ad1de991c6c50",
+    "blind-grades.json": "dd88a78ac0ba7b98292cde0480ca0a48e432d3658027697fa55471a9f62211c2",
+    "blind-key.json": "dbca4531f857965a6b60d9480c5d769c9bcf6ff30dbbcb5faaf8746210786bd3",
+    "blind-review-input.json": "f95b20aa05f1bc5443e9fb1d2fa9fa8d4b1143cb85b151382d019312fcd57313",
+    "build_report.py": "2eb42436502a6ce1251ff64b66ef61cec7f42da12920c0b09f03ca5fe6702453",
+    "compact_same_records-input.json": "9bfbab44ce12b829a74111743915d3962fba96999efd391b0f98662d3ca03565",
+    "compact_same_records-output.json": "0a712cfb7aa5c2474d9b16e7024cc59bfc894cdb3c36060c8ca92c3b30998f11",
+    "flat_same_records-input.json": "bc315347521f935e3da7e76bcdf835d5548a58ad9a91e2691fb82cf63cdce82a",
+    "flat_same_records-output.json": "72ecd636484534be872f402d8484496fb971221151085260df16d7299795ba16",
+    "grade-adjudication.json": "1e2c527556853be8ba6c1beb46b26245154ec61af6ca0b51cd616699bc1badf7",
+    "input-integrity.json": "08e671b7164af80511f6510986a0ad1372d5c30ca870628b6445b12f5a63528b",
+    "input-material-metrics.json": "4e9ef91e3c603af0429ccdecb242273c807692facd21b2e68c279490cf18a840",
+    "mechanical-checks.json": "169f06be2d553ae058d94f129939feccb2e26e9fcbc02a66e702598307366e71",
+    "protocol-v2.json": "5d6bb8e2f982d1183e23d7c5f25592dcb22b690763f4e62c50c1444fbca6acbb",
+    "protocol-v2.sha256": "19f28901c37798f70ade75b824be3bc8f476a5ae840156e8ea2a8682556afa75",
+    "report-additions.json": "d8f3aeee4e16dde380845ce52c379454ec96276c40fbb5ed8b97f5c95d269c3b",
+    "report.json": "0f5e73b6006db26f95d4dbc60845dabaf62b5596f3eb1821e90f20c0d70db8a7",
+    "selected-records.json": "09ea9f5cf49769f9d3ed087742c3c1018692eb10bf12d97fe2fd76c1cf072aca",
+    "unaided-input.json": "9ce9eef736ae40a03259ae05a69e17c136fbb34426ed74fe77f6b26a77ea5ee4",
+    "unaided-output.json": "a1f25dd1a82b50b4f3146d4d9c96b96ed0770c462781ae53d1a9dd65f3ced649",
+    "verify_artifacts.py": "153df5c6466fdcae0234825f93486ce3b97501bdbb48afb441433817165fd37e",
+    "verify_bundle.py": "9a8250b5a885072508f2d3368cc80497c9eeccda6fcbb91043f94c3972ad9b42"
+  },
+  "policy": "Only sanitized synthetic fixtures, public method records, outputs, blind ratings and reproducibility evidence; no credentials/private data/agent session metadata."
+}

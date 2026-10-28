@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "condition": "unaided",
+      "task_id": "T1",
+      "whitespace_words": 174,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "unaided",
+      "task_id": "T2",
+      "whitespace_words": 167,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "unaided",
+      "task_id": "T3",
+      "whitespace_words": 169,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "unaided",
+      "task_id": "T4",
+      "whitespace_words": 35,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "unaided",
+      "task_id": "T5",
+      "whitespace_words": 152,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "unaided",
+      "task_id": "T6",
+      "whitespace_words": 176,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "flat_same_records",
+      "task_id": "T1",
+      "whitespace_words": 206,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "flat_same_records",
+      "task_id": "T2",
+      "whitespace_words": 224,
+      "word_limit_pass": false
+    },
+    {
+      "condition": "flat_same_records",
+      "task_id": "T3",
+      "whitespace_words": 232,
+      "word_limit_pass": false
+    },
+    {
+      "condition": "flat_same_records",
+      "task_id": "T4",
+      "whitespace_words": 28,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "flat_same_records",
+      "task_id": "T5",
+      "whitespace_words": 207,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "flat_same_records",
+      "task_id": "T6",
+      "whitespace_words": 226,
+      "word_limit_pass": false
+    },
+    {
+      "condition": "compact_same_records",
+      "task_id": "T1",
+      "whitespace_words": 215,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "compact_same_records",
+      "task_id": "T2",
+      "whitespace_words": 219,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "compact_same_records",
+      "task_id": "T3",
+      "whitespace_words": 192,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "compact_same_records",
+      "task_id": "T4",
+      "whitespace_words": 30,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "compact_same_records",
+      "task_id": "T5",
+      "whitespace_words": 185,
+      "word_limit_pass": true
+    },
+    {
+      "condition": "compact_same_records",
+      "task_id": "T6",
+      "whitespace_words": 193,
+      "word_limit_pass": true
+    }
+  ],
+  "counting": "whitespace words; numbers and hyphenated tokens count as one; no semantic quality inference"
+}

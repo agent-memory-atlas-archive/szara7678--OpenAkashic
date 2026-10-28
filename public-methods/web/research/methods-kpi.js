@@ -11,6 +11,18 @@
     const verdict = section("효과가 있는가? 현재의 결론", "방법 검색과 근거 연결은 작동합니다. 더 좋은 산출물을 만든다는 일반적인 효과는 아직 입증되지 않았습니다.");
     verdict.classList.add("methods-kpi-verdict");
     verdict.append(n("p", "그래프는 연결을 탐색하는 화면과 API입니다. 에이전트가 모든 그래프를 읽도록 요구하지 않습니다. 상황·목적으로 짧게 검색하고 필요한 방법만 조회하는 흐름을 우선 사용합니다.", "methods-muted"));
+    if (report.application_evaluation) {
+      const q=report.application_evaluation;
+      const e=section("새 실험 · 6개 과제, 18개 실제 답변", "장애 대응·인터뷰·팀 결정·안내문·학습·오픈소스 기여 과제를 답변 생성 전에 동결했습니다. Luna 세 조건: 자료 없음 / 동일 기록 평면 JSON / 동일 기록 중첩 JSON. 조건을 가린 Sol 평가입니다. 자료는 수동으로 골랐으며 검색이나 그래프 UI의 효과 시험은 아닙니다.");
+      metric(e,"방법 적합성 · 실행 가능성 · 근거 경계", "세 조건 모두 35 / 36", "모델 평가, 과제당 1회. 실제 업무 수행·사람의 평가·통계적 우위가 아닙니다.");
+      metric(e,"의미 기준 원점수 · 무자료 / 평면 / 중첩", "24 / 23 / 23 (각 24점)", "채점 해석 불일치 1개를 별도 감사. 같은 엄격 기준은 모두 23점, 같은 완화 기준은 모두 24점. 원점수와 불리한 결과 보존.");
+      metric(e,"220단어 제한 준수", "6 / 6 · 3 / 6 · 6 / 6", "같은 순서. 평면형 초과 4·12·6단어. 작은 단일 실행 관측입니다.");
+      metric(e,"같은 자료의 입력 표현 크기", "6,857 → 5,959 추정 토큰", "평면 leaf-path JSON 대비 일반 중첩 JSON 13.1% 감소. 직렬화 차이이며 그래프·검색·웹 문맥 복사의 절감률이 아닙니다. 실제 사용량·비용 미측정.");
+      e.append(n("p","자료가 있는 두 조건은 안내문의 근거 없는 최상급을 제거했습니다. 하지만 인터뷰의 유도 질문과 의사결정 기한을 놓치는 위험도 남았습니다. 전반적인 산출물 품질 우위는 확인되지 않았습니다.","methods-muted"));
+      const a=n("a","과제·18개 답변·원채점·감사·재현 자료 보기 ↗");a.href="https://github.com/szara7678/OpenAkashic/tree/main/public-methods/benchmarks/application-2026-10-28";a.target="_blank";a.rel="noopener noreferrer";e.append(a);
+      const details=n("details");details.append(n("summary","실제 안내문 답변 나란히 읽기"));
+      for(const [label,answer] of Object.entries(q.example_outputs||{})){details.append(n("h3",label),n("p",answer));}e.append(details);
+    }
     if (report.navigation_workload) {
       const nav = report.navigation_workload, v=nav.summary;
       const e = section("새 측정 · 연결을 따라 기록 찾기", `측정 ${new Date(nav.measured_at).toLocaleString("ko-KR",{timeZone:"Asia/Seoul"})} KST · 현재 코퍼스의 정확한 URL·ID 조회. 자연어 답변 생성이나 사람의 탐색 시험이 아닙니다.`);

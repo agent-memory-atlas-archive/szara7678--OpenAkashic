@@ -1,0 +1,36 @@
+{
+  "schema": "atlas-grade-adjudication-v1",
+  "kind": "post-hoc unblinded evaluator audit; not independent blind regrading",
+  "original_grades_preserved": true,
+  "issue": {
+    "task_id": "T6",
+    "criterion": "confirm scope before submission",
+    "frozen_wording_requires_maintainer_confirmation": false,
+    "inconsistency": "Original grader accepted a conditional focused question plus scope checks in unaided, but required explicit maintainer confirmation in flat/compact. The frozen criterion does not specify unconditional maintainer confirmation.",
+    "answer_evidence": {
+      "unaided": "If the goal remains unclear, ask a focused question before coding; review diff before PR.",
+      "flat_same_records": "If intended change is unclear, prepare a question; define narrow scope and prepare exact-scope summary before submission.",
+      "compact_same_records": "Follow stated process; seek guidance if behavior must change; review diff for scope before submission."
+    }
+  },
+  "resolution": "Do not choose a new winner. Treat this one binary criterion as ambiguous; retain original scores and report sensitivity. No rubric changes or answer reruns.",
+  "sensitivity": {
+    "original_criterion_passes_model_reviewed": {
+      "unaided": 24,
+      "flat_same_records": 23,
+      "compact_same_records": 23
+    },
+    "consistent_strict_explicit_maintainer_scope_confirmation": {
+      "unaided": 23,
+      "flat_same_records": 23,
+      "compact_same_records": 23
+    },
+    "consistent_permissive_pre_submission_scope_review": {
+      "unaided": 24,
+      "flat_same_records": 24,
+      "compact_same_records": 24
+    }
+  },
+  "conclusion": "All conditions tie under both consistent readings. Original one-point criterion advantage for unaided is not robust. Subjective judgment remains 35/36 for every condition.",
+  "independence_caveat": "The same evaluation coordinator inspected labels for this audit; no second blind human or model adjudicator was used."
+}

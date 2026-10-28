@@ -1,0 +1,13 @@
+{
+  "same_full_record_leaf_values": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "record_snapshot_sha256": "09ea9f5cf49769f9d3ed087742c3c1018692eb10bf12d97fe2fd76c1cf072aca",
+  "selection": "Manually selected before generation; not retrieval success test. T2 adjacent product-experiment method, no exact interview method selected.",
+  "execution": "No key access, runtime mutation, public DB writes or external model API calls; generation via authorized collaboration agents."
+}
