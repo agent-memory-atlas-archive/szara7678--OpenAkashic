@@ -1,0 +1,56 @@
+[
+  {
+    "route": "/probe-base/research/api/methods/catalog",
+    "status": 403,
+    "bytes": 65,
+    "keys": [
+      "error"
+    ]
+  },
+  {
+    "route": "/probe-akashic/research/api/methods/catalog?limit=24&offset=0",
+    "status": 200,
+    "bytes": 13902,
+    "keys": [
+      "schema",
+      "items",
+      "total",
+      "limit",
+      "offset",
+      "has_more",
+      "domains",
+      "counts",
+      "search_capabilities",
+      "classification"
+    ]
+  },
+  {
+    "route": "/probe-akashic/research/api/methods/search?situation=offline+mobile+design&goal=prevent+mistakes&mode=hybrid&limit=3",
+    "status": 200,
+    "bytes": 6445,
+    "keys": [
+      "mode",
+      "query",
+      "results",
+      "total",
+      "cautions",
+      "search"
+    ]
+  },
+  {
+    "route": "/probe-akashic/research/api/methods/evaluation/report",
+    "status": 403,
+    "bytes": 30,
+    "keys": [
+      "error"
+    ]
+  },
+  {
+    "route": "/probe-akashic/research/api/subjects",
+    "status": 403,
+    "bytes": 30,
+    "keys": [
+      "error"
+    ]
+  }
+]

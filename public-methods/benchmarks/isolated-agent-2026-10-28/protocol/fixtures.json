@@ -1,0 +1,964 @@
+{
+  "schema": "isolated-pilot-fixtures-v1",
+  "security": "Only visibility=public cases may be copied into participant sandboxes. Entire fixtures.json is grader-only because it contains hidden cases.",
+  "cases": [
+    {
+      "id": "C1-P1",
+      "task_id": "C1",
+      "visibility": "public",
+      "weight": 0,
+      "focus": "혼합 주기·중복·고아 이벤트",
+      "input": {
+        "events": [
+          {
+            "event_id": "e8",
+            "at": 8,
+            "service": "cache",
+            "kind": "ack",
+            "actor": "sun"
+          },
+          {
+            "event_id": "e6",
+            "at": 6,
+            "service": "db",
+            "kind": "ack",
+            "actor": "jin"
+          },
+          {
+            "event_id": "e3",
+            "at": 3,
+            "service": "api",
+            "kind": "trigger",
+            "severity": "high"
+          },
+          {
+            "event_id": "e1",
+            "at": 1,
+            "service": "api",
+            "kind": "trigger",
+            "severity": "medium"
+          },
+          {
+            "event_id": "e2",
+            "at": 2,
+            "service": "api",
+            "kind": "ack",
+            "actor": "min"
+          },
+          {
+            "event_id": "e3",
+            "at": 3,
+            "service": "api",
+            "kind": "trigger",
+            "severity": "high"
+          },
+          {
+            "event_id": "e4",
+            "at": 4,
+            "service": "api",
+            "kind": "resolve"
+          },
+          {
+            "event_id": "e5",
+            "at": 5,
+            "service": "api",
+            "kind": "trigger",
+            "severity": "low"
+          },
+          {
+            "event_id": "e7",
+            "at": 7,
+            "service": "cache",
+            "kind": "trigger",
+            "severity": "medium"
+          }
+        ]
+      },
+      "expected": {
+        "open": [
+          {
+            "service": "api",
+            "opened_at": 5,
+            "last_trigger_at": 5,
+            "severity": "low",
+            "acknowledged_by": null
+          },
+          {
+            "service": "cache",
+            "opened_at": 7,
+            "last_trigger_at": 7,
+            "severity": "medium",
+            "acknowledged_by": "sun"
+          }
+        ],
+        "resolved_cycles": 1,
+        "ignored_orphan_events": 1,
+        "ignored_duplicates": 1
+      }
+    },
+    {
+      "id": "C1-H1",
+      "task_id": "C1",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "빈 입력",
+      "input": {
+        "events": []
+      },
+      "expected": {
+        "open": [],
+        "resolved_cycles": 0,
+        "ignored_orphan_events": 0,
+        "ignored_duplicates": 0
+      }
+    },
+    {
+      "id": "C1-H2",
+      "task_id": "C1",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "동일 시각 ASCII 순서",
+      "input": {
+        "events": [
+          {
+            "event_id": "d",
+            "at": 10,
+            "service": "worker",
+            "kind": "trigger",
+            "severity": "high"
+          },
+          {
+            "event_id": "c",
+            "at": 10,
+            "service": "worker",
+            "kind": "ack",
+            "actor": "Bo"
+          },
+          {
+            "event_id": "b",
+            "at": 10,
+            "service": "worker",
+            "kind": "trigger",
+            "severity": "low"
+          },
+          {
+            "event_id": "a",
+            "at": 10,
+            "service": "worker",
+            "kind": "ack",
+            "actor": "early"
+          }
+        ]
+      },
+      "expected": {
+        "open": [
+          {
+            "service": "worker",
+            "opened_at": 10,
+            "last_trigger_at": 10,
+            "severity": "high",
+            "acknowledged_by": "Bo"
+          }
+        ],
+        "resolved_cycles": 0,
+        "ignored_orphan_events": 1,
+        "ignored_duplicates": 0
+      }
+    },
+    {
+      "id": "C1-H3",
+      "task_id": "C1",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "ack 덮어쓰기와 trigger의 ack 보존",
+      "input": {
+        "events": [
+          {
+            "event_id": "4",
+            "at": 4,
+            "service": "srv",
+            "kind": "trigger",
+            "severity": "medium"
+          },
+          {
+            "event_id": "2",
+            "at": 2,
+            "service": "srv",
+            "kind": "ack",
+            "actor": "A"
+          },
+          {
+            "event_id": "1",
+            "at": 1,
+            "service": "srv",
+            "kind": "trigger",
+            "severity": "low"
+          },
+          {
+            "event_id": "3",
+            "at": 3,
+            "service": "srv",
+            "kind": "ack",
+            "actor": "B"
+          }
+        ]
+      },
+      "expected": {
+        "open": [
+          {
+            "service": "srv",
+            "opened_at": 1,
+            "last_trigger_at": 4,
+            "severity": "medium",
+            "acknowledged_by": "B"
+          }
+        ],
+        "resolved_cycles": 0,
+        "ignored_orphan_events": 0,
+        "ignored_duplicates": 0
+      }
+    },
+    {
+      "id": "C1-H4",
+      "task_id": "C1",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "종료 후 고아 사건",
+      "input": {
+        "events": [
+          {
+            "event_id": "4",
+            "at": 4,
+            "service": "srv",
+            "kind": "ack",
+            "actor": "late"
+          },
+          {
+            "event_id": "3",
+            "at": 3,
+            "service": "srv",
+            "kind": "resolve"
+          },
+          {
+            "event_id": "2",
+            "at": 2,
+            "service": "srv",
+            "kind": "resolve"
+          },
+          {
+            "event_id": "1",
+            "at": 1,
+            "service": "srv",
+            "kind": "trigger",
+            "severity": "high"
+          }
+        ]
+      },
+      "expected": {
+        "open": [],
+        "resolved_cycles": 1,
+        "ignored_orphan_events": 2,
+        "ignored_duplicates": 0
+      }
+    },
+    {
+      "id": "C1-H5",
+      "task_id": "C1",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "재개방에서 심각도와 ack 초기화",
+      "input": {
+        "events": [
+          {
+            "event_id": "7",
+            "at": 7,
+            "service": "가",
+            "kind": "trigger",
+            "severity": "low"
+          },
+          {
+            "event_id": "6",
+            "at": 6,
+            "service": "가",
+            "kind": "resolve"
+          },
+          {
+            "event_id": "5",
+            "at": 5,
+            "service": "가",
+            "kind": "ack",
+            "actor": "C"
+          },
+          {
+            "event_id": "4",
+            "at": 4,
+            "service": "가",
+            "kind": "trigger",
+            "severity": "medium"
+          },
+          {
+            "event_id": "3",
+            "at": 3,
+            "service": "가",
+            "kind": "trigger",
+            "severity": "low"
+          },
+          {
+            "event_id": "2",
+            "at": 2,
+            "service": "가",
+            "kind": "resolve"
+          },
+          {
+            "event_id": "1",
+            "at": 1,
+            "service": "가",
+            "kind": "trigger",
+            "severity": "high"
+          },
+          {
+            "event_id": "z0",
+            "at": 0,
+            "service": "z",
+            "kind": "trigger",
+            "severity": "medium"
+          }
+        ]
+      },
+      "expected": {
+        "open": [
+          {
+            "service": "z",
+            "opened_at": 0,
+            "last_trigger_at": 0,
+            "severity": "medium",
+            "acknowledged_by": null
+          },
+          {
+            "service": "가",
+            "opened_at": 7,
+            "last_trigger_at": 7,
+            "severity": "low",
+            "acknowledged_by": null
+          }
+        ],
+        "resolved_cycles": 2,
+        "ignored_orphan_events": 0,
+        "ignored_duplicates": 0
+      }
+    },
+    {
+      "id": "C2-P1",
+      "task_id": "C2",
+      "visibility": "public",
+      "weight": 0,
+      "focus": "수정본·결측·제외·경계 통과",
+      "input": {
+        "records": [
+          {
+            "record_id": "a1",
+            "participant_id": "p1",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "d",
+            "participant_id": "p4",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "missing",
+            "eligible": true
+          },
+          {
+            "record_id": "a2",
+            "participant_id": "p1",
+            "revision": 1,
+            "variant": "A",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "b",
+            "participant_id": "p2",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "missing",
+            "eligible": true
+          },
+          {
+            "record_id": "c",
+            "participant_id": "p3",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "e",
+            "participant_id": "p5",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "success",
+            "eligible": false
+          }
+        ],
+        "min_n": 1,
+        "min_gain_pp": 50
+      },
+      "expected": {
+        "removed_duplicates": 1,
+        "excluded_ineligible": 1,
+        "analyses": {
+          "exclude_missing": {
+            "A": {
+              "n": 1,
+              "success": 0,
+              "rate": 0
+            },
+            "B": {
+              "n": 1,
+              "success": 1,
+              "rate": 1
+            },
+            "uplift_pp": 100,
+            "decision": "pass"
+          },
+          "missing_as_failure": {
+            "A": {
+              "n": 2,
+              "success": 0,
+              "rate": 0
+            },
+            "B": {
+              "n": 2,
+              "success": 1,
+              "rate": 0.5
+            },
+            "uplift_pp": 50,
+            "decision": "pass"
+          }
+        }
+      }
+    },
+    {
+      "id": "C2-H1",
+      "task_id": "C2",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "양쪽 분모 0",
+      "input": {
+        "records": [],
+        "min_n": 1,
+        "min_gain_pp": 0
+      },
+      "expected": {
+        "removed_duplicates": 0,
+        "excluded_ineligible": 0,
+        "analyses": {
+          "exclude_missing": {
+            "A": {
+              "n": 0,
+              "success": 0,
+              "rate": null
+            },
+            "B": {
+              "n": 0,
+              "success": 0,
+              "rate": null
+            },
+            "uplift_pp": null,
+            "decision": "hold"
+          },
+          "missing_as_failure": {
+            "A": {
+              "n": 0,
+              "success": 0,
+              "rate": null
+            },
+            "B": {
+              "n": 0,
+              "success": 0,
+              "rate": null
+            },
+            "uplift_pp": null,
+            "decision": "hold"
+          }
+        }
+      }
+    },
+    {
+      "id": "C2-H2",
+      "task_id": "C2",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "최소 표본과 이득의 등호",
+      "input": {
+        "records": [
+          {
+            "record_id": "1",
+            "participant_id": "a",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "2",
+            "participant_id": "b",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "3",
+            "participant_id": "c",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "4",
+            "participant_id": "d",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "success",
+            "eligible": true
+          }
+        ],
+        "min_n": 2,
+        "min_gain_pp": 50
+      },
+      "expected": {
+        "removed_duplicates": 0,
+        "excluded_ineligible": 0,
+        "analyses": {
+          "exclude_missing": {
+            "A": {
+              "n": 2,
+              "success": 1,
+              "rate": 0.5
+            },
+            "B": {
+              "n": 2,
+              "success": 2,
+              "rate": 1
+            },
+            "uplift_pp": 50,
+            "decision": "pass"
+          },
+          "missing_as_failure": {
+            "A": {
+              "n": 2,
+              "success": 1,
+              "rate": 0.5
+            },
+            "B": {
+              "n": 2,
+              "success": 2,
+              "rate": 1
+            },
+            "uplift_pp": 50,
+            "decision": "pass"
+          }
+        }
+      }
+    },
+    {
+      "id": "C2-H3",
+      "task_id": "C2",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "결측 정책이 분모와 판정을 바꿈",
+      "input": {
+        "records": [
+          {
+            "record_id": "1",
+            "participant_id": "a",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "2",
+            "participant_id": "b",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "missing",
+            "eligible": true
+          },
+          {
+            "record_id": "3",
+            "participant_id": "c",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "missing",
+            "eligible": true
+          },
+          {
+            "record_id": "4",
+            "participant_id": "d",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "5",
+            "participant_id": "e",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "6",
+            "participant_id": "f",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "missing",
+            "eligible": true
+          }
+        ],
+        "min_n": 2,
+        "min_gain_pp": 0
+      },
+      "expected": {
+        "removed_duplicates": 0,
+        "excluded_ineligible": 0,
+        "analyses": {
+          "exclude_missing": {
+            "A": {
+              "n": 1,
+              "success": 1,
+              "rate": 1
+            },
+            "B": {
+              "n": 2,
+              "success": 1,
+              "rate": 0.5
+            },
+            "uplift_pp": -50,
+            "decision": "hold"
+          },
+          "missing_as_failure": {
+            "A": {
+              "n": 3,
+              "success": 1,
+              "rate": 0.333333
+            },
+            "B": {
+              "n": 3,
+              "success": 1,
+              "rate": 0.333333
+            },
+            "uplift_pp": 0,
+            "decision": "pass"
+          }
+        }
+      }
+    },
+    {
+      "id": "C2-H4",
+      "task_id": "C2",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "동일 revision의 record_id 정렬과 최종 variant",
+      "input": {
+        "records": [
+          {
+            "record_id": "z",
+            "participant_id": "pA",
+            "revision": 2,
+            "variant": "A",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "a",
+            "participant_id": "pA",
+            "revision": 2,
+            "variant": "B",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "b",
+            "participant_id": "pB",
+            "revision": 1,
+            "variant": "B",
+            "outcome": "success",
+            "eligible": true
+          }
+        ],
+        "min_n": 1,
+        "min_gain_pp": 0
+      },
+      "expected": {
+        "removed_duplicates": 1,
+        "excluded_ineligible": 0,
+        "analyses": {
+          "exclude_missing": {
+            "A": {
+              "n": 1,
+              "success": 1,
+              "rate": 1
+            },
+            "B": {
+              "n": 1,
+              "success": 1,
+              "rate": 1
+            },
+            "uplift_pp": 0,
+            "decision": "pass"
+          },
+          "missing_as_failure": {
+            "A": {
+              "n": 1,
+              "success": 1,
+              "rate": 1
+            },
+            "B": {
+              "n": 1,
+              "success": 1,
+              "rate": 1
+            },
+            "uplift_pp": 0,
+            "decision": "pass"
+          }
+        }
+      }
+    },
+    {
+      "id": "C2-H5",
+      "task_id": "C2",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "최종 불적격 제외·과거 기록 부활 금지·한쪽 분모0",
+      "input": {
+        "records": [
+          {
+            "record_id": "a",
+            "participant_id": "p1",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "b",
+            "participant_id": "p1",
+            "revision": 1,
+            "variant": "A",
+            "outcome": "failure",
+            "eligible": false
+          },
+          {
+            "record_id": "c",
+            "participant_id": "p2",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "missing",
+            "eligible": true
+          }
+        ],
+        "min_n": 1,
+        "min_gain_pp": 0
+      },
+      "expected": {
+        "removed_duplicates": 1,
+        "excluded_ineligible": 1,
+        "analyses": {
+          "exclude_missing": {
+            "A": {
+              "n": 0,
+              "success": 0,
+              "rate": null
+            },
+            "B": {
+              "n": 0,
+              "success": 0,
+              "rate": null
+            },
+            "uplift_pp": null,
+            "decision": "hold"
+          },
+          "missing_as_failure": {
+            "A": {
+              "n": 0,
+              "success": 0,
+              "rate": null
+            },
+            "B": {
+              "n": 1,
+              "success": 0,
+              "rate": 0
+            },
+            "uplift_pp": null,
+            "decision": "hold"
+          }
+        }
+      }
+    },
+    {
+      "id": "C1-H6",
+      "task_id": "C1",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "낮은 심각도 재트리거·중복이 마지막 시각/심각도에 미치는 영향",
+      "input": {
+        "events": [
+          {
+            "event_id": "b",
+            "at": 1,
+            "service": "svc",
+            "kind": "trigger",
+            "severity": "low"
+          },
+          {
+            "event_id": "a",
+            "at": 0,
+            "service": "svc",
+            "kind": "trigger",
+            "severity": "high"
+          },
+          {
+            "event_id": "c",
+            "at": 2,
+            "service": "svc",
+            "kind": "ack",
+            "actor": "지수"
+          },
+          {
+            "event_id": "b",
+            "at": 1,
+            "service": "svc",
+            "kind": "trigger",
+            "severity": "low"
+          }
+        ]
+      },
+      "expected": {
+        "open": [
+          {
+            "service": "svc",
+            "opened_at": 0,
+            "last_trigger_at": 1,
+            "severity": "high",
+            "acknowledged_by": "지수"
+          }
+        ],
+        "resolved_cycles": 0,
+        "ignored_orphan_events": 0,
+        "ignored_duplicates": 1
+      }
+    },
+    {
+      "id": "C2-H6",
+      "task_id": "C2",
+      "visibility": "hidden",
+      "weight": 2,
+      "focus": "서로 다른 분모와 음수 uplift 반올림",
+      "input": {
+        "records": [
+          {
+            "record_id": "1",
+            "participant_id": "a",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "2",
+            "participant_id": "b",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "3",
+            "participant_id": "c",
+            "revision": 0,
+            "variant": "A",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "4",
+            "participant_id": "d",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "success",
+            "eligible": true
+          },
+          {
+            "record_id": "5",
+            "participant_id": "e",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "6",
+            "participant_id": "f",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "failure",
+            "eligible": true
+          },
+          {
+            "record_id": "7",
+            "participant_id": "g",
+            "revision": 0,
+            "variant": "B",
+            "outcome": "failure",
+            "eligible": true
+          }
+        ],
+        "min_n": 1,
+        "min_gain_pp": 0
+      },
+      "expected": {
+        "removed_duplicates": 0,
+        "excluded_ineligible": 0,
+        "analyses": {
+          "exclude_missing": {
+            "A": {
+              "n": 3,
+              "success": 1,
+              "rate": 0.333333
+            },
+            "B": {
+              "n": 4,
+              "success": 1,
+              "rate": 0.25
+            },
+            "uplift_pp": -8.333333,
+            "decision": "hold"
+          },
+          "missing_as_failure": {
+            "A": {
+              "n": 3,
+              "success": 1,
+              "rate": 0.333333
+            },
+            "B": {
+              "n": 4,
+              "success": 1,
+              "rate": 0.25
+            },
+            "uplift_pp": -8.333333,
+            "decision": "hold"
+          }
+        }
+      }
+    }
+  ]
+}

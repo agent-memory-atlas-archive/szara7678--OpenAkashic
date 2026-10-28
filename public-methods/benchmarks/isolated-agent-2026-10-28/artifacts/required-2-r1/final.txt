@@ -1,0 +1,5 @@
+`/work/solution.py`을 작성했고 공개 예제에서 expected 집계와 일치하는 결과를 확인했습니다.
+
+실행 명령: `python /work/solution.py < input.json`
+
+집계는 주어진 규칙에 따른 기계적 판정입니다. 통계적 유의성이나 인과효과, 출시 적합성을 뜻하지 않습니다.

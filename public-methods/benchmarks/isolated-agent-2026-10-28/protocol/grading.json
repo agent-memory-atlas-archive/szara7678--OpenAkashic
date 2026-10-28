@@ -1,0 +1,164 @@
+{
+  "schema": "isolated-pilot-grading-v1",
+  "access": "grader_only",
+  "blind_rules": [
+    "Independent grader receives task prompt, public fixtures, normalized participant artifacts and this rubric; no arm, model transcript, retrieval trace, elapsed time or token use.",
+    "Normalize filenames and remove only transport metadata. If provenance appendix reveals resource/arm, replace source labels with neutral S1/S2 while retaining claims and quoted substance. Keep untouched originals and a redaction log outside participant view.",
+    "Do not award points for mentioning OpenAkashic, method names, framework labels, links, verbosity, or resemblance to a source. Score application to the given facts. An alternative recommendation can earn full marks.",
+    "Grade outputs independently in randomized order before revealing pairs. Two human graders independently score N1/N2, then record disagreements and adjudicated reasons. If only one grader is available, report that limitation; model-based grading is not independent human judgment.",
+    "Freeze rubric and fixtures before any participant answer is inspected. Do not adjust weights or retry weak outputs after seeing arm labels."
+  ],
+  "scoring": {
+    "max_per_task": 12,
+    "coding": "Six hidden fixture groups per task, each worth 2: 1 for the literal input and 1 for a deterministic reversed input with identical expected result. One additional public fixture group is diagnostic and worth 0. The official script exposes check results only to graders. Exact object schemas, list order and values are required; finite numeric tolerance 0.0000011 for rate/uplift fields. Counts/times require true JSON integers (not booleans or floats).",
+    "noncoding": "Six criteria per task, 0/1/2 each. 0=absent or materially wrong, 1=partial but usable, 2=meets the task-specific anchor. Cite a short answer excerpt or artifact line for each score.",
+    "aggregation": "Report each task separately and mean task score/12; coding and judgment submeans separately. Four selected tasks do not support population significance, general capability ranking, or proven expertise.",
+    "execution_failures": "Retain timeout, crash, missing artifact and protocol violation. Score available artifacts by rubric, but missing/unparseable coding output fails that execution. Never replace a failed attempt silently."
+  },
+  "tasks": {
+    "C1": {
+      "primary_verifier": "verify_tasks.py --task C1 --submission <sandbox>/solution.py",
+      "max_points": 12,
+      "coverage_note": "Deterministic event fold correctness. This is not a production incident system or concurrency/security benchmark.",
+      "expertise_diagnostic": {
+        "scale": "0..2, descriptive only; excluded from 12-point primary score",
+        "anchors": {
+          "0": "사건 정렬·중복·주기 의미를 오해하거나 실행되지 않는다.",
+          "1": "대체로 동작하나 결정적 순서/상태 전이의 근거 또는 공개 실행 증거가 불명확하다.",
+          "2": "결정적 정렬, 중복 제거, 서비스별 주기 상태를 분리하고 공개 실행 증거를 남기며 운영 보장으로 확대하지 않는다."
+        }
+      }
+    },
+    "C2": {
+      "primary_verifier": "verify_tasks.py --task C2 --submission <sandbox>/solution.py",
+      "max_points": 12,
+      "coverage_note": "Specified aggregation correctness. No statistical power, causal validity or rollout safety is established by pass.",
+      "expertise_diagnostic": {
+        "scale": "0..2, descriptive only; excluded from 12-point primary score",
+        "anchors": {
+          "0": "분모/수정본 의미를 오해하거나 기계 판정을 유의성·출시 승인으로 단정한다.",
+          "1": "집계는 대체로 맞지만 결측 정책 또는 표본/기계 판정의 의미를 설명하지 않는다.",
+          "2": "최신 기록 선택과 eligibility를 올바르게 분리하고 정책별 분모를 인지하며 단순 pass를 인과/통계적 결론으로 확대하지 않는다."
+        }
+      }
+    },
+    "N1": {
+      "max_points": 12,
+      "criteria": [
+        {
+          "id": "N1-1",
+          "dimension": "조건과 우선순위",
+          "anchors": {
+            "0": "공유 단말·불안정 연결·8개발일 중 핵심 조건을 무시하거나 시각 선호만으로 결정한다.",
+            "1": "핵심 조건을 언급하지만 우선순위 충돌 또는 제한 내 범위를 결정하지 못한다.",
+            "2": "정확성·작업속도·수용성의 우선순위를 상황에 맞게 정하고 공유 단말/연결/교육10분/8개발일을 범위 결정에 연결한다."
+          }
+        },
+        {
+          "id": "N1-2",
+          "dimension": "상호작용 전문성",
+          "anchors": {
+            "0": "서버 응답 전 완료 표시를 유지하거나 오류/저장 상태를 구별하지 않는다.",
+            "1": "대기·실패 표시와 재시도는 제안하나 스캔→수정→저장/재접속 중 주요 흐름 또는 중복 방지가 빠진다.",
+            "2": "흐름과 짧은 상태 문구를 제시하고 단말 저장/서버 반영/실패를 구분하며 재시도·재접속·수정에서 값 보존과 중복 위험을 구체적으로 다룬다. 구현 전에는 보장 대신 요구·검증으로 표현한다."
+          }
+        },
+        {
+          "id": "N1-3",
+          "dimension": "대안과 변경 조건",
+          "anchors": {
+            "0": "한 시안만 정답으로 단정하거나 대안 비교가 없다.",
+            "1": "두 시안의 장단점은 말하지만 다른 방향을 택할 관찰/조건이 모호하다.",
+            "2": "목록·사진 또는 타당한 혼합안의 작업 비용/정보 밀도/브랜드 가치를 비교하고 관찰 결과와 연결된 방향 변경 조건을 제시한다. 특정 시안을 골라야 한다는 고정 정답은 없다."
+          }
+        },
+        {
+          "id": "N1-4",
+          "dimension": "검증과 근거의 경계",
+          "anchors": {
+            "0": "내부4/20을 현장 실패율이나 검증된 성능으로 취급하거나 관찰 계획이 없다.",
+            "1": "2곳 관찰과 성공 기준은 제시하지만 조건·측정·출시/보류 연결이 불명확하다.",
+            "2": "4/20과 내부 선호의 한계를 명시하고 30분 관찰 각각에 현실 작업·연결 단절/재시작·측정항목을 배치하며 사전 출시/보류/방향변경 기준을 구별한다. 2곳으로 전체 일반화를 주장하지 않는다."
+          }
+        },
+        {
+          "id": "N1-5",
+          "dimension": "불확실성과 복구",
+          "anchors": {
+            "0": "재시작 데이터 소실/두 단말 충돌을 무시하거나 오프라인 안전을 확정한다.",
+            "1": "두 위험을 언급하지만 실패 시 복구·노출·검증 또는 중단 조건이 부족하다.",
+            "2": "소실과 미시험 충돌을 구분하고 데이터 대조/복구·사용자 상태 노출·확인 전 범위 축소 또는 출시 보류 조건을 연결하며 모르는 점과 시험 책임을 명시한다."
+          }
+        },
+        {
+          "id": "N1-6",
+          "dimension": "실행 가능한 결정",
+          "anchors": {
+            "0": "추상 원칙만 있고 다음주 행동·담당·결정이 없다.",
+            "1": "행동/일정은 있으나 8개발일 배분, 제외 범위, 결정권자/재검토 중 2개 이상이 빠진다.",
+            "2": "8개발일 이내 우선작업과 제외 범위를 제시하고 결정권자·구현/관찰 책임·재검토 시점을 묶어 지금의 잠정 출시 결정을 실행 가능하게 전달한다. 합리적 배분 가정은 가정으로 표시한다."
+          }
+        }
+      ]
+    },
+    "N2": {
+      "max_points": 12,
+      "criteria": [
+        {
+          "id": "N2-1",
+          "dimension": "제약과 정량 판단",
+          "anchors": {
+            "0": "현금/필수지출을 틀리게 계산하거나 대책 없는 즉시 퇴사를 유일한 답으로 권한다.",
+            "1": "현금900만원/지출220만원 또는 월 잉여90만원을 활용하나 취약성·조건 변화와 연결하지 못한다.",
+            "2": "월 잉여90만원, 무수입 시 현금 약4.1개월이라는 조건부 계산을 정확히 해석하고 부양비 증가·기타비용·수입 단절로 실제 여유가 달라짐을 결정에 반영한다. 240만원 교육 선택 시 현금 감소도 비교한다."
+          }
+        },
+        {
+          "id": "N2-2",
+          "dimension": "역할·보상 전문성",
+          "anchors": {
+            "0": "직함/구두 급여/지분을 확정 가치로 취급하거나 문서 미확인을 무시한다.",
+            "1": "문서 확인을 권하나 실제 역할 비율·근무/주말·수습/보상 중 중요한 영역이 빠진다.",
+            "2": "구두 세후 예상액과 확정 조건을 구분하고 실제 분석/지원 역할 비율·성장 지원·주말 대응·수습 급여·지분/베스팅 등 확인 항목을 결정/협의 가능한 조건에 연결한다. 법률·세금·지분 가치를 만들어내지 않는다."
+          }
+        },
+        {
+          "id": "N2-3",
+          "dimension": "대안의 실재성과 비교",
+          "anchors": {
+            "0": "거절하면 다른 오퍼가 있다고 가정하거나 수락/거절 한 경로만 다룬다.",
+            "1": "현직 유지/교육/전환 탐색 대안은 있으나 비용·시간·되돌림 또는 수락 시 대책 비교가 부족하다.",
+            "2": "수락 시 역할/재정 위험 완화 경로와 거절·유예 시 현직6개월+탐색 경로를 비교하고 교육240만원의 기회비용을 검토한다. 미확정 채용·복귀를 보장하지 않으며 실행 가능한 대안과 소망을 구분한다."
+          }
+        },
+        {
+          "id": "N2-4",
+          "dimension": "적합성 실험의 설계",
+          "anchors": {
+            "0": "4주를 일반 공부/강의 수강으로만 채우거나 적합성을 입증했다고 주장한다.",
+            "1": "작은 분석 과제를 제시하나 6시간/주 배분, 직무의 핵심 불확실성, 외부 피드백/관찰기준 중 일부가 빠진다.",
+            "2": "4주×주6시간의 실행 가능한 직무 모사나 현직자 피드백을 설계하고 문제정의·데이터 점검·해석/전달 같은 실제 일을 접하게 한다. 지속 의향/결과 설명/피드백 등 관찰과 다음 결정 조건을 연결한다."
+          }
+        },
+        {
+          "id": "N2-5",
+          "dimension": "조건·불확실성과 가치",
+          "anchors": {
+            "0": "민서의 위험 선호/가족비용/스타트업 안정성을 임의로 확정하거나 질문만 나열한다.",
+            "1": "중요 미지수와 가치 질문은 있으나 권고를 바꿀 최소 조건이 추상적이다.",
+            "2": "역할 적합성·생활 안정·성장 중 아직 모르는 선호와 부양비를 질문으로 남기면서도 수락/유예/거절 권고를 바꿀 구체 최소 조건을 제시한다. 조건은 보편 정답이 아닌 잠정 기준으로 표시한다."
+          }
+        },
+        {
+          "id": "N2-6",
+          "dimension": "기한 내 실행 결정",
+          "anchors": {
+            "0": "사흘 기한을 놓치거나 '신중히 생각' 이상의 권고가 없다.",
+            "1": "잠정 권고와 행동은 있으나 사흘 동안의 우선 연락/요청/마감 또는 4주 후 재검토가 불명확하다.",
+            "2": "현재의 잠정 결정을 명확히 하고 사흘 안에 문서 요청·역할 확인·기한 협의 등의 순서와 답이 없을 때 행동을 정하며 4주 실험 후 재검토를 연결한다. 어떤 결론이든 근거와 조건이 충족되면 만점을 받을 수 있다."
+          }
+        }
+      ]
+    }
+  }
+}

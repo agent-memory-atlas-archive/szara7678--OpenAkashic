@@ -1,0 +1,21 @@
+{
+  "schema": "exploratory-required-lookup-v1",
+  "frozen_utc": "2026-10-28T13:26:55Z",
+  "trigger": "Optional retrieval was used in 0/4 treatment tasks. Availability comparison is retained, cannot be called a used-resource effect.",
+  "new_arm": "required lookup, same four tasks and original frozen rubric/fixtures",
+  "not_preregistered_primary": true,
+  "prior_outputs_seen": "Only 3 coding aggregate grades were exposed (12/12). No judgment artifacts or scores inspected. All original answers remain fixed. No task-specific feedback is supplied to followup candidates.",
+  "purpose": "Diagnostic of forced context use vs availability; not independent holdout or superiority proof.",
+  "order": [
+    "required-1-r1",
+    "required-2-r1",
+    "required-3-r1",
+    "required-4-r1"
+  ],
+  "prompt_sha256": {
+    "required-1-r1": "a3c705514ee6a6f472d9980fe2de663e47799fc23698b06668cdceda8702b633",
+    "required-2-r1": "17c49af85eb08945f4d2df5b5402f4fba0784afef4d84c574d9de5f98e3b7269",
+    "required-3-r1": "032dbc61ca45b26a98fd29b848105f4d9c31acc9936d4037f50c12000ae8bc1d",
+    "required-4-r1": "4fc309a9d561a621e8cb2e4d89cb6004a53ddc57c4680d5fb94b17d9c65ec066"
+  }
+}

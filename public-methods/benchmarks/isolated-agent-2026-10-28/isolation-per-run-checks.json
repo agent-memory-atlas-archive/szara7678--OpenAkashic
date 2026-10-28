@@ -1,0 +1,23 @@
+[
+  {
+    "socket": "probe-base",
+    "route": "/probe-akashic/research/api/methods/catalog",
+    "status": 403,
+    "expected": 403,
+    "passed": true
+  },
+  {
+    "socket": "probe-base",
+    "route": "/probe-base/research/api/methods/catalog",
+    "status": 403,
+    "expected": 403,
+    "passed": true
+  },
+  {
+    "socket": "probe-akashic",
+    "route": "/probe-akashic/research/api/methods/catalog?limit=24&offset=0",
+    "status": 200,
+    "expected": 200,
+    "passed": true
+  }
+]

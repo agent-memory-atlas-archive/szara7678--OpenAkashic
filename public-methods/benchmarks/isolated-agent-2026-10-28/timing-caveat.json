@@ -1,0 +1,4 @@
+{
+  "observed_utc": "2026-10-28T13:25:21Z",
+  "issue": "Host began coding grading while last candidate runs were active; interrupted grading. Wall times are descriptive shared-host observations, not isolated hardware latency. No task answers/grades fed back to agents. All cases will be graded after completion."
+}

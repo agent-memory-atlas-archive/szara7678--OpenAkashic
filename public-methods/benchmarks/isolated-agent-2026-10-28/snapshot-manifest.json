@@ -1,0 +1,37 @@
+{
+  "captured_utc": "2026-10-28T13:17:46Z",
+  "database": {
+    "sha256": "4f3602fb9af53b10095e218718970e6bf01689bf9d2f6a2c1d03fef39c674a7a",
+    "read_only": true
+  },
+  "index": {
+    "sha256": "3447799ac0894be47703b567caf6cd80c20d63db054a155a7f7236d3a1b40a92"
+  },
+  "code": {
+    "scripts/public_news_providers.py": "d6ffa790f1e7ab8f53e00f5519451e744ebae1065ea91c13adb87d18e6e05913",
+    "app/utils.py": "0aa361e99316d59e416dea07d32d653cd348424258284db43d5c56bf8e2e26f1",
+    "app/research_context.py": "8b01682860e7d54639cfb3b5986313e8fbe21f63e63a639b91e604a087f81c37",
+    "app/research_changes.py": "ecbcfe7cd2779b0efcdfacd434f332fc16bd09f82f12c1ed24893b24d4e25933",
+    "app/research_intake_context.py": "c3baee8f9625d4ee164dd82a4adb9699d398511ebd042f3ca8005075095c184e",
+    "app/research_method_context.py": "faad78a6f1f2cf4f373622580b704d5414d84a0b3fd2ee1c0decb79db2160150",
+    "app/research_time.py": "6dd75befe09390092592741d9e5c86c72a1db81fda916720e32b56d98689c089",
+    "app/research_references.py": "d4326c55c0942e3983eb4f96c771a6f115a6b4bd2dc670e07afa656ae300a751",
+    "app/research_adaptive_context.py": "c723a3a64ca80952e9be6cad591ecaae157a167e0b727e98d082b340ab46b2c6",
+    "app/research_graph_store.py": "84e6ee4069e646576ed7f416cf275e4d2dfdccdd9fd47300224069676bd0bec3",
+    "app/research_method_graph.py": "068de43288466830a693dfbb976e179fd849b959b23098f9e34eb292a0d55182",
+    "app/research_memory.py": "3a4db2914c58a37085f5fc1f7dd8c5ebd01977299aaf3bcb08df1f487d7cfa0d",
+    "app/research_connectors.py": "8099d8152d7d10e6b64a3cf660f23ff69fe796870fd23d442e0267b2f5f9948d",
+    "app/research_knowledge.py": "2754b857018f4267f74a4063b04df09cc2b85ee78ad06fbb26fba3f44971210f",
+    "app/research_method_search.py": "f1c57229c9d87a7681d159767933f3058b6b1d6a2537330b5835baf1f4c3dcbd",
+    "app/research_graph.py": "e5385bc04687b564ed0e51423c56b4954c385b77433874abdf72f07b32a227d8",
+    "app/research_store.py": "f6c61be5a9c029d12cac91c02bc7d2bb90f7cdba845ce74fad6a36f6d570f3a8",
+    "app/research_method_store.py": "856a98a3fc4bfff59d1d730a86dfbf31602b520b8edd01137fe0c23f034e8aeb",
+    "app/research_passages.py": "3481b50bfb96e46cc781fba1a119f1ffb7839cbf57cfe6bb36c4944b6671127f",
+    "app/research_main.py": "d8f745eac605f9a75bb8da9c49813194e824807493864b3e2af12eb144585783",
+    "app/research_methods.py": "67cfbee6c176577a4b544b5e4ded23ca693508bbdab8d07044c42187c7b7eac5",
+    "app/research.py": "a59334df520d68c2c8c4b1fbf5f33ef87a0a82f39e515f4ceab1a226eaf006dc"
+  },
+  "source_release": "20261028T055711Z",
+  "isolation": "Per task Docker network none; fresh tmpfs home; no host memory or credentials; allowlisted UDS broker only",
+  "price_usd": null
+}

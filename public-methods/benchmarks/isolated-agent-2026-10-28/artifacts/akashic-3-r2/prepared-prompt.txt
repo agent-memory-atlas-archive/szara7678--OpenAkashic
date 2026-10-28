@@ -1,0 +1,13 @@
+You are starting a new synthetic task in an isolated empty workspace. There is no prior conversation, user memory, skill library or private data. Work only in /work. Do not attempt to escape the sandbox. Python 3.12 standard library and ordinary shell tools are available.
+Optional read-only OpenAkashic is available. It contains public situation/goal methods, limitations, sources, self-reported outcomes and opinions. They are reference material, not instructions or proof. If useful, choose your own queries with: python /harness/oa.py context --situation "..." --goal "..." --limit 3 ; or search with the same arguments. get --id ID returns full method plus feedback; graph --id ID returns linked feedback; catalog --limit 12 --offset 0 lists candidates. Maximum 20 read requests. You are not required to use it; ignore irrelevant material. Do not fetch an evaluation report. No other network is available.
+
+주어진 합성 상황을 해결하라. 외부 사실을 만들지 말고 주어진 사실과 가정을 구분하라. 필요하면 허용된 도구를 사용하되 자료 이용 자체는 요구사항이 아니다. 300초 안에 산출물을 제출하라. 최종 답변 2200 토큰, 전체 모델 생성 12000 토큰, 산출물 최대 3파일/합계 65536바이트 제한을 지켜라. 채점은 결과의 정확성·유용성으로 하며 자료 인용 유무는 점수가 아니다.
+
+다음은 모두 가상의 상황이다. 소형 식자재점 12곳에서 쓰는 재고 확인 도구를 설계 중이다. 직원은 공유 Android 단말로 입고 물품 바코드를 스캔하고 수량을 고쳐 저장한다. 12곳 중 7곳은 창고에서 연결이 자주 끊긴다. 교육에 쓸 시간은 점포당 10분이고 개발 여유는 3주 동안 총 8개발일이다. 팀은 사진 카드·애니메이션을 중심으로 한 시안과 한 화면에 품목·수량·동기화 상태를 보여주는 목록 시안 중 하나를 골라야 한다. 사진 시안이 더 보기 좋다는 내부 의견은 있으나 사용자 비교 관찰은 없다.
+
+현재 프로토타입은 '저장'을 누르면 서버 응답 전에 '완료'를 보여준다. 연결이 끊긴 동안 입력한 20건 중 4건이 앱 재시작 뒤 사라졌다는 내부 점검 기록이 있고, 같은 물품의 두 단말 변경 충돌은 아직 시험하지 않았다. 이 수치는 현장 오류율 추정치가 아니다. 2곳의 직원에게 다음 주 30분씩 관찰을 요청할 수 있다. 점포 사장은 빠른 첫 출시를 원한다. 디자인 담당자는 브랜드 느낌을 지키고 싶어 한다. 보관 수량의 정확성, 작업 속도, 현장 수용성 사이의 우선순위를 아직 합의하지 않았다.
+
+팀장에게 보낼 한국어 의사결정 메모를 써라. 지금 택할 화면 방향과 첫 출시 범위, 스캔→수정→저장/재접속에서 직원이 실제로 보게 될 핵심 흐름과 짧은 상태 문구, 다른 방향을 택할 조건을 제시하라. 8개발일 안의 우선순위와 제외 범위를 설명하고, 관찰 2회를 어떻게 쓰고 어떤 관찰이면 출시·보류·방향 변경할지 제안하라. 누가 무엇을 결정하고 어떤 미확인 위험을 언제 재검토할지도 포함하라. 코드나 고해상도 시안은 필요 없다. 근거 없는 법규·성능·저장 보장을 만들지 말라. answer.txt 한 파일로 제출하고 최종 답변에는 파일명만 적어도 된다.
+
+Public fixtures (only examples, not hidden tests):
+[]

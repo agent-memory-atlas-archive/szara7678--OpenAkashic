@@ -1,0 +1,3 @@
+`solution.py`를 작성했습니다: [solution.py](/work/solution.py)
+
+공개 예제를 `python3.12 solution.py`에 JSON 입력으로 전달해 실행했고, 출력이 기대값과 일치하는 것을 확인했습니다. `rate`와 `uplift_pp`는 각 정책의 집계값이며, `decision`은 지정된 기계적 기준의 결과일 뿐 통계적 유의성이나 인과효과, 출시 적합성을 뜻하지 않습니다.

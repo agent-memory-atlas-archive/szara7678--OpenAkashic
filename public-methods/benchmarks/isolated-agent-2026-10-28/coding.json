@@ -1,0 +1,728 @@
+[
+  {
+    "id": "base-1-r2",
+    "task": "C1",
+    "points": 12,
+    "max_points": 12,
+    "checks": [
+      {
+        "case": "C1-P1",
+        "visibility": "public",
+        "mode": "literal",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C1-P1",
+        "visibility": "public",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H1",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H1",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H2",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H2",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H3",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H3",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H4",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H4",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H5",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H5",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H6",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H6",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      }
+    ],
+    "grading_seconds": 11.022042753989808
+  },
+  {
+    "id": "base-2-r2",
+    "task": "C2",
+    "points": 12,
+    "max_points": 12,
+    "checks": [
+      {
+        "case": "C2-P1",
+        "visibility": "public",
+        "mode": "literal",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C2-P1",
+        "visibility": "public",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H1",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H1",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H2",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H2",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H3",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H3",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H4",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H4",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H5",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H5",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H6",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H6",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      }
+    ],
+    "grading_seconds": 10.018011189997196
+  },
+  {
+    "id": "akashic-1-r2",
+    "task": "C1",
+    "points": 12,
+    "max_points": 12,
+    "checks": [
+      {
+        "case": "C1-P1",
+        "visibility": "public",
+        "mode": "literal",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C1-P1",
+        "visibility": "public",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H1",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H1",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H2",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H2",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H3",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H3",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H4",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H4",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H5",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H5",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H6",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H6",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      }
+    ],
+    "grading_seconds": 10.218874885991681
+  },
+  {
+    "id": "akashic-2-r2",
+    "task": "C2",
+    "points": 12,
+    "max_points": 12,
+    "checks": [
+      {
+        "case": "C2-P1",
+        "visibility": "public",
+        "mode": "literal",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C2-P1",
+        "visibility": "public",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H1",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H1",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H2",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H2",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H3",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H3",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H4",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H4",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H5",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H5",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H6",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H6",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      }
+    ],
+    "grading_seconds": 10.572121330013033
+  },
+  {
+    "id": "required-1-r1",
+    "task": "C1",
+    "points": 12,
+    "max_points": 12,
+    "checks": [
+      {
+        "case": "C1-P1",
+        "visibility": "public",
+        "mode": "literal",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C1-P1",
+        "visibility": "public",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H1",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H1",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H2",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H2",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H3",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H3",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H4",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H4",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H5",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H5",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H6",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C1-H6",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      }
+    ],
+    "grading_seconds": 10.770676875021309
+  },
+  {
+    "id": "required-2-r1",
+    "task": "C2",
+    "points": 12,
+    "max_points": 12,
+    "checks": [
+      {
+        "case": "C2-P1",
+        "visibility": "public",
+        "mode": "literal",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C2-P1",
+        "visibility": "public",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 0,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H1",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H1",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H2",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H2",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H3",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H3",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H4",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H4",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H5",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H5",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H6",
+        "visibility": "hidden",
+        "mode": "literal",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      },
+      {
+        "case": "C2-H6",
+        "visibility": "hidden",
+        "mode": "reverse_input",
+        "passed": true,
+        "points": 1,
+        "reason": "match"
+      }
+    ],
+    "grading_seconds": 11.922529331000987
+  }
+]

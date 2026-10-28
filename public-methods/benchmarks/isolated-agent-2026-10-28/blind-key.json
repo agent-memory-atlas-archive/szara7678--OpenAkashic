@@ -1,0 +1,38 @@
+{
+  "P01": {
+    "source_run": "akashic-4-r2",
+    "task_id": "N2",
+    "artifact_sha256": "006ecd95e8a0d4570186521485981c5c000251f86f9e3d2cb67fc3dc4ae113a2",
+    "label_redactions": false
+  },
+  "P02": {
+    "source_run": "base-4-r2",
+    "task_id": "N2",
+    "artifact_sha256": "a3be9ad12a950cfaf78289ea210e937a8fa0eefed33e40385dd429e22a23a484",
+    "label_redactions": false
+  },
+  "P03": {
+    "source_run": "base-3-r2",
+    "task_id": "N1",
+    "artifact_sha256": "b006c17d0b9645fd8765bafd8d95e4ba40238382a782d66eb290681de18732e0",
+    "label_redactions": false
+  },
+  "P04": {
+    "source_run": "akashic-3-r2",
+    "task_id": "N1",
+    "artifact_sha256": "1c3bf043665659b3c689e7eaeb9b939ddc3e8cab94cfcf04a63c4950b510ee4d",
+    "label_redactions": false
+  },
+  "P05": {
+    "source_run": "required-3-r1",
+    "task_id": "N1",
+    "artifact_sha256": "79ffc32594ac29bf91e3f6fa28775fe39b482bb84458ccaf0e730501ffa84fed",
+    "label_redactions": false
+  },
+  "P06": {
+    "source_run": "required-4-r1",
+    "task_id": "N2",
+    "artifact_sha256": "3c175da4bec78e300e1276e96c060dbdce2aa02cf62bdb342741143395ed3c8d",
+    "label_redactions": false
+  }
+}

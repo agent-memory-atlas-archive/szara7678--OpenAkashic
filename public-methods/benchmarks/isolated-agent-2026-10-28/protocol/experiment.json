@@ -1,0 +1,35 @@
+{
+  "schema": "openakashic-isolated-pilot-v1",
+  "frozen_utc": "2026-10-28T13:20:25Z",
+  "tasks": 4,
+  "arms": [
+    "base",
+    "akashic"
+  ],
+  "repeats_per_task_arm": 1,
+  "order": [
+    "base-1",
+    "akashic-1",
+    "akashic-2",
+    "base-2",
+    "akashic-3",
+    "base-3",
+    "base-4",
+    "akashic-4"
+  ],
+  "model_requested": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "primary": "Task scores /12, separately coding and judgment; no significance claims",
+  "usage": "Backend receipt input, cached input, output, reasoning; checked against CLI turn.completed. Cached tokens are included in input, not added. No guessed dollar costs.",
+  "wall_time": "Container invocation to exit, including retrieval, shell calls, retries. Preparation and grading excluded and separately noted.",
+  "output_budget": "Prompt limits 12000 generated tokens and 2200 final tokens; observed adherence, not provider hard cap. 300 seconds hard outer timeout; 24 model requests and20 retrieval requests maximum.",
+  "comparability": "Both offline stdlib environments, treatment adds read-only frozen methods API. This measures adding this curated resource to pretrained knowledge, not equivalence to general web search or a flat-document RAG baseline.",
+  "isolation": "Per-task fresh Docker network none and tmpfs home; no credentials, vault, history, hooks, user config, skills, gold or other candidates mounted. Only dedicated per-run UDS broker. Base broker rejects methods and other run IDs.",
+  "limitations": [
+    "Four synthetic tasks selected after seeing catalog metadata; task selection favors corpus coverage.",
+    "One run per task per condition; execution-order, cache and stochastic noise remain.",
+    "Model-blind assessment is an expertise proxy, not human expert/user utility.",
+    "Two coding tasks use 12 correlated checks each; not 24 independent tasks.",
+    "Source quality, preference adherence across unrelated tasks, and real-world deployment outcomes are not established."
+  ]
+}

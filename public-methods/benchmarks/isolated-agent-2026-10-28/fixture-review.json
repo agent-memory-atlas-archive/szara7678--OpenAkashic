@@ -1,0 +1,58 @@
+[
+  {
+    "id": "C1-P1",
+    "pass": true
+  },
+  {
+    "id": "C1-H1",
+    "pass": true
+  },
+  {
+    "id": "C1-H2",
+    "pass": true
+  },
+  {
+    "id": "C1-H3",
+    "pass": true
+  },
+  {
+    "id": "C1-H4",
+    "pass": true
+  },
+  {
+    "id": "C1-H5",
+    "pass": true
+  },
+  {
+    "id": "C2-P1",
+    "pass": true
+  },
+  {
+    "id": "C2-H1",
+    "pass": true
+  },
+  {
+    "id": "C2-H2",
+    "pass": true
+  },
+  {
+    "id": "C2-H3",
+    "pass": true
+  },
+  {
+    "id": "C2-H4",
+    "pass": true
+  },
+  {
+    "id": "C2-H5",
+    "pass": true
+  },
+  {
+    "id": "C1-H6",
+    "pass": true
+  },
+  {
+    "id": "C2-H6",
+    "pass": true
+  }
+]

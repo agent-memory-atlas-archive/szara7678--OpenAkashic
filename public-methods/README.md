@@ -113,3 +113,8 @@ scripts are included. No broad answer-quality advantage has been demonstrated.
 ### Concrete prior-risk transfer pilot
 
 [Executable pilot and reproducible raw results](benchmarks/failure-transfer-2026-10-28/README.md): SQLite backup, join audit, and source-preserving search. Primary cases: 17/18,17/18,18/18 with a source-encoding confound. A separate complete regeneration with reliable direct file writes passed 18/18,17/18,18/18 for methods-only, raw experience, and linked experience. Same fixtures, not a new holdout. No output repaired after scoring; all 18 programs and 108 clustered case executions remain visible. Methods-only already succeeds on all follow-up cases, so experience or graph superiority is **not established**. Input material roughly doubled with experience; billed usage and real-work benefit are unknown.
+
+
+### Actual isolated-agent usage pilot
+
+[New 4-task, 12-run isolated comparison](benchmarks/isolated-agent-2026-10-28/README.md): a true no-resource baseline and optional access scored coding24/24 and judgment23/24 each, but optional access made0 lookups. A later required-lookup diagnostic scored24/24 and22/24 while consuming193,256 actual input+output tokens versus107,450 for the baseline. No output-quality or token-efficiency advantage is established. Fresh per-task containers, actual usage receipts, all artifacts and the negative results are retained. This updates the actual-usage gap for this small pilot only; older material-token estimates are unchanged.

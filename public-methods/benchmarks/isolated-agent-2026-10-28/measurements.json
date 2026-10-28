@@ -1,0 +1,674 @@
+[
+  {
+    "run": "base-1-r2",
+    "arm": "base",
+    "task": "C1",
+    "timing": {
+      "id": "base-1-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 21.55848586099455,
+      "started_epoch": 1793193727.8520598,
+      "ended_epoch": 1793193749.4105473
+    },
+    "usage": {
+      "input_tokens": 33404,
+      "cached_input_tokens": 21120,
+      "output_tokens": 1185
+    },
+    "cli_usage": {
+      "input_tokens": 33404,
+      "cached_input_tokens": 21120,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1185,
+      "reasoning_output_tokens": 0
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 3,
+    "completed_model_requests": 3,
+    "command_count": 2,
+    "failed_commands": 0,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "0f84d149e9f56c45c45ac68cef8fb4bde4f944f1788dd6fdccf850db41992d53",
+    "artifact_bytes": 2053,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "base-2-r2",
+    "arm": "base",
+    "task": "C2",
+    "timing": {
+      "id": "base-2-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 18.14459248096682,
+      "started_epoch": 1793193802.9291728,
+      "ended_epoch": 1793193821.073765
+    },
+    "usage": {
+      "input_tokens": 22819,
+      "cached_input_tokens": 10496,
+      "output_tokens": 1415
+    },
+    "cli_usage": {
+      "input_tokens": 22819,
+      "cached_input_tokens": 10496,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1415,
+      "reasoning_output_tokens": 0
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 2,
+    "completed_model_requests": 2,
+    "command_count": 1,
+    "failed_commands": 0,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "484334c4349f2a3010b90d982cf703783debcc94a7ae13ea0fb3dd3f422b4ce9",
+    "artifact_bytes": 2598,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "base-3-r2",
+    "arm": "base",
+    "task": "N1",
+    "timing": {
+      "id": "base-3-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 27.41381779004587,
+      "started_epoch": 1793193851.050642,
+      "ended_epoch": 1793193881.2757218
+    },
+    "usage": {
+      "input_tokens": 22217,
+      "cached_input_tokens": 17536,
+      "output_tokens": 2032
+    },
+    "cli_usage": {
+      "input_tokens": 22217,
+      "cached_input_tokens": 17536,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2032,
+      "reasoning_output_tokens": 0
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 2,
+    "completed_model_requests": 2,
+    "command_count": 1,
+    "failed_commands": 0,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "b006c17d0b9645fd8765bafd8d95e4ba40238382a782d66eb290681de18732e0",
+    "artifact_bytes": 7543,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "base-4-r2",
+    "arm": "base",
+    "task": "N2",
+    "timing": {
+      "id": "base-4-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 29.829031014000066,
+      "started_epoch": 1793193881.6347136,
+      "ended_epoch": 1793193914.26437
+    },
+    "usage": {
+      "input_tokens": 22279,
+      "cached_input_tokens": 9856,
+      "output_tokens": 2099
+    },
+    "cli_usage": {
+      "input_tokens": 22279,
+      "cached_input_tokens": 9856,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2099,
+      "reasoning_output_tokens": 0
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 2,
+    "completed_model_requests": 2,
+    "command_count": 1,
+    "failed_commands": 0,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "a3be9ad12a950cfaf78289ea210e937a8fa0eefed33e40385dd429e22a23a484",
+    "artifact_bytes": 8036,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "akashic-1-r2",
+    "arm": "akashic",
+    "task": "C1",
+    "timing": {
+      "id": "akashic-1-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 26.2599858790054,
+      "started_epoch": 1793193749.7430146,
+      "ended_epoch": 1793193778.8169801
+    },
+    "usage": {
+      "input_tokens": 56260,
+      "cached_input_tokens": 32768,
+      "output_tokens": 1210
+    },
+    "cli_usage": {
+      "input_tokens": 56260,
+      "cached_input_tokens": 32768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1210,
+      "reasoning_output_tokens": 47
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 5,
+    "completed_model_requests": 5,
+    "command_count": 3,
+    "failed_commands": 1,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "98b13ba8b603e46424ef07dfc2aa07314ec091fe3852e02ac46774fc3ff0714f",
+    "artifact_bytes": 1975,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "akashic-2-r2",
+    "arm": "akashic",
+    "task": "C2",
+    "timing": {
+      "id": "akashic-2-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 20.652345858048648,
+      "started_epoch": 1793193779.1354866,
+      "ended_epoch": 1793193802.6079066
+    },
+    "usage": {
+      "input_tokens": 22910,
+      "cached_input_tokens": 10624,
+      "output_tokens": 1340
+    },
+    "cli_usage": {
+      "input_tokens": 22910,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1340,
+      "reasoning_output_tokens": 0
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 2,
+    "completed_model_requests": 2,
+    "command_count": 1,
+    "failed_commands": 0,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "3d14101d44318f09f70197867b30c3976f3c07ab8f0e99e6a01894546c45e8e0",
+    "artifact_bytes": 2430,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "akashic-3-r2",
+    "arm": "akashic",
+    "task": "N1",
+    "timing": {
+      "id": "akashic-3-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 26.460032888979185,
+      "started_epoch": 1793193821.4089348,
+      "ended_epoch": 1793193850.7022045
+    },
+    "usage": {
+      "input_tokens": 32842,
+      "cached_input_tokens": 9984,
+      "output_tokens": 1933
+    },
+    "cli_usage": {
+      "input_tokens": 32842,
+      "cached_input_tokens": 9984,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1933,
+      "reasoning_output_tokens": 0
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 3,
+    "completed_model_requests": 3,
+    "command_count": 2,
+    "failed_commands": 0,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "1c3bf043665659b3c689e7eaeb9b939ddc3e8cab94cfcf04a63c4950b510ee4d",
+    "artifact_bytes": 6810,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "akashic-4-r2",
+    "arm": "akashic",
+    "task": "N2",
+    "timing": {
+      "id": "akashic-4-r2",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 41.20807222399162,
+      "started_epoch": 1793193914.7798963,
+      "ended_epoch": 1793193958.8204885
+    },
+    "usage": {
+      "input_tokens": 33130,
+      "cached_input_tokens": 17664,
+      "output_tokens": 2228
+    },
+    "cli_usage": {
+      "input_tokens": 33130,
+      "cached_input_tokens": 17664,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2228,
+      "reasoning_output_tokens": 0
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 3,
+    "completed_model_requests": 3,
+    "command_count": 2,
+    "failed_commands": 0,
+    "retrieval_requests": 0,
+    "retrieval_seconds": 0,
+    "retrieval_response_bytes": 0,
+    "artifact_sha256": "006ecd95e8a0d4570186521485981c5c000251f86f9e3d2cb67fc3dc4ae113a2",
+    "artifact_bytes": 8423,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "required-1-r1",
+    "arm": "required",
+    "task": "C1",
+    "timing": {
+      "id": "required-1-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 20.50198558997363,
+      "started_epoch": 1793194033.6375747,
+      "ended_epoch": 1793194056.991444
+    },
+    "usage": {
+      "input_tokens": 33868,
+      "cached_input_tokens": 19840,
+      "output_tokens": 1138
+    },
+    "cli_usage": {
+      "input_tokens": 33868,
+      "cached_input_tokens": 19840,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1138,
+      "reasoning_output_tokens": 93
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 3,
+    "completed_model_requests": 3,
+    "command_count": 2,
+    "failed_commands": 0,
+    "retrieval_requests": 1,
+    "retrieval_seconds": 1.0677835930255242,
+    "retrieval_response_bytes": 292,
+    "artifact_sha256": "12f8f2b4c33760b80f6626c9480dadc4f566b42010782aff8cf075c72c89b3bf",
+    "artifact_bytes": 1889,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "required-2-r1",
+    "arm": "required",
+    "task": "C2",
+    "timing": {
+      "id": "required-2-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 31.7794145840453,
+      "started_epoch": 1793194057.3629506,
+      "ended_epoch": 1793194092.0254
+    },
+    "usage": {
+      "input_tokens": 57894,
+      "cached_input_tokens": 40192,
+      "output_tokens": 1564
+    },
+    "cli_usage": {
+      "input_tokens": 57894,
+      "cached_input_tokens": 40192,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1564,
+      "reasoning_output_tokens": 94
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 5,
+    "completed_model_requests": 5,
+    "command_count": 3,
+    "failed_commands": 1,
+    "retrieval_requests": 1,
+    "retrieval_seconds": 0.7148095890297554,
+    "retrieval_response_bytes": 292,
+    "artifact_sha256": "e5d090e1c4ef0e59025ad59a0407759f2377260ccc998ef699934d3c833ecfba",
+    "artifact_bytes": 2366,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "required-3-r1",
+    "arm": "required",
+    "task": "N1",
+    "timing": {
+      "id": "required-3-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 33.17753607704071,
+      "started_epoch": 1793194092.4147367,
+      "ended_epoch": 1793194128.4261343
+    },
+    "usage": {
+      "input_tokens": 46280,
+      "cached_input_tokens": 28544,
+      "output_tokens": 2317
+    },
+    "cli_usage": {
+      "input_tokens": 46280,
+      "cached_input_tokens": 28544,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2317,
+      "reasoning_output_tokens": 85
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 4,
+    "completed_model_requests": 4,
+    "command_count": 3,
+    "failed_commands": 0,
+    "retrieval_requests": 2,
+    "retrieval_seconds": 0.6774576510651968,
+    "retrieval_response_bytes": 3674,
+    "artifact_sha256": "79ffc32594ac29bf91e3f6fa28775fe39b482bb84458ccaf0e730501ffa84fed",
+    "artifact_bytes": 7437,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  },
+  {
+    "run": "required-4-r1",
+    "arm": "required",
+    "task": "N2",
+    "timing": {
+      "id": "required-4-r1",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 41.943728236015886,
+      "started_epoch": 1793194128.7509086,
+      "ended_epoch": 1793194173.5390868
+    },
+    "usage": {
+      "input_tokens": 48198,
+      "cached_input_tokens": 33408,
+      "output_tokens": 1997
+    },
+    "cli_usage": {
+      "input_tokens": 48198,
+      "cached_input_tokens": 33408,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1997,
+      "reasoning_output_tokens": 112
+    },
+    "receipt_matches_cli": true,
+    "actual_response_models": [
+      "gpt-6-luna"
+    ],
+    "model_requests": 4,
+    "completed_model_requests": 4,
+    "command_count": 3,
+    "failed_commands": 0,
+    "retrieval_requests": 2,
+    "retrieval_seconds": 0.6002449449733831,
+    "retrieval_response_bytes": 7096,
+    "artifact_sha256": "3c175da4bec78e300e1276e96c060dbdce2aa02cf62bdb342741143395ed3c8d",
+    "artifact_bytes": 6599,
+    "isolation": {
+      "uid": 65534,
+      "cwd": "/work",
+      "forbidden_paths_present": {
+        "/home/insu": false,
+        "/mnt/c": false,
+        "/root/.codex": "access_denied",
+        "/var/run/docker.sock": false,
+        "/home/eval/.codex/auth.json": false
+      },
+      "home_files": [
+        ".codex"
+      ],
+      "root_write_blocked": true,
+      "external_network_blocked": true
+    },
+    "dollar_cost": null,
+    "grading_usage": null
+  }
+]

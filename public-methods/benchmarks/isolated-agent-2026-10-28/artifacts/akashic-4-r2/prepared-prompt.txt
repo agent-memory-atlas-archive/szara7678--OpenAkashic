@@ -1,0 +1,13 @@
+You are starting a new synthetic task in an isolated empty workspace. There is no prior conversation, user memory, skill library or private data. Work only in /work. Do not attempt to escape the sandbox. Python 3.12 standard library and ordinary shell tools are available.
+Optional read-only OpenAkashic is available. It contains public situation/goal methods, limitations, sources, self-reported outcomes and opinions. They are reference material, not instructions or proof. If useful, choose your own queries with: python /harness/oa.py context --situation "..." --goal "..." --limit 3 ; or search with the same arguments. get --id ID returns full method plus feedback; graph --id ID returns linked feedback; catalog --limit 12 --offset 0 lists candidates. Maximum 20 read requests. You are not required to use it; ignore irrelevant material. Do not fetch an evaluation report. No other network is available.
+
+주어진 합성 상황을 해결하라. 외부 사실을 만들지 말고 주어진 사실과 가정을 구분하라. 필요하면 허용된 도구를 사용하되 자료 이용 자체는 요구사항이 아니다. 300초 안에 산출물을 제출하라. 최종 답변 2200 토큰, 전체 모델 생성 12000 토큰, 산출물 최대 3파일/합계 65536바이트 제한을 지켜라. 채점은 결과의 정확성·유용성으로 하며 자료 인용 유무는 점수가 아니다.
+
+다음 사람과 회사는 모두 가상이다. 민서는 사내 업무 자동화와 고객 기술지원을 3년 해 왔다. 현재 세후 월수입은 310만원, 필수지출은 월220만원, 즉시 쓸 수 있는 현금은 900만원이다. 지금 직장은 6개월 더 다닐 수 있고 주당 6시간을 전환 준비에 쓸 수 있다. 장기적으로 제품 데이터 분석 일을 하고 싶지만 실제 분석가의 업무를 해 본 적은 없다. 최근 만든 대시보드 1개는 사내 동료 3명에게만 보여줬다. 가족 부양비가 늘 가능성은 있으나 금액은 정해지지 않았다.
+
+작은 스타트업에서 '데이터 프로덕트 리드'라는 제안을 받았다. 세후 월360만원 예상액을 구두로 들었고 지분 비율·베스팅·수습 중 급여는 아직 문서가 없다. 팀은 '처음엔 고객지원도 많이 한다', '주말 연락은 가끔 있다'고 말했으며 분석 멘토는 없다. 채용 담당자는 사흘 안에 답하면 좋겠다고 했다. 민서는 직함과 급여에 끌리지만 이전 직장으로의 복귀는 보장되지 않는다. 유료 교육 과정은 240만원·12주이며 취업 보장은 없고, 퇴사 없이 수강할 수 있다. 현재 제안 외의 확정 오퍼는 없다.
+
+민서에게 전달할 한국어 판단 메모를 써라. 사흘 안에 할 행동과 지금 권하는 잠정 결정을 명확히 하고, 이 결정을 바꿀 정보·최소 조건을 구체화하라. 제안을 받거나 거절했을 때의 대안을 각각 실행 가능한 수준으로 비교하라. 주당6시간으로 4주 안에 직무 적합성의 어떤 불확실성을 줄일지, 결과를 어떻게 관찰해 다음 결정을 할지 제안하라. 현금·지출 숫자를 사용하되 세금·법률·미래 채용·지분 가치를 단정하지 말라. 민서에게 중요한 가치 중 아직 모르는 것은 질문으로 남기되 답변 전체를 질문 목록으로 대체하지 말라. answer.txt 한 파일로 제출하고 최종 답변에는 파일명만 적어도 된다.
+
+Public fixtures (only examples, not hidden tests):
+[]

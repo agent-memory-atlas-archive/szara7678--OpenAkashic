@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-10-28T13:21:32Z",
+  "reason": "probe pathlib.exists raised PermissionError for inaccessible /root/.codex; candidate model was never invoked in any of 8 attempts",
+  "model_calls_original": 0,
+  "task_fixture_rubric_changes": false,
+  "original_freeze": "54959c163a0d2cd65ee2579cb21208344dc42c44ce46c6ba05e5156e5007f590",
+  "change": "Handle PermissionError as access_denied in isolation probe; no candidate prompt or task changes",
+  "files": {
+    "harness-v2/inside.py": "cc8135f4452a7a285ae65f344e993446bb4e5b50f22a2a843f92f83d64d1695e",
+    "harness-v2/run_batch.py": "1935f281fdb96914cdf824428b44bd65293d562290b9acb9ea83c3ff01f08e6d",
+    "harness-v2/relay.py": "05405bad5bbb30ea3ecce2d4f3b302bcb50a594b90584e845ab7432170befb1f",
+    "harness-v2/run_candidate.py": "f324b9513076dd755640820457898caf5460bd45973dbfbcd3cabaac343f4702",
+    "harness-v2/broker.py": "4046e9cf04cd06a1dd68c038c4ccc4aa64b1d272a2fd5c8795e60b8867ca1f64",
+    "harness-v2/probe.py": "bce90657ae7bbb59328a8fdb21bc82bc893bf5ed78724d14eb6e383aa110b088",
+    "harness-v2/oa.py": "df11ed3a4aded4c02d1a241fedf987cb962c09654cd15ada33eec7c1147ac8fc"
+  }
+}

@@ -1,0 +1,9 @@
+`solution.py`가 제출 폴더에 있습니다: [solution.py](/work/solution.py)
+
+공개 fixture를 실행해 expected 값과 비교했습니다.
+
+```sh
+python3 -c 'import json,subprocess; x=json.load(open("fixture.json")); print(subprocess.run(["python3","solution.py"],input=json.dumps(x),text=True,capture_output=True,check=True).stdout,end="")'
+```
+
+집계는 최신 수정본과 eligibility 규칙을 적용한 기술적 요약입니다. 결측치를 실패로 볼지 제외할지에 따라 값이 달라지며, 결과는 통계적 유의성이나 인과효과 또는 출시 근거를 뜻하지 않습니다.

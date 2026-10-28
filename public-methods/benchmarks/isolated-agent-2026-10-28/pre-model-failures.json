@@ -1,0 +1,106 @@
+[
+  {
+    "run": "base-1",
+    "timing": {
+      "id": "base-1",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.616538392030634,
+      "started_epoch": 1793193625.6335924,
+      "ended_epoch": 1793193627.2501311
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  },
+  {
+    "run": "akashic-1",
+    "timing": {
+      "id": "akashic-1",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.316103795019444,
+      "started_epoch": 1793193627.607245,
+      "ended_epoch": 1793193628.9233491
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  },
+  {
+    "run": "akashic-2",
+    "timing": {
+      "id": "akashic-2",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.2661896190256812,
+      "started_epoch": 1793193629.2755833,
+      "ended_epoch": 1793193630.541773
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  },
+  {
+    "run": "base-2",
+    "timing": {
+      "id": "base-2",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.2659038359997794,
+      "started_epoch": 1793193630.8838918,
+      "ended_epoch": 1793193632.1497958
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  },
+  {
+    "run": "akashic-3",
+    "timing": {
+      "id": "akashic-3",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.2660092790029012,
+      "started_epoch": 1793193632.4869308,
+      "ended_epoch": 1793193633.75294
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  },
+  {
+    "run": "base-3",
+    "timing": {
+      "id": "base-3",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.21590411599027,
+      "started_epoch": 1793193634.091122,
+      "ended_epoch": 1793193635.3070264
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  },
+  {
+    "run": "base-4",
+    "timing": {
+      "id": "base-4",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.21597684599692,
+      "started_epoch": 1793193635.6447008,
+      "ended_epoch": 1793193636.860678
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  },
+  {
+    "run": "akashic-4",
+    "timing": {
+      "id": "akashic-4",
+      "status": "completed",
+      "exit_code": 1,
+      "wall_seconds": 1.3161592559772544,
+      "started_epoch": 1793193637.1747932,
+      "ended_epoch": 1793193638.4909525
+    },
+    "model_calls": 0,
+    "error": "PermissionError during isolation probe before invoking Codex; /root/.codex inaccessible"
+  }
+]

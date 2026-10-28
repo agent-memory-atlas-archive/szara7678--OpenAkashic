@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-28T13:20:25Z",
+  "files": {
+    "protocol/verify_tasks.py": "9e8e7c091c5ce84a75e1288602cc4af34e89b89846c7306989ef976ca84e8be7",
+    "protocol/tasks.json": "078807a26ead0b074b47c41431e33c4a218d292747cf56f57a04092aebc23ac7",
+    "protocol/README.md": "67dd895e694e59739897dfb83699a989adcb11a4291b86c5396054b9454a4313",
+    "protocol/fixtures.json": "42e43aae658120120d7a71b1443e886fa06ef4b47bd580b437261ac279b3baab",
+    "protocol/grading.json": "e21a12069c4384616d3732d0cacae91a344d35a7ab62cf7247b991fa07c80985",
+    "protocol/experiment.json": "d358f231a741b6493fb84b1b03142c7f0e3b15bf99d0c6fd29628d13ae2e8e51",
+    "harness/inside.py": "cc8135f4452a7a285ae65f344e993446bb4e5b50f22a2a843f92f83d64d1695e",
+    "harness/run_batch.py": "1935f281fdb96914cdf824428b44bd65293d562290b9acb9ea83c3ff01f08e6d",
+    "harness/relay.py": "05405bad5bbb30ea3ecce2d4f3b302bcb50a594b90584e845ab7432170befb1f",
+    "harness/run_candidate.py": "d550577d54f5a2cc8f9ecacb2cbf6b247029e837e3d8928f741349085d9a3925",
+    "harness/broker.py": "4046e9cf04cd06a1dd68c038c4ccc4aa64b1d272a2fd5c8795e60b8867ca1f64",
+    "harness/probe.py": "0489d9cb5459d39cf5de830190ca77d50b217359c0d661f238d6e2293f2a09ef",
+    "harness/oa.py": "df11ed3a4aded4c02d1a241fedf987cb962c09654cd15ada33eec7c1147ac8fc",
+    "snapshot/config.json": "e4e62374d6d59f3dfe6b90c5263a50488f17dd8c4df51fc8ade0c3daa8ce2a2e",
+    "snapshot/manifest.json": "8a9c1523b66f3a2be22dde8e6120788be3f044ca23009c31446723cda5dd0246",
+    "snapshot/catalog-page.json": "62e4f2d08b897f540f7b123e7bd9e0e44614ceaf06d8a45fff0490af3b655eb6",
+    "snapshot/probe-search.json": "39501273b8239797735cca1b180a0f7c15e715ba6bd972a0c7863e92f9ebad37",
+    "snapshot/research.sqlite3": "4f3602fb9af53b10095e218718970e6bf01689bf9d2f6a2c1d03fef39c674a7a",
+    "snapshot/index.sqlite3": "3447799ac0894be47703b567caf6cd80c20d63db054a155a7f7236d3a1b40a92",
+    "execution/base-1/prepared-prompt.txt": "9f0335fab72c5080d46b39003350f39a8743ef2d5f3567283678f5c2df7d8672",
+    "execution/akashic-1/prepared-prompt.txt": "74d81f3c295842dd8a622f69ae289d6cd08523a1050fad2e03d0a541792fffd9",
+    "execution/akashic-2/prepared-prompt.txt": "ab98c38fe90a05d3666fd795081cf543be247dd06afc633b08b97883fff318ff",
+    "execution/base-2/prepared-prompt.txt": "351134e708acc98a32cc6faa447a37405fe060cfd1e7656dfa60356ffbf1cc62",
+    "execution/akashic-3/prepared-prompt.txt": "47b8cc39b74f01ab0901fa623c0427508be6909b8390335e73da7a01e2335b57",
+    "execution/base-3/prepared-prompt.txt": "387a26428a0f79402ae52c510012e74ecb11f042c38d5102689ea8fe17b46ebe",
+    "execution/base-4/prepared-prompt.txt": "c8c63c0829723f8fe7905057030a890b301c2d77c8d5d57a97d62928c7c26737",
+    "execution/akashic-4/prepared-prompt.txt": "6d4234930582ceb249204fcf8e9932b3a766b6d67d4f962fd7e07970ae65b3c1"
+  }
+}

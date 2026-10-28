@@ -1,0 +1,110 @@
+{
+  "schema": "openakashic-isolated-agent-evaluation-v1",
+  "measured_utc": "2026-10-28T13:37:52Z",
+  "primary_preregistered_arms": [
+    "base",
+    "akashic"
+  ],
+  "exploratory_arm": "required",
+  "conclusion": "No output-quality or resource-efficiency advantage established in this pilot. Optional availability produced zero lookups; required lookup cost more and did not improve rubric scores.",
+  "summary": [
+    {
+      "arm": "base",
+      "task_count": 4,
+      "actual_model": "gpt-6-luna",
+      "coding_points": 24,
+      "coding_max": 24,
+      "judgment_points": 23,
+      "judgment_max": 24,
+      "expertise_diagnostic_points": 4,
+      "expertise_diagnostic_max": 4,
+      "input_tokens": 100719,
+      "cached_input_tokens": 59008,
+      "output_tokens": 6731,
+      "wall_seconds_sum": 96.9459271460073,
+      "retrieval_requests": 0,
+      "tasks_with_retrieval": 0,
+      "model_requests": 9,
+      "dollar_cost": null,
+      "observed_total_tokens": 107450,
+      "uncached_input_tokens": 41711,
+      "total_points": 47
+    },
+    {
+      "arm": "akashic",
+      "task_count": 4,
+      "actual_model": "gpt-6-luna",
+      "coding_points": 24,
+      "coding_max": 24,
+      "judgment_points": 23,
+      "judgment_max": 24,
+      "expertise_diagnostic_points": 3,
+      "expertise_diagnostic_max": 4,
+      "input_tokens": 145142,
+      "cached_input_tokens": 71040,
+      "output_tokens": 6711,
+      "wall_seconds_sum": 114.58043685002485,
+      "retrieval_requests": 0,
+      "tasks_with_retrieval": 0,
+      "model_requests": 13,
+      "dollar_cost": null,
+      "observed_total_tokens": 151853,
+      "uncached_input_tokens": 74102,
+      "total_points": 47
+    },
+    {
+      "arm": "required",
+      "task_count": 4,
+      "actual_model": "gpt-6-luna",
+      "coding_points": 24,
+      "coding_max": 24,
+      "judgment_points": 22,
+      "judgment_max": 24,
+      "expertise_diagnostic_points": 3,
+      "expertise_diagnostic_max": 4,
+      "input_tokens": 186240,
+      "cached_input_tokens": 121984,
+      "output_tokens": 7016,
+      "wall_seconds_sum": 127.40266448707553,
+      "retrieval_requests": 6,
+      "tasks_with_retrieval": 4,
+      "model_requests": 16,
+      "dollar_cost": null,
+      "observed_total_tokens": 193256,
+      "uncached_input_tokens": 64256,
+      "total_points": 46
+    }
+  ],
+  "tasks": 4,
+  "valid_generation_runs": 12,
+  "pre_model_setup_failures_preserved": 8,
+  "scored_code_programs": 6,
+  "correlated_hidden_executions": 72,
+  "public_example_executions": 12,
+  "same_frozen_task_rubric_fixture": true,
+  "actual_usage_receipts_match_cli": true,
+  "models_observed": [
+    "gpt-6-luna"
+  ],
+  "isolation": "Fresh Docker network=none, readonly root, new tmpfs HOME; no private data/history/config/credentials or other candidates mounted. Read-only public retrieval via per-run socket; base route denied. Signed-in model credentials remained in trusted host broker.",
+  "token_definition": "Input includes cached tokens; total=input+output. Cache is provider prefix reuse, not prior user memory. Usage covers participant agent loop, including tool steps; not protocol preparation, embedding compute, grader or total project cost.",
+  "latency_boundary": "Descriptive sum of per-task monotonic container times, no shared-host workload isolation; an interrupted grading overlap affected late primary runs. One run per arm/task, not a stable speed estimate.",
+  "expertise_boundary": "Two task-specific rubric items from one blind model grader. Not an independent human or domain-expert assessment.",
+  "other_limits": [
+    "Four synthetic tasks selected from current catalog coverage; near-ceiling results.",
+    "Required-lookup condition was added after observing 0/4 optional lookups, after three coding grades were exposed; exploratory on same tasks, no fresh holdout.",
+    "The no-resource baseline does not include general web search, flat-document RAG, or a competitive memory product.",
+    "The coding tasks returned no matching context. Design and career retrieved one full method each.",
+    "No graph traversal was requested by the agents. This does not establish graph-specific value.",
+    "No real users, field outcomes, long-term preference transfer or billed dollar savings measured."
+  ],
+  "required_vs_base": {
+    "token_change_pct": 79.85667752442997,
+    "wall_change_pct": 31.41621132283181
+  },
+  "artifacts_integrity": {
+    "original_freeze_sha256": "54959c163a0d2cd65ee2579cb21208344dc42c44ce46c6ba05e5156e5007f590",
+    "original_freeze_unchanged": true,
+    "grade_sha256": "564faea9b7e832770770010b7c3b13c8b3712f4cbdb284e5140f8a76c0648ce1"
+  }
+}
